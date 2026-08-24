@@ -1,0 +1,7 @@
+# Baseline and candidate commands executed in PowerShell; validation/test commands were intentionally not run.
+uv run python -m unittest discover -s tests -v  # exit 0; 6 tests passed
+uv run quant-freqtrade-research list-strategies --strategy-path strategies  # exit 0; all 4 strategies OK
+uv run quant-freqtrade-research backtesting --config config/freqtrade-dry-run.json --strategy DryRunSmaCrossStrategy --strategy-path strategies --timeframe 5m --timerange 20230101-20250101 --fee 0.0015 --cache none --export trades --backtest-directory _audit_tmp/baseline_train  # exit 0; independent baseline reproduction
+uv run quant-freqtrade-research lookahead-analysis --config config/freqtrade-dry-run.json --strategy DryRunSmaCrossStrategy --strategy-path strategies --timerange 20230101-20250101 --fee 0.0015  # exit 0; baseline has_bias No
+uv run quant-freqtrade-research recursive-analysis --config config/freqtrade-dry-run.json --strategy DryRunSmaCrossStrategy --strategy-path strategies --timerange 20230101-20250101  # exit 0; no indicator variance
+uv run quant-freqtrade-research backtesting --config config/freqtrade-dry-run.json --strategy DryRunSmaCrossMinHoldStrategy --strategy-path strategies --timeframe 5m --timerange 20230101-20250101 --fee 0.0015 --cache none --export trades --backtest-directory experiments/exp_20260714_002/backtests/train  # exit 0

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quant-research"
+version = "0.1.0"
+description = "Reproducible, next-bar-execution quantitative research workspace"
+requires-python = ">=3.10"
+dependencies = [
+    "freqtrade>=2025.6",
+    "scipy>=1.15.3",
+]
+
+[project.scripts]
+quant-validate-data = "quant_research.validate_data:main"
+quant-backtest = "quant_research.backtest:main"
+quant-dry-run = "quant_research.freqtrade_dry_run:main"
+quant-freqtrade-research = "quant_research.freqtrade_research:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

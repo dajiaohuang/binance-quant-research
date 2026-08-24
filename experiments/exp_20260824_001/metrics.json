@@ -1,0 +1,62 @@
+{
+  "experiment_id": "exp_20260824_001",
+  "status": "IN_PROGRESS",
+  "scope": {
+    "exchange": "binance",
+    "market": "spot",
+    "pairs": ["BTC/USDT", "ETH/USDT"],
+    "base_timeframe": "5m",
+    "informative_timeframe": "1h",
+    "train_range": "20230101-20250101",
+    "fee_per_side": 0.0015,
+    "starting_balance": 1000.0,
+    "stake_amount": 50.0,
+    "execution": "completed 5m signal shifted by Freqtrade and filled at next 5m open"
+  },
+  "baseline_reproduction": {
+    "strategy": "DryRunSmaCrossStrategy",
+    "trades": 5064,
+    "net_profit_abs_usdt": -671.437,
+    "net_profit_pct": -67.14,
+    "final_balance_usdt": 328.563,
+    "profit_factor": 0.4544,
+    "win_rate_pct": 20.8,
+    "max_drawdown_pct": 67.36,
+    "sharpe_closed_trades": -37.76,
+    "average_holding": "3:22:00"
+  },
+  "candidate": {
+    "strategy": "DryRunSmaCrossHtfBreakoutGateStrategy",
+    "strategy_sha256": "390f94e30e080feb64062a3b9b2b02fd48aef49ce5ccc89f8d3178fbd466e2bc",
+    "htf_breakout_lookback_hours": 24,
+    "unit_tests": {"passed": 12, "failed": 0},
+    "strategy_load": "OK",
+    "smoke": {
+      "requested_range": "20230101-20230108",
+      "effective_start": "2023-01-02T01:00:00Z",
+      "effective_end": "2023-01-08T00:00:00Z",
+      "trades": 0,
+      "exit_code": 0
+    },
+    "full_train": "NOT_RUN"
+  },
+  "bias_checks": {
+    "unit_informative_boundary": "PASS",
+    "historical_prefix_invariance": "PASS",
+    "lookahead_analysis": "NOT_RUN",
+    "recursive_analysis": "NOT_RUN"
+  },
+  "robustness": {
+    "cost_plus_50": "NOT_RUN",
+    "cost_plus_100": "NOT_RUN",
+    "parameter_neighbors_18_36": "NOT_RUN",
+    "signal_delay": "NOT_RUN",
+    "event_window_sensitivity": "NOT_RUN",
+    "walk_forward": "NOT_RUN"
+  },
+  "out_of_sample": {
+    "validation": "NOT_RUN",
+    "final_test": "NOT_RUN"
+  },
+  "decision": null
+}

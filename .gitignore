@@ -1,0 +1,35 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+
+# Temporary audit outputs are not formal experiment evidence.
+_audit_tmp/
+
+# Third-party reference repositories are intentionally not vendored. Their
+# sources and the files actually consulted are recorded in reports.
+references/
+
+# Local market data can be large or subject to licensing restrictions.
+/data/raw/*
+!data/raw/.gitkeep
+/data/processed/*
+!data/processed/.gitkeep
+
+# Formal experiments, including backtest archives and command ledgers, are
+# versioned. Raw market data remains excluded above and below.
+
+# Freqtrade dry-run state and logs are local runtime artifacts.
+/freqtrade-state/*
+!/freqtrade-state/.gitkeep
+/logs/*
+!/logs/.gitkeep
+/user_data/data/

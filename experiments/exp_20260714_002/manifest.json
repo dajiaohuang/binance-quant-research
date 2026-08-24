@@ -1,0 +1,45 @@
+{
+  "experiment_id": "exp_20260714_002",
+  "created_at": "2026-07-14T16:45:00+08:00",
+  "status": "completed",
+  "decision_status": "REJECTED",
+  "strategy": "DryRunSmaCrossMinHoldStrategy",
+  "strategy_sha256": "a90507fc6dd2928620266042d9a22c1ae9cb5bf22487915719d2d1ea48718d74",
+  "parent_strategy": "DryRunSmaCrossStrategy",
+  "change_summary": "Add a fixed minimum holding period to reduce cost-dominated micro-reversals; do not change entry signals or indicators.",
+  "git_repository": false,
+  "git_commit": null,
+  "framework": "freqtrade",
+  "framework_version": "2026.6",
+  "python_version": "3.12.13",
+  "data_source": "Binance public spot OHLCV",
+  "data_files": [
+    {
+      "path": "user_data/data/binance/BTC_USDT-5m.feather",
+      "sha256": "040c4dec3af78c0f8011f26fe6daf52e21681e6150fdeb137acdc0b13672aaac",
+      "rows": 371602
+    },
+    {
+      "path": "user_data/data/binance/ETH_USDT-5m.feather",
+      "sha256": "f2573e2120d36438d65c2524e1a31313ea2d921d819add54ae83e5a1235feda9",
+      "rows": 371602
+    }
+  ],
+  "symbols": ["BTC/USDT", "ETH/USDT"],
+  "timeframe": "5m",
+  "train_range": "20230101-20250101",
+  "validation_range": "20250101-20260101",
+  "test_range": "20260101-20260714",
+  "initial_cash": 1000.0,
+  "fee_rate_per_side": 0.0015,
+  "stress_fee_rates_per_side": [0.00225, 0.003],
+  "slippage_model": "included in fixed fee proxy",
+  "execution_assumption": "next tradable bar",
+  "minimum_hold_bars_candidates": [3, 6, 12],
+  "selected_minimum_hold_bars": 6,
+  "random_seed": 42,
+  "allowed_data_splits": ["train"],
+  "forbidden_data_splits": ["validation", "test"],
+  "completed_at": "2026-07-14T17:00:00+08:00",
+  "notes": "Training gate failed: candidate remains negative with PF below 1. Validation and final test were not opened."
+}

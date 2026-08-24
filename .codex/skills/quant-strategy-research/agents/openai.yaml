@@ -1,0 +1,4 @@
+interface:
+  display_name: "量化策略研究手册"
+  short_description: "用固定 Subagent 分工执行高级量化研究、对抗验证与模拟盘晋级"
+  default_prompt: "使用 $quant-strategy-research 派出固定研究、实验和审计 Subagent，完成一轮可证伪策略研究。"

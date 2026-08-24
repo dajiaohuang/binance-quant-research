@@ -1,0 +1,1 @@
+{"DryRunSmaCrossAdxStrategy":{"run_id":"9e717996cb45dcd3b8204238630da5ae592431b8","backtest_start_time":1784017142,"timeframe":"5m","timeframe_detail":null,"backtest_start_ts":1735689600,"backtest_end_ts":1767225600,"notes":"candidate ADX(14)>=25 validation; only entry filter changed"}}

@@ -1,0 +1,1 @@
+{"HourlySmaCrossAdxStrategy":{"run_id":"91492ead36a23eba2cf89c1fe51c9c2abed32e5a","backtest_start_time":1784017221,"timeframe":"1h","timeframe_detail":null,"backtest_start_ts":1672711200,"backtest_end_ts":1735689600,"notes":"hourly SMA+ADX train; timeframe only changed from rejected 5m candidate"}}

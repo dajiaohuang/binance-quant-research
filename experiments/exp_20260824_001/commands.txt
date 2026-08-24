@@ -1,0 +1,33 @@
+# exp_20260824_001 command ledger
+# Commands are appended with timestamp, exit code, and output directory when executed.
+# Validation and final-test commands are forbidden until the documented gates pass.
+
+# Environment and baseline checks
+$env:PYTHONUTF8 = "1"
+uv sync --frozen
+uv run python -m unittest discover -s tests -v
+uv run freqtrade --version
+uv run quant-freqtrade-research list-strategies --strategy-path strategies
+uv run quant-freqtrade-research list-data --config config/freqtrade-dry-run.json --show-timerange --data-format-ohlcv feather
+
+# Formal train baseline
+uv run quant-freqtrade-research backtesting --config config/freqtrade-dry-run.json --strategy DryRunSmaCrossStrategy --strategy-path strategies --timeframe 5m --timerange 20230101-20250101 --fee 0.0015 --cache none --export trades --backtest-directory experiments/exp_20260824_001/backtests/baseline_train --logfile experiments/exp_20260824_001/logs/baseline_train.log
+
+# Formal primary candidate train
+uv run quant-freqtrade-research backtesting --config config/freqtrade-dry-run.json --strategy DryRunSmaCrossHtfBreakoutGateStrategy --strategy-path strategies --timeframe 5m --timerange 20230101-20250101 --fee 0.0015 --cache none --export trades --backtest-directory experiments/exp_20260824_001/backtests/candidate_train --logfile experiments/exp_20260824_001/logs/candidate_train.log
+
+# Only after the primary candidate passes the complete training gate:
+uv run quant-freqtrade-research lookahead-analysis --config config/freqtrade-dry-run.json --strategy DryRunSmaCrossHtfBreakoutGateStrategy --strategy-path strategies --timerange 20230101-20250101 --fee 0.0015
+uv run quant-freqtrade-research recursive-analysis --config config/freqtrade-dry-run.json --strategy DryRunSmaCrossHtfBreakoutGateStrategy --strategy-path strategies --timerange 20230101-20250101
+
+# Stage 2 implementation checks actually executed
+# 2026-08-24T23:22:52.2910080+08:00 -> 2026-08-24T23:23:04.8114506+08:00; exit 0; 12 tests passed
+uv run python -m unittest discover -s tests -v
+
+# 2026-08-24T23:23:18.4339392+08:00 -> 2026-08-24T23:23:21.3925315+08:00; exit 0; candidate status OK
+uv run quant-freqtrade-research list-strategies --strategy-path strategies
+
+# 2026-08-24T23:23:45.9299941+08:00 -> 2026-08-24T23:23:51.4045686+08:00; exit 0
+# Output: experiments/exp_20260824_001/backtests/smoke; log: experiments/exp_20260824_001/logs/smoke.log
+# Smoke only: requested timerange 20230101-20230108; effective range after 300 startup candles 2023-01-02 01:00:00 through 2023-01-08 00:00:00; 0 trades
+uv run quant-freqtrade-research backtesting --config config/freqtrade-dry-run.json --strategy DryRunSmaCrossHtfBreakoutGateStrategy --strategy-path strategies --timeframe 5m --timerange 20230101-20230108 --fee 0.0015 --cache none --export trades --backtest-directory experiments/exp_20260824_001/backtests/smoke --logfile experiments/exp_20260824_001/logs/smoke.log

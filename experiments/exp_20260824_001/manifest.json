@@ -1,0 +1,85 @@
+{
+  "experiment_id": "exp_20260824_001",
+  "created_at": "2026-08-24T23:17:16.0098977+08:00",
+  "status": "running",
+  "phase": "implementation_and_smoke_complete",
+  "decision_status": null,
+  "strategy": "DryRunSmaCrossHtfBreakoutGateStrategy",
+  "strategy_sha256": "390f94e30e080feb64062a3b9b2b02fd48aef49ce5ccc89f8d3178fbd466e2bc",
+  "code_frozen_at": "2026-08-24T23:25:34.0451535+08:00",
+  "parent_strategy": "DryRunSmaCrossStrategy",
+  "change_summary": "Gate the existing 5m entry with a completed same-pair 1h close breaking above the preceding 24 completed 1h highs.",
+  "git_repository": false,
+  "git_commit": null,
+  "framework": "freqtrade",
+  "framework_version": "2026.6",
+  "python_version": "3.12.13",
+  "data_source": "Binance public spot OHLCV via Freqtrade/CCXT",
+  "source_snapshot_downloaded_at": null,
+  "data_files": [
+    {
+      "path": "user_data/data/binance/BTC_USDT-5m.feather",
+      "sha256": "040c4dec3af78c0f8011f26fe6daf52e21681e6150fdeb137acdc0b13672aaac",
+      "rows": 371602,
+      "utc_start": "2023-01-01T00:00:00Z",
+      "utc_end": "2026-07-14T08:05:00Z"
+    },
+    {
+      "path": "user_data/data/binance/ETH_USDT-5m.feather",
+      "sha256": "f2573e2120d36438d65c2524e1a31313ea2d921d819add54ae83e5a1235feda9",
+      "rows": 371602,
+      "utc_start": "2023-01-01T00:00:00Z",
+      "utc_end": "2026-07-14T08:05:00Z"
+    },
+    {
+      "path": "user_data/data/binance/BTC_USDT-1h.feather",
+      "sha256": "624c54c1278040d36aa13020339fc2da7c8ab7c121dc6204bbe7af8b486059e4",
+      "rows": 30967,
+      "utc_start": "2023-01-01T00:00:00Z",
+      "utc_end": "2026-07-14T07:00:00Z"
+    },
+    {
+      "path": "user_data/data/binance/ETH_USDT-1h.feather",
+      "sha256": "db16358c830b05c542ae5802482b1bc7f1cfb4dcfeade8d6a8bc627f0174d98f",
+      "rows": 30967,
+      "utc_start": "2023-01-01T00:00:00Z",
+      "utc_end": "2026-07-14T07:00:00Z"
+    }
+  ],
+  "symbols": [
+    "BTC/USDT",
+    "ETH/USDT"
+  ],
+  "timeframe": "5m",
+  "informative_timeframe": "1h",
+  "train_range": "20230101-20250101",
+  "validation_range": "20250101-20260101",
+  "test_range": "20260101-20260714",
+  "initial_cash": 1000.0,
+  "stake_amount": 50.0,
+  "max_open_trades": 2,
+  "fee_rate_per_side": 0.0015,
+  "stress_fee_rates_per_side": [
+    0.00225,
+    0.003
+  ],
+  "slippage_model": "0.0005 per side is included in the fixed fee proxy and does not alter fill prices",
+  "execution_assumption": "completed 5m close signal shifted by Freqtrade and filled at the next 5m open; completed 1h informative candle only",
+  "missing_candle_behavior": "raw Feather preserves the Binance event gap; Freqtrade fills missing candles in memory as zero-volume no-action candles",
+  "random_seed": 42,
+  "primary_parameters": {
+    "htf_breakout_lookback_hours": 24
+  },
+  "parameter_neighbors_after_train_gate": [
+    18,
+    36
+  ],
+  "allowed_data_splits": [
+    "train"
+  ],
+  "forbidden_data_splits_until_gate": [
+    "validation",
+    "test"
+  ],
+  "notes": "Existing data is sufficient for this experiment. Additional Binance public data requires a separate data version and experiment. Original download time is unknown and is recorded as null."
+}
