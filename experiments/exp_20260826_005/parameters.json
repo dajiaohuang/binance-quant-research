@@ -1,0 +1,123 @@
+{
+  "experiment_id": "exp_20260826_005",
+  "parent_experiment": "exp_20260826_004",
+  "extractor_version": "binance_spot_announcement_v4",
+  "run_id": "exp_20260826_005_formal_001",
+  "catalog_ids": [48, 161],
+  "page_size": 50,
+  "list_release_date_claim_interval_ms": [1669852800000, 1735689600000],
+  "expected_totals": {"48": 2234, "161": 426},
+  "expected_list_release_date_claim_interval_counts": {"48": 575, "161": 181},
+  "expected_logical_request_count": 866,
+  "bounds": {
+    "max_pages_per_catalog": 50,
+    "max_articles": 800,
+    "max_response_bytes": 2000000,
+    "max_total_response_bytes": 1000000000,
+    "max_clock_skew_ms": 300000,
+    "hardcoded_base_logical_delay_seconds": 1,
+    "hardcoded_timeout_cap_seconds": 30,
+    "hardcoded_wall_budget_seconds": 10800,
+    "hardcoded_max_wire_attempts": 3464,
+    "absolute_attempt_numbers": [1, 2, 3, 4]
+  },
+  "retry_policy": {
+    "retryable_http_statuses": [408, 429, 500, 502, 503, 504],
+    "retryable_outcome_rule": "only recomputed well-formed HTTP_<status>",
+    "retry_after_case_insensitive_presence_on_retryable": "terminal even empty, zero, or malformed",
+    "http_429_absent_retry_after_delays_seconds_by_attempt": {"1": 30, "2": 60, "3": 120, "4": null},
+    "other_retryable_absent_retry_after_delays_seconds_by_attempt": {"1": 1, "2": 2, "3": null, "4": null},
+    "transport_error": "terminal",
+    "malformed_nonretryable_redirect_or_header_drift": "terminal",
+    "accepted_ok_next_logical_delay_seconds": 1,
+    "sleep_before_first_wire": false,
+    "sleep_after_accepted_time_after": false
+  },
+  "formal_cli_timing_flags": {
+    "http_429_backoff_seconds": [30, 60, 120],
+    "other_retryable_backoff_seconds": [1, 2]
+  },
+  "forbidden_legacy_cli_flags": [
+    "--timeout-seconds",
+    "--max-attempts",
+    "--max-wire-attempts",
+    "--pacing-seconds"
+  ],
+  "receipt_core_fields": [
+    "run_id",
+    "logical_key",
+    "logical_sequence",
+    "attempt_key",
+    "attempt_no",
+    "wire_attempt_global_no",
+    "canonical_url",
+    "outcome",
+    "http_status",
+    "retry_after_present",
+    "accepted",
+    "decision",
+    "next_wire_scope",
+    "next_attempt_no",
+    "delay_rule",
+    "requested_delay_ns",
+    "pre_sleep_monotonic_ns",
+    "post_sleep_monotonic_ns",
+    "terminal_reason",
+    "body_path",
+    "body_sha256",
+    "sidecar_path",
+    "sidecar_sha256",
+    "previous_receipt_sha256"
+  ],
+  "receipt_decisions": ["NEXT_WIRE", "NO_NEXT_WIRE"],
+  "receipt_next_wire_scopes": ["SAME_LOGICAL_RETRY", "NEXT_LOGICAL", null],
+  "terminal_schedule_fields": [
+    "run_id",
+    "reason",
+    "wire_attempt_count",
+    "last_receipt_sha256",
+    "planned_logical_key",
+    "planned_logical_sequence",
+    "planned_attempt_no",
+    "planned_delay_ns",
+    "pre_sleep_monotonic_ns",
+    "post_sleep_monotonic_ns",
+    "expected_extractor_sha256",
+    "observed_extractor_sha256"
+  ],
+  "attempt_key_format": "global zero-padded decimal",
+  "attempt_commit_order": ["body", "sidecar", "receipt"],
+  "raw_success_artifacts": [
+    "runtime_contract.json",
+    "request_ledger.jsonl",
+    "summary.json",
+    "requests/**/attempt_NNNN.response",
+    "requests/**/attempt_NNNN.request.json",
+    "requests/**/attempt_NNNN.receipt.json"
+  ],
+  "raw_tree_includes": [
+    "runtime_contract.json",
+    "request_ledger.jsonl",
+    "requests/**/attempt_NNNN.response",
+    "requests/**/attempt_NNNN.request.json",
+    "requests/**/attempt_NNNN.receipt.json"
+  ],
+  "raw_tree_excludes": [
+    "raw_run/summary.json",
+    "external corpus_summary.json",
+    "processed artifacts",
+    "root schema.json",
+    "root source_contract.json"
+  ],
+  "success_bijections": [
+    "selected detail key set == accepted final-OK detail key set",
+    "ledger attempt keys == body keys == sidecar keys == receipt keys",
+    "each attempt key appears exactly once",
+    "no terminal schedule, orphan, pending OK, missing logical request, or extra raw artifact"
+  ],
+  "success_terminal_status": "NEEDS_MORE_DATA",
+  "success_artifact_state": "ANNOUNCEMENT_CORPUS_AVAILABLE",
+  "historical_eligibility_ready": false,
+  "formal_network_authorized": false
+}
+

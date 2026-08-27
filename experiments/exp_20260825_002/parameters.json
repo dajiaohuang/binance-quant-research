@@ -1,0 +1,21 @@
+{
+  "experiment_id": "exp_20260825_002",
+  "list_objects_api": "ListObjectsV2",
+  "bucket_url": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
+  "root_prefix": "data/spot/monthly/klines/",
+  "root_symbol_delimiter": "/",
+  "symbol_object_delimiter": null,
+  "max_keys": 1000,
+  "interval": "1h",
+  "quote_suffix": "USDT",
+  "start_month": "2022-12",
+  "end_month": "2024-12",
+  "request_timeout_seconds": 30,
+  "max_attempts": 3,
+  "symbol_listing_workers": 8,
+  "save_raw_pages": true,
+  "download_zip_payloads": false,
+  "download_checksum_payloads": false,
+  "output_sort": ["symbol", "month", "object_type", "key"],
+  "random_seed": 42
+}

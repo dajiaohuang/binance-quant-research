@@ -1,0 +1,34 @@
+{
+  "eligibility_evaluated": false,
+  "env_file_content_size_hash_read": false,
+  "formal_attempt": {
+    "exact_formal_line_started": false,
+    "exit_code": 1,
+    "failure_code": "OUTER_COMMAND_SELECTION_BUG_BEFORE_WRAPPER_START",
+    "request_count": 0,
+    "stderr": "NONEMPTY_REDACTED_NOT_PERSISTED",
+    "stdout": "EMPTY",
+    "wall_seconds": 0.585,
+    "wrapper_ledger_exists": false,
+    "wrapper_reservation_exists": false
+  },
+  "formal_executed": false,
+  "formal_paths_absent": true,
+  "full_suite": {
+    "expected_lifecycle_mismatches": [
+      "test_binance_spot_forward_schedule_pit_v2.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero",
+      "test_binance_spot_forward_schedule_pit_v4.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero"
+    ],
+    "failed": 2,
+    "passed": 518,
+    "total": 520
+  },
+  "network_access_count": 0,
+  "phase": "POSTFORMAL_AWAITING_AUDITOR",
+  "power_shell_parse": "PASS",
+  "py_compile": "PASS",
+  "status": "INCONCLUSIVE",
+  "strict_eligible_count": 0,
+  "strict_json": "PASS",
+  "targeted_tests": {"failed":0,"passed":43,"skipped":0,"total":43}
+}

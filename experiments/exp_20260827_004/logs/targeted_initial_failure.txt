@@ -1,0 +1,14 @@
+COMMAND: uv run python -m unittest tests.test_historical_pit_evidence -v
+OBSERVED EXIT: 1
+RESULT: Ran 17 tests; 16 passed and 1 failed.
+
+FAIL: test_same_scalar_value_merges_and_different_value_conflicts
+Traceback (most recent call last):
+  File "tests/test_historical_pit_evidence.py", line 192, in test_same_scalar_value_merges_and_different_value_conflicts
+    self.assertEqual(status_resolution.component, "STATUS")
+AssertionError: 'LISTING_WINDOW' != 'STATUS'
+- LISTING_WINDOW
++ STATUS
+
+ROOT CAUSE: the test selected resolution_ledger[3], but component order puts STATUS at index 0.
+MINIMAL CORRECTION: select the resolution row by component name; no production behavior was changed for this failure.

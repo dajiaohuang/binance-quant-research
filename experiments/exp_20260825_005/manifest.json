@@ -1,0 +1,82 @@
+{
+  "experiment_id": "exp_20260825_005",
+  "created_at": "2026-08-25T16:45:06.2735021+08:00",
+  "status": "complete",
+  "phase": "terminal_postflight_complete",
+  "decision_status": "NEEDS_MORE_DATA",
+  "parent_experiment": "exp_20260825_004",
+  "objective": "Offline revalidation of all frozen Binance Spot 1h payloads under a bounded, explicitly flagged close-time policy.",
+  "git_repository": true,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_clean_before_experiment": false,
+  "frozen_inputs": {
+    "inventory_jsonl_sha256": "8be13634629f8fc21e499aaab7df46839510b3a5be4842ab620bfb3089f512b3",
+    "symbol_index_jsonl_sha256": "0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16",
+    "inventory_summary_sha256": "168fa33118114fd088d03ceb87f920755aea8b088b13f891a37984e75065605d",
+    "exp004_object_quality_sha256": "3e7675986d7c3f22b1c02ff0beae4532015dc2993be9f69b984d0223f5c6acc2",
+    "exp004_payload_summary_sha256": "40419cb5bfc1990930adf662650a73a2531a42830991987fdae7057ac86b6684",
+    "raw_run_contract_sha256": "77335ef92b84513d73e6152ef3b2b3ddb5c14d6e1560ec86348793d186860683"
+  },
+  "raw_input_root": "data/raw/binance_spot_v3/payloads",
+  "processed_output_root": "data/processed/binance_spot_v4",
+  "expected_pairs": 9240,
+  "expected_candidate_symbols": 723,
+  "expected_panel_hours": 18288,
+  "expected_panel_cells": 13222224,
+  "network_scope": "none",
+  "authentication": "none",
+  "close_time_policy": "open_time <= close_time <= open_time + 3,599,999; preserve actual values and flag non-nominal values without causal semantics",
+  "research_review": {
+    "verdict": "GO",
+    "required_event_code": "NON_NOMINAL_CLOSE_TIME_WITHIN_INTERVAL",
+    "required_event_rows": 354,
+    "required_event_object_months": 353,
+    "restriction": "The event code is descriptive only and cannot infer HALT or TRADING"
+  },
+  "implementation_freeze": {
+    "payload_source_sha256": "287b315f2a0cfaab2124c1bc8dbcd0ee14fa4527e347866e919925c17c2069c4",
+    "payload_test_sha256": "3b07b82da81fd30559c5876f9cd9949b462605b274b0e79cdf4ab0f3459796c5",
+    "offline_revalidator_sha256": "ab043894a57ea94c08c7f54d840fdf737ec7495bfaee4a6bad30d1da5cdf2227",
+    "offline_revalidator_test_sha256": "6e651f6ea1600421fffdde0339100cefa719e3f981d5319edbdef6f3fd8d78c3",
+    "pyproject_sha256": "3a9a7e2f922fdf487b385abc2fa9ac2b155e19e557b76306d7ff5678dac1456b",
+    "full_test_count": 50,
+    "full_test_result": "PASS"
+  },
+  "independent_audit": {
+    "completed_at": "2026-08-25T17:05:10.4476337+08:00",
+    "verdict": "PASS",
+    "formal_offline_revalidation_authorized": true,
+    "scope": "Exact commands.txt offline command and v4/exp005 output paths only"
+  },
+  "expected_terminal_status_after_success": "NEEDS_MORE_DATA",
+  "actual_result": {
+    "pairs_valid": 9240,
+    "pairs_invalid": 0,
+    "non_nominal_close_rows": 354,
+    "affected_object_months": 353,
+    "normalized_rows": 6687797,
+    "normalized_symbols": 462,
+    "state_counts": {"A": 6687797, "M": 72379, "N": 6462048, "U": 0},
+    "contract_failures": [],
+    "coverage_panel_sha256": "716b2d5c42c3078c93707722cbd93e171b233e6492f770d3c0905a710d9ba8b2",
+    "object_quality_sha256": "45194f662a72fd7776acfb825095c234227c6fb6353a7d2e1edfbd326a76f06c",
+    "non_nominal_close_rows_sha256": "2c54fcea7f3fcd5d4121cd96f9aff1d1952ddcbd4933b075c6684e4357efdb25",
+    "revalidation_summary_sha256": "14c63f57aa65014a0541b9764de90a5a0f1d597566732f1064c062a68abbdb47"
+  },
+  "postflight_audit": {
+    "verdict": "PASS",
+    "raw_pairs_recomputed": 9240,
+    "normalized_files_verified": 462,
+    "normalized_rows_verified": 6687797,
+    "panel_cells_verified": 13222224,
+    "v3_and_exp004_unchanged": true,
+    "restriction": "ARCHIVE_KLINE_AVAILABLE only; not historical TRADING or eligibility"
+  },
+  "forbidden_work": [
+    "network fetch",
+    "historical trading inference",
+    "factor research",
+    "backtesting",
+    "machine learning"
+  ]
+}

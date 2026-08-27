@@ -1,0 +1,101 @@
+{
+  "experiment_id": "exp_20260825_001",
+  "created_at": "2026-08-25T00:11:33.0425360+08:00",
+  "status": "completed",
+  "phase": "training_gate_failed",
+  "decision_status": "INCONCLUSIVE",
+  "completed_at": "2026-08-25T00:18:18.2603005+08:00",
+  "strategy": "DryRunSmaCrossHtfBreakoutGateStrategy",
+  "strategy_sha256_lf": "390f94e30e080feb64062a3b9b2b02fd48aef49ce5ccc89f8d3178fbd466e2bc",
+  "parent_strategy": "DryRunSmaCrossStrategy",
+  "parent_strategy_sha256_lf": "4b966d33aac7aad492800510b0f2d6e8385fe24db40b06e5d8367aaff75b88c9",
+  "config_sha256_lf": "906eb2439cb6784005fa636707198e9d74219627307b2f8b37626c076c91d618",
+  "change_summary": "Repeat the frozen 24-hour HTF breakout hypothesis on a newly downloaded and independently frozen public-data snapshot because the original untracked Feather files are unavailable on this host.",
+  "supersedes_experiment": "exp_20260824_001",
+  "git_repository": true,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_clean_before_experiment": true,
+  "framework": "freqtrade",
+  "framework_version": "2026.6",
+  "ccxt_version": "4.5.65",
+  "python_version": "3.12.13",
+  "data_source": "Binance public spot OHLCV downloaded through Freqtrade/CCXT",
+  "data_version": "binance_spot_ohlcv_exp_20260825_001",
+  "source_snapshot_downloaded_at": "2026-08-25T00:14:16.3076831+08:00/2026-08-25T00:14:27.6348676+08:00",
+  "download_timerange": "20230101-20260715",
+  "data_files": [
+    {
+      "path": "user_data/data/binance/BTC_USDT-5m.feather",
+      "sha256": "b68e0a0487cd38e005c969852d5872e604260f13b5681fd3c1ae932828198878",
+      "rows": 371792,
+      "utc_start": "2023-01-01T00:00:00Z",
+      "utc_end": "2026-07-14T23:55:00Z"
+    },
+    {
+      "path": "user_data/data/binance/ETH_USDT-5m.feather",
+      "sha256": "cb228c791f0aa2479f7d9db3ae9711ce4e2b0e58114749f4831297b2f4289db5",
+      "rows": 371792,
+      "utc_start": "2023-01-01T00:00:00Z",
+      "utc_end": "2026-07-14T23:55:00Z"
+    },
+    {
+      "path": "user_data/data/binance/BTC_USDT-1h.feather",
+      "sha256": "d4a5022d0cc465e21cb5064f647be4fc74b3a4ffef9cd9c8bc1503130342f678",
+      "rows": 30998,
+      "utc_start": "2023-01-01T00:00:00Z",
+      "utc_end": "2026-07-15T14:00:00Z"
+    },
+    {
+      "path": "user_data/data/binance/ETH_USDT-1h.feather",
+      "sha256": "c56f7312f4acb469e61854904239b6bd62a2198f9f03fad97d43819705659615",
+      "rows": 30998,
+      "utc_start": "2023-01-01T00:00:00Z",
+      "utc_end": "2026-07-15T14:00:00Z"
+    }
+  ],
+  "symbols": [
+    "BTC/USDT",
+    "ETH/USDT"
+  ],
+  "timeframe": "5m",
+  "informative_timeframe": "1h",
+  "data_train_range": "20230101-20250101",
+  "common_evaluation_train_range": "1672621200-1735689600",
+  "common_evaluation_train_utc": "2023-01-02T01:00:00Z/2025-01-01T00:00:00Z",
+  "validation_range": "20250101-20260101",
+  "test_range": "20260101-20260714",
+  "initial_cash": 1000.0,
+  "stake_amount": 50.0,
+  "max_open_trades": 2,
+  "fee_rate_per_side": 0.0015,
+  "stress_fee_rates_per_side": [
+    0.00225,
+    0.003
+  ],
+  "slippage_model": "0.0005 per side is included in the fixed fee proxy and does not alter fill prices",
+  "execution_assumption": "completed 5m close signal shifted by Freqtrade and filled at the next 5m open; completed 1h informative candle only",
+  "random_seed": 42,
+  "primary_parameters": {
+    "htf_breakout_lookback_hours": 24
+  },
+  "allowed_data_splits": [
+    "train"
+  ],
+  "forbidden_data_splits_until_gate": [
+    "validation",
+    "test"
+  ],
+  "backtest_outputs": [
+    {
+      "strategy": "DryRunSmaCrossStrategy",
+      "path": "experiments/exp_20260825_001/backtests/baseline_train_common_start-2026-08-25_00-16-42.zip",
+      "sha256": "083770ee0b59a8a21b72443119a024b1d635ab320c83bb29f7e69f7ee88307be"
+    },
+    {
+      "strategy": "DryRunSmaCrossHtfBreakoutGateStrategy",
+      "path": "experiments/exp_20260825_001/backtests/candidate_train_common_start-2026-08-25_00-16-50.zip",
+      "sha256": "4f86b1ab71cd5ad1962d238afe49b0a734d689055789900caf96580f46f348bb"
+    }
+  ],
+  "notes": "The original exp_20260824_001 data hashes remain historical facts and are not reused. The 1h downloader returned 14 hours beyond the requested end; this is frozen and disclosed, while formal training ends at 2025-01-01 and does not inspect out-of-sample strategy results."
+}

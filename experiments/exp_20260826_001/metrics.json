@@ -1,0 +1,76 @@
+{
+  "experiment_id": "exp_20260826_001",
+  "snapshot_id": "exp_20260826_001_formal_001",
+  "decision_status": "NEEDS_MORE_DATA",
+  "network_scope": "three unauthenticated public GETs; one attempt per logical endpoint",
+  "tool_wall_time_seconds": 3.7182146,
+  "wire_attempts": {
+    "total": 3,
+    "time_before": 1,
+    "exchange_info": 1,
+    "time_after": 1,
+    "retries": 0,
+    "redirects": 0
+  },
+  "wire_response_bytes": {
+    "total": 17512713,
+    "time_before": 28,
+    "exchange_info": 17512657,
+    "time_after": 28
+  },
+  "network_evidence_interval_utc": {
+    "first_request_started": "2026-08-25T18:53:16.555508Z",
+    "last_response_completed": "2026-08-25T18:53:18.379064Z"
+  },
+  "known_at_utc": "2026-08-25T18:53:18.027925Z",
+  "known_at_ms": 1787683998027,
+  "server_time_bracket_ms": {
+    "before": 1787683998470,
+    "exchange_info": 1787683998768,
+    "after": 1787683999972
+  },
+  "raw_sha256": {
+    "time_before": "983435f03cd1b1964e5ee1a928803fc02849f1c240639e52e0622fa504d1582a",
+    "exchange_info": "93815999f9ce41e4918ea836928a8cbb7238eba89d4b1d6ad04823e69f0b4743",
+    "time_after": "3031fb21b2dd11b5be1bc0b7fbad5f3a750f10c03567209d8ef02803f80256ca"
+  },
+  "current_response_symbol_count": 3681,
+  "archive_candidate_count": 723,
+  "membership_count": 3682,
+  "archive_only_unknown_count": 1,
+  "raw_status_counts": {
+    "TRADING": 1354,
+    "BREAK": 2327,
+    "HALT": 0,
+    "UNKNOWN": 1
+  },
+  "spot_permission_counts": {
+    "isSpotTradingAllowed_true": 3641,
+    "isSpotTradingAllowed_false": 40,
+    "UNKNOWN": 1
+  },
+  "quote_usdt_count": 733,
+  "listing_null_count": 3682,
+  "strict_eligible_count": 0,
+  "all_reasons_include_unknown_listing_window": true,
+  "artifacts": {
+    "memberships": {
+      "bytes": 26917791,
+      "sha256": "28dca84736c26497a79b3950fad9bd65b9f00f79e50cb6e87ca21d474c39a450"
+    },
+    "snapshot_summary": {
+      "bytes": 3954,
+      "sha256": "38eb1b5afed1506c794943d0a860236b8356f6cdc7c6ad919c994502a1f656a9"
+    },
+    "membership_schema": {
+      "bytes": 882,
+      "sha256": "d745287a38f2f2e1051d4714ecca9d32cf10265f8905b3febd03ab8969dd5d95"
+    },
+    "eligibility_gate_result": {
+      "bytes": 284,
+      "sha256": "a8e3b3d284944b061e4abfdb8e5d2c2297cb5abcbf26a2312dba3cd2668149f1"
+    }
+  },
+  "historical_2023_2024_gate_open": false,
+  "alpha_or_backtest_executed": false
+}

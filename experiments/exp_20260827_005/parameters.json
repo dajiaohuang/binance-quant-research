@@ -1,0 +1,47 @@
+{
+  "allowed_horizons_hours": [
+    1,
+    24,
+    120,
+    480
+  ],
+  "development_only": true,
+  "eligibility_evaluated": false,
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260827_005",
+  "formal_execution_authorized": false,
+  "expert_key_validation_order": "VALIDATE_EXACT_KEY_BEFORE_ANY_MAPPING_OR_SET_EQUALITY",
+  "historical_eligibility_ready": false,
+  "multi_horizon_bundle_semantics": "IDENTITY_PRESERVING_CONTAINER_ONLY",
+  "multi_horizon_public_entrypoint": "compose_multi_horizon",
+  "multi_horizon_direct_construction_fail_closed": true,
+  "multi_horizon_required_horizons": [
+    1,
+    24,
+    120,
+    480
+  ],
+  "precondition_kernel_sha256": "2637ac6b686ef0d6a0a7dc4c07817fd57e2f2724984cdcccac1671528c7044c5",
+  "precondition_kernel_tests_sha256": "6d13ba56248305b9990f9422be79d476b64228d266691f4b6db8ac9416935870",
+  "primary_change": "HORIZON_IDENTITY_END_TO_END_V1",
+  "regime_multiplier_horizon_semantics": "HORIZONLESS_EXTERNAL_MULTIPLIER_APPLIED_ONLY_TO_ONE_SHARED_SCORE_HORIZON",
+  "prohibited_research": [
+    "REAL_DATA",
+    "ELIGIBILITY",
+    "EMPIRICAL_ALPHA",
+    "IC",
+    "ML",
+    "PNL",
+    "BACKTEST",
+    "VALIDATION_SET",
+    "FINAL_TEST_SET"
+  ],
+  "out_of_scope": [
+    "CROSS_HORIZON_WEIGHTS",
+    "CROSS_HORIZON_UTILITY",
+    "CROSS_HORIZON_ALLOCATION",
+    "HORIZON_SPECIFIC_REGIME",
+    "HORIZON_SPECIFIC_COST"
+  ],
+  "strict_eligible_count": 0
+}

@@ -1,0 +1,34 @@
+exp_20260826_001 stage-2 Auditor pre-execution review
+
+Terminal conclusion: NO-GO. No formal network request was authorized or run.
+
+Initial blockers received:
+
+1. tests/test_binance_spot_pit.py line 377 must read text with explicit UTF-8.
+2. A successful HTTP 200 without Content-Length must fail closed in both the
+   collector and trusted loader.
+3. Local request/response clocks must prove this monotone sequence, in addition
+   to Binance server-time ordering:
+   time-before request -> time-before complete -> exchangeInfo request ->
+   exchangeInfo complete/known_at -> time-after request -> time-after complete.
+4. Raw urllib/proxy exception strings must not enter sidecars; evidence must use
+   a controlled error category and safe message and prove proxy credentials do
+   not leak. Public fixed URLs and unauthenticated semantics remain unchanged.
+
+Final supplemental blockers received:
+
+5. Before any network request, snapshot_id must acquire an atomic exclusive
+   lease/directory so a concurrent second writer with the same ID is rejected.
+6. Every retry attempt must be root-bound: summary must list all attempt raw and
+   sidecar paths, SHA-256 values and outcomes, and the trusted loader must verify
+   sequence continuity and hashes. Retaining max_attempts=3 was preferred over
+   reducing the preregistered transport contract.
+7. Use a dedicated urllib ProxyHandler({}) opener and forbid
+   Proxy-Authorization.
+8. Schema and frozen hypothesis must state that isSpotTradingAllowed is the
+   eligibility permission predicate; permissions and permissionSets are retained
+   verbatim evidence only and are not a second predicate.
+
+Resolution state: all eight blockers have targeted offline tests or direct
+contract enforcement. Re-review is required; this log does not change NO-GO to
+GO and does not authorize the formal command.

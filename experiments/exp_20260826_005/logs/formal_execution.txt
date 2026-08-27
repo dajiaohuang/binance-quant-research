@@ -1,0 +1,38 @@
+experiment_id: exp_20260826_005
+run_id: exp_20260826_005_formal_001
+authorization: Researcher GO + Auditor GO
+execution_count: 1
+command_source: experiments/exp_20260826_005/commands.txt line 12 before ledger update
+command_utf8_without_newline_bytes: 1060
+command_utf8_without_newline_sha256: b0d3a1e2a9479b8c20d5cfe905f49313d249a09dee7ac26f286f6df4119eb5ce
+extractor_sha256: cd6447ba861e7c02a3307456b60adadbb9e1b71e51879e2f03f424007d8943c4
+preflight_frozen_hashes_match: true
+preflight_five_formal_paths_absent: true
+request_first_started_at_utc: 2026-08-25T22:55:15.041503Z
+response_last_completed_at_utc: 2026-08-25T23:33:28.480168Z
+acquisition_monotonic_start_ns: 86957687000000
+acquisition_final_response_postfetch_monotonic_ns: 89251125000000
+acquisition_wall_seconds: 2293.438
+root_summary_created_at_utc: 2026-08-25T23:33:38.856455Z
+observed_outer_wall_seconds_approx: 2304
+observed_exit_code: 0
+stdout_bytes: 10867
+stdout_sha256: 1d7b0cb5fdbe38ad641375b4909e28d992181cd68b1fbcc9e181e51aab3ca394
+stdout_path: experiments/exp_20260826_005/logs/formal_stdout.txt
+stderr_bytes: 0
+stderr: EMPTY
+logical_request_count: 866
+wire_attempt_count: 884
+outcome_counts: OK=866 HTTP_429=18
+response_bytes: 39718211
+terminal_status: NEEDS_MORE_DATA
+artifact_state: ANNOUNCEMENT_CORPUS_AVAILABLE
+historical_eligibility_ready: false
+raw_summary_sha256: 912282eea1a4f9e691d34e0bffeb28053cae61cc1ec6581f16a7c298c987ea48
+request_ledger_sha256: 455afba5577a2c56d1a1c16604c9becacc0308806a9a28bbdee7137746be7928
+root_corpus_summary_sha256: 03900ad203d15483f7dd968b77390abdb675ef77519d60f35e3071d6ccfe8a19
+root_schema_sha256: 041c867ebbe82ffea9d22e14204e9ae6ca4586287dd448d3fd333ba74b3b1d0c
+root_source_contract_sha256: 9a99ebc97803228dbb1bb20f4eb8cfe03b9a381a076959355353c3f9a7c4d852
+postflight_audit_executed: false
+alpha_ic_ml_backtest_or_eligibility_derivation_executed: false
+notes: Exact frozen command executed once. Built-in policy handled all HTTP_429 attempts. No external probe, retry, rerun or resume occurred.

@@ -1,0 +1,28 @@
+experiment_id: exp_20260825_006
+contract_revision: 2
+executed_around: 2026-08-25T20:05+08:00
+timestamp_precision: approximate; exact completion timestamp was not captured
+command: uv run python -m unittest tests.test_hierarchical_alpha -v
+result: FAILED
+tests_run: 35
+passed: 34
+failures: 0
+errors: 1
+numpy_version: 2.5.1
+scipy_version: 1.18.0
+
+ERROR: test_residuals_are_orthogonal_and_rank_deficiency_is_rejected
+(tests.test_hierarchical_alpha.CrossSectionTests.test_residuals_are_orthogonal_and_rank_deficiency_is_rejected)
+
+Key traceback (stable call chain; console line numbers were not captured):
+Traceback (most recent call last):
+  File "tests/test_hierarchical_alpha.py", in test_residuals_are_orthogonal_and_rank_deficiency_is_rejected
+    residuals = residualize_cross_section(...)
+  File "src/quant_research/hierarchical_alpha.py", in residualize_cross_section
+    coefficients, _squares, rank, _singular = lstsq(matrix, target_vector)
+  File "scipy/linalg/_basic.py", in lstsq
+    [SciPy inspected the input shape]
+AttributeError: 'list' object has no attribute 'shape'
+
+Full-repository tests: NOT RUN because the narrow gate failed.
+No real-data, network, ML/model-fit, backtest, CLI, dry-run, or live-trade command ran.

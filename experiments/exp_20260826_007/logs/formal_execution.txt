@@ -1,0 +1,14 @@
+experiment_id=exp_20260826_007
+run_id=exp_20260826_007_formal_001
+preflight_at=2026-08-26T13:05:31.1787675+08:00
+postflight_observed_at=2026-08-26T13:06:32.3729405+08:00
+formal_command_sha256_utf8_no_newline=86abaf291de174a8abdc292bf7b2d1ba8ccb7d5b45f5b05608eff3d607e8260a
+formal_command=.venv\Scripts\python.exe -B src\quant_research\binance_spot_announcement_claims_lean_v2_runner.py --expected-runner-sha256 9c6c74b36aef30ce1159124f7d546b24328e032d9990c59c4cd449b9a3eb8b70 --expected-extractor-sha256 d3c38f472132753038db15b9d7fca376f685e7be43e5b9050bf663f000a26fb3 --expected-loader-sha256 a99e47acd5c4de4bf9a444063a878ffc0fb334786d797cf60f38280c027d2ce2 --expected-source-contract-sha256 62d1f3658e285d0444863f35fe56a7756f954777d682d23edfb4bb8d0ba11f66 --expected-schema-sha256 e0b75fb9cd4d82cf7b84461eff795b91ff3a1ff6d091e4a97c3c108d9778ef8c --expected-parameters-sha256 0a10cf6a52051c99cb1a5983a4841430536da2a27eb8eef2d96f20b31aa69037
+observed_exit_code=0
+observed_wall_seconds=3.1896848
+stdout_bytes=0
+stdout_begin
+stdout_end
+stderr_bytes=0
+stderr_begin
+stderr_end

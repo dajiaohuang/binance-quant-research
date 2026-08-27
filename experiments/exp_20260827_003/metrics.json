@@ -1,0 +1,58 @@
+{
+  "eligibility_evaluated": false,
+  "env_file_content_size_hash_read": false,
+  "formal_attempt": {
+    "artifact_state": "FORWARD_SPOT_SCHEDULE_PIT_SNAPSHOT_COMPLETE",
+    "artifact_tree_sha256": "8a85e6c0b096823d959acea5276450c830bad7542dfb08b2b6906935d903cbab",
+    "collector_authorization_sha256": "8f04f125109133e95600b72780a3ebe094975528320dfdc152f636d5e6b835b6",
+    "collector_lease_sha256": "83fe9447d782b5906727fb8007e382696303cf349803e45a4ebabfc8786adcb7",
+    "current_symbol_count": 3685,
+    "exact_formal_line_started": true,
+    "exit_code": 0,
+    "final_exists": true,
+    "final_tree_sha256": "5f1c91f8f2cc88e35f441cce37a68a36e952781a436ccdcc5e70584c41671263",
+    "join_count": 3,
+    "join_status_counts": {"MATCHED":3,"MISSING":0},
+    "output_files": {
+      "current_symbols.jsonl": {"bytes":11929096,"rows":3685,"sha256":"8fdb648317dca5acf7b2e157d452f1cfaf9f20e814065afa4e212067db25a366"},
+      "joins.jsonl": {"bytes":1074,"rows":3,"sha256":"8ead684469e907d8018d8ffbe9bd8978029a2bf92a1e102f3b296788393a9cb7"},
+      "plans.jsonl": {"bytes":987,"rows":3,"sha256":"995611db49958399099661749d32ab6c0fdf0d4206251b3b6e484431a9d5f223"},
+      "summary.json": {"bytes":6787,"rows":null,"sha256":"5bd203f9b2af98a00a0f2a46e3825c4052d257f241a8e514320af15a65ea7d19"}
+    },
+    "plan_count": 3,
+    "request_count": 5,
+    "request_http_status_counts": {"200":5},
+    "response_count": 5,
+    "server_time_delta_ms": 966,
+    "staging_exists": false,
+    "stderr": "EMPTY",
+    "stdout": "EMPTY",
+    "summary_sha256": "5bd203f9b2af98a00a0f2a46e3825c4052d257f241a8e514320af15a65ea7d19",
+    "terminal_status": "NEEDS_MORE_DATA",
+    "trusted_loader": "PASS",
+    "wall_seconds": 2.7293683,
+    "wrapper_ledger_rows": 8,
+    "wrapper_ledger_sha256": "282539a39233b1d3483eaa6a9205349b2111f77324483dccd52d15f0b15746db",
+    "wrapper_ledger_terminal": "FINAL_CLEANUP/PASS",
+    "wrapper_reservation_sha256": "24a9020e6e253c427602c836864052fcc0d5e4920698515ab564114afbd45ad6"
+  },
+  "formal_executed": true,
+  "formal_paths_absent": false,
+  "full_suite": {
+    "expected_lifecycle_mismatches": [
+      "test_binance_spot_forward_schedule_pit_v2.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero",
+      "test_binance_spot_forward_schedule_pit_v4.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero"
+    ],
+    "failed": 2,
+    "passed": 567,
+    "total": 569
+  },
+  "network_access_count": 5,
+  "phase": "POSTFORMAL_AWAITING_AUDITOR",
+  "power_shell_parse": "PASS",
+  "py_compile": "PASS",
+  "status": "NEEDS_MORE_DATA",
+  "strict_eligible_count": 0,
+  "strict_json": "PASS",
+  "targeted_tests": {"failed":0,"passed":49,"skipped":0,"total":49}
+}

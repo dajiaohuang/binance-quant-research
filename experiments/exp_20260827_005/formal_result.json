@@ -1,0 +1,16 @@
+{
+  "artifact_state": "HORIZON_IDENTITY_SYNTHETIC_CONTRACT_VERIFIED",
+  "eligibility_evaluated": false,
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260827_005",
+  "formal_execution_count": 2,
+  "full_repository_tests": "NOT_RUN",
+  "historical_adapter_tests": 27,
+  "historical_eligibility_ready": false,
+  "hierarchical_tests": 48,
+  "network_request_count": 0,
+  "real_data_accessed": false,
+  "retry_count": 0,
+  "strict_eligible_count": 0,
+  "terminal_status": "NEEDS_MORE_DATA"
+}

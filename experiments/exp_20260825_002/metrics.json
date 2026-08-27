@@ -1,0 +1,26 @@
+{
+  "experiment_id": "exp_20260825_002",
+  "status": "INCONCLUSIVE",
+  "tests_before_formal_run": "23/23 PASSED",
+  "root_symbol_pages": 4,
+  "root_common_prefixes": 3695,
+  "non_ascii_common_prefixes": 5,
+  "non_ascii_symbols": [
+    "币安人生TRY",
+    "币安人生U",
+    "币安人生USD1",
+    "币安人生USDC",
+    "币安人生USDT"
+  ],
+  "symbol_candidates": "NOT_COMPUTED_BECAUSE_FROZEN_VALIDATOR_FAILED",
+  "object_pages": "NOT_FETCHED",
+  "zip_objects": "NOT_COMPUTED",
+  "checksum_objects": "NOT_COMPUTED",
+  "missing_checksum_objects": "NOT_COMPUTED",
+  "estimated_zip_bytes": "NOT_COMPUTED",
+  "network_scope_reached": "S3_ROOT_LIST_OBJECTS_ONLY",
+  "exchange_info_fetched": false,
+  "kline_or_checksum_payloads_downloaded": false,
+  "decision": "INCONCLUSIVE",
+  "decision_reason": "Formal metadata inventory stopped on an unmodeled Unicode archive symbol namespace before candidate and object enumeration."
+}

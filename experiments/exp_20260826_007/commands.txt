@@ -1,0 +1,30 @@
+# exp_20260826_007 Parent Bootstrap V1.1 command ledger
+# Status: FORMAL_EXECUTED_ONCE / POSTFLIGHT_AUDITED / NEEDS_MORE_DATA
+
+# Planned offline verification
+.venv\Scripts\python.exe -B -m unittest tests.test_binance_spot_announcement_claims_lean_v2 -v
+uv run python -m unittest discover -s tests -v
+
+# Frozen formal command. UTF-8 bytes without newline SHA-256:
+# 86abaf291de174a8abdc292bf7b2d1ba8ccb7d5b45f5b05608eff3d607e8260a
+# EXECUTED EXACTLY ONCE after Researcher and Auditor Phase2 FINAL GO.
+# RUN CONSUMED. DO NOT RERUN.
+.venv\Scripts\python.exe -B src\quant_research\binance_spot_announcement_claims_lean_v2_runner.py --expected-runner-sha256 9c6c74b36aef30ce1159124f7d546b24328e032d9990c59c4cd449b9a3eb8b70 --expected-extractor-sha256 d3c38f472132753038db15b9d7fca376f685e7be43e5b9050bf663f000a26fb3 --expected-loader-sha256 a99e47acd5c4de4bf9a444063a878ffc0fb334786d797cf60f38280c027d2ce2 --expected-source-contract-sha256 62d1f3658e285d0444863f35fe56a7756f954777d682d23edfb4bb8d0ba11f66 --expected-schema-sha256 e0b75fb9cd4d82cf7b84461eff795b91ff3a1ff6d091e4a97c3c108d9778ef8c --expected-parameters-sha256 0a10cf6a52051c99cb1a5983a4841430536da2a27eb8eef2d96f20b31aa69037
+
+# Offline results: targeted PASS 40/40; full repository PASS 308/308;
+# py_compile, strict experiment JSON, and read-only workspace parent-layout
+# validation PASS.
+
+# Formal result: exit 0; wall 3.1896848s; stdout/stderr empty.
+# Transcript: logs/formal_execution.txt
+# SHA-256: 76f83302c8a17037decd6cd78908cd7a5624695deac22c5085789e050406b1ab
+# Trusted loader: NEEDS_MORE_DATA / ANNOUNCEMENT_SCHEDULE_CLAIM_SCAN_COMPLETE;
+# coverage=756, claims=623, ambiguity=44; postflight selected tests PASS 39/39.
+# Independent Auditor postflight: PASS. Run remains consumed; rerun forbidden.
+# Postflight lifecycle-test maintenance SHA:
+# a518dadf8ef44a3072bffaca37c4a05d917fc7d53ab625e29aae82a852c44cb4
+# The formal-time frozen test SHA remains recorded in manifest and is not
+# retroactively replaced.
+
+# Forbidden: any rerun/resume; network; credentials; eligibility;
+# Alpha/Factor/IC/ML/P&L/backtest.

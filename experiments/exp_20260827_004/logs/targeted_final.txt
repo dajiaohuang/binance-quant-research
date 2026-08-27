@@ -1,0 +1,27 @@
+COMMAND: uv run python -m py_compile src/quant_research/historical_pit_evidence.py tests/test_historical_pit_evidence.py
+OBSERVED EXIT: 0
+RESULT: PASS
+
+COMMAND: uv run python -m unittest tests.test_historical_pit_evidence -v
+OBSERVED EXIT: 0
+RESULT: Ran 17 tests in 0.009s; OK.
+
+COMMAND: uv run python -m unittest tests.test_hierarchical_alpha -v
+OBSERVED EXIT: 0
+RESULT: Ran 35 tests in 0.005s; OK.
+
+FRESH MICRO-AMENDMENT RESULTS:
+- py_compile: PASS
+- tests.test_historical_pit_evidence: 26/26 PASS
+- tests.test_hierarchical_alpha: 35/35 PASS
+
+FRESH PHASE2 FIDELITY OPTION A RESULTS:
+- py_compile: PASS
+- tests.test_historical_pit_evidence: 27/27 PASS
+- tests.test_hierarchical_alpha: 35/35 PASS
+- fixed EvidenceReference vector: 52e6bdf8e9ffbb2eb6b793fd4b28e2265f098bf88449840be5af09079b207f63
+
+FULL REPOSITORY TEST: NOT RUN by frozen Phase 1 scope.
+FORMAL EXECUTION: false
+NETWORK REQUESTS: 0
+REAL PAYLOADS READ: 0

@@ -1,0 +1,14 @@
+exp_20260826_001 final pre-execution review
+
+Researcher conclusion: limited GO.
+Auditor conclusion: limited GO.
+
+Authorized scope: execute exactly once the preregistered formal command in
+commands.txt, then perform offline trusted loading and strict eligibility checks.
+
+Not authorized: any other endpoint or network command, a second formal snapshot,
+historical backfill, Alpha/factor/IC computation, ML/model fitting, backtest,
+Freqtrade, validation/final-test data, dry-run or trading action.
+
+The exact command succeeded. This limited GO is exhausted and does not authorize
+the next experiment.

@@ -1,0 +1,57 @@
+{
+  "api_key_environment_present_postflight": false,
+  "artifact_count": 0,
+  "authorization_exists": false,
+  "clipboard_state_postflight": "FIXED_NONSECRET_MARKER_OVERWRITE_REPORTED_SUCCESS_NO_READBACK_NOT_EMPTY_ASSERTION",
+  "collector_control_exists": false,
+  "collector_started": false,
+  "execution_count": 1,
+  "failure_exists": false,
+  "final_exists": false,
+  "formal_command_sha256": "5da7e8bdeafba4e34fbe3b289ccbf8125578729f7dad68fed76e7b23219d5c3e",
+  "ledger": {
+    "bytes": 381,
+    "canonical_and_transition_valid": true,
+    "path": "experiments/exp_20260826_009/formal_control/exp_20260826_009_formal_001.stage_ledger.jsonl",
+    "rows": [
+      {"event": "PASS", "exit_code": null, "seq": 1, "stage": "SELF_HASH"},
+      {"event": "START", "exit_code": null, "seq": 2, "stage": "CLIPBOARD_READ"},
+      {"event": "PASS", "exit_code": null, "seq": 3, "stage": "CLIPBOARD_READ"},
+      {"event": "PASS", "exit_code": null, "seq": 4, "stage": "VALIDATE"},
+      {"event": "FAIL", "exit_code": 44, "seq": 5, "stage": "PRECLEAR"},
+      {"event": "FAIL", "exit_code": 46, "seq": 6, "stage": "FINAL_CLEANUP"}
+    ],
+    "sha256": "d45d0e9adf9567a7e5370a511400ef8b99f9524f9b3900afd92e9c0598faa911"
+  },
+  "network_request_count": 0,
+  "observed_exit_code": 46,
+  "observed_wall_seconds": 0.3296141,
+  "postflight_observed_at": "2026-08-27T00:27:58.9583995+08:00",
+  "postformal_safety_remediation": {
+    "classification": "INDEPENDENT_NONFORMAL_NONNETWORK_FIXED_MARKER_OVERWRITE",
+    "clipboard_readback_performed": false,
+    "command_as_reported": "powershell.exe ... Set-Clipboard -Value 'CLEARED_BY_CODEX'; exit 0",
+    "command_text_is_byte_exact": false,
+    "fixed_marker": "CLEARED_BY_CODEX",
+    "formal_request_count_changed": false,
+    "observed_exit_code": 0,
+    "stderr": "",
+    "stderr_bytes": 0,
+    "stdout": "",
+    "stdout_bytes": 0
+  },
+  "request_receipt_count": 0,
+  "reservation": {
+    "bytes": 76,
+    "canonical": true,
+    "path": "experiments/exp_20260826_009/formal_control/exp_20260826_009_formal_001.reservation.lock",
+    "sha256": "b2ce461ee5897c2eacfc2da9e2ec134373ee6a74789cdc4441dd12b98e3b184b"
+  },
+  "run_id_consumed": true,
+  "staging_exists": false,
+  "stderr": "",
+  "stderr_bytes": 0,
+  "stdout": "",
+  "stdout_bytes": 0,
+  "terminal_status": "INCONCLUSIVE"
+}

@@ -1,0 +1,23 @@
+# exp_20260825_004 command ledger
+# Preregistered before payload implementation and before the formal bulk fetch.
+
+uv run python -m unittest discover -s tests -v
+
+# Planned formal command; execute only after implementation, offline fixture smoke
+# tests, full repository tests, and code freeze pass.  There is no separate live
+# smoke fetch outside the exact frozen whitelist and the formal acquisition ledger.
+uv run quant-binance-spot-payload --inventory data/processed/binance_spot_v2/archive_inventory_1h_2022-12_2024-12.jsonl --inventory-sha256 8be13634629f8fc21e499aaab7df46839510b3a5be4842ab620bfb3089f512b3 --symbol-index data/raw/binance_spot_v2/inventory/symbol_index.jsonl --symbol-index-sha256 0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16 --inventory-summary experiments/exp_20260825_003/artifacts/inventory_summary.json --inventory-summary-sha256 168fa33118114fd088d03ceb87f920755aea8b088b13f891a37984e75065605d --raw-root data/raw/binance_spot_v3/payloads --processed-root data/processed/binance_spot_v3 --payload-summary-output experiments/exp_20260825_004/artifacts/payload_summary.json --object-quality-output experiments/exp_20260825_004/artifacts/object_quality.jsonl --coverage-schema-output experiments/exp_20260825_004/artifacts/coverage_schema.json --derived-index-output experiments/exp_20260825_004/artifacts/derived_index.jsonl --source-base-url https://s3-ap-northeast-1.amazonaws.com/data.binance.vision --max-workers 16 --request-timeout-seconds 30 --max-attempts 5
+
+# No factor, backtest, validation-set, final-test, ML, account, or order command is
+# authorized in this experiment.
+
+# Independent final audit PASS recorded at 2026-08-25T16:24:52.5092407+08:00.
+# Formal fetch below starts only after this ledger entry; no login or API key is used.
+
+# Executed 2026-08-25T08:25:15.513014Z to 2026-08-25T08:35:17.585334Z.
+# Result: 9,240/9,240 pairs downloaded; 8,887 VALID; 353 CSV_VALIDATION_ERROR;
+# terminal decision INCONCLUSIVE (the CLI return contract is exit 2 for this result).
+
+# Postflight read-only aggregation inspected object_quality.jsonl, payload_summary.json,
+# the frozen raw object paths, receipt existence, byte totals, response metadata,
+# close-time anomaly rows, coverage counts, and artifact SHA-256 values.

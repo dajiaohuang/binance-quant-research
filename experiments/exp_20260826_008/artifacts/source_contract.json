@@ -1,0 +1,38 @@
+{
+  "contract_revision": "FORWARD_SPOT_SCHEDULE_PIT_SNAPSHOT_V1_1",
+  "documents": [
+    {
+      "accessed_at_utc": "2026-08-26T05:33:36.827Z",
+      "document_id": "S1",
+      "short_supporting_paraphrase_zh": "官方 Spot REST 总览列出 api.binance.com 为基础地址，并说明 JSON、认证类型与限流规则。",
+      "url": "https://developers.binance.com/en/docs/products/spot/rest-api"
+    },
+    {
+      "accessed_at_utc": "2026-08-26T05:33:36.827Z",
+      "document_id": "S2",
+      "short_supporting_paraphrase_zh": "官方 Spot REST 规范把 /api/v3/time 与 /api/v3/exchangeInfo 列为公开端点；showPermissionSets 控制 permissionSets 内容。",
+      "url": "https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md"
+    },
+    {
+      "accessed_at_utc": "2026-08-26T05:33:36.827Z",
+      "document_id": "S3",
+      "short_supporting_paraphrase_zh": "官方 Market Data Only 说明 time 与 exchangeInfo 可在无需认证或 API key 的市场数据接口使用。",
+      "url": "https://github.com/binance/binance-spot-api-docs/blob/master/faqs/market_data_only.md"
+    },
+    {
+      "accessed_at_utc": "2026-08-26T05:33:36.827Z",
+      "document_id": "S4",
+      "short_supporting_paraphrase_zh": "官方 OPEN 接口要求 X-MBX-APIKEY、IP 权重100，返回 openTime 与 symbols；列表表示计划开放交易的符号。",
+      "url": "https://developers.binance.com/en/docs/catalog/core-trading-wallet/api/rest-api/asset"
+    },
+    {
+      "accessed_at_utc": "2026-08-26T05:33:36.827Z",
+      "document_id": "S5",
+      "short_supporting_paraphrase_zh": "官方 Spot DELIST 接口要求 X-MBX-APIKEY、IP 权重100，返回 delistTime 与 symbols。",
+      "url": "https://developers.binance.com/en/docs/catalog/core-trading-wallet/api/rest-api/others"
+    }
+  ],
+  "network_contract": "FIVE_FIXED_GETS_ONE_ATTEMPT_NO_REDIRECT_NO_RETRY",
+  "source_observation": "RESEARCHER_READ_ONLY_ACCESS_NO_PAGE_SNAPSHOT_OR_PAGE_SHA",
+  "semantic_ceiling": "CURRENT_VISIBLE_FORWARD_SCHEDULE_CLAIMS_AND_CURRENT_SPOT_METADATA_ONLY_NOT_EFFECTIVE_OR_ELIGIBILITY"
+}

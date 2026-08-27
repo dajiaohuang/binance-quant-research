@@ -1,0 +1,24 @@
+{
+  "cells": 13222224,
+  "close_time_policy": "within_open_interval",
+  "encoding": "UTF-8 without BOM",
+  "format": "deterministic gzip CSV",
+  "gzip_mtime": 0,
+  "hours": 18288,
+  "newline": "LF",
+  "object_atomicity": "Any hard failure makes the entire symbol-month U and emits no normalized rows",
+  "panel_end_utc_exclusive": "2025-01-01T00:00:00+00:00",
+  "panel_path": "data\\processed\\binance_spot_v4\\archive_kline_available_1h_2022-12_2024-12.csv.gz",
+  "panel_sha256": "716b2d5c42c3078c93707722cbd93e171b233e6492f770d3c0905a710d9ba8b2",
+  "panel_start_utc": "2022-12-01T00:00:00+00:00",
+  "semantics": "Archive Kline evidence only; never historical TRADING, permission, listing, eligibility, or executability",
+  "states": {
+    "A": "ARCHIVE_KLINE_AVAILABLE",
+    "M": "VALIDATED_OBJECT_ROW_MISSING",
+    "N": "NO_ARCHIVE_OBJECT",
+    "U": "OBJECT_INVALID_OR_UNVERIFIED"
+  },
+  "symbol_list_sha256": "abcfbaa4b3a44a2336de962c1da2495d254b4bf37800def41af8c66cba20d121",
+  "symbol_order": "ascending Unicode code point",
+  "symbols": 723
+}

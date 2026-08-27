@@ -1,0 +1,89 @@
+exp_20260827_002 offline Phase2 preparation
+
+Initial targeted run:
+.venv\Scripts\python.exe -m unittest tests.test_binance_spot_forward_schedule_pit_v5 -v
+Ran 43 tests in 17.422s; 42 PASS; 1 FAIL; exit 1.
+Only failure: exact v4/v5 source normalization found one extra EOF newline in
+the mechanically copied collector. The initial failure was preserved.
+
+Minimal repair:
+Removed only the extra EOF newline from the v5 collector and loader.
+
+Targeted rerun after EOF repair:
+.venv\Scripts\python.exe -m unittest tests.test_binance_spot_forward_schedule_pit_v5 -v
+Ran 43 tests in 17.275s; OK; exit 0.
+
+Final frozen targeted run after adding explicit malformed UTF-8 rejection:
+.venv\Scripts\python.exe -m unittest tests.test_binance_spot_forward_schedule_pit_v5 -v
+Ran 43 tests in 17.940s; OK; exit 0.
+
+Full repository:
+uv run python -m unittest discover -s tests -v
+Final frozen run: Ran 520 tests in 71.802s; 518 PASS; 2 expected lifecycle
+mismatches; exit 1.
+Expected mismatch 1:
+test_binance_spot_forward_schedule_pit_v2.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero
+Reason: preserved, consumed exp009 reservation exists.
+Expected mismatch 2:
+test_binance_spot_forward_schedule_pit_v4.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero
+Reason: preserved, consumed exp001 reservation exists.
+
+py_compile: PASS.
+strict JSON: PASS.
+PowerShell parse: PASS after one preserved malformed outer-shell interpolation
+attempt that emitted a diagnostic and did not execute the wrapper.
+
+Formal executed: false
+Network access count: 0
+Eligibility evaluated: false
+Alpha/IC/ML/P&L/backtest: not run
+Real env file: contents, size, and hash not read
+
+One-time formal authorization attempt (post Fresh Phase2 dual GO):
+- Frozen seven SHA and formal-line SHA precheck: PASS.
+- Env path: ordinary, non-reparse, gitignored, untracked; content/size/hash not
+  read. Parent BINANCE_READ_ONLY_API_KEY: absent.
+- Formal final/staging/collector-control/wrapper reservation/ledger: absent.
+- External launcher attempt exit: 1; wall: 0.585s; stdout: EMPTY; stderr:
+  NONEMPTY_REDACTED_NOT_PERSISTED.
+- Root cause: PowerShell unique-line selection returned a scalar string, then
+  `[0]` selected only the first character `p`. The frozen formal line and
+  wrapper did not start.
+- Postflight wrapper reservation/ledger and collector paths: all absent.
+- Exact request count: 0. No raw, receipt, authorization, failure, staging, or
+  final artifacts exist.
+- The authorization is treated as consumed; rerun is forbidden. Terminal
+  experiment status: INCONCLUSIVE / NO DATA RESULT.
+- No env file content/size/hash read, eligibility, Alpha, IC, ML, P&L, or
+  backtest occurred.
+
+Fresh Phase2 repair after independent dual NO-GO:
+- Removed the global line-ending mode and mixed-ending rejection only.
+- Each LF consumes one code point; each CRLF consumes two; bare CR remains
+  invalid with wrapper exit 43.
+- Added both LF-to-CRLF and CRLF-to-LF valid fixtures. Each proves the exact
+  child environment value, normal ledger sequence, and zero sentinel leakage.
+- Split the frozen contract booleans into mixed_line_endings_allowed=true and
+  bare_cr_allowed=false.
+
+Fresh targeted run:
+.venv\Scripts\python.exe -m unittest tests.test_binance_spot_forward_schedule_pit_v5 -v
+Ran 43 tests in 17.993s; OK; exit 0.
+
+Fresh full repository run:
+uv run python -m unittest discover -s tests -v
+Ran 520 tests in 71.449s; 518 PASS; 2 expected lifecycle mismatches; exit 1.
+The mismatches are unchanged consumed exp009 and exp001 reservations listed
+above; exp002 tests all passed.
+
+Fresh py_compile: PASS.
+Fresh strict JSON: PASS.
+Fresh PowerShell parse: PASS.
+Fresh seven-file binding verification: PASS.
+Fresh exact formal-line reconstruction: PASS; UTF-8/no-newline SHA256
+3ca044b860b274d83a75c22c0d36a553587d0e58750db33d7d3680eb6b79e366.
+Fresh formal final/staging/collector-control/reservation/ledger paths: all absent.
+Parent BINANCE_READ_ONLY_API_KEY process environment: absent.
+Formal executed: false
+Network access count: 0
+Real env file: contents, size, and hash not read

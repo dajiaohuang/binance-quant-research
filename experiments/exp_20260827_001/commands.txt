@@ -1,0 +1,13 @@
+# Offline Phase2 preparation only; no real clipboard, network, or formal execution.
+.venv\Scripts\python.exe -m py_compile src/quant_research/binance_spot_forward_schedule_pit_v4.py src/quant_research/binance_spot_forward_schedule_pit_v4_loader.py tests/test_binance_spot_forward_schedule_pit_v4.py
+.venv\Scripts\python.exe -m unittest tests.test_binance_spot_forward_schedule_pit_v4 -v
+uv run python -m unittest discover -s tests -v
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "[void][scriptblock]::Create([IO.File]::ReadAllText('src/quant_research/binance_spot_forward_schedule_pit_v4_wrapper.ps1')); exit 0"
+.venv\Scripts\python.exe -c "import json,pathlib; [json.loads(p.read_text(encoding='utf-8')) for p in pathlib.Path('experiments/exp_20260827_001').rglob('*.json')]"
+
+# FROZEN FORMAL LINE — EXECUTED EXACTLY ONCE; RUN CONSUMED; DO NOT RERUN. UTF-8/no-newline SHA256: 4d39ee8ea74183eacdfa3d09ae10aa73aa2b154bbd47061dcf5e81ec9d51c3af
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\binance_spot_forward_schedule_pit_v4_wrapper.ps1 -ExpectedWrapperSha256 39e957d70ed48c5346e7e335b284b520f2da7117f62dadae07ae32c9bdd9f4ab -ExpectedCollectorSha256 abd13b6cfad926a320b90a17b71f15105a06edfc66f9510f5895e20b3b326b7e -ExpectedLoaderSha256 efad36c77f4da281e7b513bb71ecda13bba8217375d4bbeb476302184832a1a5 -ExpectedSourceContractSha256 3115e3613d22b1ea6cbcff26a3619f36f3a71a3f4b7f6e444fc8aa303f799ecf -ExpectedSchemaSha256 caa0f48194f9ce343d4dcc6c28f9ebf6e48a76b552c64ce2c8af2b1c46b5ea0e -ExpectedParametersSha256 9a360688d5284f4ee0771e86d758cb91f08446dfc186fcdb84e3430c369029da -ExpectedTestsSha256 cd9336d1b8d878ecd3a9d2a11c8d5a554021016e57e7b50ad9145652bf326009; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode
+
+# Formal result: exit 43 after 0.265804s; stdout/stderr empty; VALIDATE failed.
+# Network requests: 0. Collector was not launched. No final/staging/control artifact exists.
+# Reservation and stage ledger persist; this run ID is consumed and rerun is forbidden.

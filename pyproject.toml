@@ -17,6 +17,15 @@ quant-validate-data = "quant_research.validate_data:main"
 quant-backtest = "quant_research.backtest:main"
 quant-dry-run = "quant_research.freqtrade_dry_run:main"
 quant-freqtrade-research = "quant_research.freqtrade_research:main"
+quant-binance-spot-inventory = "quant_research.binance_spot_archive:main"
+quant-binance-spot-payload = "quant_research.binance_spot_payload:main"
+quant-binance-spot-revalidate = "quant_research.binance_spot_revalidate:main"
+quant-binance-spot-pit-snapshot = "quant_research.binance_spot_pit:main"
+quant-binance-spot-announcement-corpus = "quant_research.binance_spot_announcement_corpus:main"
+quant-binance-spot-announcement-corpus-v2 = "quant_research.binance_spot_announcement_corpus_v2:main"
+quant-binance-spot-announcement-corpus-v3 = "quant_research.binance_spot_announcement_corpus_v3:main"
+quant-binance-spot-announcement-corpus-v4 = "quant_research.binance_spot_announcement_corpus_v4:main"
+quant-release-tests = "quant_research.release_tests:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

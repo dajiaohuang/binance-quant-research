@@ -1,0 +1,74 @@
+# exp_20260826_001 preregistered command ledger
+# Written before collector implementation and before any formal network request.
+
+# Offline implementation gates:
+uv run python -m unittest tests.test_binance_spot_pit -v
+uv run python -m unittest discover -s tests -v
+
+# Planned formal command. Do not execute until implementation/test freeze and
+# Researcher/Auditor pre-execution review both authorize it.
+uv run quant-binance-spot-pit-snapshot --symbol-index data/raw/binance_spot_v2/inventory/symbol_index.jsonl --symbol-index-sha256 0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16 --raw-root data/raw/binance_spot_pit_v1/snapshots --processed-root data/processed/binance_spot_pit_v1/snapshots --snapshot-id exp_20260826_001_formal_001 --summary-output experiments/exp_20260826_001/artifacts/snapshot_summary.json --membership-schema-output experiments/exp_20260826_001/artifacts/membership_schema.json --gate-result-output experiments/exp_20260826_001/artifacts/eligibility_gate_result.json --time-url https://data-api.binance.vision/api/v3/time --exchange-info-url "https://data-api.binance.vision/api/v3/exchangeInfo?showPermissionSets=true" --request-timeout-seconds 30 --max-attempts 3 --max-clock-skew-ms 300000
+
+# Not authorized in this experiment:
+# - no API key, signing, cookie, account, order, balance or user endpoint
+# - no validation/final-test market data
+# - no factor, Alpha, IC, ML, model fit, backtest, Freqtrade or dry-run
+# - no current snapshot backfill into 2023-2024
+
+# No command had been executed at preregistration time.
+
+# Offline execution ledger (no network):
+# 1. uv run python -m unittest tests.test_binance_spot_pit -v
+#    exit 1; 15 tests, 9 errors; synthetic BASE_MS fixture was one day early.
+#    Raw tool transcript chunk: 850c9a. Production fail-closed clock logic unchanged.
+# 2. uv run python -m unittest tests.test_binance_spot_pit -v
+#    exit 0; 15/15 passed; transcript chunk fc078a.
+# 3. uv run python -m unittest tests.test_binance_spot_pit -v
+#    exit 0; 15/15 passed after trusted-loader time evidence hardening; chunk a0f0d7.
+# 4. uv run python -m unittest discover -s tests -v
+#    exit 0; 100/100 passed; transcript chunk 2cf244.
+# 5. uv run quant-binance-spot-pit-snapshot --help
+#    exit 0; frozen preregistered CLI flags confirmed.
+# 6. uv run python -m unittest tests.test_binance_spot_pit -v
+#    exit 0; 15/15 passed after final CLI/size alignment; transcript chunk 69267f.
+# 7. uv run python -m unittest discover -s tests -v
+#    exit 0; 100/100 passed after final CLI/size alignment; transcript chunk 69267f.
+# 8. transport-receipt/source-binding hardening test attempt
+#    narrow import failed; full suite 86 tests plus one import error; transcript
+#    chunk 89789f. A newly added assignment was misindented outside its try block.
+#    The raw failure is retained; the fix is indentation-only.
+# 9. uv run python -m unittest tests.test_binance_spot_pit -v
+#    exit 0; 16/16 passed; transcript chunk 3bd044.
+# 10. uv run python -m unittest discover -s tests -v
+#     exit 0; 101/101 passed; transcript chunk 3bd044.
+# 11. trusted offline load of the real frozen exp003 symbol index
+#     exit 0; exact frozen hash accepted and 723 candidates loaded; transcript
+#     chunk 2817dd. No network request.
+# 12. Auditor stage-2 pre-execution review: NO-GO; formal network remained
+#     unauthorized. Exact blockers and terminal conclusion are retained in
+#     logs/auditor_no_go_20260826.txt.
+# 13. uv run python -m unittest tests.test_binance_spot_pit -v
+#     Auditor-hardening freeze: exit 0; 20/20 passed; transcript chunk 588984.
+# 14. uv run python -m unittest discover -s tests -v
+#     Auditor-hardening freeze: exit 0; 105/105 passed; transcript chunk 67a667.
+# 15. Auditor hardening re-review: NO-GO on the remaining urllib redirect
+#     following risk. Formal network remained unauthorized. Exact conclusion is
+#     retained in logs/auditor_redirect_no_go_20260826.txt.
+# 16. uv run python -m unittest tests.test_binance_spot_pit -v
+#     Redirect-hardening freeze: exit 0; 22/22 passed; transcript chunk 629572.
+# 17. uv run python -m unittest discover -s tests -v
+#     Redirect-hardening freeze: exit 0; 107/107 passed; transcript chunk ffe7f0.
+
+# 18. Researcher and Auditor both issued limited GO for only the exact command
+#     on line 10. No broader network or research scope was authorized.
+# 19. The exact formal command on line 10 was executed once: exit 0, tool wall
+#     3.7182146s, 3 wire attempts, 0 retries; transcript chunk 07d76f. Complete
+#     stdout/stderr/exit evidence is in logs/formal_command.txt.
+# 20. Offline trusted loader plus strict_gate_result: exit 0, 3,682 memberships,
+#     listing-null 3,682, strict eligible 0; transcript chunk 0f62b4 and
+#     logs/trusted_loader_postrun.txt.
+# 21. The first diagnostic-only inventory summarizer failed on sorting a None
+#     dictionary key; no artifact changed. Failure retained in
+#     logs/postrun_inspection_first_failure.txt. Corrected read-only summary ran
+#     successfully without network.
+# No second formal command, endpoint, Alpha, IC, ML or backtest was executed.

@@ -1,0 +1,58 @@
+exp_20260826_005 pre-execution freeze audit
+
+phase: pre_execution_review_pending
+formal network authorization: false
+formal execution count: 0
+network requests executed by experimenter: 0
+run id consumed: false
+
+Frozen implementation
+- src/quant_research/binance_spot_announcement_corpus_v4.py
+  bytes 129900
+  sha256 cd6447ba861e7c02a3307456b60adadbb9e1b71e51879e2f03f424007d8943c4
+- tests/test_binance_spot_announcement_corpus_v4.py
+  bytes 71050
+  sha256 2c59c20573d20685e45e1bda785ca364e329adc01e68b113fab7badee3e4395d
+- pyproject.toml
+  bytes 1377
+  sha256 c97b3e4a72d8b1538dd621d93596535824af99e21a4e29d3417a63ed744f8295
+- experiments/exp_20260826_005/hypothesis.md
+  bytes 7967
+  sha256 728f5ce42a234cb845b071cf59f80c490e4aead5b047e121c1898cea3bcc09ad
+- experiments/exp_20260826_005/parameters.json
+  bytes 4131
+  sha256 db8d1f169354a0d85ee321e75c4ae719b5bb66722ba46f1f28d27131825fa016
+- experiments/exp_20260826_005/commands.txt
+  sha256 6d8704ba0839f55ba1cff52da37e83d2af6c49bd5c97dc2bd5ef20f151527ea7
+
+Parent/fixture invariants
+- v3 source sha256
+  e3fd4ec75c450771afe654ccf08a1c1839c4b11ac9dc7ec038a0a1de722aa62e
+- list fixture bytes/sha256
+  9949 / adbcfcf758ce0c55b772b77de49169702b44759b3e99525e92bb16591d13ce5d
+- detail fixture bytes/sha256
+  78567 / cb27c5578fa9303516b238b0e4845640b21f397d09e6f5a90fd4446d21a2a8d5
+
+Formal command binding
+- line count: 1
+- UTF-8 bytes without newline: 1060
+- sha256 b0d3a1e2a9479b8c20d5cfe905f49313d249a09dee7ac26f286f6df4119eb5ce
+- expected extractor sha argument equals frozen source sha: true
+- command executed: false
+
+Offline gates
+- Auditor fail-open reproduced before fix: ACCEPTED / exit 0
+- final refrozen narrow: 46/46 PASS, 12.531 s
+- final refrozen full repository: 236/236 PASS, 19.150 s
+- py_compile: PASS
+- CLI option surface: PASS
+- v3 import/runtime reuse: absent
+- formal raw/processed/root artifacts: absent
+
+Disposition
+- previous implementation freeze: invalidated by Auditor NO-GO
+- root-summary tamper closure: implemented and refrozen
+- implementation freeze: complete pending fresh review
+- independent pre-execution Researcher/Auditor review: required
+- formal execution: NO-GO pending both decisions
+- terminal experiment decision: none

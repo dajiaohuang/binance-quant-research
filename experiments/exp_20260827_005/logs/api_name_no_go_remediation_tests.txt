@@ -1,0 +1,30 @@
+experiment_id=exp_20260827_005
+execution_domain=OFFLINE_SYNTHETIC_DEVELOPMENT_NOT_FORMAL
+change=PURE_RENAME_build_multi_horizon_ensemble_TO_compose_multi_horizon_NO_ALIAS
+formal_executed=false
+network_access=false
+real_data_accessed=false
+full_repository_tests=NOT_RUN
+
+command=uv run python -m unittest tests.test_hierarchical_alpha -v
+start_local=2026-08-27T16:22:17.3340099+08:00
+end_local=2026-08-27T16:22:17.7281902+08:00
+exit_code=0
+count=48
+result=PASS
+
+command=uv run python -m unittest tests.test_historical_pit_evidence -v
+start_local=2026-08-27T16:22:17.3340027+08:00
+end_local=2026-08-27T16:22:17.7351243+08:00
+exit_code=0
+count=27
+result=PASS
+
+command=uv run python -m py_compile src/quant_research/hierarchical_alpha.py tests/test_hierarchical_alpha.py
+start_local=2026-08-27T16:22:17.3340227+08:00
+end_local=2026-08-27T16:22:17.4583581+08:00
+exit_code=0
+result=PASS
+
+development_failures=NONE
+remediation_status=PREFORMAL_AWAITING_FRESH_PHASE2

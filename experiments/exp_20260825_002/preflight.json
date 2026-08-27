@@ -1,0 +1,24 @@
+{
+  "experiment_id": "exp_20260825_002",
+  "frozen_at": "2026-08-25T00:49:16.7932038+08:00",
+  "hash_algorithm": "SHA-256 over exact file bytes",
+  "files": {
+    "src/quant_research/binance_spot_archive.py": "f9a7e5e010801edb67ab6eda6b15b61504731b746903cc7b2550963d47f404e3",
+    "tests/test_binance_spot_archive.py": "fa2560e637176a6da8035188e9f2619dc38f6d6010d0eaa881f295bb82539c9b",
+    "pyproject.toml": "fdd2a131b549128cf73711e2c4faf0c26e7a23fde1489f0f71f62a5321584318",
+    "experiments/exp_20260825_002/manifest.json": "bba02f51117ce5ce0e697b84dbf43521ff8a6dddbdfa394eebe7535a12eb3800",
+    "experiments/exp_20260825_002/parameters.json": "ce53aada0d09f38f2da4178eb393a4c43075c5f7078061279050b3ad8c8b2472",
+    "experiments/exp_20260825_002/commands.txt": "b6f545f2743d3047c40f9463b1423f0e5aa96ec2293dce9459c71e732c6b86a6",
+    "experiments/exp_20260825_002/preflight_git_status.txt": "778e98a7bc5c62de762f0aaf704fce9625439e29b681e29951a1e5f25b6fd1d1"
+  },
+  "offline_inventory_tests": {
+    "passed": 11,
+    "failed": 0
+  },
+  "full_repository_tests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "network_access_before_freeze": false,
+  "formal_output_paths_absent_before_fetch": true
+}

@@ -1,0 +1,53 @@
+# exp_20260825_007 preregistered command ledger
+# The plan below is retained as the pre-execution record.
+# Do not run gate 2 unless gate 1 passes all 35 frozen tests.
+
+# Gate 1 — narrow frozen synthetic kernel suite:
+uv run python -m unittest tests.test_hierarchical_alpha -v
+
+# Gate 2 — full repository regression, conditional on gate 1 passing:
+uv run python -m unittest discover -s tests -v
+
+# Forbidden in this experiment:
+# - no real market-data or exp005 row read
+# - no network or account access
+# - no real factor, score, rank IC, return, turnover, or P&L
+# - no model fit or training
+# - no backtest, Freqtrade, dry-run, or live-trade command
+# - no CLI implementation or execution
+
+# FIRST EXECUTION — PASSED; console output was not persisted.
+# Gate 1 executed first:
+uv run python -m unittest tests.test_hierarchical_alpha -v
+# exit 0; Ran 35 tests; OK
+# Gate 2 executed only after gate 1 passed:
+uv run python -m unittest discover -s tests -v
+# exit 0; Ran 85 tests; OK
+
+# RAW-EVIDENCE REPLAY — same frozen module/test SHA values.
+# Gate 1 replay:
+# started 2026-08-25T20:15:21.0987098+08:00
+uv run python -m unittest tests.test_hierarchical_alpha -v
+# ended 2026-08-25T20:15:21.5131740+08:00; exit 0; Ran 35; OK;
+# 35 per-test ok lines.
+# log: logs/gate1_narrow_replay.log
+# log SHA-256: 0972f7d6a21c3fdf01a83c907bcb234c5b74b7039296946092caa91a4ca457e3
+
+# Gate 2 replay, only after replay gate 1 passed:
+# started 2026-08-25T20:15:21.7866969+08:00
+uv run python -m unittest discover -s tests -v
+# ended 2026-08-25T20:15:23.8772524+08:00; exit 0; Ran 85; OK;
+# 85 per-test ok lines.
+# log: logs/gate2_full_repository_replay.log
+# log SHA-256: 485a169ef68e1cae8b3d5f8466f0a62ac2acf33273a6069bc36dd5d276a8bba7
+
+# Environment: NumPy 2.5.1; SciPy 1.18.0.
+# Frozen test SHA-256: 6d13ba56248305b9990f9422be79d476b64228d266691f4b6db8ac9416935870
+# Current module SHA-256: 2637ac6b686ef0d6a0a7dc4c07817fd57e2f2724984cdcccac1671528c7044c5
+# No real-data, network, model-fit, backtest, or CLI command ran.
+# POSTFLIGHT AUDIT: PASS.
+# TERMINAL STATUS: complete / NEEDS_MORE_DATA.
+# Evidence accepted: narrow 35/35, full repository 85/85, replay logs and hashes
+# above, module SHA 2637ac6b...7044c5, frozen test SHA 6d13ba56...35870.
+# Limitation: synthetic kernel validation only; no real data, IC, P&L, model fit,
+# backtest, or paper-trading qualification.

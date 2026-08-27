@@ -1,0 +1,38 @@
+{
+  "contract_revision": "LEAN_R2_2_2_PARENT_BOOTSTRAP_V1_1",
+  "experiment_id": "exp_20260826_007",
+  "inherited_semantics": {
+    "coverage_partition": "CLAIMED_AMBIGUOUS_NO_MATCH_EXACTLY_756",
+    "eligibility_evaluated": false,
+    "extractor_equal_after_identity_normalization": true,
+    "historical_eligibility_ready": false,
+    "loader_equal_after_identity_normalization": true,
+    "strict_eligible_count": 0,
+    "syntactic_fixture_assertion": "SIX_FROZEN_FIXTURES_20_CLAIMS",
+    "value_source": "exp_20260826_006 LEAN_R2_2_2"
+  },
+  "new_source_sha256": {
+    "extractor": "d3c38f472132753038db15b9d7fca376f685e7be43e5b9050bf663f000a26fb3",
+    "loader": "a99e47acd5c4de4bf9a444063a878ffc0fb334786d797cf60f38280c027d2ce2",
+    "runner": "9c6c74b36aef30ce1159124f7d546b24328e032d9990c59c4cd449b9a3eb8b70"
+  },
+  "parent_source_sha256": {
+    "extractor": "552aba2e02db3c0d1ad4e500bac7f3036d24d150abd74dd4ac7e756803f15dac",
+    "loader": "76cc371b6f10e2f87b92d7fcc71e648c245fffe8a3f42b83d6be8cc4b7dad347",
+    "runner": "8f068d89e0fa66840e12706aa8954ca8e5585d271b2a76893abb385f182abe0b"
+  },
+  "runner_only_material_change": {
+    "added_exit_code": {"INFRASTRUCTURE": 24},
+    "added_path_guards": ["drive", "commonpath", "lstat_plain_directory", "symlink", "windows_reparse_point", "same_parent"],
+    "created_before_control_allowlist": ["data/processed/binance_spot_announcement_claims_v2", "data/processed/binance_spot_announcement_claims_v2/runs"],
+    "lease_failure_semantics": "CONTROL_RETAINED;NO_FAILURE_BEFORE_LEASE_SUCCESS",
+    "reservation_semantics": "ATOMIC_CONTROL_MKDIR_CONSUMES_RUN",
+    "source_recheck_before_promotion": true
+  },
+  "test_evidence": {
+    "first_targeted": "FAIL_39_OF_40_TRAILING_LF_TEST_EXPECTATION_ONLY",
+    "full_repository": "PASS_308_OF_308",
+    "latest_targeted": "PASS_40_OF_40",
+    "semantic_or_grammar_change_from_failed_test_fix": false
+  }
+}

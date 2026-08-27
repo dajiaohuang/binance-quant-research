@@ -1,0 +1,59 @@
+{
+  "experiment_id": "exp_20260826_004",
+  "phase": "formal_execution_complete",
+  "implementation_status": "frozen_source_formal_run_failed_closed",
+  "formal_run_executed": true,
+  "formal_command_execution_count": 1,
+  "network_requests_executed_by_experimenter": 228,
+  "offline_tests": {
+    "first_narrow": {"passed": 32, "failed": 0, "errors": 0, "seconds": 3.497},
+    "post_hardening_narrow": {"passed": 32, "failed": 0, "errors": 0, "seconds": 3.681},
+    "first_full_repository": {"passed": 190, "failed": 0, "errors": 0, "seconds": 10.089},
+    "final_frozen_narrow": {"passed": 32, "failed": 0, "errors": 0, "seconds": 2.388},
+    "final_frozen_full_repository": {"passed": 190, "failed": 0, "errors": 0, "seconds": 7.382}
+  },
+  "paired_fixture_contract": {
+    "list_bytes": 9949,
+    "list_sha256": "adbcfcf758ce0c55b772b77de49169702b44759b3e99525e92bb16591d13ce5d",
+    "detail_bytes": 78567,
+    "detail_sha256": "cb27c5578fa9303516b238b0e4845640b21f397d09e6f5a90fd4446d21a2a8d5",
+    "list_release_date_claim_ms": 1730975333236,
+    "detail_publish_date_claim_ms": 1730975320602,
+    "detail_publish_minus_list_release_claim_ms": -12634,
+    "formal_evidence": false
+  },
+  "expected_formal_request_inventory": {
+    "list": 108,
+    "detail": 756,
+    "time": 2,
+    "logical_total": 866,
+    "max_wire_attempts": 2598
+  },
+  "formal_run": {
+    "observed_exit_code": 1,
+    "failure_outcome": "HTTP_429",
+    "failure_builtin_attempts": 3,
+    "wire_attempt_count": 228,
+    "successful_wire_attempts": 225,
+    "failed_wire_attempts": 3,
+    "response_bytes": 9420210,
+    "raw_tree_files": 456,
+    "raw_tree_bytes": 9705245,
+    "raw_tree_sha256": "5cf7bae6947864a32773860dfee32295f4c7ab40d4db21c0db5d4f3a63c0fc2b",
+    "first_list_pass_catalog_totals": {"48": 2234, "161": 426},
+    "first_list_pass_interval_counts": {"48": 575, "161": 181},
+    "successful_detail_rows": 170,
+    "selected_detail_rows": 756,
+    "unacquired_detail_rows": 586,
+    "partial_noncanonical_discrepancy_rows": 2,
+    "partial_noncanonical_zero_delta_rows": 168,
+    "second_list_pass_complete": false,
+    "time_after_present": false,
+    "trusted_loader_accepted": false
+  },
+  "formal_outputs_present": false,
+  "terminal_status": "INCONCLUSIVE",
+  "artifact_state": null,
+  "historical_eligibility_ready": false,
+  "alpha_ic_ml_backtest_executed": false
+}

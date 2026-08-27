@@ -1,0 +1,51 @@
+experiment_id=exp_20260827_005
+execution_domain=OFFLINE_SYNTHETIC_DEVELOPMENT_NOT_FORMAL
+review_result_before_changes=NO_GO
+formal_executed=false
+network_access=false
+real_data_accessed=false
+full_repository_tests=NOT_RUN
+
+command=uv run python -m unittest tests.test_hierarchical_alpha -v
+start_local=2026-08-27T16:11:52.7538950+08:00
+end_local=2026-08-27T16:11:53.1512265+08:00
+exit_code=0
+count=48
+result=PASS
+
+command=uv run python -m unittest tests.test_historical_pit_evidence -v
+start_local=2026-08-27T16:12:01.9135734+08:00
+end_local=2026-08-27T16:12:02.2877706+08:00
+exit_code=0
+count=27
+result=PASS
+
+command=uv run python -m py_compile src/quant_research/hierarchical_alpha.py tests/test_hierarchical_alpha.py
+start_local=2026-08-27T16:12:01.9169379+08:00
+end_local=2026-08-27T16:12:02.0289118+08:00
+exit_code=0
+result=PASS
+
+development_failures=NONE
+remediation_status=PREFORMAL_AWAITING_FRESH_PHASE2
+
+final_boundary_rerun_reason=Validate every FamilyWeights key before any ExpertKey mapping equality, including families later rejected for coverage mismatch.
+command=uv run python -m unittest tests.test_hierarchical_alpha -v
+start_local=2026-08-27T16:13:22.0049489+08:00
+end_local=2026-08-27T16:13:22.3824315+08:00
+exit_code=0
+count=48
+result=PASS
+
+command=uv run python -m unittest tests.test_historical_pit_evidence -v
+start_local=2026-08-27T16:13:22.0250056+08:00
+end_local=2026-08-27T16:13:22.3940526+08:00
+exit_code=0
+count=27
+result=PASS
+
+command=uv run python -m py_compile src/quant_research/hierarchical_alpha.py tests/test_hierarchical_alpha.py
+start_local=2026-08-27T16:13:22.0052586+08:00
+end_local=2026-08-27T16:13:22.1192839+08:00
+exit_code=0
+result=PASS

@@ -1,0 +1,109 @@
+{
+  "experiment_id": "exp_20260825_007",
+  "created_on": "2026-08-25",
+  "status": "complete",
+  "phase": "terminal_postflight_complete",
+  "decision_status": "NEEDS_MORE_DATA",
+  "actual_result": {
+    "execution_order": [
+      "first_gate1_narrow",
+      "first_gate2_full_repository",
+      "evidence_replay_gate1_narrow",
+      "evidence_replay_gate2_full_repository"
+    ],
+    "first_execution": {
+      "gate1": {
+        "command": "uv run python -m unittest tests.test_hierarchical_alpha -v",
+        "exit_code": 0,
+        "tests_run": 35,
+        "result": "OK",
+        "stdout_persisted": false
+      },
+      "gate2": {
+        "command": "uv run python -m unittest discover -s tests -v",
+        "exit_code": 0,
+        "tests_run": 85,
+        "result": "OK",
+        "stdout_persisted": false,
+        "order_gate": "executed only after first gate1 passed"
+      }
+    },
+    "evidence_replay": {
+      "purpose": "Close the raw-evidence gap by replaying the same commands against the same frozen implementation and test SHA-256 values.",
+      "gate1": {
+        "log": "logs/gate1_narrow_replay.log",
+        "log_sha256": "0972f7d6a21c3fdf01a83c907bcb234c5b74b7039296946092caa91a4ca457e3",
+        "started_at": "2026-08-25T20:15:21.0987098+08:00",
+        "ended_at": "2026-08-25T20:15:21.5131740+08:00",
+        "exit_code": 0,
+        "tests_run": 35,
+        "ok_test_lines": 35,
+        "result": "OK"
+      },
+      "gate2": {
+        "log": "logs/gate2_full_repository_replay.log",
+        "log_sha256": "485a169ef68e1cae8b3d5f8466f0a62ac2acf33273a6069bc36dd5d276a8bba7",
+        "started_at": "2026-08-25T20:15:21.7866969+08:00",
+        "ended_at": "2026-08-25T20:15:23.8772524+08:00",
+        "exit_code": 0,
+        "tests_run": 85,
+        "ok_test_lines": 85,
+        "result": "OK",
+        "order_gate": "executed only after replay gate1 passed"
+      }
+    },
+    "environment": {
+      "numpy": "2.5.1",
+      "scipy": "1.18.0"
+    },
+    "current_module_sha256": "2637ac6b686ef0d6a0a7dc4c07817fd57e2f2724984cdcccac1671528c7044c5",
+    "frozen_test_sha256": "6d13ba56248305b9990f9422be79d476b64228d266691f4b6db8ac9416935870",
+    "postflight_audit_complete": true,
+    "postflight_audit_result": "PASS",
+    "terminal_decision": "NEEDS_MORE_DATA",
+    "limitations": [
+      "Only synthetic kernel behavior and repository regression were tested.",
+      "No historical point-in-time eligible universe exists yet.",
+      "No real factor, score, IC, return, turnover, P&L, model fit, or backtest was produced.",
+      "The result does not qualify any strategy for paper trading."
+    ]
+  },
+  "objective": "Repair only the SciPy 1.18.0 residualization input compatibility error by converting the design matrix and target vector to NumPy float arrays before scipy.linalg.lstsq.",
+  "parent_experiment": "exp_20260825_006",
+  "parent_terminal_status": "INCONCLUSIVE",
+  "git_repository": true,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_clean_before_experiment": false,
+  "git_dirty": true,
+  "experiment_type": "single-change synthetic kernel compatibility repair",
+  "implementation_file": "src/quant_research/hierarchical_alpha.py",
+  "implementation_pre_fix_sha256": "c19fd1953b18205d4757e54d67b4d1127dd11d2f52f47738a2b9d9159275601e",
+  "frozen_test_file": "tests/test_hierarchical_alpha.py",
+  "frozen_test_sha256": "6d13ba56248305b9990f9422be79d476b64228d266691f4b6db8ac9416935870",
+  "single_change": "Immediately before scipy.linalg.lstsq, convert the already constructed design matrix and target vector with numpy.asarray(..., dtype=float).",
+  "dependency_contract": {
+    "numpy_version_observed_in_parent_failure": "2.5.1",
+    "scipy_version_observed_in_parent_failure": "1.18.0",
+    "new_dependency_allowed": false,
+    "basis": "NumPy is already guaranteed by the repository's direct SciPy dependency."
+  },
+  "forbidden_changes": [
+    "mathematical residualization behavior",
+    "public API or data types",
+    "frozen tests or their contract",
+    "PIT, clock, label, purge, ensemble, regime, net-alpha, or diagnostic semantics",
+    "dependency declarations",
+    "real data access",
+    "network access",
+    "model fit or training",
+    "backtesting",
+    "CLI implementation or execution"
+  ],
+  "success_gate": {
+    "narrow_tests": "35 of 35 pass",
+    "then_full_repository_tests": "all pass",
+    "terminal_status": "NEEDS_MORE_DATA"
+  },
+  "failure_terminal_status": "INCONCLUSIVE",
+  "success_boundary": "A pass establishes only synthetic kernel compatibility; it cannot establish PIT eligibility, empirical alpha, model validity, backtest performance, or paper-trading readiness."
+}

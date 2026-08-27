@@ -1,0 +1,121 @@
+{
+  "experiment_id": "exp_20260826_003",
+  "created_at": "2026-08-26T04:37:36.7542667+08:00",
+  "created_at_source": "local Get-Date observation immediately before preregistration",
+  "status": "complete",
+  "phase": "formal_run_complete",
+  "decision_status": "INCONCLUSIVE",
+  "parent_experiment": "exp_20260826_002",
+  "git_repository": true,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_clean_before_experiment": false,
+  "git_status_entry_count_before_experiment": 30,
+  "single_primary_change": "Opaque, type-preserving article identifier contract v2: code union plus exact ID type/value preservation across list, URL, detail, uniqueness, hashes and loader.",
+  "extractor_version": "binance_spot_announcement_v2",
+  "module_path": "src/quant_research/binance_spot_announcement_corpus_v2.py",
+  "test_path": "tests/test_binance_spot_announcement_corpus_v2.py",
+  "cli": "quant-binance-spot-announcement-corpus-v2",
+  "raw_output_root": "data/raw/binance_spot_announcement_v2/runs",
+  "processed_output_root": "data/processed/binance_spot_announcement_v2/runs",
+  "run_id": "exp_20260826_003_formal_001",
+  "formal_outputs": {
+    "summary": "experiments/exp_20260826_003/artifacts/corpus_summary.json",
+    "schema": "experiments/exp_20260826_003/artifacts/schema.json",
+    "source_contract": "experiments/exp_20260826_003/artifacts/source_contract.json"
+  },
+  "expected_counts": {
+    "catalog_totals": {"48": 2234, "161": 426},
+    "interval": {"48": 575, "161": 181},
+    "logical_requests": 866,
+    "max_wire_attempts": 2598
+  },
+  "tracked_test_fixture": {
+    "path": "tests/fixtures/binance_cms_catalog_48_page_0038_legacy_codes.response",
+    "bytes": 7607,
+    "sha256": "ab4676534a3219461555e4127326a1da9a43e9e29afce0df3e8ace3ad0c31876",
+    "source": "byte-for-byte copy planned from ignored exp002 formal failure raw response",
+    "formal_evidence": false
+  },
+  "implementation": {
+    "self_contained": true,
+    "imports_exp002_v1_helpers": false,
+    "source_sha256": "30a45ed781e0335838ec7e6643c04c229c8ff53637aec2e2c7a0d928f22adc10",
+    "source_sha256_stage": "unknown at preregistration; frozen only after implementation plus first narrow/full offline tests and before formal review",
+    "formal_command_placeholder_replaced": true
+  },
+  "frozen_files": {
+    "source_sha256": "30a45ed781e0335838ec7e6643c04c229c8ff53637aec2e2c7a0d928f22adc10",
+    "test_sha256": "fbbe5571d171ee302398191ea32f931da05e7adb9bdfe2133ce25f4a0ba2156f",
+    "fixture_sha256": "ab4676534a3219461555e4127326a1da9a43e9e29afce0df3e8ace3ad0c31876",
+    "pyproject_sha256": "606453ead1702b1646d622f69aed997e3916eea66618fee6c05cfeb08706bda8",
+    "pre_execution_commands_sha256": "6260bb869b72f7aa3d60a0dd75758cfefd4548e881477b2f51562762fab227a7",
+    "post_run_commands_sha256": "601b70390985e34eb6d17b5fa644e7c9090527000cb99066e0848d36eefdb5a8",
+    "parameters_sha256": "2caab3da07d511c1dee4ab7f64ebdfa8a2484974a734ab3b54fffeb03f74e79f",
+    "hypothesis_sha256": "540640273f2bd6dcd0cf7e188d1d182d511dd5a1f64701e83a9795ceae2f09b5",
+    "formal_command_utf8_without_newline_sha256": "0970899a06cc5e3d324c20c0dc29e1bafc0481bc44c9b75f85e3f751d2d42c73"
+  },
+  "offline_tests": {
+    "first_narrow": {"passed": 28, "failed": 0, "seconds": 1.687},
+    "first_full_repository": {"passed": 158, "failed": 0, "seconds": 3.944},
+    "final_frozen_narrow": {"passed": 28, "failed": 0, "seconds": 1.479},
+    "final_frozen_full_repository": {"passed": 158, "failed": 0, "seconds": 3.925}
+  },
+  "network_requests_executed_by_experimenter": 120,
+  "formal_output_paths_present_at_freeze": false,
+  "exp002_integrity": {
+    "v1_source_path": "src/quant_research/binance_spot_announcement_corpus.py",
+    "v1_source_sha256_at_preregistration": "9c98725d74ce3d5e4f6c2a9ac5f9fbe53926b9fd4dae35520db39e7a086a7d46",
+    "modification_allowed": false,
+    "data_or_run_modification_allowed": false
+  },
+  "authorization": {
+    "researcher_decision": "GO",
+    "auditor_decision": "GO",
+    "scope": "exactly one execution of the single frozen formal command",
+    "formal_network_authorized": true,
+    "authorization_consumed": true
+  },
+  "formal_run": {
+    "execution_count": 1,
+    "run_id_consumed": true,
+    "observed_exit_code": 1,
+    "tool_observed_wall_time_seconds": 33.3436274,
+    "stdout": "",
+    "stderr": "ERROR: detail publishDate mismatch",
+    "wire_attempts": 120,
+    "retries": 0,
+    "response_bytes": 3961317,
+    "sidecar_bytes": 149438,
+    "raw_file_count": 240,
+    "partial_raw_inventory_sha256": "2d9378a331993742e73000ccb0531358202bd474cc0077e51ad2456db8c51052",
+    "processed_or_root_artifacts_created": false,
+    "trusted_reload_executed": false,
+    "trusted_reload_reason": "collector failed before processed/root artifacts were created",
+    "terminal_status": "INCONCLUSIVE",
+    "artifact_state": null
+  },
+  "formal_records": {
+    "formal_run_log_sha256": "648714b4aa6b7286e26c8f09899bb82f8b4db68eef561d4c9a65b333fa821f1b",
+    "formal_failure_inspection_sha256": "282a779642085539fef943dd3c2ec7d98e3c3a41e510372e609f056b9a24eafb",
+    "formal_partial_raw_inventory_sha256": "2d9378a331993742e73000ccb0531358202bd474cc0077e51ad2456db8c51052",
+    "post_run_commands_sha256": "601b70390985e34eb6d17b5fa644e7c9090527000cb99066e0848d36eefdb5a8",
+    "metrics_sha256": "685fe60ea50368848447d065ad1c3478f44ede62ffb3b55a9809d9573d0e2469",
+    "report_sha256": "05cf1712b3e8ea858157e8fe7d79c9b5af160cebb65c272a14cb73189507384b"
+  },
+  "forbidden_outputs": [
+    "event ledger",
+    "listing interval",
+    "historical eligibility",
+    "Alpha or factor",
+    "IC",
+    "ML or model fit",
+    "backtest",
+    "validation or final-test market data"
+  ],
+  "referenced_skill": ".codex/skills/quant-strategy-research/SKILL.md",
+  "missing_skill_references": [
+    ".codex/skills/quant-strategy-research/references/methodology.md",
+    ".codex/skills/quant-strategy-research/references/experiment-contract.md",
+    ".codex/skills/quant-strategy-research/references/source-map.md"
+  ]
+}

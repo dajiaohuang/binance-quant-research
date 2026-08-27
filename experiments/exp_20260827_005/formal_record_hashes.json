@@ -1,0 +1,31 @@
+{
+  "experiment_id": "exp_20260827_005",
+  "files": [
+    {
+      "path": "experiments/exp_20260827_005/formal_ledger.json",
+      "sha256": "a62e10957f597ab68d1740d601d21e6a0f20009133d1e428f10a18d53cc1ec79"
+    },
+    {
+      "path": "experiments/exp_20260827_005/formal_result.json",
+      "sha256": "eb4ad3f4eaa6a73e91145bd8f064d3348083fc20a2be9c536d773f593379ba60"
+    },
+    {
+      "path": "experiments/exp_20260827_005/logs/formal_001_hierarchical.txt",
+      "sha256": "4aeaaea61e469515291be07b269ff1c20f187ed9fb707932b36b66559b5d010d"
+    },
+    {
+      "path": "experiments/exp_20260827_005/logs/formal_002_historical_adapter.txt",
+      "sha256": "4e3a2fadfba0189df316a7542246a1fda058ff783e5aeef869fccd66082b5e1f"
+    },
+    {
+      "path": "src/quant_research/hierarchical_alpha.py",
+      "sha256": "5db9584b1b456fbe69d0c0937edbcb625adf6ec0b588ef76400da21e037093dc"
+    },
+    {
+      "path": "tests/test_hierarchical_alpha.py",
+      "sha256": "1796ac727b8fd066a4d68bb8e179841ebe80457bee65b59044bbca9014294da1"
+    }
+  ],
+  "formal_execution_count": 2,
+  "retry_count": 0
+}

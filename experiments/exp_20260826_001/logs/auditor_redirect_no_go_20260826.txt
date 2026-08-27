@@ -1,0 +1,26 @@
+exp_20260826_001 Auditor hardening re-review
+
+Terminal conclusion: NO-GO. No formal network request was authorized or run.
+
+Remaining blocker:
+
+The collector checked `final_url` only after urllib returned. Python's default
+redirect handler could therefore follow a 30x `Location` and issue a second wire
+request, including to another host, before the collector rejected the changed
+final URL.
+
+Required resolution:
+
+- Add a no-redirect handler whose redirect_request returns None.
+- Do not issue a wire request to Location.
+- Convert the original 30x HTTPError into TransportResponse and preserve its
+  body, headers, status and original canonical URL in raw attempt evidence.
+- Treat redirect as terminal and never retry it.
+- Retain max_attempts=3 as at most three attempts for each of three logical
+  endpoints: at most nine wire GETs total, with retries only to the same
+  canonical endpoint URL.
+- Prove the behavior with offline default-fetcher/handler tests, including a
+  cross-domain Location.
+
+Resolution state: implemented and covered by offline tests. Re-review remains
+required; this log does not change NO-GO to GO or authorize the formal command.

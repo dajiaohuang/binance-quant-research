@@ -1,0 +1,25 @@
+{
+  "experiment_id": "exp_20260825_005",
+  "status": "COMPLETE",
+  "tests": "50/50 PASS",
+  "payload_pairs_expected": 9240,
+  "payload_pairs_validated": 9240,
+  "payload_pairs_invalid": 0,
+  "non_nominal_close_time_rows": 354,
+  "affected_object_months": 353,
+  "normalized_rows": 6687797,
+  "normalized_symbols": 462,
+  "coverage_state_counts": {"A": 6687797, "M": 72379, "N": 6462048, "U": 0},
+  "panel_cells": 13222224,
+  "contract_failures": [],
+  "hashes": {
+    "coverage_panel_sha256": "716b2d5c42c3078c93707722cbd93e171b233e6492f770d3c0905a710d9ba8b2",
+    "object_quality_sha256": "45194f662a72fd7776acfb825095c234227c6fb6353a7d2e1edfbd326a76f06c",
+    "non_nominal_close_rows_sha256": "2c54fcea7f3fcd5d4121cd96f9aff1d1952ddcbd4933b075c6684e4357efdb25",
+    "revalidation_summary_sha256": "14c63f57aa65014a0541b9764de90a5a0f1d597566732f1064c062a68abbdb47",
+    "coverage_schema_sha256": "9b74de765c34312c4be16244e473623bf2f872213de0a0f8d2e7c3ad9a800fdb",
+    "derived_index_sha256": "0c833b60e177e22bda7bf8ceef165e74d6ffc2ef11e1090d2cb828c13bf516c9"
+  },
+  "decision": "NEEDS_MORE_DATA",
+  "decision_reason": "All 9,240 frozen payload pairs passed the revised bounded close-time policy and every preregistered regression invariant; historical trading status and eligibility remain unproven."
+}

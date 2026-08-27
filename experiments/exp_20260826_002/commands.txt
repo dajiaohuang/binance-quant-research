@@ -1,0 +1,87 @@
+# exp_20260826_002 preregistered command ledger
+# Written before implementation and before any formal network request.
+
+# Offline gates:
+uv run python -m unittest tests.test_binance_spot_announcement_corpus -v
+uv run python -m unittest discover -s tests -v
+
+# Planned formal command. DO NOT EXECUTE until Researcher and Auditor GO.
+uv run quant-binance-spot-announcement-corpus --run-id exp_20260826_002_formal_001 --expected-extractor-sha256 9c98725d74ce3d5e4f6c2a9ac5f9fbe53926b9fd4dae35520db39e7a086a7d46 --raw-root data/raw/binance_spot_announcement_v1/runs --processed-root data/processed/binance_spot_announcement_v1/runs --summary-output experiments/exp_20260826_002/artifacts/corpus_summary.json --schema-output experiments/exp_20260826_002/artifacts/schema.json --source-contract-output experiments/exp_20260826_002/artifacts/source_contract.json --catalog-id 48 --catalog-id 161 --page-size 50 --claimed-release-start-ms 1669852800000 --claimed-release-end-ms-exclusive 1735689600000 --expected-total 48=2234 --expected-total 161=426 --expected-interval-count 48=575 --expected-interval-count 161=181 --max-pages-per-catalog 50 --max-articles 800 --max-response-bytes 2000000 --max-total-response-bytes 1000000000 --timeout-seconds 30 --max-attempts 3 --max-wire-attempts 2598 --pacing-seconds 0.1 --max-clock-skew-ms 300000
+
+# No command has been executed at preregistration. No event, listing interval,
+# Alpha, IC, ML or backtest command is authorized.
+
+# Offline execution ledger (no network):
+# 1. Initial narrow implementation gate: exit 0; 11/11 passed in 0.624s;
+#    transcript chunk 065daa.
+# 2. Narrow gate after trusted-loader semantic rebuild and coverage expansion:
+#    exit 0; 13/13 passed in 0.790s; transcript chunk a8b1c2.
+# 3. Final frozen narrow gate: exit 0; 13/13 passed in 0.739s;
+#    transcript chunk 4c1192.
+# 4. Final frozen full-repository gate: exit 0; 120/120 passed in 1.568s;
+#    transcript chunk ff2f96.
+# 5. Read-only freeze inspection confirmed the formal raw run, processed run
+#    and corpus summary do not exist. Network request count remains zero.
+# The planned formal command above was not executed. It remains blocked pending
+# independent Researcher and Auditor GO. No Alpha/IC/ML/backtest was executed.
+
+# Pre-execution NO-GO correction round (no network):
+# - production list/detail response shapes, canonical Host evidence, two full
+#   list passes, cap+1 transport, terminal retry outcomes and pre-network source
+#   binding were implemented under the same corpus-only hypothesis.
+# - the expected successful request inventory is 108 list + 756 detail + 2 time
+#   = 866 logical requests; three attempts each caps wire GETs at 2,598.
+# - the exact formal command now binds extractor SHA-256
+#   3ca7731482fb7f319a0eb5bc2303879f97868b47f249d4879783ec29b8420ab8.
+# - a final TOCTOU hardening adds source/dependency verification immediately
+#   before every logical GET. Post-hardening narrow: 20/20 passed in 1.175s;
+#   transcript chunk de33c9.
+# - final post-TOCTOU full-repository run: exit 0; 127/127 passed in 2.007s;
+#   transcript chunk 807309. No formal command or network request was executed.
+# - source/dependency checks were then moved to every wire attempt, including
+#   retries. Final narrow: 21/21 passed in 1.186s; transcript chunk 3221b7.
+# - final per-wire-preflight full-repository run: exit 0; 128/128 passed in
+#   1.981s; transcript chunk 1e70e1. Formal network remained unexecuted.
+# - correction-round narrow run: exit 0; 19/19 passed in 1.087s; transcript
+#   chunk fa31ba.
+# - correction-round full-repository run: exit 0; 126/126 passed in 1.881s;
+#   transcript chunk 2ec0d7.
+# - formal raw/processed/artifact paths remained absent; network count remained
+#   zero. The planned formal command was not executed.
+
+# Second fresh re-review NO-GO correction round (offline only):
+# - code now enforces one shared positive max-wire-attempts bound before every
+#   fetch; the formal bound is 2,598 and the successful logical expectation is
+#   still 866. No 2,599th fetch can be issued.
+# - extractor and frozen dependency binding are checked before lease, before
+#   and after every fetch, and before artifact completion; the loader separately
+#   requires the live dependency hash and rebuilds wire count/bound.
+# - source was frozen first at SHA-256
+#   9c98725d74ce3d5e4f6c2a9ac5f9fbe53926b9fd4dae35520db39e7a086a7d46;
+#   only then was that value inserted in this command/docs/manifest.
+# - pre-freeze hardening narrow run: exit 0; 23/23 passed in 1.370s;
+#   transcript chunk 772c37.
+# - post-loader-coverage narrow run: exit 0; 23/23 passed in 1.399s;
+#   transcript chunk adb424.
+# - final frozen narrow/full results are recorded below after hash freeze.
+# - no formal command or network request was executed.
+# - after strengthening the cap fixture to the frozen 50-page/800-article
+#   maxima, final frozen narrow: exit 0; 23/23 passed in 1.578s; transcript
+#   chunk 933518.
+# - final frozen full repository: exit 0; 130/130 passed in 2.457s; transcript
+#   chunk 926b81.
+# - formal raw/processed/summary paths remained absent and network count stayed
+#   zero; phase remains pre_execution_review_pending.
+
+# Formal execution after independent Researcher GO and Auditor GO:
+# - the exact planned command on line 9 was executed once with byte-for-byte
+#   unchanged arguments; pre-execution command ledger SHA-256 was
+#   44c4b3fb773addb88d1426498e87e8edc7d609cfd8cbb893b33f0872be439039.
+# - observed exit 1 after 11.4427733s; stdout empty; stderr exact text:
+#   ERROR: invalid article code
+# - built-in collector made 39 wire attempts and zero retries, then failed
+#   closed during catalog 48 pass 1 page 38 parsing. It was not rerun/adapted.
+# - partial raw evidence is preserved; processed/summary/schema/source-contract
+#   outputs were not created, so trusted reload was unavailable.
+# - terminal status INCONCLUSIVE; artifact state null. No Alpha/IC/ML/backtest
+#   or eligibility derivation was executed.

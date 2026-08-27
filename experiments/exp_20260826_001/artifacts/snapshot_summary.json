@@ -1,0 +1,76 @@
+{
+  "archive_candidate_count": 723,
+  "archive_only_unknown_count": 1,
+  "current_response_symbol_count": 3681,
+  "extractor_source_sha256": "427b9eab83f14798fdb9b6465dddad397081d6a2c094fb27aa229fd94aee2264",
+  "extractor_version": "binance_spot_pit_v1",
+  "known_at_ms": 1787683998027,
+  "known_at_utc": "2026-08-25T18:53:18.027925Z",
+  "membership_count": 3682,
+  "memberships_path": "data/processed/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/memberships.jsonl",
+  "memberships_sha256": "28dca84736c26497a79b3950fad9bd65b9f00f79e50cb6e87ca21d474c39a450",
+  "raw_requests": {
+    "exchange_info": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "body": "data/raw/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/requests/exchange_info/attempt_0001.response",
+          "body_sha256": "93815999f9ce41e4918ea836928a8cbb7238eba89d4b1d6ad04823e69f0b4743",
+          "outcome": "OK",
+          "sidecar": "data/raw/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/requests/exchange_info/attempt_0001.request.json",
+          "sidecar_sha256": "35568c6b8369e763c1dc09bdb9683be1e3db808f70d6416da61c7c1ed429f848"
+        }
+      ],
+      "body": "data/raw/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/requests/exchange_info/attempt_0001.response",
+      "sha256": "93815999f9ce41e4918ea836928a8cbb7238eba89d4b1d6ad04823e69f0b4743",
+      "sidecar": "data/raw/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/requests/exchange_info/attempt_0001.request.json"
+    },
+    "time_after": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "body": "data/raw/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/requests/time_after/attempt_0001.response",
+          "body_sha256": "3031fb21b2dd11b5be1bc0b7fbad5f3a750f10c03567209d8ef02803f80256ca",
+          "outcome": "OK",
+          "sidecar": "data/raw/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/requests/time_after/attempt_0001.request.json",
+          "sidecar_sha256": "c11dc0372c724f92e5ec9d05ecac5cf7c5ded5a5eb5ce98d62eadd2a65340293"
+        }
+      ],
+      "body": "data/raw/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/requests/time_after/attempt_0001.response",
+      "sha256": "3031fb21b2dd11b5be1bc0b7fbad5f3a750f10c03567209d8ef02803f80256ca",
+      "sidecar": "data/raw/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/requests/time_after/attempt_0001.request.json"
+    },
+    "time_before": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "body": "data/raw/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/requests/time_before/attempt_0001.response",
+          "body_sha256": "983435f03cd1b1964e5ee1a928803fc02849f1c240639e52e0622fa504d1582a",
+          "outcome": "OK",
+          "sidecar": "data/raw/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/requests/time_before/attempt_0001.request.json",
+          "sidecar_sha256": "e93b9acec3b2468ec9c630f9bac7646ce9aa905df72ea825a4b7e96f79ddda59"
+        }
+      ],
+      "body": "data/raw/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/requests/time_before/attempt_0001.response",
+      "sha256": "983435f03cd1b1964e5ee1a928803fc02849f1c240639e52e0622fa504d1582a",
+      "sidecar": "data/raw/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/requests/time_before/attempt_0001.request.json"
+    }
+  },
+  "semantics": "CURRENT_OR_FORWARD_ONLY; NOT_HISTORICAL_ELIGIBILITY",
+  "server_time_bracket_ms": {
+    "after": 1787683999972,
+    "before": 1787683998470,
+    "exchange_info": 1787683998768
+  },
+  "snapshot_id": "exp_20260826_001_formal_001",
+  "strict_eligible_count": 0,
+  "symbol_index": {
+    "path": "data/raw/binance_spot_v2/inventory/symbol_index.jsonl",
+    "sha256": "0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16"
+  },
+  "transport_contract": {
+    "max_attempts": 3,
+    "max_clock_skew_ms": 300000,
+    "timeout_seconds": 30.0
+  }
+}

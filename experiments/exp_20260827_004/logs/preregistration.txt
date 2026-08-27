@@ -1,0 +1,22 @@
+2026-08-27T09:54:04.6828949+08:00 PRE_REGISTERED
+formal_executed=false
+network_access=false
+real_data_accessed=false
+FRESH_PHASE1_AMENDMENT=EXACT_POLICY_PAYLOAD_PROVENANCE_AND_TWO_LAYER_HASHES
+prior_candidate_phase2=NO_GO
+fresh_targeted_tests=27/27_PASS
+existing_kernel_tests=35/35_PASS
+py_compile=PASS
+formal_executed=false
+network_access=false
+real_data_accessed=false
+PHASE2_FIDELITY_OPTION_A=APPLIED
+fixed_evidence_reference_vector=52e6bdf8e9ffbb2eb6b793fd4b28e2265f098bf88449840be5af09079b207f63
+historical_eligibility_ready=false
+strict_eligible_count=0
+2026-08-27 OFFLINE_IMPLEMENTATION_COMPLETE
+phase=PREFORMAL_AWAITING_PHASE2
+status=NEEDS_MORE_DATA
+formal_executed=false
+network_access=false
+real_data_accessed=false

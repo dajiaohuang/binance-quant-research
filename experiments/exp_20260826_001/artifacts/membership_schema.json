@@ -1,0 +1,27 @@
+{
+  "listing_semantics": "listing_from_ms and listing_to_ms_exclusive are always null",
+  "permission_semantics": "isSpotTradingAllowed is the sole eligibility permission predicate; permissions and permissionSets are retained verbatim as source evidence only",
+  "row_fields": [
+    "symbol",
+    "archive_candidate",
+    "current_response_observed",
+    "raw_status",
+    "raw_quote_asset",
+    "raw_is_spot_trading_allowed",
+    "raw_permissions",
+    "raw_permission_sets",
+    "json_record_locator",
+    "raw_exchange_info_sha256",
+    "canonical_raw_record_sha256",
+    "extractor_version",
+    "extractor_source_sha256",
+    "known_at_utc",
+    "listing_from_ms",
+    "listing_to_ms_exclusive",
+    "strict_eligible",
+    "strict_reasons",
+    "evidence_bindings"
+  ],
+  "semantics": "CURRENT_OR_FORWARD_ONLY; NOT_HISTORICAL_ELIGIBILITY",
+  "version": "binance_spot_pit_v1"
+}

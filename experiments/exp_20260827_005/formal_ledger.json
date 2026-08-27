@@ -1,0 +1,28 @@
+{
+  "experiment_id": "exp_20260827_005",
+  "formal_execution_count": 2,
+  "git_head": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "precheck_start_local": "2026-08-27T16:27:16.2266886+08:00",
+  "precheck_start_utc": "2026-08-27T08:27:16.2229194Z",
+  "precheck_passed": true,
+  "retry_count": 0,
+  "runs": [
+    {
+      "command_sha256": "20410fbbc49fddcf45d6c052cda48b85aa832aa9c5f2530f27dd9dfb2c80c8e1",
+      "exit_code": 0,
+      "log_path": "experiments/exp_20260827_005/logs/formal_001_hierarchical.txt",
+      "post_frozen_hashes_match": true,
+      "sequence": 1,
+      "test_count": 48
+    },
+    {
+      "command_sha256": "e7c8f8cec9a2cece6c31895cc18c671b5325ecfcaf5b49488db30fb430a6de0b",
+      "exit_code": 0,
+      "log_path": "experiments/exp_20260827_005/logs/formal_002_historical_adapter.txt",
+      "post_frozen_hashes_match": true,
+      "sequence": 2,
+      "test_count": 27
+    }
+  ],
+  "terminal_status": "NEEDS_MORE_DATA"
+}

@@ -1,0 +1,81 @@
+{
+  "artifact_state": "ANNOUNCEMENT_SCHEDULE_CLAIM_SCAN_COMPLETE",
+  "formal_executed": true,
+  "formal_result": {
+    "ambiguity_count": 44,
+    "claim_count": 623,
+    "claim_type_counts": {
+      "OPEN_SCHEDULE_CLAIM": 76,
+      "REMOVAL_SCHEDULE_CLAIM": 547
+    },
+    "coverage_count": 756,
+    "coverage_counts": {
+      "AMBIGUOUS": 44,
+      "CLAIMED": 83,
+      "NO_MATCH": 629
+    },
+    "exit_code": 0,
+    "final_tree_sha256": "0c5ee97d978b24ebaea928d3a5ec5eeae989827b6d3abdf1300bd53799396c0b",
+    "output_artifacts": {
+      "ambiguity.jsonl": {
+        "bytes": 67841,
+        "rows": 44,
+        "sha256": "d9c299a5c75dd84dd44e86a937a90e55826374685debd5a23f3a951f9512f66f"
+      },
+      "claims.jsonl": {
+        "bytes": 1173141,
+        "rows": 623,
+        "sha256": "5cde1e1970ffa6d6c625ddcae4fb505e3d1bf7667198fc2bcb2ba9372263b605"
+      },
+      "coverage.jsonl": {
+        "bytes": 236697,
+        "rows": 756,
+        "sha256": "7efd431c29095beb6fb76ac99445a49756456306180aa72441d18f456c4db371"
+      },
+      "summary.json": {
+        "bytes": 3854,
+        "rows": null,
+        "sha256": "361a1e5dcc3dd6cb688c0743e4a0eb455bf244eca9e5eb77a9b486ed943e07ac"
+      }
+    },
+    "payload_tree_sha256": "e6d8ebdc9f9095d4620b2508310bde5bffdc52398a332ae6019b8bf9079e41e2",
+    "wall_seconds": 3.1896848
+  },
+  "historical_eligibility_ready": false,
+  "eligibility_evaluated": false,
+  "network_access": false,
+  "phase": "POSTFLIGHT_AUDITED",
+  "postflight_audit": "PASS",
+  "strict_eligible_count": 0,
+  "terminal_status": "NEEDS_MORE_DATA",
+  "tests": {
+    "full_repository": {
+      "command": "uv run python -m unittest discover -s tests -v",
+      "latest_run": "PASS_308_OF_308",
+      "test_seconds": 21.411,
+      "wall_seconds": 23.503484
+    },
+    "py_compile_and_contract_json": {
+      "latest_run": "PASS"
+    },
+    "postflight": {
+      "current_lifecycle_test_sha256": "a518dadf8ef44a3072bffaca37c4a05d917fc7d53ab625e29aae82a852c44cb4",
+      "fixture_articles": 6,
+      "fixture_claims": 20,
+      "fixture_exact_pairs_and_epochs": "PASS",
+      "initial_helper_diagnostic": "ATTRIBUTE_ERROR_ON_NONCONTRACT_LOADEDCLAIMS_COVERAGE_COUNT_ACCESS",
+      "selected_targeted_latest_run": "PASS_39_OF_39",
+      "trusted_loader_corrected_run": "PASS"
+    },
+    "workspace_parent_layout_read_only": {
+      "latest_run": "PASS"
+    },
+    "targeted": {
+      "command": ".venv\\Scripts\\python.exe -B -m unittest tests.test_binance_spot_announcement_claims_lean_v2 -v",
+      "first_run": "FAIL_39_OF_40_TRAILING_LF_TEST_EXPECTATION_ONLY",
+      "latest_run": "PASS_40_OF_40",
+      "test_seconds": 3.184,
+      "wall_seconds": 3.5134817
+    }
+  }
+}

@@ -1,0 +1,66 @@
+exp_20260826_004 offline implementation results
+
+No formal or exploratory network request was executed by the Experimenter.
+No event, eligibility, Alpha, IC, ML, backtest, validation-set or final-test
+command was executed.
+
+First implementation narrow run
+  command: uv run python -m unittest tests.test_binance_spot_announcement_corpus_v3 -v
+  raw transcript: Codex chunk 921efe
+  exit code: 0
+  result: OK, Ran 32 tests in 3.497s
+
+Post-hardening narrow run
+  command: uv run python -m unittest tests.test_binance_spot_announcement_corpus_v3 -v
+  raw transcript: Codex chunk 626d0e
+  exit code: 0
+  result: OK, Ran 32 tests in 3.681s
+
+First full-repository run
+  command: uv run python -m unittest discover -s tests -v
+  raw transcript: Codex chunk de4edb
+  exit code: 0
+  result: OK, Ran 190 tests in 10.089s
+
+Final frozen narrow run
+  command: uv run python -m unittest tests.test_binance_spot_announcement_corpus_v3 -v
+  raw transcript: Codex chunk d0576d
+  exit code: 0
+  result: OK, Ran 32 tests in 2.388s
+
+Final frozen full-repository run
+  command: uv run python -m unittest discover -s tests -v
+  raw transcript: Codex chunk cd2a57
+  exit code: 0
+  result: OK, Ran 190 tests in 7.382s
+
+Frozen files
+  source sha256: e3fd4ec75c450771afe654ccf08a1c1839c4b11ac9dc7ec038a0a1de722aa62e
+  test sha256: 110522cbad14afe8440f253baee02e18076ff7b3f57fa0911307a757efdae81b
+  list fixture: 9949 bytes / adbcfcf758ce0c55b772b77de49169702b44759b3e99525e92bb16591d13ce5d
+  detail fixture: 78567 bytes / cb27c5578fa9303516b238b0e4845640b21f397d09e6f5a90fd4446d21a2a8d5
+  pyproject sha256: a994b75f5f5aa2c5b7b543d160751f92b3e1f75c29ed1b10b5d034bc4bd86563
+  commands sha256: b9e016e207446f3c25b12c548bd5ff9def8a650e5c0e2d4f7ed89b5262841c98
+  parameters sha256: 696db474218a92e16f432a49cd285b1590449649abb78ec8c539f7a5641f5c20
+  hypothesis sha256: d6872b83277bbc2c00d26836b9d55905838a452ea7ff065d32081e7f8e93a2a6
+  formal command UTF-8/no-newline sha256: de1a7f3457b1d17a9a2abde043bc9e5240b29fa24d1129d2d2a0c45110dbe4b4
+  unchanged v2 source sha256: 30a45ed781e0335838ec7e6643c04c229c8ff53637aec2e2c7a0d928f22adc10
+
+Fixture copy exception
+  Both source responses end with byte 0x7d ('}') and no LF. apply_patch cannot
+  preserve this terminal-byte contract. After preregistration, exactly two local
+  Copy-Item operations copied the ignored exp003 responses byte-for-byte into
+  tracked test fixtures. Source and destination lengths/SHA-256 matched exactly
+  before and after. No transformation or network access occurred. Every other
+  repository write used apply_patch.
+
+Formal output state at freeze
+  raw run directory exists: false
+  processed run directory exists: false
+  corpus summary exists: false
+  schema exists: false
+  source contract exists: false
+  network requests executed: 0
+
+There were no offline test failures. Formal execution remains blocked pending
+new independent Researcher and Auditor GO.

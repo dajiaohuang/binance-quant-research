@@ -32,10 +32,42 @@
 
 ### 0.3 当前策略研究状态
 
+`exp_20260825_006` 建立了 data-agnostic、fail-closed 的 Hierarchical Alpha
+Research Kernel，但首次窄测因 SciPy 1.18.0 的 `lstsq` 不接受 Python list 输入而
+以 `INCONCLUSIVE` 关闭。独立单一修复 `exp_20260825_007` 显式转换 NumPy float
+arrays，通过窄测 35/35、全仓 85/85 和 postflight audit，终态为
+`NEEDS_MORE_DATA`。这只证明合成内核合同可运行，不是实际 Alpha、IC、P&L、模型或
+回测结论。
+
+`exp_20260826_001` 随后完成无需认证、status-complete、source-bound 的 Binance
+Spot current/forward PIT 快照。正式命令只访问公共 `data-api.binance.vision` 的
+time/exchangeInfo/time，各 1 次、无 retry；known-at 为
+`2026-08-25T18:53:18.027925Z`。3,681 个当前响应 symbol 与 723 个 archive candidate
+合并为 3,682 条 membership，1 条 archive-only 显式 UNKNOWN。由于 3,682/3,682
+listing interval 均为 null，strict eligible=0，终态 `NEEDS_MORE_DATA`；历史
+2023–2024 门禁没有打开。
+
+`exp_20260827_004` 完成 bound historical PIT evidence adapter 的离线合成合同，
+正式通过 adapter 27/27 与既有 kernel 35/35，独立 postflight PASS；唯一 policy
+仍是 synthetic fixture，不能授权实证。`exp_20260827_005` 随后把 exact built-in
+integer horizon identity 贯穿 ensemble、regime、expected-net-alpha 与 diagnostic，
+并建立无 scalar/weights 的 `compose_multi_horizon` exact-four identity bundle。
+正式通过 48/48 与 adapter regression 27/27，各执行一次、零重试，最终闭包为
+`HORIZON_IDENTITY_SYNTHETIC_CONTRACT_VERIFIED / NEEDS_MORE_DATA`。两轮均未读取
+真实数据或密钥，也没有形成 Alpha、IC、模型、P&L 或回测结论。
+
 基础单边成本率为 `0.0015`。`exp_20260714_001` 只有原始回测目录，缺少
 Manifest、指标汇总和报告，不能作为完整正式实验引用；`exp_20260714_002`
-是已完成的正式失败实验。最新 `exp_20260824_001` 已预注册并实现候选，但只完成
-工程测试与训练子集冒烟，完整训练尚未运行。
+是已完成的正式失败实验。`exp_20260824_001` 因原冻结 Feather 未随 Git 保留而
+关闭为 `INCONCLUSIVE / SUPERSEDED`；`exp_20260825_001` 使用新下载、独立冻结的
+数据版本，在严格共同起点完成父子训练并因样本不足裁决为 `INCONCLUSIVE`。
+`exp_20260825_002` 的 archive inventory 因冻结校验器未接受 Unicode symbol 而
+保留为 `INCONCLUSIVE`；修复后的 `exp_20260825_003` 完成 metadata-only inventory，
+状态为 `NEEDS_MORE_DATA`。`exp_20260825_004` 随后完整获取并校验 9,240 个 ZIP
+及 CHECKSUM，但 353 个对象月因预注册的 close-time 恒等式门禁而保留为
+`INCONCLUSIVE`。独立后继 `exp_20260825_005` 离线重验全部对象，原样保留并中性
+标记 354 条区间内非名义 close time，完成无回填 `ARCHIVE_KLINE_AVAILABLE`
+面板，状态为 `NEEDS_MORE_DATA`；仍未形成历史可交易 universe。
 
 | 策略 | 数据段 | 结果摘要 | 决定 |
 |---|---|---|---|
@@ -46,7 +78,7 @@ Manifest、指标汇总和报告，不能作为完整正式实验引用；`exp_2
 | `DryRunSmaCrossAdxStrategy` | 5m 验证集 2025 | 447 笔，净收益 -5.31% | `REJECTED`；不得打开最终测试集 |
 | `HourlySmaCrossAdxStrategy` | 1h 训练集 2023–2024 | 99 笔，净收益 -1.85%，PF 0.71，Sharpe -0.40，最大回撤 2.81% | `REJECTED`；不得打开验证或最终测试集 |
 | `DryRunSmaCrossMinHoldStrategy` | `exp_20260714_002` 5m 训练集 2023–2024 | 4773 笔，净收益 -61.66%，PF 0.47869，最大回撤 61.87% | `REJECTED`；最短持仓只略微改善成本，未打开验证或最终测试集 |
-| `DryRunSmaCrossHtfBreakoutGateStrategy` | `exp_20260824_001` 训练子集冒烟 2023-01-01 至 2023-01-08 | 12/12 测试通过、加载 OK、冒烟 0 笔；完整训练未运行 | `IN_PROGRESS`；不得打开验证或最终测试集 |
+| `DryRunSmaCrossHtfBreakoutGateStrategy` | `exp_20260825_001` 5m 训练共同窗口 2023-01-02 01:00 至 2025-01-01 | 39 笔，净收益 -0.73%，成本前 P&L -1.45 USDT，PF 0.4776，≤4h 占 64.10%，四单元仅一个盈利 | `INCONCLUSIVE`；交易总数和各品种×年份均不足，同时边际和机制失败；不得打开验证或最终测试集 |
 
 不得删除失败策略或结果，不得静默改名后继续在测试集调参。下一条路线应建立新的、可解释的基准假设，而不是扩大 SMA/ADX 参数搜索。
 
@@ -70,10 +102,42 @@ Manifest、指标汇总和报告，不能作为完整正式实验引用；`exp_2
 
 | 文件 | 行数 | SHA-256 |
 |---|---:|---|
-| `BTC_USDT-5m.feather` | 371602 | `040c4dec3af78c0f8011f26fe6daf52e21681e6150fdeb137acdc0b13672aaac` |
-| `ETH_USDT-5m.feather` | 371602 | `f2573e2120d36438d65c2524e1a31313ea2d921d819add54ae83e5a1235feda9` |
-| `BTC_USDT-1h.feather` | 30967 | `624c54c1278040d36aa13020339fc2da7c8ab7c121dc6204bbe7af8b486059e4` |
-| `ETH_USDT-1h.feather` | 30967 | `db16358c830b05c542ae5802482b1bc7f1cfb4dcfeade8d6a8bc627f0174d98f` |
+| `BTC_USDT-5m.feather` | 371792 | `b68e0a0487cd38e005c969852d5872e604260f13b5681fd3c1ae932828198878` |
+| `ETH_USDT-5m.feather` | 371792 | `cb228c791f0aa2479f7d9db3ae9711ce4e2b0e58114749f4831297b2f4289db5` |
+| `BTC_USDT-1h.feather` | 30998 | `d4a5022d0cc465e21cb5064f647be4fc74b3a4ffef9cd9c8bc1503130342f678` |
+| `ETH_USDT-1h.feather` | 30998 | `c56f7312f4acb469e61854904239b6bd62a2198f9f03fad97d43819705659615` |
+
+上表是 `exp_20260825_001` 的当前本地版本。旧实验的四个历史哈希仍保留在其
+Manifest，但对应未提交文件在当前主机不可用，不得把新文件回填为旧快照。
+新 5m 文件至 2026-07-14 23:55 UTC；1h 下载器多返回到 2026-07-15 14:00 UTC，
+但正式训练严格截止 2025-01-01，边界异常已在实验报告披露。
+
+`exp_20260825_003` 另冻结 Binance Data Vision Spot 月度 1h archive inventory：
+3,695 个原始 symbol 前缀，723 个字符串后缀为 `USDT` 的候选；2022-12 至
+2024-12 有 9,240 个 ZIP 对象和 9,240 个对应 CHECKSUM 对象，预计 ZIP payload
+292,861,199 bytes。inventory JSONL SHA-256 为
+`8be13634629f8fc21e499aaab7df46839510b3a5be4842ab620bfb3089f512b3`，symbol
+index SHA-256 为 `0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16`。
+`exp_20260825_004` 已下载全部 292,861,199 bytes ZIP 与 818,811 bytes CHECKSUM；
+18,480 个对象的 ETag、size、Last-Modified 和官方 CHECKSUM 均通过。其严格
+close-time 恒等式实验保留 353 个月为 `U / INCONCLUSIVE`。`exp_20260825_005`
+在新 processed v4 中按 `open_time <= close_time <= nominal_close_time` 离线重验，
+9,240/9,240 对象月通过，得到 6,687,797 行；面板计数为
+`A=6,687,797`、`M=72,379`、`N=6,462,048`、`U=0`，面板 SHA-256 为
+`716b2d5c42c3078c93707722cbd93e171b233e6492f770d3c0905a710d9ba8b2`。
+354 条非名义 close time 原样保留，ledger SHA-256 为
+`2c54fcea7f3fcd5d4121cd96f9aff1d1952ddcbd4933b075c6684e4357efdb25`。
+这些只证明 `ARCHIVE_KLINE_AVAILABLE`，不能据此声称历史 `TRADING`、SPOT
+permission、上市/下市、eligibility 或可成交。
+
+`exp_20260826_001` 的 current/forward PIT membership artifact 位于
+`data/processed/binance_spot_pit_v1/snapshots/exp_20260826_001_formal_001/`，共
+3,682 行、SHA-256
+`28dca84736c26497a79b3950fad9bd65b9f00f79e50cb6e87ca21d474c39a450`。
+exchangeInfo exact raw body 为 17,512,657 bytes、SHA-256
+`93815999f9ce41e4918ea836928a8cbb7238eba89d4b1d6ad04823e69f0b4743`。
+该证据只能从 2026 known-at 起使用；不得把 `BREAK`、响应缺席或 archive 出现解释
+为过去的停牌/下市/上市。
 
 下载新数据后必须建立新数据版本和实验，不得沿用旧哈希或直接比较结果。
 
@@ -180,13 +244,31 @@ Manifest 必须记录 Git 状态、框架版本、数据哈希、切分、成本
 
 ### 0.10 当前下一步
 
-下一步用冻结 SHA-256
-`390f94e30e080feb64062a3b9b2b02fd48aef49ce5ccc89f8d3178fbd466e2bc`
-运行 `DryRunSmaCrossHtfBreakoutGateStrategy` 的 24 小时主参数完整训练回测，
-先按共同有效起点复核父子策略。训练净收益不为正、PF 不大于 1、交易数不足或
-品种×年份集中度失败时立即拒绝或标记 `INCONCLUSIVE`；不得先运行 18/36 邻域，
-不得打开验证或最终测试，也不得启动无人值守模拟盘。该候选裁决后，再为
-point-in-time Binance 多币种 universe 和衍生品状态数据建立独立数据版本与实验。
+现代 Alpha V1 内核已经建立，但真实研究继续被 PIT eligibility universe 阻断。
+在独立冻结 Binance Spot 历史 status、SPOT permission、quote asset、listing
+effective interval、known-at 和证据 SHA-256 前，不得运行真实 factor/score/rank
+IC/P&L，不得拟合 Linear、LightGBM、Neural 或其他模型，也不得回测。archive
+availability 只能作为可用性证据，不能推断 `TRADING` 或 eligibility。完整 V1
+合同见 `research/MODERN_ALPHA_RESEARCH_V1.md`。
+
+current/forward collector 已由 `exp_20260826_001` 建立并证明严格 gate 为 0；它没有
+历史 listing interval，因此没有解决 2023–2024 PIT universe。下一数据实验仍必须
+寻找独立的历史状态、权限、quote asset 与 listing effective interval 证据，而不
+得重复抓取当前 exchangeInfo 后回填过去。
+
+24 小时高周期门控已裁决，不运行 18/36 邻域、验证或最终测试，也不围绕该结果
+继续调参。archive payload 和无回填 `ARCHIVE_KLINE_AVAILABLE` 面板已由
+`exp_20260825_005` 完成，但状态仍为 `NEEDS_MORE_DATA`。下一步新建独立的历史
+状态/交易规则数据实验：为每个 symbol-time 建立可审计的 point-in-time
+`TRADING`、SPOT permission、quote asset、上线/下线和 eligibility 证据，不得用
+当前 exchangeInfo 回填过去，也不得从 archive Kline 出现反推历史可交易状态。
+在该门禁完成前不运行截面残差动量、回测或 ML。funding、OI、mark/index/spot
+basis 另建衍生品数据版本。
+
+多周期身份合同已经由 `exp_20260827_005` 闭合；不得在其无经济聚合语义的 bundle
+上擅自增加跨周期权重、效用或 allocation。如果没有新的历史官方来源候选，下一项
+可独立预注册 forward-label-aware purge/embargo split builder，只做离线防泄漏合同，
+不得因此打开真实 factor、IC、ML 或 P&L 门禁。
 
 ## 1. 角色与目标
 

@@ -1,0 +1,33 @@
+{
+  "authorization": {
+    "formal_execution_authorized": false,
+    "phase1_decision": "AUDITOR_FINAL_GO_OFFLINE_IMPLEMENTATION_AND_PHASE2_PREPARATION_ONLY",
+    "superseded_before_phase2_freeze": true
+  },
+  "contract_revision": "CLIPBOARD_NONEMPTY_OVERWRITE_V1",
+  "created_at": "2026-08-27T00:36:38.6027572+08:00",
+  "created_at_source": "local Get-Date observation immediately before preregistration",
+  "decision_status": "SUPERSEDED_BY_ENV_FILE_SUCCESSOR",
+  "experiment_id": "exp_20260826_010",
+  "formal_executed": false,
+  "git_clean_before_experiment": false,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_repository": true,
+  "historical_eligibility_ready": false,
+  "network_access": false,
+  "parent_experiment": "exp_20260826_009",
+  "phase": "SUPERSEDED_BEFORE_PHASE2_FREEZE",
+  "preregistration_status": "SUPERSEDED_BY_ENV_FILE_SUCCESSOR",
+  "referenced_skill": ".codex/skills/quant-strategy-research/SKILL.md",
+  "run_id": "exp_20260826_010_formal_001",
+  "run_id_consumed": false,
+  "single_primary_change": "Replace both empty-string clipboard cleanup writes with one fixed nonempty marker variable.",
+  "status": "superseded",
+  "strict_eligible_count": 0,
+  "supersession": {
+    "reason": "User selected local env-file credential input instead of clipboard formal execution.",
+    "successor_experiment": null,
+    "successor_requires_independent_phase1_contract": true
+  },
+  "version": "binance_spot_forward_schedule_pit_v3"
+}

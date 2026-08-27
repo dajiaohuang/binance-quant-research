@@ -1,0 +1,10 @@
+{
+  "all_reasons_include_unknown_listing_window": true,
+  "decision": "NEEDS_MORE_DATA",
+  "eligible_count": 0,
+  "eligible_symbols": [],
+  "formation_time_ms": 1787683998027,
+  "known_at_ms": 1787683998027,
+  "requested_count": 3682,
+  "snapshot_id": "exp_20260826_001_formal_001"
+}

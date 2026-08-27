@@ -1,0 +1,53 @@
+{
+  "affected_object_month_count": 353,
+  "archive_semantics": "ARCHIVE_KLINE_AVAILABLE only; no historical market-status or eligibility inference",
+  "close_time_policy": "within_open_interval",
+  "contract_failures": [],
+  "decision": "NEEDS_MORE_DATA",
+  "derived": {
+    "coverage_schema_sha256": "9b74de765c34312c4be16244e473623bf2f872213de0a0f8d2e7c3ad9a800fdb",
+    "derived_index_sha256": "0c833b60e177e22bda7bf8ceef165e74d6ffc2ef11e1090d2cb828c13bf516c9",
+    "normalized_rows": 6687797,
+    "normalized_symbols": 462,
+    "panel_cells": 13222224,
+    "panel_hours": 18288,
+    "panel_path": "data\\processed\\binance_spot_v4\\archive_kline_available_1h_2022-12_2024-12.csv.gz",
+    "panel_sha256": "716b2d5c42c3078c93707722cbd93e171b233e6492f770d3c0905a710d9ba8b2",
+    "panel_symbols": 723,
+    "state_counts": {
+      "A": 6687797,
+      "M": 72379,
+      "N": 6462048,
+      "U": 0
+    }
+  },
+  "exp004_evidence_records": 18480,
+  "failure_counts": {},
+  "frozen_input_sha256": {
+    "exp004_object_quality": "3e7675986d7c3f22b1c02ff0beae4532015dc2993be9f69b984d0223f5c6acc2",
+    "exp004_payload_summary": "40419cb5bfc1990930adf662650a73a2531a42830991987fdae7057ac86b6684",
+    "inventory": "8be13634629f8fc21e499aaab7df46839510b3a5be4842ab620bfb3089f512b3",
+    "inventory_summary": "168fa33118114fd088d03ceb87f920755aea8b088b13f891a37984e75065605d",
+    "raw_run_contract": "77335ef92b84513d73e6152ef3b2b3ddb5c14d6e1560ec86348793d186860683",
+    "symbol_index": "0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16"
+  },
+  "network_scope": "none",
+  "non_nominal_close_event_count": 354,
+  "non_nominal_close_reason": "NON_NOMINAL_CLOSE_TIME_WITHIN_INTERVAL",
+  "non_nominal_close_rows_sha256": "2c54fcea7f3fcd5d4121cd96f9aff1d1952ddcbd4933b075c6684e4357efdb25",
+  "object_quality_sha256": "45194f662a72fd7776acfb825095c234227c6fb6353a7d2e1edfbd326a76f06c",
+  "pairs_expected": 9240,
+  "pairs_invalid": 0,
+  "pairs_valid": 9240,
+  "success_contract": {
+    "affected_object_month_count": 353,
+    "non_nominal_close_event_count": 354,
+    "normalized_rows": 6687797,
+    "state_counts": {
+      "A": 6687797,
+      "M": 72379,
+      "N": 6462048,
+      "U": 0
+    }
+  }
+}

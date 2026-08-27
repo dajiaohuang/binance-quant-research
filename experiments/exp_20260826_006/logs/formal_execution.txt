@@ -1,0 +1,21 @@
+experiment_id=exp_20260826_006
+run_id=exp_20260826_006_formal_001
+recorded_at=2026-08-26T12:39:38.7984997+08:00
+formal_command_sha256_utf8_no_newline=182eb47739ac726331014569efa9b1f5c8e15dda60895afe2d2216e888a0f372
+observed_exit_code=1
+observed_wall_seconds=0.1396267
+output_channel=exec_command_combined_output
+output_begin
+Traceback (most recent call last):
+  File "D:\repo\binance-quant-research\src\quant_research\binance_spot_announcement_claims_lean_v1_runner.py", line 288, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "D:\repo\binance-quant-research\src\quant_research\binance_spot_announcement_claims_lean_v1_runner.py", line 274, in main
+    return _run(args)
+           ^^^^^^^^^^
+  File "D:\repo\binance-quant-research\src\quant_research\binance_spot_announcement_claims_lean_v1_runner.py", line 174, in _run
+    CONTROL_ROOT.mkdir(parents=False, exist_ok=False)
+  File "C:\Users\dajiaohuang\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\repo\\binance-quant-research\\data\\processed\\binance_spot_announcement_claims_v1\\runs\\.exp_20260826_006_formal_001.control'
+output_end

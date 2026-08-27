@@ -1,0 +1,20 @@
+{
+  "development_adapter_tests": "27_PASS",
+  "development_hierarchical_tests": "48_PASS",
+  "eligibility_evaluated": false,
+  "empirical_authorized": false,
+  "formal_execution_count": 2,
+  "formal_historical_adapter_tests": "27_PASS",
+  "formal_hierarchical_tests": "48_PASS",
+  "full_repository_tests": "NOT_RUN",
+  "historical_eligibility_ready": false,
+  "network_request_count": 0,
+  "precondition_reproduction": "PASS_DEFECT_CONFIRMED",
+  "strict_eligible_count": 0,
+  "retry_count": 0,
+  "py_compile": "PASS",
+  "phase2_research_review": "NO_GO_REMEDIATED_FRESH_PHASE2_GO",
+  "phase2_auditor_api_name_review": "NO_GO_REMEDIATED_FRESH_PHASE2_GO",
+  "postflight_audit_status": "RECORD_CLOSURE_REMEDIATED_AWAITING_READONLY_RECHECK",
+  "terminal_status": "NEEDS_MORE_DATA"
+}

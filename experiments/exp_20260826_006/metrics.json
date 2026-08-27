@@ -1,0 +1,49 @@
+{
+  "artifact_state": null,
+  "formal_executed": true,
+  "formal_execution": {
+    "authorization_exists": false,
+    "claims_count": null,
+    "command_sha256_utf8_no_newline": "182eb47739ac726331014569efa9b1f5c8e15dda60895afe2d2216e888a0f372",
+    "control_exists": false,
+    "coverage_count": null,
+    "executed_exactly_once": true,
+    "failure_exists": false,
+    "final_exists": false,
+    "lease_exists": false,
+    "observed_exit_code": 1,
+    "observed_output_log_bytes": 1275,
+    "observed_output_log_path": "experiments/exp_20260826_006/logs/formal_execution.txt",
+    "observed_output_log_sha256": "fa1651b3cb1e491135d6d7e42a962eac1f12de83095e8048f0fa91994e94b880",
+    "observed_wall_seconds": 0.1396267,
+    "output_file_count": 0,
+    "primary_failure": "UNCONTROLLED_PRE_LEASE_FILE_NOT_FOUND",
+    "rerun_forbidden": true,
+    "run_id_consumed": true,
+    "staging_exists": false,
+    "ambiguity_count": null
+  },
+  "historical_eligibility_ready": false,
+  "network_access": false,
+  "phase": "POSTFLIGHT_AUDITED",
+  "strict_eligible_count": 0,
+  "terminal_status": "INCONCLUSIVE",
+  "tests": {
+    "full_repository": {
+      "command": "uv run python -m unittest discover -s tests -v",
+      "latest_run": "PASS_268_OF_268",
+      "wall_seconds": 19.6430828
+    },
+    "py_compile_and_contract_json": {
+      "latest_run": "PASS"
+    },
+    "targeted": {
+      "command": ".venv\\Scripts\\python.exe -B -m unittest tests.test_binance_spot_announcement_claims_lean_v1 -v",
+      "first_lean_run": "FAIL_19_OF_21_EXPECTATIONS",
+      "latest_run": "PASS_32_OF_32",
+      "postflight_run": "PASS_32_OF_32_AFTER_FORMAL_FAILURE",
+      "postflight_wall_seconds": 3.3598705,
+      "wall_seconds": 3.3435121
+    }
+  }
+}

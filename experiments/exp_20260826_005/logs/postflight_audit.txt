@@ -1,0 +1,40 @@
+experiment_id: exp_20260826_005
+run_id: exp_20260826_005_formal_001
+auditor_verdict: PASS
+network_requests_during_postflight: 0
+trusted_load_terminal_status: NEEDS_MORE_DATA
+trusted_load_artifact_state: ANNOUNCEMENT_CORPUS_AVAILABLE
+inventory_count: 2660
+detail_count: 756
+time_claim_discrepancy_count: 7
+logical_request_count: 866
+wire_attempt_count: 884
+outcome_counts: OK=866 HTTP_429=18
+http_429_retry_groups: 6
+http_429_group_shape: HTTP_429,HTTP_429,HTTP_429,OK
+http_429_delays_seconds: 30,60,120
+retry_after_present_on_http_429: false
+raw_file_count: 2655
+raw_total_bytes: 44020359
+body_file_count: 884
+sidecar_file_count: 884
+receipt_file_count: 884
+terminal_schedule_present: false
+orphan_artifacts_present: false
+extra_artifacts_present: false
+catalog_48_pages_per_pass: 45
+catalog_161_pages_per_pass: 9
+full_pass_inventory_equal: true
+receipt_tree_hash_match: true
+raw_tree_hash_match: true
+all_declared_hashes_match: true
+root_summary_canonical_bytes_check: PASS
+root_summary_exact_top_level_key_check: PASS
+duplicate_json_key_rejection_check: PASS
+extractor_sha256_unchanged: cd6447ba861e7c02a3307456b60adadbb9e1b71e51879e2f03f424007d8943c4
+formal_command_utf8_without_newline_sha256_unchanged: b0d3a1e2a9479b8c20d5cfe905f49313d249a09dee7ac26f286f6df4119eb5ce
+acquisition_wall_seconds: 2293.438
+formal_stderr_file_present: false
+stderr_contract_caveat: The frozen contract did not require a standalone stderr file. The immutable execution record experiments/exp_20260826_005/logs/formal_execution.txt has SHA256 bd584acd90bab18dd0a3fa0f10ced45c1499595cd4967198c30c8ad66969fae7 and binds stderr_bytes=0 plus stderr=EMPTY.
+future_recommendation: Freeze and hash a zero-byte stderr artifact in the next acquisition contract.
+scope_boundary: No event parsing, listing interval, historical eligibility, Alpha, IC, ML, backtest, validation or final-test work was performed.

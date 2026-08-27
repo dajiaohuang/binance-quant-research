@@ -1,0 +1,53 @@
+{
+  "experiment_id": "exp_20260827_004",
+  "generated_at_local": "2026-08-27T10:50:51.3011086+08:00",
+  "generated_at_utc": "2026-08-27T02:50:51.2984061Z",
+  "records": [
+    {
+      "bytes": 2587,
+      "path": "experiments/exp_20260827_004/formal_ledger.json",
+      "sha256": "0de7a2c5bd45f2b9acaeb38e60ab6216ac1d215f06b8bdbcb1c0a03cbf0f5f80"
+    },
+    {
+      "bytes": 1388,
+      "path": "experiments/exp_20260827_004/formal_result.json",
+      "sha256": "c9adf014e8d278f9cec8255832cb18fa702a90f6dc4b211c7eba1c7430533083"
+    },
+    {
+      "bytes": 5623,
+      "path": "experiments/exp_20260827_004/logs/formal_command_001.txt",
+      "sha256": "afd564dbd94f716785177ecaa05616a2a6e11080c31b5a94f62c5dd963bb8de7"
+    },
+    {
+      "bytes": 6995,
+      "path": "experiments/exp_20260827_004/logs/formal_command_002.txt",
+      "sha256": "71f7567d8ad11db91b07e8766256a69358a9e77c4f2f1a65bae0b76ef80f9fbd"
+    },
+    {
+      "bytes": 1456,
+      "path": "experiments/exp_20260827_004/logs/formal_postflight.txt",
+      "sha256": "b44d72a7b009ade69a187e191417c34550f2972a87de7cb1caf30270ee7d9344"
+    },
+    {
+      "bytes": 1414,
+      "path": "experiments/exp_20260827_004/logs/formal_preflight.txt",
+      "sha256": "9a595d0e9d328b1f8b63ddf8a4a9ee4b86896fc36b9d10ef146669d1bb3815ec"
+    },
+    {
+      "bytes": 2131,
+      "path": "experiments/exp_20260827_004/manifest.json",
+      "sha256": "6bc9ed301f63411c9ad8007411c10cf1e9c1f70c5f9471650a90898698b87eec"
+    },
+    {
+      "bytes": 934,
+      "path": "experiments/exp_20260827_004/metrics.json",
+      "sha256": "0746c1dd5c0ae8116fba083f768e8cdd12639532352ef6ac25bde4fca5d9447a"
+    },
+    {
+      "bytes": 5658,
+      "path": "experiments/exp_20260827_004/report.md",
+      "sha256": "102fdfa985418a34db7f6f5a9bc5746b8aaf5bd955ee4147f80ff0a849be5202"
+    }
+  ],
+  "status": "terminal_postflight_pending_auditor"
+}

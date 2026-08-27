@@ -1,0 +1,25 @@
+exp_20260826_002 pre-execution Auditor NO-GO
+
+Formal network authorization: false
+Formal requests executed before or during this fix round: 0
+
+Blocking findings retained for correction:
+1. The production list payload is $.data.catalogs[0].total/articles, not
+   $.data.total/articles, and the single catalog object must match the request.
+2. Production detail prose/catalog fields are body and firstCatalogId; optional
+   contentJson must not leak prose into processed artifacts.
+3. urllib adds Host to the Request evidence; only the canonical endpoint Host
+   may be accepted alongside the fixed headers.
+4. A page-1 recheck is insufficient; every page of both catalogs must be
+   traversed twice and compared semantically without merging pass 2.
+5. The 2,000,000-byte formal response cap must limit the actual network read.
+6. Retry must apply only to an exact well-formed retryable HTTP outcome, and the
+   trusted loader must recompute every attempt outcome and retry transition.
+7. “Complete” must mean current-visible corpus, excluding deleted articles and
+   unavailable historical versions.
+8. The exact formal CLI must verify a preregistered extractor SHA-256 before
+   lease creation or any GET, while retaining the frozen dependency SHA check.
+
+Resolution is limited to the same preregistered corpus-only hypothesis. No
+event, pair, effective time, listing interval, eligibility, Alpha, IC, ML,
+backtest, validation-set or final-test work is authorized.

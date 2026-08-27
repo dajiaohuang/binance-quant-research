@@ -1,0 +1,25 @@
+{
+  "artifact_state": null,
+  "eligibility_evaluated": false,
+  "formal_executed": false,
+  "historical_eligibility_ready": false,
+  "network_access": false,
+  "phase": "SUPERSEDED_BY_ENV_FILE_SUCCESSOR",
+  "strict_eligible_count": 0,
+  "terminal_status": "SUPERSEDED",
+  "tests": {
+    "full_repository": {
+      "expected_lifecycle_mismatch": 1,
+      "failed": 0,
+      "passed": 434,
+      "reason": "The consumed exp009 reservation makes its frozen pre-formal absence assertion permanently stale; exp009 frozen evidence was preserved.",
+      "total": 435
+    },
+    "targeted": {
+      "failed": 0,
+      "passed": 47,
+      "seconds": 8.933,
+      "total": 47
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "experiment_id": "exp_20260826_004",
+  "extractor_version": "binance_spot_announcement_v3",
+  "run_id": "exp_20260826_004_formal_001",
+  "expected_extractor_sha256": "e3fd4ec75c450771afe654ccf08a1c1839c4b11ac9dc7ec038a0a1de722aa62e",
+  "expected_extractor_sha256_freeze_stage": "frozen after source implementation plus first 32/32 narrow and 190/190 full offline tests; before formal review",
+  "catalog_ids": [48, 161],
+  "page_size": 50,
+  "expected_totals": {"48": 2234, "161": 426},
+  "expected_list_release_date_claim_interval_counts": {"48": 575, "161": 181},
+  "list_release_date_claim_start_ms": 1669852800000,
+  "list_release_date_claim_end_ms_exclusive": 1735689600000,
+  "temporal_fields": [
+    "list_release_date_claim_ms",
+    "detail_publish_date_claim_ms",
+    "detail_publish_minus_list_release_claim_ms"
+  ],
+  "temporal_claim_types": "exact positive non-bool JSON int",
+  "delta_contract": "exact detail minus list subtraction; any signed magnitude",
+  "article_code_type": "exact str only",
+  "article_code_regex": "^(?:[0-9a-f]{32}|[0-9]{1,64})$",
+  "article_code_normalization": "forbidden",
+  "article_code_kind_derivation": "forbidden",
+  "article_id_int_contract": "type is int, bool excluded, positive, <=64 decimal digits",
+  "article_id_string_regex": "^[0-9]{1,64}$",
+  "article_id_string_zero_and_leading_zeros": "accepted and preserved",
+  "article_id_uniqueness": "type-aware exact type and value",
+  "detail_id_equality": "exact same type and exact same value as list",
+  "max_pages_per_catalog": 50,
+  "max_articles": 800,
+  "max_response_bytes": 2000000,
+  "max_total_response_bytes": 1000000000,
+  "timeout_seconds": 30,
+  "max_attempts": 3,
+  "max_wire_attempts": 2598,
+  "pacing_seconds": 0.1,
+  "max_clock_skew_ms": 300000,
+  "list_passes": 2,
+  "expected_list_requests": 108,
+  "expected_detail_requests": 756,
+  "expected_time_requests": 2,
+  "expected_logical_requests": 866,
+  "raw_root": "data/raw/binance_spot_announcement_v3/runs",
+  "processed_root": "data/processed/binance_spot_announcement_v3/runs",
+  "formal_outputs": {
+    "summary": "experiments/exp_20260826_004/artifacts/corpus_summary.json",
+    "schema": "experiments/exp_20260826_004/artifacts/schema.json",
+    "source_contract": "experiments/exp_20260826_004/artifacts/source_contract.json"
+  },
+  "discrepancy_artifact": "time_claim_discrepancies.jsonl",
+  "fixtures": [
+    {
+      "path": "tests/fixtures/binance_cms_catalog_48_page_0014_time_claims.response",
+      "bytes": 9949,
+      "sha256": "adbcfcf758ce0c55b772b77de49169702b44759b3e99525e92bb16591d13ce5d",
+      "formal_evidence": false
+    },
+    {
+      "path": "tests/fixtures/binance_cms_article_209355888f0042f788899dd1a04a0052_time_claims.response",
+      "bytes": 78567,
+      "sha256": "cb27c5578fa9303516b238b0e4845640b21f397d09e6f5a90fd4446d21a2a8d5",
+      "formal_evidence": false
+    }
+  ],
+  "english_headers": {
+    "Accept-Encoding": "identity",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Clienttype": "web",
+    "lang": "en",
+    "User-Agent": "quant-binance-announcement-corpus-v3/1"
+  },
+  "authentication": "none",
+  "implementation_dependency": "self-contained stdlib; no v2 helper/runtime import",
+  "frozen_v2_source_sha256": "30a45ed781e0335838ec7e6643c04c229c8ff53637aec2e2c7a0d928f22adc10",
+  "success_state": "NEEDS_MORE_DATA / ANNOUNCEMENT_CORPUS_AVAILABLE",
+  "failure_state": "INCONCLUSIVE",
+  "formal_network_authorized": false,
+  "random_seed": 42
+}

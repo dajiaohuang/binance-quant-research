@@ -1,0 +1,13 @@
+experiment_id=exp_20260827_005
+reviewed_at_local=2026-08-27T16:09:56.7576988+08:00
+review_phase=PRE_PHASE2_RESEARCH_REVIEW
+review_result=NO_GO
+formal_executed=false
+network_access=false
+old_kernel_sha256=392ef9b28fcbf9415ad8cefaadd18851303c8e80f54c28745ff49ce97e962f6f
+old_tests_sha256=e9a617c30e1e72b48dec6a556fc3d7e7d106a673209b0f8b0a38dec5f5e14dd5
+old_commands_sha256=f7a8bc2bd2a432a42856bc28505c6ee9f93a4fc785c371355b1bb6723bbd78b7
+blocker_1=combine_hierarchical did not independently validate ExpertOutput.key and FamilyWeights expert keys before dict/set equality.
+blocker_2=MultiHorizonEnsemble direct construction did not validate its own four-horizon invariant, clocks, ordering, score contract, or provenance.
+resolution_scope=MINIMAL_PHASE1_REMEDIATION_ONLY
+skill_reference_note=quant-strategy-research SKILL.md was read; its linked methodology.md and experiment-contract.md files were absent.

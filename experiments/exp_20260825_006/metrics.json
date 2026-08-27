@@ -1,0 +1,38 @@
+{
+  "experiment_id": "exp_20260825_006",
+  "contract_revision": 2,
+  "terminal_status": "INCONCLUSIVE",
+  "executed_around": "2026-08-25T20:05+08:00",
+  "timestamp_precision": "approximate",
+  "narrow_test": {
+    "command": "uv run python -m unittest tests.test_hierarchical_alpha -v",
+    "tests_run": 35,
+    "passed": 34,
+    "failures": 0,
+    "errors": 1,
+    "successful": false
+  },
+  "error": {
+    "test": "tests.test_hierarchical_alpha.CrossSectionTests.test_residuals_are_orthogonal_and_rank_deficiency_is_rejected",
+    "function": "quant_research.hierarchical_alpha.residualize_cross_section",
+    "dependency_call": "scipy.linalg.lstsq(matrix, target_vector)",
+    "exception_type": "AttributeError",
+    "exception_message": "'list' object has no attribute 'shape'",
+    "root_cause": "SciPy 1.18.0 lstsq expects array-like inputs exposing shape; the kernel passed Python lists."
+  },
+  "environment": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0"
+  },
+  "full_repository_tests": {
+    "executed": false,
+    "reason": "The preregistered narrow test did not pass."
+  },
+  "empirical_research": {
+    "real_data_read": false,
+    "network_used": false,
+    "model_fit": false,
+    "backtest_run": false,
+    "real_score_ic_or_pnl_produced": false
+  }
+}

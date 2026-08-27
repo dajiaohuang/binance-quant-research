@@ -1,0 +1,26 @@
+# exp_20260826_005 preregistered command ledger
+# Created before v4 implementation. Formal execution was later authorized by
+# independent Researcher GO and Auditor GO after the final refreeze.
+
+# Offline gates planned after implementation:
+uv run python -m unittest tests.test_binance_spot_announcement_corpus_v4 -v
+uv run python -m unittest discover -s tests -v
+
+# Formal template. The preregistration placeholder was replaced only after the
+# self-contained source stabilized, passed narrow/full offline tests, and hashed.
+# Executed exactly once on 2026-08-25 UTC after hash/path preflight.
+uv run quant-binance-spot-announcement-corpus-v4 --run-id exp_20260826_005_formal_001 --expected-extractor-sha256 cd6447ba861e7c02a3307456b60adadbb9e1b71e51879e2f03f424007d8943c4 --raw-root data/raw/binance_spot_announcement_v4/runs --processed-root data/processed/binance_spot_announcement_v4/runs --summary-output experiments/exp_20260826_005/artifacts/corpus_summary.json --schema-output experiments/exp_20260826_005/artifacts/schema.json --source-contract-output experiments/exp_20260826_005/artifacts/source_contract.json --catalog-id 48 --catalog-id 161 --page-size 50 --list-release-date-claim-start-ms 1669852800000 --list-release-date-claim-end-ms-exclusive 1735689600000 --expected-total 48=2234 --expected-total 161=426 --expected-list-release-date-claim-interval-count 48=575 --expected-list-release-date-claim-interval-count 161=181 --max-pages-per-catalog 50 --max-articles 800 --max-response-bytes 2000000 --max-total-response-bytes 1000000000 --max-clock-skew-ms 300000 --http-429-backoff-seconds 30 60 120 --other-retryable-backoff-seconds 1 2
+
+# Hardcoded runtime policy: base logical delay 1 s; timeout cap 30 s; wall
+# budget 10,800 s; wire cap 3,464; attempt numbers 1..4; retryable statuses
+# {408,429,500,502,503,504}. Old timeout/max-attempts/max-wire/pacing flags are
+# intentionally absent and rejected.
+
+# Forbidden throughout: exploratory network, out-of-band retry/probe/resume,
+# events, eligibility, Alpha, IC, ML, backtest, validation or final-test commands.
+# formal execution count: 1; observed exit 0; run id consumed.
+# terminal: NEEDS_MORE_DATA / ANNOUNCEMENT_CORPUS_AVAILABLE.
+# Independent offline postflight Auditor verdict: PASS. No postflight network
+# request was made. Trusted load returned NEEDS_MORE_DATA /
+# ANNOUNCEMENT_CORPUS_AVAILABLE; 866 logical requests and 884 wire attempts
+# were independently reconciled. See logs/postflight_audit.txt.

@@ -1,0 +1,33 @@
+{
+  "experiment_id": "exp_20260825_005",
+  "formal_revalidation_started": false,
+  "network_scope": "none",
+  "implementation_freeze": {
+    "payload_source_sha256": "287b315f2a0cfaab2124c1bc8dbcd0ee14fa4527e347866e919925c17c2069c4",
+    "payload_test_sha256": "3b07b82da81fd30559c5876f9cd9949b462605b274b0e79cdf4ab0f3459796c5",
+    "offline_revalidator_sha256": "ab043894a57ea94c08c7f54d840fdf737ec7495bfaee4a6bad30d1da5cdf2227",
+    "offline_revalidator_test_sha256": "6e651f6ea1600421fffdde0339100cefa719e3f981d5319edbdef6f3fd8d78c3",
+    "pyproject_sha256": "3a9a7e2f922fdf487b385abc2fa9ac2b155e19e557b76306d7ff5678dac1456b"
+  },
+  "tests": {
+    "command": "uv run python -m unittest discover -s tests -v",
+    "tests_run": 50,
+    "result": "PASS"
+  },
+  "frozen_success_invariants": {
+    "pairs_valid": 9240,
+    "non_nominal_close_rows": 354,
+    "affected_object_months": 353,
+    "normalized_rows": 6687797,
+    "state_counts": {"A": 6687797, "M": 72379, "N": 6462048, "U": 0}
+  },
+  "output_roots_absent": [
+    "data/processed/binance_spot_v4",
+    "experiments/exp_20260825_005/artifacts"
+  ],
+  "audit_status": "PASS",
+  "audit_completed_at": "2026-08-25T17:05:10.4476337+08:00",
+  "formal_offline_revalidation_authorized": true,
+  "recorded_at": "2026-08-25T17:05:10.4476337+08:00",
+  "prior_audit_result": "FAIL; both TOCTOU blockers corrected before this freeze"
+}

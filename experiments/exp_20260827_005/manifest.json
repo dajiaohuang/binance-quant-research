@@ -1,0 +1,52 @@
+{
+  "audit_closure": {
+    "bytes": 929,
+    "closure_id": "af82656f996085f5c60640c512c15a234a960c2d777d9ae45db917fbe2dd845d",
+    "path": "experiments/exp_20260827_005/audit_closure.json",
+    "sha256": "6b037d26dfde7092b8089a85b71b3ccfd1d16d96c913941fdd9075b66c7727c1"
+  },
+  "created_at": "2026-08-27T15:51:31.0012000+08:00",
+  "eligibility_evaluated": false,
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260827_005",
+  "formal_executed": true,
+  "formal_execution_authorized": true,
+  "formal_execution_count": 2,
+  "formal_record_index": {
+    "bytes": 1088,
+    "path": "experiments/exp_20260827_005/formal_record_hashes.json",
+    "sha256": "9313f7e0141c4f7cd5d0dbb45f9521c63b0f81edd06e48df0588f66d9986d58f"
+  },
+  "postflight_record_closure_remediation": {
+    "bytes": 1521,
+    "path": "experiments/exp_20260827_005/logs/postflight_record_closure_remediation.txt",
+    "sha256": "1bd72fbe16156eec6ee4d3d47803a5c1df860642b75b82522d8b28bb0dbd991f"
+  },
+  "formal_candidate_command_sha256s": [
+    "20410fbbc49fddcf45d6c052cda48b85aa832aa9c5f2530f27dd9dfb2c80c8e1",
+    "e7c8f8cec9a2cece6c31895cc18c671b5325ecfcaf5b49488db30fb430a6de0b"
+  ],
+  "full_repository_tests": "NOT_RUN",
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_repository": true,
+  "historical_eligibility_ready": false,
+  "frozen_files": {
+    "commands": "f7a8bc2bd2a432a42856bc28505c6ee9f93a4fc785c371355b1bb6723bbd78b7",
+    "documentation": "d086417c366079655629781134bb7de4d16fff3659efbc898739fd3d112c2ae4",
+    "hierarchical_alpha": "5db9584b1b456fbe69d0c0937edbcb625adf6ec0b588ef76400da21e037093dc",
+    "hierarchical_alpha_tests": "1796ac727b8fd066a4d68bb8e179841ebe80457bee65b59044bbca9014294da1",
+    "hypothesis": "25c07a36ae604c0f7dd1a0b26a03be4df12d800d2d65daa872336269c00e7c8d",
+    "parameters": "ad2bcb9daf5e391509806c9520db7ddea705f2bd48d700cfbe7506651f19c363",
+    "schema": "a5fe791fc2772125984835acad5a0e54162bcdc0e6ad6b34b375645ade6b8112"
+  },
+  "network_access": false,
+  "phase": "TERMINAL_AUDIT_COMPLETE",
+  "phase2_auditor_api_name_review": "NO_GO_REMEDIATED",
+  "phase2_research_review": "NO_GO_REMEDIATED",
+  "precondition_kernel_sha256": "2637ac6b686ef0d6a0a7dc4c07817fd57e2f2724984cdcccac1671528c7044c5",
+  "primary_change": "HORIZON_IDENTITY_END_TO_END_V1",
+  "real_data_accessed": false,
+  "status": "NEEDS_MORE_DATA",
+  "strict_eligible_count": 0,
+  "terminal_status_ceiling": "NEEDS_MORE_DATA"
+}

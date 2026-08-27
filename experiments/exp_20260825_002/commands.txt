@@ -1,0 +1,17 @@
+# exp_20260825_002 command ledger
+# Preregistered before formal inventory fetch. No Kline ZIP or CHECKSUM payload downloads are authorized.
+
+uv run python -m unittest discover -s tests -v
+
+uv run quant-binance-spot-inventory --raw-root data/raw/binance_spot_v1/inventory --inventory-output data/processed/binance_spot_v1/archive_inventory_1h_2022-12_2024-12.jsonl --summary-output experiments/exp_20260825_002/artifacts/inventory_summary.json --interval 1h --quote-suffix USDT --start-month 2022-12 --end-month 2024-12 --max-workers 8 --request-timeout-seconds 30 --max-attempts 3
+
+# After execution append timestamps, exit code, code hashes, raw-page hashes,
+# inventory hash/rows, current exchangeInfo snapshot hash, and summary values.
+
+# Formal execution record
+# started_at=2026-08-25T00:50:11.4409229+08:00
+# ended_at=2026-08-25T00:50:14.1904391+08:00
+# exit_code=1
+# executed_source_sha256=f9a7e5e010801edb67ab6eda6b15b61504731b746903cc7b2550963d47f404e3
+# error=invalid archive symbol path segment '币安人生TRY'
+# scope_reached=S3 root ListObjectsV2 only; four complete pages; no exchangeInfo or object payload request

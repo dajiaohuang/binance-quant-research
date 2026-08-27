@@ -1,0 +1,99 @@
+{
+  "artifact_state": null,
+  "eligibility_evaluated": false,
+  "formal_executed": true,
+  "formal_execution": {
+    "collector_control_exists": false,
+    "collector_started": false,
+    "execution_count": 1,
+    "final_exists": false,
+    "ledger": {
+      "bytes": 381,
+      "canonical_and_transition_valid": true,
+      "row_count": 6,
+      "sha256": "d45d0e9adf9567a7e5370a511400ef8b99f9524f9b3900afd92e9c0598faa911",
+      "terminal_event": "FAIL",
+      "terminal_exit_code": 46,
+      "terminal_stage": "FINAL_CLEANUP"
+    },
+    "network_request_count": 0,
+    "observed_exit_code": 46,
+    "observed_wall_seconds": 0.3296141,
+    "reservation": {
+      "bytes": 76,
+      "canonical": true,
+      "sha256": "b2ce461ee5897c2eacfc2da9e2ec134373ee6a74789cdc4441dd12b98e3b184b"
+    },
+    "stage_outcomes": [
+      "SELF_HASH/PASS",
+      "CLIPBOARD_READ/START",
+      "CLIPBOARD_READ/PASS",
+      "VALIDATE/PASS",
+      "PRECLEAR/FAIL/44",
+      "FINAL_CLEANUP/FAIL/46"
+    ],
+    "staging_exists": false,
+    "stderr_bytes": 0,
+    "stderr_state": "EMPTY",
+    "stdout_bytes": 0,
+    "stdout_state": "EMPTY"
+  },
+  "historical_eligibility_ready": false,
+  "network_access": false,
+  "phase": "POSTFLIGHT_AWAITING_AUDITOR",
+  "postflight": {
+    "api_key_environment_present": false,
+    "authorization_exists": false,
+    "clipboard_state": "FIXED_NONSECRET_MARKER_OVERWRITE_REPORTED_SUCCESS_NO_READBACK_NOT_EMPTY_ASSERTION",
+    "failure_exists": false,
+    "formal_artifact_count": 0,
+    "request_receipt_count": 0
+  },
+  "postformal_safety_remediation": {
+    "classification": "INDEPENDENT_NONFORMAL_NONNETWORK_FIXED_MARKER_OVERWRITE",
+    "clipboard_readback_performed": false,
+    "fixed_marker": "CLEARED_BY_CODEX",
+    "formal_request_count_after": 0,
+    "observed_exit_code": 0,
+    "stderr_bytes": 0,
+    "stderr_state": "EMPTY",
+    "stdout_bytes": 0,
+    "stdout_state": "EMPTY"
+  },
+  "static_checks": {
+    "powershell_parse": "PASS",
+    "py_compile": "PASS",
+    "strict_json_files": 6,
+    "strict_json_result": "PASS"
+  },
+  "strict_eligible_count": 0,
+  "terminal_status": "INCONCLUSIVE",
+  "tests": {
+    "full_final": {
+      "command": "uv run python -m unittest discover -s tests -v",
+      "failed": 0,
+      "passed": 388,
+      "seconds": 31.908,
+      "total": 388
+    },
+    "targeted_final": {
+      "command": "uv run python -m unittest tests.test_binance_spot_forward_schedule_pit_v2 -v",
+      "failed": 0,
+      "passed": 45,
+      "seconds": 8.486,
+      "total": 45
+    },
+    "targeted_initial_preserved": {
+      "failed": 20,
+      "failure_summary": "Synthetic host did not preserve native wrapper exit and sentinel quoting was invalid.",
+      "passed": 23,
+      "total": 43
+    },
+    "targeted_second_preserved": {
+      "failed": 5,
+      "failure_summary": "CreateNew nested HResult classification and mock Set-Clipboard counter initialization were incomplete.",
+      "passed": 38,
+      "total": 43
+    }
+  }
+}

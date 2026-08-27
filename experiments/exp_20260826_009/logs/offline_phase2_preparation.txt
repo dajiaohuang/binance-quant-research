@@ -1,0 +1,26 @@
+exp_20260826_009 offline Phase2 preparation log
+formal_executed=false
+network_access=false
+real_clipboard_read=false
+credential_access=false
+
+Initial targeted run: 43 total, 23 passed, 20 failed.
+Cause: synthetic PowerShell host did not preserve wrapper native exit and one
+sentinel expression was not correctly quoted. No product-source conclusion.
+
+Second targeted run: 43 total, 38 passed, 5 failed.
+Cause: CreateNew already-exists HResult was nested and the Set-Clipboard mock
+counter was not initialized. No product-source conclusion.
+
+Intermediate targeted run: 43/43 PASS.
+Composite priority addition: 44/44 PASS.
+Final semantic-source equality addition: 45/45 PASS, 8.486 seconds.
+
+Full repository before final equality test: 387/387 PASS, 40.855 seconds.
+Final full repository: 388/388 PASS, 31.908 seconds.
+py_compile: PASS.
+PowerShell parse without execution: PASS.
+Strict JSON duplicate/nonfinite validation: PASS (5 files).
+
+No exp009 final/staging/control, wrapper reservation, or stage ledger was
+created in the real workspace. Only synthetic temporary roots were exercised.

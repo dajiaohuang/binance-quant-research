@@ -1,0 +1,112 @@
+{
+  "article_code_regex": "^(?:[0-9a-f]{32}|[0-9]{1,64})$",
+  "article_id_types": [
+    "int",
+    "str"
+  ],
+  "detail_body_fields": [
+    "body",
+    "contentJson"
+  ],
+  "detail_known_at_rule": "response completion; independent source claims never become effective times",
+  "discrepancy_artifact_rule": "exact nonzero-delta detail-index subset sorted catalog_id/article_code; empty valid; SHA/path/count trusted-rebuilt",
+  "forbidden_artifacts": [
+    "events.jsonl",
+    "listing_intervals.jsonl",
+    "alpha.json"
+  ],
+  "forbidden_processed_fields": [
+    "code_kind",
+    "claimed_published_at_ms",
+    "claimed_published_at_source_field",
+    "detail_publish_date_ms"
+  ],
+  "forbidden_summary_fields": [
+    "claimed_release_interval_ms",
+    "interval_counts",
+    "expected_interval_counts"
+  ],
+  "inventory_key": [
+    "catalog_id",
+    "article_id_type",
+    "article_id",
+    "article_code"
+  ],
+  "list_response_locator": "$.data.catalogs[0]",
+  "processed_artifacts": [
+    "inventory.jsonl",
+    "detail_index.jsonl",
+    "time_claim_discrepancies.jsonl",
+    "corpus_summary.json",
+    "schema.json",
+    "source_contract.json"
+  ],
+  "raw_artifacts": [
+    "runtime_contract.json",
+    "request_ledger.jsonl",
+    "summary.json",
+    "requests/**/attempt_NNNN.response",
+    "requests/**/attempt_NNNN.request.json",
+    "requests/**/attempt_NNNN.receipt.json"
+  ],
+  "raw_summary_required_fields": [
+    "runtime_contract",
+    "request_ledger",
+    "final_receipt_sha256",
+    "receipt_tree_sha256",
+    "raw_artifact_tree_sha256",
+    "selected_detail_keyset_sha256",
+    "accepted_detail_keyset_sha256",
+    "attempt_keyset_sha256",
+    "body_keyset_sha256",
+    "sidecar_keyset_sha256",
+    "receipt_keyset_sha256",
+    "logical_request_count",
+    "wire_attempt_count",
+    "outcome_counts"
+  ],
+  "stability_gate": "two complete list passes; pass 1 alone is processed inventory",
+  "summary_top_level_fields": [
+    "acquisition_bounds",
+    "artifact_state",
+    "catalog_totals",
+    "contract_failures",
+    "detail_count",
+    "detail_index",
+    "expected_list_release_date_claim_interval_counts",
+    "expected_request_count",
+    "expected_totals",
+    "extractor_source_sha256",
+    "historical_eligibility_ready",
+    "inventory",
+    "inventory_count",
+    "list_pass_stability",
+    "list_release_date_claim_interval_counts",
+    "list_release_date_claim_interval_ms",
+    "max_clock_skew_ms",
+    "max_wire_attempts",
+    "page_counts",
+    "pre_network_expected_extractor_sha256",
+    "raw_summary",
+    "request_count",
+    "request_ledger",
+    "response_bytes",
+    "run_id",
+    "semantics",
+    "terminal_status",
+    "time_bracket_ms",
+    "time_claim_discrepancies",
+    "time_claim_discrepancy_count",
+    "wire_attempt_count"
+  ],
+  "summary_wire_fields": [
+    "wire_attempt_count",
+    "max_wire_attempts"
+  ],
+  "temporal_fields": [
+    "list_release_date_claim_ms",
+    "detail_publish_date_claim_ms",
+    "detail_publish_minus_list_release_claim_ms"
+  ],
+  "version": "binance_spot_announcement_v4"
+}

@@ -1,0 +1,62 @@
+{
+  "artifact_state": null,
+  "eligibility_evaluated": false,
+  "formal_executed": true,
+  "formal_result": {
+    "clipboard_postflight_state": "EMPTY",
+    "control_present": false,
+    "execution_count": 1,
+    "final_present": false,
+    "key_environment_present": false,
+    "network_attempt_count": 0,
+    "observed_exit_code": 1,
+    "observed_wall_seconds": 0.2857559,
+    "rerun_forbidden": true,
+    "staging_present": false,
+    "stderr_bytes": 0,
+    "stdout_bytes": 0,
+    "trusted_loader_result": "NOT_RUN_NO_FINAL_ARTIFACT"
+  },
+  "historical_eligibility_ready": false,
+  "network_access": false,
+  "phase": "FORMAL_EXECUTED_AWAITING_POSTFLIGHT_AUDIT",
+  "phase2_v2_decisions": {
+    "auditor": "FINAL_GO",
+    "formal_execution_condition": "USER_COPIES_COMPLIANT_READ_ONLY_API_KEY_AND_EXACT_COMMAND_SHA_EE744DA16648CFAD8857C05D01B02C9D1274C439134EE1B3789D19B0D01D1C70",
+    "researcher": "FINAL_GO"
+  },
+  "strict_eligible_count": 0,
+  "terminal_status": "INCONCLUSIVE",
+  "tests": {
+    "full_repository": {
+      "command": "uv run python -m unittest discover -s tests -q",
+      "first_run": "FAIL_339_OF_340_EXISTING_EXP007_PREFLIGHT_ONLY_ASSERTION",
+      "latest_run": "PASS_343_OF_343",
+      "test_seconds": 22.461,
+      "wall_seconds": 24.5532698
+    },
+    "py_compile": "PASS",
+    "powershell_parse": {
+      "first_harness_run": "FAIL_OUTER_POWERSHELL_VARIABLE_EXPANSION_ONLY",
+      "latest_run": "PASS"
+    },
+    "strict_experiment_json": "PASS",
+    "targeted": {
+      "command": ".venv\\Scripts\\python.exe -B -m unittest tests.test_binance_spot_forward_schedule_pit_v1 -v",
+      "first_run": "FAIL_26_OF_28_TEST_SCAN_INCLUDED_SENTINEL_SOURCE",
+      "latest_run": "PASS_35_OF_35",
+      "test_seconds": 2.2,
+      "wall_seconds": 2.4368847
+    },
+    "workspace_formal_paths_absent": "PASS",
+    "wrapper_hardening": {
+      "auditor_review": "NO_GO_TWO_WRAPPER_BLOCKERS",
+      "initial_regression": "FAIL_34_OF_35_TEST_HARNESS_AND_WINDOWS_POWERSHELL_GET_FILE_HASH_AVAILABILITY",
+      "latest_regression": "PASS_35_OF_35",
+      "self_hash_before_clipboard": "PASS",
+      "prelaunch_clipboard_clear_failure": "PASS_ZERO_COLLECTOR_LAUNCH",
+      "final_clipboard_clear_failure": "PASS_COLLECTOR_ZERO_BECOMES_FIXED_NONZERO",
+      "stdout_stderr_secret_scan": "PASS"
+    }
+  }
+}

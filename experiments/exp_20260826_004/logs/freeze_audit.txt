@@ -1,0 +1,37 @@
+exp_20260826_004 final offline freeze audit
+
+JSON parse
+  manifest.json: OK
+  parameters.json: OK
+  metrics.json: OK
+
+Frozen hash bindings
+  source: MATCH e3fd4ec75c450771afe654ccf08a1c1839c4b11ac9dc7ec038a0a1de722aa62e
+  test: MATCH 110522cbad14afe8440f253baee02e18076ff7b3f57fa0911307a757efdae81b
+  list fixture: MATCH adbcfcf758ce0c55b772b77de49169702b44759b3e99525e92bb16591d13ce5d / 9949 bytes
+  detail fixture: MATCH cb27c5578fa9303516b238b0e4845640b21f397d09e6f5a90fd4446d21a2a8d5 / 78567 bytes
+  pyproject: MATCH a994b75f5f5aa2c5b7b543d160751f92b3e1f75c29ed1b10b5d034bc4bd86563
+  commands: MATCH b9e016e207446f3c25b12c548bd5ff9def8a650e5c0e2d4f7ed89b5262841c98
+  parameters: MATCH 696db474218a92e16f432a49cd285b1590449649abb78ec8c539f7a5641f5c20
+  hypothesis: MATCH d6872b83277bbc2c00d26836b9d55905838a452ea7ff065d32081e7f8e93a2a6
+  formal command UTF-8/no-newline: MATCH de1a7f3457b1d17a9a2abde043bc9e5240b29fa24d1129d2d2a0c45110dbe4b4
+
+Isolation and interface
+  v2 source: UNCHANGED 30a45ed781e0335838ec7e6643c04c229c8ff53637aec2e2c7a0d928f22adc10
+  v3 import/runtime reuse of v2: ABSENT
+  formal command line count: 1
+  formal command placeholder in command/manifest: ABSENT
+  preregistration placeholder text retained only as historical prose in hypothesis.md
+  tolerance/reconciliation runtime parameters: ABSENT
+  expected discrepancy-count parameter/CLI/summary field: ABSENT
+
+Formal output state
+  raw run directory: ABSENT
+  processed run directory: ABSENT
+  corpus_summary.json: ABSENT
+  schema.json: ABSENT
+  source_contract.json: ABSENT
+  formal execution count: 0
+  network request count: 0
+
+Phase: pre_execution_review_pending / formal execution NO-GO

@@ -1,0 +1,16 @@
+exp_20260827_005 postflight record closure remediation
+
+Auditor verdict: POSTFLIGHT FINAL FAIL limited to record closure.
+
+The three stale-state categories were:
+1. report.md still said that the candidate awaited Fresh Phase 2 review and that formal commands were unexecuted, although Fresh Phase 2 GO had been granted and the commands had each passed once.
+2. metrics.json still labeled both Phase 2 review remediations as awaiting fresh review and lacked the record-closure recheck state.
+3. manifest.json still used TERMINAL_POSTFLIGHT_PENDING_AUDITOR instead of the required record-recheck-pending phase and did not bind this remediation log.
+
+Remediation scope:
+- report.md was corrected to record Fresh Phase 2 GO, formal hierarchical 48/48 exit 0, formal historical adapter 27/27 exit 0, retry count zero, and record closure awaiting independent read-only recheck.
+- metrics.json was corrected to record both NO_GO findings as remediated with Fresh Phase 2 GO and to add RECORD_CLOSURE_REMEDIATED_AWAITING_READONLY_RECHECK.
+- manifest.json is to bind this log and use TERMINAL_POSTFLIGHT_RECORD_RECHECK_PENDING.
+
+The formal record index remains 1088 bytes with SHA-256 9313f7e0141c4f7cd5d0dbb45f9521c63b0f81edd06e48df0588f66d9986d58f.
+No formal command or test was rerun. No indexed formal record and no frozen file was modified. No network, real data, eligibility, Alpha, IC, ML, P&L, or backtest operation was performed. The terminal research status remains NEEDS_MORE_DATA, and audit completion is not claimed.

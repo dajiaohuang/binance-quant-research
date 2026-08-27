@@ -1,0 +1,32 @@
+{
+  "api_key_environment_variable": "BINANCE_READ_ONLY_API_KEY",
+  "body_caps_bytes": [65536, 2097152, 2097152, 33554432, 65536],
+  "clipboard_overwrite_marker": "CLEARED_BY_CODEX",
+  "clipboard_readback_forbidden": true,
+  "collector_path": "src/quant_research/binance_spot_forward_schedule_pit_v3.py",
+  "endpoint_plan": [
+    {"api_key_header": false, "endpoint_id": "time_before", "ordinal": 1, "url": "https://api.binance.com/api/v3/time"},
+    {"api_key_header": true, "endpoint_id": "open_symbol_list", "ordinal": 2, "url": "https://api.binance.com/sapi/v1/spot/open-symbol-list"},
+    {"api_key_header": true, "endpoint_id": "delist_schedule", "ordinal": 3, "url": "https://api.binance.com/sapi/v1/spot/delist-schedule"},
+    {"api_key_header": false, "endpoint_id": "exchange_info", "ordinal": 4, "url": "https://api.binance.com/api/v3/exchangeInfo?showPermissionSets=true"},
+    {"api_key_header": false, "endpoint_id": "time_after", "ordinal": 5, "url": "https://api.binance.com/api/v3/time"}
+  ],
+  "experiment_id": "exp_20260826_010",
+  "formal_command_shell": "Windows PowerShell outer native exit propagation",
+  "formal_command_suffix": "; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode",
+  "formal_control_parent": "experiments/exp_20260826_010/formal_control",
+  "formal_run_authorized": false,
+  "ledger_path": "experiments/exp_20260826_010/formal_control/exp_20260826_010_formal_001.stage_ledger.jsonl",
+  "loader_path": "src/quant_research/binance_spot_forward_schedule_pit_v3_loader.py",
+  "max_attempts_per_endpoint": 1,
+  "max_total_body_bytes": 41943040,
+  "network_access_during_phase2": false,
+  "redirects_allowed": false,
+  "request_count": 5,
+  "reservation_path": "experiments/exp_20260826_010/formal_control/exp_20260826_010_formal_001.reservation.lock",
+  "run_id": "exp_20260826_010_formal_001",
+  "timeout_seconds_per_request": 30,
+  "total_wall_seconds": 180,
+  "version": "binance_spot_forward_schedule_pit_v3",
+  "wrapper_path": "src/quant_research/binance_spot_forward_schedule_pit_v3_wrapper.ps1"
+}

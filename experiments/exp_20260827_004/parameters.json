@@ -1,0 +1,49 @@
+{
+  "components": [
+    "TRADING_STATUS",
+    "SPOT_PERMISSION",
+    "QUOTE_ASSET",
+    "LISTING_WINDOW"
+  ],
+  "expected_market_type": "SPOT",
+  "expected_venue": "BINANCE",
+  "experiment_id": "exp_20260827_004",
+  "formal_execution_authorized": false,
+  "hash_layers": {
+    "final_snapshot": "scope + exact_raw_manifest + semantic_resolution_sha256",
+    "semantic_resolution": "physical-provenance-free semantic claims, revisions, resolutions, and requested scope"
+  },
+  "input_mode": "SYNTHETIC_ONLY",
+  "nonqualifying_assertion_semantics": [
+    "RESPONSE_ABSENCE",
+    "ARCHIVE_AVAILABILITY",
+    "CURRENT_OBSERVATION",
+    "PLANNED_SCHEDULE_CLAIM"
+  ],
+  "policy_registry": {
+    "SYNTHETIC_BINANCE_HISTORICAL_PIT_FIXTURE_V1": {
+      "allowed_authority_id": "SYNTHETIC_BINANCE_OFFICIAL_FIXTURE",
+      "allowed_market_type": "SPOT",
+      "allowed_schema_version": "BINANCE_HISTORICAL_PIT_EVIDENCE_V1",
+      "allowed_source_contract_id": "SYNTHETIC_BINANCE_HISTORICAL_PIT_SOURCE_CONTRACT_V1",
+      "allowed_venue": "BINANCE",
+      "empirical_authorized": false,
+      "qualifying_assertion_semantics": "HISTORICAL_EFFECTIVE_FACT"
+    }
+  },
+  "provenance": {
+    "binding_unique_key": "payload_id",
+    "composite_locator_fields": [
+      "source_contract_id",
+      "payload_id",
+      "raw_payload_sha256",
+      "json_pointer"
+    ]
+  },
+  "revision_actions": [
+    "ASSERT",
+    "REPLACE",
+    "CANCEL"
+  ],
+  "schema_version": "BINANCE_HISTORICAL_PIT_EVIDENCE_V1"
+}

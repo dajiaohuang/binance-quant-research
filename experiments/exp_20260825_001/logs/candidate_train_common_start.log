@@ -1,0 +1,66 @@
+2026-08-25 00:16:45,176 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-08-25 00:16:45,176 - freqtrade.loggers - INFO - Logfile configured
+2026-08-25 00:16:45,176 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-08-25 00:16:45,177 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: strategies
+2026-08-25 00:16:45,177 - freqtrade.configuration.configuration - INFO - Parameter -i/--timeframe detected ... Using timeframe: 5m ...
+2026-08-25 00:16:45,177 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 2 ...
+2026-08-25 00:16:45,177 - freqtrade.configuration.configuration - INFO - Parameter --fee detected, setting fee to: 0.0015 ...
+2026-08-25 00:16:45,178 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 1672621200-1735689600 ...
+2026-08-25 00:16:45,178 - freqtrade.configuration.configuration - INFO - Using user-data directory: D:\repo\binance-quant-research\user_data ...
+2026-08-25 00:16:45,178 - freqtrade.configuration.configuration - INFO - Using data directory: D:\repo\binance-quant-research\user_data\data\binance ...
+2026-08-25 00:16:45,179 - freqtrade.configuration.configuration - INFO - Using experiments/exp_20260825_001/backtests/candidate_train_common_start as backtest directory ...
+2026-08-25 00:16:45,179 - freqtrade.configuration.configuration - INFO - Parameter --export detected: trades ...
+2026-08-25 00:16:45,179 - freqtrade.configuration.configuration - INFO - Parameter --cache=none detected ...
+2026-08-25 00:16:45,179 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 1672621200-1735689600
+2026-08-25 00:16:45,180 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-08-25 00:16:45,184 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-08-25 00:16:45,184 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-08-25 00:16:45,184 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-08-25 00:16:45,185 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2026-08-25 00:16:45,186 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-08-25 00:16:45,186 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.65
+2026-08-25 00:16:45,187 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True}
+2026-08-25 00:16:45,190 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True}
+2026-08-25 00:16:45,194 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-08-25 00:16:45,874 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-08-25 00:16:45,876 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy DryRunSmaCrossHtfBreakoutGateStrategy from 'D:\repo\binance-quant-research\strategies\DryRunSmaCrossHtfBreakoutGateStrategy.py'...
+2026-08-25 00:16:45,876 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-08-25 00:16:45,877 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 5m.
+2026-08-25 00:16:45,877 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'order_types' with value from the configuration: {'entry': 'market', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False, 'emergency_exit': 'market'}.
+2026-08-25 00:16:45,877 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-08-25 00:16:45,877 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 50.
+2026-08-25 00:16:45,878 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 2.
+2026-08-25 00:16:45,878 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 0.03}
+2026-08-25 00:16:45,878 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2026-08-25 00:16:45,878 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.03
+2026-08-25 00:16:45,878 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-08-25 00:16:45,879 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-08-25 00:16:45,879 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-08-25 00:16:45,879 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-08-25 00:16:45,879 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-08-25 00:16:45,879 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'market', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False, 'emergency_exit': 'market'}
+2026-08-25 00:16:45,879 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-08-25 00:16:45,880 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-08-25 00:16:45,880 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 50
+2026-08-25 00:16:45,880 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 300
+2026-08-25 00:16:45,880 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-08-25 00:16:45,880 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-08-25 00:16:45,880 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-08-25 00:16:45,881 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-08-25 00:16:45,881 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-08-25 00:16:45,881 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-08-25 00:16:45,881 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-08-25 00:16:45,881 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-08-25 00:16:45,881 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 2
+2026-08-25 00:16:45,882 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-08-25 00:16:45,886 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from 'D:\repo\binance-quant-research\.venv\Lib\site-packages\freqtrade\plugins\pairlist\StaticPairList.py'...
+2026-08-25 00:16:45,895 - freqtrade.optimize.backtesting - INFO - Using fee 0.1500% from config.
+2026-08-25 00:16:46,059 - freqtrade.optimize.backtesting - INFO - Loading data from 2023-01-01 00:00:00 up to 2025-01-01 00:00:00 (731 days).
+2026-08-25 00:16:47,733 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-08-25 00:16:47,734 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy DryRunSmaCrossHtfBreakoutGateStrategy
+2026-08-25 00:16:47,743 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT 1h from 2022-12-20 13:00:00 to 2025-01-01 00:00:00
+2026-08-25 00:16:47,747 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT, spot, 1h, data starts at 2023-01-01 00:00:00
+2026-08-25 00:16:47,810 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT 1h from 2022-12-20 13:00:00 to 2025-01-01 00:00:00
+2026-08-25 00:16:47,813 - freqtrade.data.history.datahandlers.idatahandler - WARNING - ETH/USDT, spot, 1h, data starts at 2023-01-01 00:00:00
+2026-08-25 00:16:47,860 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2023-01-02 01:00:00 up to 2025-01-01 00:00:00 (729 days).
+2026-08-25 00:16:50,319 - freqtrade.misc - INFO - dumping json to "experiments\exp_20260825_001\backtests\candidate_train_common_start-2026-08-25_00-16-50.meta.json"

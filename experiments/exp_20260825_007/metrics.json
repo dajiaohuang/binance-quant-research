@@ -1,0 +1,73 @@
+{
+  "experiment_id": "exp_20260825_007",
+  "status": "complete",
+  "phase": "terminal_postflight_complete",
+  "decision_status": "NEEDS_MORE_DATA",
+  "implementation": {
+    "pre_fix_sha256": "c19fd1953b18205d4757e54d67b4d1127dd11d2f52f47738a2b9d9159275601e",
+    "current_sha256": "2637ac6b686ef0d6a0a7dc4c07817fd57e2f2724984cdcccac1671528c7044c5"
+  },
+  "frozen_test_sha256": "6d13ba56248305b9990f9422be79d476b64228d266691f4b6db8ac9416935870",
+  "environment": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0"
+  },
+  "first_execution": {
+    "raw_stdout_persisted": false,
+    "gate1_narrow": {
+      "sequence": 1,
+      "exit_code": 0,
+      "tests_run": 35,
+      "result": "OK"
+    },
+    "gate2_full_repository": {
+      "sequence": 2,
+      "prerequisite": "gate1_narrow passed",
+      "exit_code": 0,
+      "tests_run": 85,
+      "result": "OK"
+    }
+  },
+  "evidence_replay": {
+    "same_frozen_sha_contract": true,
+    "purpose": "raw evidence closure only",
+    "gate1_narrow": {
+      "sequence": 3,
+      "started_at": "2026-08-25T20:15:21.0987098+08:00",
+      "ended_at": "2026-08-25T20:15:21.5131740+08:00",
+      "exit_code": 0,
+      "tests_run": 35,
+      "ok_test_lines": 35,
+      "result": "OK",
+      "log": "logs/gate1_narrow_replay.log",
+      "log_sha256": "0972f7d6a21c3fdf01a83c907bcb234c5b74b7039296946092caa91a4ca457e3"
+    },
+    "gate2_full_repository": {
+      "sequence": 4,
+      "prerequisite": "evidence replay gate1_narrow passed",
+      "started_at": "2026-08-25T20:15:21.7866969+08:00",
+      "ended_at": "2026-08-25T20:15:23.8772524+08:00",
+      "exit_code": 0,
+      "tests_run": 85,
+      "ok_test_lines": 85,
+      "result": "OK",
+      "log": "logs/gate2_full_repository_replay.log",
+      "log_sha256": "485a169ef68e1cae8b3d5f8466f0a62ac2acf33273a6069bc36dd5d276a8bba7"
+    }
+  },
+  "scope_attestation": {
+    "real_data_read": false,
+    "network_used": false,
+    "model_fit": false,
+    "backtest_run": false,
+    "cli_implemented_or_executed": false,
+    "real_factor_score_ic_or_pnl_produced": false
+  },
+  "postflight_audit": "PASS",
+  "terminal_decision": "NEEDS_MORE_DATA",
+  "limitations": [
+    "Synthetic contracts only; no empirical alpha conclusion.",
+    "PIT Binance Spot eligibility evidence is still missing.",
+    "No real data, IC, P&L, model fit, or backtest was executed."
+  ]
+}

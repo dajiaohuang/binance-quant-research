@@ -1,0 +1,41 @@
+{
+  "code_bindings": {
+    "collector": {"path":"src/quant_research/binance_spot_forward_schedule_pit_v4.py","sha256":"abd13b6cfad926a320b90a17b71f15105a06edfc66f9510f5895e20b3b326b7e"},
+    "loader": {"path":"src/quant_research/binance_spot_forward_schedule_pit_v4_loader.py","sha256":"efad36c77f4da281e7b513bb71ecda13bba8217375d4bbeb476302184832a1a5"},
+    "parameters": {"path":"experiments/exp_20260827_001/parameters.json","sha256":"9a360688d5284f4ee0771e86d758cb91f08446dfc186fcdb84e3430c369029da"},
+    "schema": {"path":"experiments/exp_20260827_001/artifacts/schema.json","sha256":"caa0f48194f9ce343d4dcc6c28f9ebf6e48a76b552c64ce2c8af2b1c46b5ea0e"},
+    "source_contract": {"path":"experiments/exp_20260827_001/artifacts/source_contract.json","sha256":"3115e3613d22b1ea6cbcff26a3619f36f3a71a3f4b7f6e444fc8aa303f799ecf"},
+    "tests": {"path":"tests/test_binance_spot_forward_schedule_pit_v4.py","sha256":"cd9336d1b8d878ecd3a9d2a11c8d5a554021016e57e7b50ad9145652bf326009"},
+    "wrapper": {"path":"src/quant_research/binance_spot_forward_schedule_pit_v4_wrapper.ps1","sha256":"39e957d70ed48c5346e7e335b284b520f2da7117f62dadae07ae32c9bdd9f4ab"}
+  },
+  "created_at": "2026-08-27T00:51:05.5518993+08:00",
+  "experiment_id": "exp_20260827_001",
+  "formal_command_sha256": "4d39ee8ea74183eacdfa3d09ae10aa73aa2b154bbd47061dcf5e81ec9d51c3af",
+  "formal_execution_authorized": true,
+  "formal_execution_evidence": {
+    "combined_stdout_stderr": "EMPTY",
+    "exit_code": 43,
+    "ledger_path": "experiments/exp_20260827_001/formal_control/exp_20260827_001_formal_001.stage_ledger.jsonl",
+    "ledger_sha256": "d110225c057a089351883214c01742b4dc98163ef63c46bdb55bd66ee9a91371",
+    "reservation_path": "experiments/exp_20260827_001/formal_control/exp_20260827_001_formal_001.reservation.lock",
+    "reservation_sha256": "38302e346ed61d35a59f011c794ada7fa02cdfe008bf58b59aa4d55b700db24a",
+    "terminal_stage": "VALIDATE",
+    "wall_time_seconds": 0.265804
+  },
+  "formal_executed": true,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_repository": true,
+  "git_worktree_clean": false,
+  "historical_eligibility_ready": false,
+  "network_access_count": 0,
+  "phase": "POSTFLIGHT_PENDING_AUDIT",
+  "primary_change": "LOCAL_ENV_FILE_KEY_HANDOFF_V1",
+  "run_id": "exp_20260827_001_formal_001",
+  "run_consumed": true,
+  "rerun_forbidden": true,
+  "runtime": {"python":"3.12.13","powershell":"5.1.19041.6456"},
+  "status": "INCONCLUSIVE",
+  "strict_eligible_count": 0,
+  "supersedes": "exp_20260826_010",
+  "version": "binance_spot_forward_schedule_pit_v4"
+}

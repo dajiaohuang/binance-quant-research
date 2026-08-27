@@ -1,0 +1,49 @@
+{
+  "experiment_id": "exp_20260825_005",
+  "close_time_policy": "within_open_interval",
+  "minimum_close_time": "open_time",
+  "maximum_close_time": "open_time + 3599999",
+  "preserve_source_close_time": true,
+  "non_nominal_close_event_code": "NON_NOMINAL_CLOSE_TIME_WITHIN_INTERVAL",
+  "required_non_nominal_close_rows": 354,
+  "required_non_nominal_close_object_months": 353,
+  "non_nominal_close_ledger_fields": [
+    "anomaly_code",
+    "symbol",
+    "month",
+    "zip_key",
+    "open_time_ms",
+    "actual_close_time_ms",
+    "nominal_close_time_ms",
+    "shortfall_ms",
+    "source_zip_sha256"
+  ],
+  "forbidden_event_inferences": ["HALT", "TRADING", "LISTED", "ELIGIBLE", "CAUSE"],
+  "object_atomicity": "Any hard failure makes the entire symbol-month U and emits zero normalized rows",
+  "gap_policy": "classify and report; never fill",
+  "duplicate_policy": "fail object validation",
+  "raw_revalidation": [
+    "frozen local size",
+    "official checksum record and basename",
+    "ZIP SHA-256",
+    "ZIP safety and CRC",
+    "12-column strict UTF-8 CSV",
+    "millisecond UTC open-time grid",
+    "month boundary",
+    "ordering and uniqueness",
+    "OHLCV and taker subset"
+  ],
+  "panel_start_utc": "2022-12-01T00:00:00Z",
+  "panel_end_utc_exclusive": "2025-01-01T00:00:00Z",
+  "panel_symbol_count": 723,
+  "panel_hour_count": 18288,
+  "panel_cell_count": 13222224,
+  "required_normalized_rows": 6687797,
+  "required_coverage_state_counts": {
+    "A": 6687797,
+    "M": 72379,
+    "N": 6462048,
+    "U": 0
+  },
+  "random_seed": 42
+}

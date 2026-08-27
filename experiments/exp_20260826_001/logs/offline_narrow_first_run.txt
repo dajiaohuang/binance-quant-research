@@ -1,0 +1,40 @@
+Command: uv run python -m unittest tests.test_binance_spot_pit -v
+Exit code: 1
+Raw execution transcript: Codex chunk_id 850c9a (complete unabridged output)
+
+test_429_is_preserved_before_bounded_retry ... ERROR
+test_atomic_no_overwrite_stops_before_new_requests ... ERROR
+test_clock_bracket_and_local_skew_fail_closed ... ok
+test_complete_unfiltered_unauthenticated_bracket_and_raw_sidecars ... ERROR
+test_current_evidence_cannot_be_used_for_earlier_formation ... ERROR
+test_duplicate_unknown_and_missing_fields_fail_closed ... ok
+test_filtered_or_noncanonical_exchange_url_is_rejected_before_fetch ... ok
+test_invalid_json_preserves_all_acquired_evidence_and_fails ... ok
+test_loader_recomputes_artifact_hash_and_rejects_tamper ... ERROR
+test_loader_recomputes_raw_hash_and_rejects_tamper ... ERROR
+test_loader_rederives_row_hash_values_and_provenance ... ERROR
+test_non_200_preserves_body_and_sidecar ... ok
+test_strict_gate_integration_keeps_every_symbol_ineligible ... ERROR
+test_symbol_index_hash_mismatch_stops_before_network ... ok
+test_unicode_stable_order_archive_only_unknown_and_listing_never_fabricated ... ERROR
+
+All nine errors had the same complete traceback shape:
+
+Traceback (most recent call last):
+  File "D:\repo\binance-quant-research\tests\test_binance_spot_pit.py", line 136, in run_good
+    summary = run_snapshot(
+  File "D:\repo\binance-quant-research\src\quant_research\binance_spot_pit.py", line 724, in run_snapshot
+    before_ms, exchange_ms, after_ms, known_at_ms = _validate_clock_bracket(
+  File "D:\repo\binance-quant-research\src\quant_research\binance_spot_pit.py", line 628, in _validate_clock_bracket
+    raise PITClockError(f"{label} exceeds permitted local/server clock skew")
+quant_research.binance_spot_pit.PITClockError: time_before exceeds permitted local/server clock skew
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.217s
+
+FAILED (errors=9)
+
+Root cause retained without changing production logic: the synthetic test
+constant for 2026-04-29T00:00:00Z was mistyped as 1777334400000; the correct UTC
+epoch milliseconds are 1777420800000. The fail-closed clock-skew gate therefore
+worked as designed. The single test-fixture constant was corrected before rerun.

@@ -1,0 +1,32 @@
+{
+  "code_bindings": {
+    "collector": {"path":"src/quant_research/binance_spot_forward_schedule_pit_v6.py","sha256":"ff76fd9e7cd3164e98c883ded78dd0e3bf4c89165e7b168b1471fec96fb1eb8d"},
+    "launcher": {"path":"src/quant_research/binance_spot_forward_schedule_pit_v6_launcher.ps1","sha256":"5da75c6a0239b6553828d85ce1dfcc63ecc44b340cc4b5d6b403511810653b2d"},
+    "loader": {"path":"src/quant_research/binance_spot_forward_schedule_pit_v6_loader.py","sha256":"42a8cb233e535af3e5bf665b5da16d77176469bd3fb58816eb21aa1a51a49a1e"},
+    "parameters": {"path":"experiments/exp_20260827_003/parameters.json","sha256":"919a4db96af6ed4cf8cdc22c6ee023ea5c20f839ffe7412fa7676c77727368c1"},
+    "schema": {"path":"experiments/exp_20260827_003/artifacts/schema.json","sha256":"129ff866fd2e4c06e43fee2aac0c869b3d908d9da4fc7a8eea70beec4c83d43e"},
+    "source_contract": {"path":"experiments/exp_20260827_003/artifacts/source_contract.json","sha256":"b7776b2ce3eed23468a8eb3d146e481c1e570b0220e247710696f999bbc0b2d2"},
+    "tests": {"path":"tests/test_binance_spot_forward_schedule_pit_v6.py","sha256":"7ec9259e35bad895b1956efa1ebab946c69c5ad3b7e42468b3a387a54c480db9"},
+    "wrapper": {"path":"src/quant_research/binance_spot_forward_schedule_pit_v6_wrapper.ps1","sha256":"6e7ed42a32c7b7a2765f1c711d19ad4fb6190d17bb6130496bf6651cba0f8c55"}
+  },
+  "created_at": "2026-08-27T02:08:36.5535000+08:00",
+  "experiment_id": "exp_20260827_003",
+  "formal_command_sha256": "6f30b127981af3fec837178871540eb48f90947aae5abc37ce75fdf504d0cd9a",
+  "formal_authorization_consumed": true,
+  "formal_execution_attempted": true,
+  "formal_execution_authorized": false,
+  "formal_executed": true,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_repository": true,
+  "git_worktree_clean": false,
+  "historical_eligibility_ready": false,
+  "network_access_count": 5,
+  "phase": "POSTFORMAL_AWAITING_AUDITOR",
+  "primary_change": "DIRECT_FROZEN_LAUNCHER_V1",
+  "run_id": "exp_20260827_003_formal_001",
+  "run_rerun_forbidden": true,
+  "status": "NEEDS_MORE_DATA",
+  "strict_eligible_count": 0,
+  "supersedes": "exp_20260827_002",
+  "version": "binance_spot_forward_schedule_pit_v6"
+}

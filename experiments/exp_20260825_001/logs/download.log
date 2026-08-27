@@ -1,0 +1,30 @@
+2026-08-25 00:14:17,376 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-08-25 00:14:17,377 - freqtrade.loggers - INFO - Logfile configured
+2026-08-25 00:14:17,377 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-08-25 00:14:17,377 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20230101-20260715 ...
+2026-08-25 00:14:17,378 - freqtrade.configuration.configuration - INFO - Using user-data directory: D:\repo\binance-quant-research\user_data ...
+2026-08-25 00:14:17,378 - freqtrade.configuration.configuration - INFO - Using data directory: D:\repo\binance-quant-research\user_data\data\binance ...
+2026-08-25 00:14:17,378 - freqtrade.configuration.configuration - INFO - Using pairs ['BTC/USDT', 'ETH/USDT']
+2026-08-25 00:14:17,381 - freqtrade.configuration.configuration - INFO - timeframes --timeframes: ['5m', '1h']
+2026-08-25 00:14:17,382 - freqtrade.configuration.configuration - INFO - Using "feather" to store OHLCV data.
+2026-08-25 00:14:17,382 - freqtrade.configuration.configuration - INFO - Detected --trading-mode: spot
+2026-08-25 00:14:17,382 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20230101-20260715
+2026-08-25 00:14:17,383 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-08-25 00:14:17,387 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-08-25 00:14:17,387 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-08-25 00:14:17,865 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-08-25 00:14:17,865 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.65
+2026-08-25 00:14:17,866 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True}
+2026-08-25 00:14:17,870 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True}
+2026-08-25 00:14:17,873 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-08-25 00:14:17,874 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-08-25 00:14:17,874 - freqtrade.exchange.exchange - INFO - Markets were not loaded. Loading them now..
+2026-08-25 00:14:18,605 - freqtrade.data.history.history_utils - INFO - About to download pairs: ['BTC/USDT', 'ETH/USDT'], intervals: ['5m', '1h'] to D:\repo\binance-quant-research\user_data\data\binance
+2026-08-25 00:14:18,626 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 5m, spot and store in D:\repo\binance-quant-research\user_data\data\binance. From 2023-01-01T00:00:00 to 2026-07-15T00:00:00
+2026-08-25 00:14:21,981 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 5m, spot with length 371792.
+2026-08-25 00:14:22,129 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 1h, spot and store in D:\repo\binance-quant-research\user_data\data\binance. From 2023-01-01T00:00:00 to 2026-07-15T00:00:00
+2026-08-25 00:14:23,052 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 1h, spot with length 30998.
+2026-08-25 00:14:23,062 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT", 5m, spot and store in D:\repo\binance-quant-research\user_data\data\binance. From 2023-01-01T00:00:00 to 2026-07-15T00:00:00
+2026-08-25 00:14:26,056 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT, 5m, spot with length 371792.
+2026-08-25 00:14:26,201 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT", 1h, spot and store in D:\repo\binance-quant-research\user_data\data\binance. From 2023-01-01T00:00:00 to 2026-07-15T00:00:00
+2026-08-25 00:14:27,069 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT, 1h, spot with length 30998.

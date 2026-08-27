@@ -1,0 +1,63 @@
+{
+  "canonicalization": {
+    "json": "UTF-8 no BOM sorted keys indent=2 LF final LF",
+    "jsonl": "UTF-8 no BOM sorted keys compact LF final LF",
+    "reject_duplicate_keys_and_nonfinite_numbers": true
+  },
+  "commit_domain": {
+    "final_root": "data/raw/binance_spot_forward_schedule_pit_v6/runs/exp_20260827_003_formal_001",
+    "payload_files": [
+      "requests/001_time_before.response",
+      "requests/001_time_before.receipt.json",
+      "requests/002_open_symbol_list.response",
+      "requests/002_open_symbol_list.receipt.json",
+      "requests/003_delist_schedule.response",
+      "requests/003_delist_schedule.receipt.json",
+      "requests/004_exchange_info.response",
+      "requests/004_exchange_info.receipt.json",
+      "requests/005_time_after.response",
+      "requests/005_time_after.receipt.json",
+      "plans.jsonl",
+      "current_symbols.jsonl",
+      "joins.jsonl"
+    ],
+    "summary_file": "summary.json"
+  },
+  "derived_contract": {
+    "current_symbols_exact_keys": ["baseAsset","permissionSets","quoteAsset","row_sha256","source_body_sha256","source_record_index","status","symbol"],
+    "join_status": ["MATCHED","MISSING"],
+    "joins_exact_keys": ["current_symbol_row_sha256","join_status","kind","plan_row_sha256","planned_at_claim_ms","row_sha256","symbol"],
+    "plans_exact_keys": ["kind","planned_at_claim_ms","row_sha256","source_body_sha256","source_endpoint_id","source_record_index","source_symbol_index","symbol"],
+    "symbol_decomposition_forbidden": true
+  },
+  "env_file_contract": {
+    "assignment_regex": "^BINANCE_READ_ONLY_API_KEY[ \\t]*=[ \\t]*([A-Za-z0-9_-]+)[ \\t]*$",
+    "bare_cr_allowed": false,
+    "blank_line_regex": "^[ \\t]*$",
+    "comment_line_regex": "^[ \\t]*#[\\t\\x20-\\x7E]*$",
+    "fixed_path": ".env.binance.local",
+    "line_endings": ["LF","CRLF"],
+    "max_bytes": 4096,
+    "mixed_line_endings_allowed": true,
+    "optional_single_leading_utf8_bom": true,
+    "post_bom_character_set": "ASCII_ONLY_NO_NUL",
+    "read_cap_plus_one": 4097,
+    "required_assignment_count": 1,
+    "user_file_mutation_allowed": false
+  },
+  "experiment_id": "exp_20260827_003",
+  "launcher_control": {
+    "allowed_child_exit_codes": [0,10,11,20,24,30,31,32,33,34,35,40,41,42,43,44,45,46,47],
+    "formal_parameter_exact": ["ExpectedLauncherSha256"],
+    "native_call_count": 1,
+    "path_or_launch_exit": 49,
+    "self_hash_exit": 48,
+    "unknown_or_null_child_exit": 50
+  },
+  "receipt_exact_keys": ["ordinal","endpoint_id","method","url","client_send_utc_ms","client_recv_utc_ms","http_status","body_bytes","body_sha256","api_key_header_sent"],
+  "run_id": "exp_20260827_003_formal_001",
+  "summary_code_binding_count": 7,
+  "summary_exact_keys": ["artifact_state","artifact_tree_sha256","code_bindings","current_symbol_count","eligibility_evaluated","experiment_id","historical_eligibility_ready","join_count","join_status_counts","output_artifacts","plan_count","request_count","request_receipts","run_id","semantics","strict_eligible_count","terminal_status","time_bracket","version"],
+  "version": "binance_spot_forward_schedule_pit_v6"
+}
+

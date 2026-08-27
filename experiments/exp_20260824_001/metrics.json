@@ -1,6 +1,6 @@
 {
   "experiment_id": "exp_20260824_001",
-  "status": "IN_PROGRESS",
+  "status": "INCONCLUSIVE",
   "scope": {
     "exchange": "binance",
     "market": "spot",
@@ -58,5 +58,6 @@
     "validation": "NOT_RUN",
     "final_test": "NOT_RUN"
   },
-  "decision": null
+  "decision": "INCONCLUSIVE",
+  "decision_reason": "The four frozen Feather files were not present on the successor host and the smoke ZIP did not contain source OHLCV. Full training was never run. The experiment is superseded by exp_20260825_001, which uses a separately frozen download."
 }

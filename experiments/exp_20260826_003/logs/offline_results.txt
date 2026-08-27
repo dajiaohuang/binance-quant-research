@@ -1,0 +1,66 @@
+exp_20260826_003 offline implementation results
+
+No formal or exploratory network request was executed by the Experimenter.
+No Alpha, IC, ML, eligibility derivation, backtest, validation-set or final-test
+command was executed.
+
+First implementation narrow run
+  command: uv run python -m unittest tests.test_binance_spot_announcement_corpus_v2 -v
+  raw transcript: Codex chunk 88d367
+  exit code: 0
+  result: OK, Ran 28 tests in 1.687s
+
+First implementation full-repository run
+  command: uv run python -m unittest discover -s tests -v
+  raw transcript: Codex chunk dc70e9
+  exit code: 0
+  result: OK, Ran 158 tests in 3.944s
+
+Final frozen narrow run
+  command: uv run python -m unittest tests.test_binance_spot_announcement_corpus_v2 -v
+  raw transcript: Codex chunk c0e0e5
+  exit code: 0
+  result: OK, Ran 28 tests in 1.479s
+
+Final frozen full-repository run
+  command: uv run python -m unittest discover -s tests -v
+  raw transcript: Codex chunk a2b6f1
+  exit code: 0
+  result: OK, Ran 158 tests in 3.925s
+
+Frozen files
+  source sha256: 30a45ed781e0335838ec7e6643c04c229c8ff53637aec2e2c7a0d928f22adc10
+  test sha256: fbbe5571d171ee302398191ea32f931da05e7adb9bdfe2133ce25f4a0ba2156f
+  fixture sha256: ab4676534a3219461555e4127326a1da9a43e9e29afce0df3e8ace3ad0c31876
+  fixture bytes: 7607
+  pyproject sha256: 606453ead1702b1646d622f69aed997e3916eea66618fee6c05cfeb08706bda8
+  commands sha256: 6260bb869b72f7aa3d60a0dd75758cfefd4548e881477b2f51562762fab227a7
+  parameters sha256: 2caab3da07d511c1dee4ab7f64ebdfa8a2484974a734ab3b54fffeb03f74e79f
+  hypothesis sha256: 540640273f2bd6dcd0cf7e188d1d182d511dd5a1f64701e83a9795ceae2f09b5
+  formal command UTF-8 without newline sha256: 0970899a06cc5e3d324c20c0dc29e1bafc0481bc44c9b75f85e3f751d2d42c73
+  unchanged exp002 source sha256: 9c98725d74ce3d5e4f6c2a9ac5f9fbe53926b9fd4dae35520db39e7a086a7d46
+
+Fixture staging disclosure
+  The first apply_patch representation appended one terminal LF, yielding
+  7608 bytes and SHA-256
+  e5baec335b6d69f05fbbf348a03c88f38652c327c60bcf6cfc855754857fd069.
+  It was rejected before testing. Because the required fixture is exact raw
+  response bytes with no terminal LF, one local Copy-Item copied the ignored
+  exp002 raw response byte-for-byte to the tracked fixture. No transformation
+  was performed. Final length/hash are the preregistered 7607/ab467653...31876.
+  All other repository writes used apply_patch.
+
+Formal output state at freeze
+  raw run directory exists: false
+  processed run directory exists: false
+  corpus summary exists: false
+  schema exists: false
+  source contract exists: false
+  network requests executed: 0
+
+There were no offline test failures to retain. Formal execution remains blocked
+pending new independent Researcher and Auditor GO.
+
+Postscript: this file records the pre-execution freeze state. Both reviewers
+subsequently issued GO; the single formal execution and its failure are recorded
+separately in formal_run.txt and formal_failure_inspection.json.

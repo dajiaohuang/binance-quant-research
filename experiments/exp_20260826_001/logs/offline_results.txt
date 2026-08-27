@@ -1,0 +1,85 @@
+exp_20260826_001 offline implementation results
+
+No formal or other network request was executed.
+
+First narrow run
+  command: uv run python -m unittest tests.test_binance_spot_pit -v
+  raw transcript: Codex chunk 850c9a
+  result: FAILED (errors=9), Ran 15 tests in 0.217s
+  cause: test fixture epoch for 2026-04-29T00:00:00Z was one day early
+  production response: none; the clock gate correctly failed closed
+
+Final narrow run
+  command: uv run python -m unittest tests.test_binance_spot_pit -v
+  raw transcript: Codex chunk 69267f
+  result: OK, Ran 15 tests in 0.369s
+
+Final full-repository run
+  command: uv run python -m unittest discover -s tests -v
+  raw transcript: Codex chunk 69267f
+  result: OK, Ran 100 tests in 0.657s
+
+Post-hardening first run (retained failure)
+  commands: narrow test, then full repository test
+  raw transcript: Codex chunk 89789f
+  narrow result: import failed with SyntaxError at binance_spot_pit.py line 895
+  full result: FAILED (errors=1), Ran 86 tests in 0.311s
+  cause: one newly added sidecar-header assignment was misindented outside its try block
+  fix: indentation only; no contract or behavior was relaxed
+
+Final post-hardening narrow run
+  command: uv run python -m unittest tests.test_binance_spot_pit -v
+  raw transcript: Codex chunk 3bd044
+  result: OK, Ran 16 tests in 0.386s
+
+Final post-hardening full-repository run
+  command: uv run python -m unittest discover -s tests -v
+  raw transcript: Codex chunk 3bd044
+  result: OK, Ran 101 tests in 0.682s
+
+Frozen exp003 input reload
+  raw transcript: Codex chunk 2817dd
+  result: hash accepted; candidate_count=723; first='0GUSDT'; last='币安人生USDT'
+
+Auditor stage-2 pre-execution review
+  result: NO-GO; formal network not authorized
+  retained record: logs/auditor_no_go_20260826.txt
+
+Auditor-hardening narrow freeze
+  command: uv run python -m unittest tests.test_binance_spot_pit -v
+  raw transcript: Codex chunk 588984
+  result: OK, Ran 20 tests in 0.537s
+
+Auditor-hardening full-repository freeze
+  command: uv run python -m unittest discover -s tests -v
+  raw transcript: Codex chunk 67a667
+  result: OK, Ran 105 tests in 0.816s
+
+Formal snapshot state after hardening
+  network requests executed: 0
+  raw formal snapshot directory exists: false
+  processed formal snapshot directory exists: false
+
+Auditor hardening re-review
+  result: NO-GO; one redirect-following blocker remained
+  retained record: logs/auditor_redirect_no_go_20260826.txt
+
+Redirect-hardening narrow freeze
+  command: uv run python -m unittest tests.test_binance_spot_pit -v
+  raw transcript: Codex chunk 629572
+  result: OK, Ran 22 tests in 0.537s
+
+Redirect-hardening full-repository freeze
+  command: uv run python -m unittest discover -s tests -v
+  raw transcript: Codex chunk ffe7f0
+  result: OK, Ran 107 tests in 0.812s
+
+Formal snapshot state after redirect hardening
+  network requests executed: 0
+  raw formal snapshot directory exists: false
+  processed formal snapshot directory exists: false
+
+CLI discovery
+  command: uv run quant-binance-spot-pit-snapshot --help
+  raw transcript: Codex chunk 69267f
+  result: exit 0; all preregistered formal flags present

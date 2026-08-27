@@ -1,0 +1,13 @@
+# exp_20260826_010 command ledger
+# Status: SUPERSEDED_BY_ENV_FILE_SUCCESSOR / NOT_RUN
+
+# Executed offline verification only
+uv run python -m unittest tests.test_binance_spot_forward_schedule_pit_v3 -v
+uv run python -m unittest discover -s tests -v
+uv run python -m py_compile src/quant_research/binance_spot_forward_schedule_pit_v3.py src/quant_research/binance_spot_forward_schedule_pit_v3_loader.py tests/test_binance_spot_forward_schedule_pit_v3.py
+
+# Formal command was never frozen or executed. The clipboard route was
+# superseded by a future independent env-file successor experiment.
+
+# Forbidden: exp010 formal, real clipboard, credential, network, eligibility,
+# Alpha/Factor/IC/ML/P&L/backtest.

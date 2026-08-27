@@ -1,0 +1,18 @@
+exp_20260827_002 one-time formal authorization attempt
+precheck=PASS
+external_launch_attempted=true
+exact_frozen_formal_line_started=false
+exit_code=1
+wall_seconds=0.585
+stdout=EMPTY
+stderr=NONEMPTY_REDACTED_NOT_PERSISTED
+failure_code=OUTER_COMMAND_SELECTION_BUG_BEFORE_WRAPPER_START
+wrapper_reservation_exists=false
+wrapper_ledger_exists=false
+collector_control_exists=false
+collector_staging_exists=false
+collector_final_exists=false
+request_count=0
+parent_key_environment=ABSENT
+env_file_content_size_hash_read=false
+rerun_forbidden=true

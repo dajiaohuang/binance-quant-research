@@ -1,0 +1,8 @@
+Command: first read-only postrun inventory summarizer
+Exit code: 1
+Stderr conclusion:
+TypeError: '<' not supported between instances of 'NoneType' and 'str'
+
+Cause: the diagnostic-only JSON object used raw status values, including None,
+as keys while requesting sort_keys=True. No data, source, formal artifacts or
+gate result changed. The corrected read-only summarizer renamed None to UNKNOWN.

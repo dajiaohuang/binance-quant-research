@@ -1,0 +1,119 @@
+{
+  "experiment_id": "exp_20260825_001",
+  "status": "INCONCLUSIVE",
+  "data_audit": {
+    "status": "PASS_WITH_DISCLOSED_SOURCE_GAPS",
+    "strictly_increasing": true,
+    "duplicates": 0,
+    "nulls": 0,
+    "nonfinite_numeric": 0,
+    "nonpositive_prices": 0,
+    "invalid_ohlc": 0,
+    "negative_volume": 0,
+    "btc_eth_5m_each": {
+      "training_rows": 210512,
+      "zero_volume_rows": 14,
+      "missing_bars": 16,
+      "gap": "2023-03-24T12:35:00Z/2023-03-24T14:00:00Z"
+    },
+    "btc_eth_1h_each": {
+      "training_rows": 17543,
+      "zero_volume_rows": 1,
+      "missing_bars": 1,
+      "gap": "2023-03-24T12:00:00Z/2023-03-24T14:00:00Z"
+    },
+    "download_boundary_note": "The 1h downloader returned through 2026-07-15T14:00:00Z although the requested end was 2026-07-15T00:00:00Z; training remains capped before 2025-01-01."
+  },
+  "baseline_common_start": {
+    "strategy": "DryRunSmaCrossStrategy",
+    "range_utc": "2023-01-02T01:00:00Z/2025-01-01T00:00:00Z",
+    "trades": 5057,
+    "net_profit_abs_usdt": -670.4895166,
+    "net_profit_pct": -67.04895166,
+    "gross_price_pnl_usdt": 85.50077880605,
+    "fees_usdt": 755.99029540605,
+    "profit_factor": 0.454761002903335,
+    "win_rate_pct": 20.8423966779,
+    "max_drawdown_pct": 67.2831611649,
+    "sharpe_closed_trades": -37.7356090854,
+    "average_holding": "3:22:00",
+    "duration_le_240_trades": 3487,
+    "duration_le_240_share_pct": 68.9539252521
+  },
+  "candidate_full_train": {
+    "strategy": "DryRunSmaCrossHtfBreakoutGateStrategy",
+    "range_utc": "2023-01-02T01:00:00Z/2025-01-01T00:00:00Z",
+    "trades": 39,
+    "net_profit_abs_usdt": -7.27950486,
+    "net_profit_pct": -0.727950486,
+    "gross_price_pnl_usdt": -1.4529330078,
+    "fees_usdt": 5.8265718522,
+    "profit_factor": 0.4775555708524483,
+    "win_rate_pct": 25.641025641,
+    "max_drawdown_pct": 1.01506884108,
+    "sharpe_closed_trades": -0.311382756751,
+    "average_holding": "3:57:00",
+    "duration_le_240": {
+      "trades": 25,
+      "share_pct": 64.1025641026,
+      "net_profit_abs_usdt": -10.65748293,
+      "gross_price_pnl_usdt": -6.93131769765,
+      "fees_usdt": 3.72616523235,
+      "profit_factor": 0.123034402202
+    },
+    "duration_gt_240": {
+      "trades": 14,
+      "share_pct": 35.8974358974,
+      "net_profit_abs_usdt": 3.37797807,
+      "gross_price_pnl_usdt": 5.47838468985,
+      "fees_usdt": 2.10040661985,
+      "profit_factor": 2.89681564195
+    }
+  },
+  "concentration": {
+    "cell_basis": "UTC close_date; open_date gives identical cells for this run",
+    "pair_year": {
+      "BTC/USDT_2023": {"trades": 8, "net_profit_abs_usdt": -3.76913969, "profit_factor": 0.02330009427},
+      "BTC/USDT_2024": {"trades": 11, "net_profit_abs_usdt": 0.24994487, "profit_factor": 1.08978194412},
+      "ETH/USDT_2023": {"trades": 8, "net_profit_abs_usdt": -0.20589811, "profit_factor": 0.92112130855},
+      "ETH/USDT_2024": {"trades": 12, "net_profit_abs_usdt": -3.55441193, "profit_factor": 0.24055390869}
+    },
+    "profitable_cells": 1,
+    "best_trade_profit_abs_usdt": 1.49946571,
+    "net_after_removing_best_trade_usdt": -8.77897057,
+    "best_month": "2024-11",
+    "best_month_profit_abs_usdt": 1.49519781,
+    "net_after_removing_best_month_usdt": -8.77470267
+  },
+  "training_gates": {
+    "artifact_and_scope_match": "PASS",
+    "total_trades_at_least_100": "FAIL_39",
+    "each_pair_year_at_least_20": "FAIL_8_11_8_12",
+    "net_profit_positive": "FAIL",
+    "profit_factor_gt_1": "FAIL",
+    "duration_le_240_share_below_50pct": "FAIL_64.1026pct",
+    "at_least_three_profitable_pair_year_cells": "FAIL_1_of_4",
+    "both_pairs_profitable": "FAIL",
+    "decision_precedence": "Sample insufficiency was preregistered before edge checks, so the terminal state is INCONCLUSIVE. Negative net/gross edge and mechanism failures are additional rejection evidence."
+  },
+  "bias_checks": {
+    "unit_informative_boundary": "PASS",
+    "historical_prefix_invariance": "PASS",
+    "lookahead_analysis": "NOT_RUN_TRAIN_GATE_FAILED",
+    "recursive_analysis": "NOT_RUN_TRAIN_GATE_FAILED"
+  },
+  "robustness": {
+    "cost_plus_50": "NOT_RUN_TRAIN_GATE_FAILED",
+    "cost_plus_100": "NOT_RUN_TRAIN_GATE_FAILED",
+    "parameter_neighbors_18_36": "NOT_RUN_TRAIN_GATE_FAILED",
+    "signal_delay": "NOT_RUN_TRAIN_GATE_FAILED",
+    "event_window_sensitivity": "NOT_RUN_TRAIN_GATE_FAILED",
+    "walk_forward": "NOT_RUN_TRAIN_GATE_FAILED"
+  },
+  "out_of_sample": {
+    "validation": "NOT_RUN",
+    "final_test": "NOT_RUN"
+  },
+  "decision": "INCONCLUSIVE",
+  "decision_reason": "Only 39 trades and every pair x year cell had fewer than 20 trades. The candidate also lost money before and after costs, had PF 0.4776, retained 64.10% short-duration trades, and produced only one profitable cell. No validation or final-test data was used."
+}

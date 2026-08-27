@@ -1,0 +1,30 @@
+exp_20260827_001 offline Phase2 preparation
+
+Targeted command:
+.venv\Scripts\python.exe -m unittest tests.test_binance_spot_forward_schedule_pit_v4 -v
+Fresh Phase2 result after buffer-lifetime hardening:
+Ran 42 tests in 11.873s; OK; exit 0.
+The oversize and injected partial-read-error tests both returned 42, launched
+zero collector processes, and found no sentinel in ledger/stdout/stderr.
+
+Full command:
+uv run python -m unittest discover -s tests -v
+Fresh result: Ran 477 tests in 52.913s; 476 PASS; 1 expected lifecycle mismatch; exit 1.
+Expected mismatch:
+test_binance_spot_forward_schedule_pit_v2.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero
+Reason: preserved, already-consumed exp009 reservation exists.
+
+py_compile: PASS.
+strict JSON: PASS.
+PowerShell parse: PASS after correcting an outer-shell interpolation mistake.
+First malformed standalone parse invocation diagnostic:
+`Continue=Stop` was interpreted as a command because the calling shell expanded
+the nested `$ErrorActionPreference` token. No wrapper execution, formal output,
+env-file read, or network request occurred.
+
+Formal executed: false
+Network access count: 0
+Eligibility evaluated: false
+Alpha/IC/ML/P&L/backtest: not run
+Real env file evidence: presence + git-ignore + untracked metadata only; content,
+size, and hash were not read.

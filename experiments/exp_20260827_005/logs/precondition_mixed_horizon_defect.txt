@@ -1,0 +1,11 @@
+experiment_id=exp_20260827_005
+evidence_role=PREIMPLEMENTATION_DEFECT_REPRODUCTION_NOT_FORMAL_RESEARCH
+kernel_path=src/quant_research/hierarchical_alpha.py
+kernel_sha256=2637ac6b686ef0d6a0a7dc4c07817fd57e2f2724984cdcccac1671528c7044c5
+command_sha256_utf8_no_newline=93c595dfae95ff8b4bb6db46a7a1787a74dd197e213a8c92b5f853a6ecba9d18
+start_local=2026-08-27T15:53:40.6833165+08:00
+end_local=2026-08-27T15:53:41.2312874+08:00
+exit_code=0
+stdout={"fields":["symbol","formation_time_ms","known_at_ms","value","provenance_sha256"],"has_horizon_hours":false,"value":2.0}
+stderr=EMPTY
+observation=The old kernel accepted a mixed 1h/24h registry and produced one scalar EnsembleScore without horizon identity.

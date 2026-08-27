@@ -1,0 +1,66 @@
+exp_20260826_002 formal execution transcript
+
+Authorization
+  independent Researcher review: GO
+  independent Auditor review: GO
+  authorized frozen extractor sha256:
+    9c98725d74ce3d5e4f6c2a9ac5f9fbe53926b9fd4dae35520db39e7a086a7d46
+  authorized frozen dependency sha256:
+    427b9eab83f14798fdb9b6465dddad397081d6a2c094fb27aa229fd94aee2264
+  pre-execution command-ledger sha256:
+    44c4b3fb773addb88d1426498e87e8edc7d609cfd8cbb893b33f0872be439039
+
+Exact command executed once
+  uv run quant-binance-spot-announcement-corpus --run-id exp_20260826_002_formal_001 --expected-extractor-sha256 9c98725d74ce3d5e4f6c2a9ac5f9fbe53926b9fd4dae35520db39e7a086a7d46 --raw-root data/raw/binance_spot_announcement_v1/runs --processed-root data/processed/binance_spot_announcement_v1/runs --summary-output experiments/exp_20260826_002/artifacts/corpus_summary.json --schema-output experiments/exp_20260826_002/artifacts/schema.json --source-contract-output experiments/exp_20260826_002/artifacts/source_contract.json --catalog-id 48 --catalog-id 161 --page-size 50 --claimed-release-start-ms 1669852800000 --claimed-release-end-ms-exclusive 1735689600000 --expected-total 48=2234 --expected-total 161=426 --expected-interval-count 48=575 --expected-interval-count 161=181 --max-pages-per-catalog 50 --max-articles 800 --max-response-bytes 2000000 --max-total-response-bytes 1000000000 --timeout-seconds 30 --max-attempts 3 --max-wire-attempts 2598 --pacing-seconds 0.1 --max-clock-skew-ms 300000
+
+Execution observation
+  command executions: 1
+  built-in wire attempts: 39
+  built-in retries: 0
+  exec wall_time_seconds: 11.4427733
+  exec transcript chunk: 6833b1
+  observed exit code: 1
+  stdout: empty
+  stderr exact text: ERROR: invalid article code
+  pre-command local timestamp observation: 2026-08-26T04:20:30.8755946+08:00
+  first raw request_started_at_utc: 2026-08-25T20:20:40.650396Z
+  last raw response_completed_at_utc: 2026-08-25T20:20:51.543148Z
+  post-failure inspection timestamp: 2026-08-26T04:21:11.0240700+08:00
+  exact process start/completion timestamps were not separately captured;
+    the values above retain their distinct observation semantics.
+
+Complete terminal transcript
+  STDERR:
+    ERROR: invalid article code
+  STDOUT:
+    <empty>
+
+Failure disposition
+  terminal status: INCONCLUSIVE
+  artifact state: null
+  formal command was not retried or adapted
+  run id is consumed and must never be reused or overwritten
+  partial raw evidence was preserved
+  no Alpha, IC, ML, backtest or eligibility derivation was executed
+
+Partial raw evidence
+  raw response files: 39
+  request sidecars: 39
+  HTTP 200 / outcome OK: 39 / 39
+  response body bytes: 355184
+  sidecar bytes: 47730
+  total frozen raw+sidecar bytes: 402914
+  canonical partial inventory:
+    logs/formal_partial_raw_inventory.tsv
+  inventory bytes: 10213
+  inventory sha256:
+    c3bee614c75899c07729cf3d26ff88244550871f69ffec25dad6b8d841f3be9c
+
+Missing formal outputs
+  request_ledger.jsonl: absent because collector failed before artifact build
+  processed run: absent
+  corpus_summary.json: absent
+  schema.json: absent
+  source_contract.json: absent
+  trusted reload: unavailable because all three trusted root artifacts are absent
+

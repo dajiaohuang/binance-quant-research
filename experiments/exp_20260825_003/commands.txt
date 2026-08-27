@@ -1,0 +1,16 @@
+# exp_20260825_003 command ledger
+# Preregistered before formal inventory fetch. No Kline ZIP or CHECKSUM payload downloads are authorized.
+
+uv run python -m unittest discover -s tests -v
+
+uv run quant-binance-spot-inventory --raw-root data/raw/binance_spot_v2/inventory --inventory-output data/processed/binance_spot_v2/archive_inventory_1h_2022-12_2024-12.jsonl --summary-output experiments/exp_20260825_003/artifacts/inventory_summary.json --interval 1h --quote-suffix USDT --start-month 2022-12 --end-month 2024-12 --max-workers 8 --request-timeout-seconds 30 --max-attempts 3
+
+# Formal execution record
+# started_at=2026-08-25T00:58:39.0823238+08:00
+# ended_at=2026-08-25T00:59:10.1342021+08:00
+# exit_code=0
+# executed_source_sha256=ebd27d417e243c997d35942cc41215c3b2ddb170106e11b2099b0f35fab09fee
+# summary_sha256=168fa33118114fd088d03ceb87f920755aea8b088b13f891a37984e75065605d
+# inventory_jsonl_sha256=8be13634629f8fc21e499aaab7df46839510b3a5be4842ab620bfb3089f512b3
+# symbol_index_sha256=0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16
+# payload_downloads=none

@@ -1,0 +1,65 @@
+{
+  "command_executions": [
+    {
+      "command": "uv run python -m unittest tests.test_historical_pit_evidence -v",
+      "command_no_newline_sha256": "e7c8f8cec9a2cece6c31895cc18c671b5325ecfcaf5b49488db30fb430a6de0b",
+      "end_local": "2026-08-27T10:43:52.3389703+08:00",
+      "end_utc": "2026-08-27T02:43:52.2446251Z",
+      "exec_tool_wall_seconds": 0.4361047,
+      "execution_count": 1,
+      "exit_code": 0,
+      "log": {
+        "bytes": 5623,
+        "path": "experiments/exp_20260827_004/logs/formal_command_001.txt",
+        "sha256": "afd564dbd94f716785177ecaa05616a2a6e11080c31b5a94f62c5dd963bb8de7"
+      },
+      "observed_utc_envelope_elapsed_seconds": 13.6506248,
+      "ordinal": 1,
+      "start_local": "2026-08-27T10:43:38.6782652+08:00",
+      "start_utc": "2026-08-27T02:43:38.5940003Z",
+      "stderr_stream": "UNITTEST_VERBOSE_OUTPUT_CAPTURED_IN_LOG",
+      "stdout_stream": "EMPTY",
+      "test_count": 27
+    },
+    {
+      "command": "uv run python -m unittest tests.test_hierarchical_alpha -v",
+      "command_no_newline_sha256": "20410fbbc49fddcf45d6c052cda48b85aa832aa9c5f2530f27dd9dfb2c80c8e1",
+      "end_local": "2026-08-27T10:44:19.2633823+08:00",
+      "end_utc": "2026-08-27T02:44:19.1699004Z",
+      "exec_tool_wall_seconds": 0.4027499,
+      "execution_count": 1,
+      "exit_code": 0,
+      "log": {
+        "bytes": 6995,
+        "path": "experiments/exp_20260827_004/logs/formal_command_002.txt",
+        "sha256": "71f7567d8ad11db91b07e8766256a69358a9e77c4f2f1a65bae0b76ef80f9fbd"
+      },
+      "observed_utc_envelope_elapsed_seconds": 18.6595889,
+      "ordinal": 2,
+      "start_local": "2026-08-27T10:44:00.5953014+08:00",
+      "start_utc": "2026-08-27T02:44:00.5103115Z",
+      "stderr_stream": "UNITTEST_VERBOSE_OUTPUT_CAPTURED_IN_LOG",
+      "stdout_stream": "EMPTY",
+      "test_count": 35
+    }
+  ],
+  "experiment_id": "exp_20260827_004",
+  "formal_execution_count": 2,
+  "full_repository_tests": "NOT_RUN",
+  "network_request_count": 0,
+  "postflight_hash_audit": {
+    "bytes": 1456,
+    "path": "experiments/exp_20260827_004/logs/formal_postflight.txt",
+    "result": "PASS",
+    "sha256": "b44d72a7b009ade69a187e191417c34550f2972a87de7cb1caf30270ee7d9344"
+  },
+  "preflight_hash_audit": {
+    "bytes": 1414,
+    "path": "experiments/exp_20260827_004/logs/formal_preflight.txt",
+    "result": "PASS",
+    "sha256": "9a595d0e9d328b1f8b63ddf8a4a9ee4b86896fc36b9d10ef146669d1bb3815ec"
+  },
+  "retry_count": 0,
+  "run_semantics": "TWO_FROZEN_OFFLINE_TEST_COMMANDS_ONLY",
+  "terminal_phase": "terminal_postflight_pending_auditor"
+}

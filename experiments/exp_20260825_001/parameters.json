@@ -1,0 +1,19 @@
+{
+  "experiment_id": "exp_20260825_001",
+  "parent_strategy": "DryRunSmaCrossStrategy",
+  "candidate_strategy": "DryRunSmaCrossHtfBreakoutGateStrategy",
+  "base_timeframe": "5m",
+  "informative_timeframe": "1h",
+  "htf_breakout_lookback_hours": 24,
+  "htf_breakout_formula": "close_1h > high_1h.shift(1).rolling(24).max()",
+  "fast_window_5m": 20,
+  "slow_window_5m": 50,
+  "minimal_roi": {"0": 0.03},
+  "stoploss": -0.03,
+  "fee_rate_per_side": 0.0015,
+  "common_evaluation_timerange": "1672621200-1735689600",
+  "duration_short_minutes_inclusive": 240,
+  "cell_year_basis": "UTC close_date",
+  "random_seed": 42,
+  "optimization": "none; 18/36 are forbidden until the 24-hour primary candidate passes every training gate"
+}

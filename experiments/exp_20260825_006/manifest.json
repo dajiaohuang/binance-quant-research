@@ -1,0 +1,93 @@
+{
+  "experiment_id": "exp_20260825_006",
+  "created_on": "2026-08-25",
+  "status": "INCONCLUSIVE",
+  "terminal": true,
+  "phase": "phase_3a_narrow_test_failure_closure",
+  "contract_revision": 2,
+  "contract_revision_reason": "pre-execution direct-construction bypasses",
+  "tests_execution_status": "FAILED_NARROW_34_OF_35",
+  "contract_revision_history": [
+    {
+      "revision": 0,
+      "phase": "phase_2a_contract_only",
+      "status": "preregistered",
+      "note": "Original preregistration retained below and in hypothesis.md/parameters.json/commands.txt. It was not executed."
+    },
+    {
+      "revision": 1,
+      "phase": "phase_2d_pre_execution_audit_revision",
+      "status": "authoritative_unexecuted_contract",
+      "reason": "pre-execution audit blockers",
+      "note": "Revision 1 narrows PIT evidence, clocks, intervals, split validation, readiness, provenance, regime/net-alpha types, and synthetic diagnostics before any test execution."
+    },
+    {
+      "revision": 2,
+      "phase": "phase_2f_pre_execution_direct_construction_revision",
+      "status": "authoritative_unexecuted_contract",
+      "reason": "pre-execution direct-construction bypasses",
+      "note": "Revision 2 makes direct PurgeEmbargoSpec, ExpertRegistry, RegimeAdjustedScore, and diagnostic score construction fail closed."
+    }
+  ],
+  "decision_status": "INCONCLUSIVE",
+  "actual_result": {
+    "executed_around": "2026-08-25T20:05+08:00",
+    "timestamp_precision": "approximate; no exact completion timestamp was captured",
+    "narrow_test_command": "uv run python -m unittest tests.test_hierarchical_alpha -v",
+    "narrow_tests_run": 35,
+    "narrow_tests_passed": 34,
+    "narrow_tests_errors": 1,
+    "narrow_tests_failed_assertions": 0,
+    "error": "scipy.linalg.lstsq received Python lists and SciPy 1.18.0 raised AttributeError: 'list' object has no attribute 'shape'",
+    "numpy_version": "2.5.1",
+    "scipy_version": "1.18.0",
+    "full_repository_tests": "NOT_RUN",
+    "implementation_changed_after_failure": false
+  },
+  "objective": "Implement and test a data-agnostic, fail-closed Hierarchical Alpha Research Kernel without reading market data or producing empirical alpha results.",
+  "parent_experiment": "exp_20260825_005",
+  "git_repository": true,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_clean_before_experiment": false,
+  "git_dirty": true,
+  "git_status_reason": "Prior experiments, data tooling, documentation, and research evidence are intentionally uncommitted; phase 2a creates only isolated exp_20260825_006 preregistration files.",
+  "experiment_type": "data-agnostic method and contract experiment",
+  "kernel_name": "Hierarchical Alpha Research Kernel",
+  "execution_mode": "synthetic fixtures and pure deterministic functions only",
+  "planned_implementation_files": [
+    "src/quant_research/hierarchical_alpha.py",
+    "tests/test_hierarchical_alpha.py"
+  ],
+  "blocking_evidence": {
+    "path": "data/processed/binance_spot_v4/archive_kline_available_1h_2022-12_2024-12.csv.gz",
+    "sha256": "716b2d5c42c3078c93707722cbd93e171b233e6492f770d3c0905a710d9ba8b2",
+    "semantics": "ARCHIVE_KLINE_AVAILABLE only; not point-in-time eligibility",
+    "allowed_use": "Negative gate evidence proving that archive availability cannot satisfy the PIT universe contract.",
+    "prohibited_as_kernel_input": true
+  },
+  "required_layers": [
+    "PIT evidence and observation-clock gate",
+    "immutable expert specification and duplicate-safe registry",
+    "single-formation-time winsorization, ranking, and residualization",
+    "next-open multi-horizon label contracts",
+    "UTC interval purge and embargo contracts",
+    "fixed hierarchical simplex ensemble",
+    "external frozen bounded regime multiplier",
+    "expected net alpha penalties"
+  ],
+  "forbidden_work": [
+    "reading exp_20260825_005 market rows or normalized Klines",
+    "reading or producing real factor values, scores, rank IC, returns, P&L, or turnover",
+    "model fitting or training against real data",
+    "backtesting",
+    "network access",
+    "CLI implementation or execution",
+    "learned routing or regime classification",
+    "using archive availability as PIT eligibility"
+  ],
+  "horizons_hours": [1, 24, 120, 480],
+  "one_way_cost_rates": [0.0015, 0.00225, 0.003],
+  "successful_terminal_status": "NEEDS_MORE_DATA",
+  "failed_terminal_status": "INCONCLUSIVE",
+  "success_boundary": "Success establishes only a tested fail-closed research kernel. It cannot establish an eligible universe, empirical alpha, backtest performance, model validity, or readiness for paper trading."
+}

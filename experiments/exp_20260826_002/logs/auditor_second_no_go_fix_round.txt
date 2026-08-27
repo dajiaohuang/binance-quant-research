@@ -1,0 +1,29 @@
+exp_20260826_002 second fresh pre-execution re-review NO-GO
+
+Formal network authorization: false
+Formal or exploratory requests executed during this correction: 0
+
+Blocking findings retained for correction:
+1. The documented acquisition-wide maximum of 2,598 wire attempts was only
+   arithmetic on the success-path logical request inventory. It was not an
+   executable global cap shared across every request and retry.
+2. Extractor/dependency checks before lease and before each attempt still left
+   response-return and final-artifact TOCTOU windows. The trusted loader also
+   needed an explicit live dependency-to-hardcoded-SHA requirement.
+
+Required resolution under the unchanged corpus-only hypothesis:
+- require a positive CLI max-wire-attempts value fixed to 2,598 in the formal
+  command; check and increment one shared counter immediately before every
+  fetch, preventing a 2,599th attempt;
+- freeze realized count and bound in summary/source contract/schema, and have
+  the trusted loader rebuild and validate them from the complete attempt chain;
+- run one central extractor/dependency assertion before lease, before every
+  attempt, after each returned response before evidence acceptance, and before
+  artifact completion;
+- prove offline that dynamic multi-page volume cannot exceed the cap and that
+  extractor or dependency drift during the final fetch is rejected;
+- retain expected successful logical request count 866 and do not execute the
+  formal command before a fresh independent GO.
+
+No event, pair, effective time, listing interval, eligibility, Alpha, IC, ML,
+backtest, validation-set or final-test work is authorized.

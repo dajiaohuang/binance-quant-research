@@ -1,0 +1,8 @@
+exp_20260826_002 post-freeze read-only inspection failure
+
+The first combined read-only inspection command returned an rg regex parse
+error (`unclosed group`) because a quoted alternation was malformed in
+PowerShell. JSON validation, source/test/command hash checks and formal-output
+absence checks in the same command all completed successfully. No code,
+evidence, output or network state changed. The follow-up uses fixed-string
+searches only.

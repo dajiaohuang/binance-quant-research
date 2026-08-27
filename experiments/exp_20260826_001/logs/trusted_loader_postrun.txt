@@ -1,0 +1,7 @@
+Command: offline trusted load of snapshot_summary.json followed by strict_gate_result
+Codex execution transcript chunk: 0f62b4
+Tool wall time seconds: 1.2232192
+Exit code: 0
+Stderr: <empty>
+Stdout:
+{'snapshot_id': 'exp_20260826_001_formal_001', 'known_at_utc': '2026-08-25T18:53:18.027925Z', 'memberships': 3682, 'artifact_sha256': '28dca84736c26497a79b3950fad9bd65b9f00f79e50cb6e87ca21d474c39a450', 'raw_exchange_info_sha256': '93815999f9ce41e4918ea836928a8cbb7238eba89d4b1d6ad04823e69f0b4743', 'eligible_count': 0, 'listing_null_count': 3682}

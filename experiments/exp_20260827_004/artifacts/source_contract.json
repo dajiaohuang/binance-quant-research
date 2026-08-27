@@ -1,0 +1,162 @@
+{
+  "adapter_api": {
+    "empirical": "require_trusted_empirical_pit_eligibility",
+    "empirical_accepts_prebuilt_snapshot": false,
+    "lower_level": "build_bound_historical_pit_snapshot",
+    "lower_level_result": "IMMUTABLE_BOUND_RESULT"
+  },
+  "empirical_authorized": false,
+  "evidence_reference_hash": {
+    "binds_active_contributors_only": true,
+    "contributor_fields": [
+      "source_contract_id",
+      "payload_id",
+      "exact_raw_sha256",
+      "json_pointer",
+      "record_fragment_sha256",
+      "physical_claim_id"
+    ],
+    "hash_envelope_fields": [
+      "active_contributors",
+      "component",
+      "formation_time_ms",
+      "normalized_value",
+      "policy_id",
+      "symbol"
+    ],
+    "active_contributors_sort": "physical_claim_id ascending",
+    "unrelated_payload_raw_change_preserves_reference": true
+  },
+  "final_snapshot_hash": {
+    "binding_list_order_invariant": true,
+    "binds": [
+      "policy",
+      "formation_and_requested_scope",
+      "raw_manifest_sorted_by_payload_id",
+      "semantic_resolution_sha256"
+    ],
+    "raw_manifest_fields": [
+      "policy_id",
+      "authority_id",
+      "source_contract_id",
+      "payload_id",
+      "exact_raw_sha256"
+    ],
+    "raw_whitespace_key_or_record_order_change_changes_final_sha": true
+  },
+  "formation_rules": {
+    "active_interval": "effective_from_ms <= formation_time_ms < effective_to_ms_exclusive",
+    "future_known_claims": "VALID_BUT_INVISIBLE",
+    "known_at_source": "published_at_ms",
+    "qualifying_semantics": "HISTORICAL_EFFECTIVE_FACT",
+    "unqualified_semantics": [
+      "RESPONSE_ABSENCE",
+      "ARCHIVE_AVAILABILITY",
+      "CURRENT_OBSERVATION",
+      "PLANNED_SCHEDULE_CLAIM"
+    ]
+  },
+  "input_binding": {
+    "exact_fields": [
+      "raw_bytes",
+      "expected_sha256",
+      "source_contract_id",
+      "payload_id",
+      "policy_id"
+    ],
+    "payload_id_unique_and_canonical": true,
+    "raw_bytes_must_match_external_sha256": true,
+    "strict_json_rejections": [
+      "BOM",
+      "DUPLICATE_KEYS",
+      "INVALID_UTF8",
+      "NONFINITE_NUMBER",
+      "SURROGATE",
+      "TOP_LEVEL_NON_OBJECT",
+      "UNKNOWN_FIELD"
+    ],
+    "whole_call_fails_if_any_bound_payload_is_invalid": true
+  },
+  "policy": {
+    "allowed_authority_id": "SYNTHETIC_BINANCE_OFFICIAL_FIXTURE",
+    "allowed_market_type": "SPOT",
+    "allowed_schema_version": "BINANCE_HISTORICAL_PIT_EVIDENCE_V1",
+    "allowed_source_contract_id": "SYNTHETIC_BINANCE_HISTORICAL_PIT_SOURCE_CONTRACT_V1",
+    "allowed_venue": "BINANCE",
+    "empirical_authorized": false,
+    "policy_id": "SYNTHETIC_BINANCE_HISTORICAL_PIT_FIXTURE_V1"
+  },
+  "provenance": {
+    "claim_id_may_bind_physical_locator": true,
+    "composite_locator_fields": [
+      "source_contract_id",
+      "payload_id",
+      "raw_payload_sha256",
+      "json_pointer"
+    ],
+    "record_fragment": "canonical compact JSON bytes of the exact located record object",
+    "replay_requires_exact_raw_sha": true
+  },
+  "resolution": {
+    "different_normalized_values": "UNKNOWN_CONFLICT",
+    "listing_normalized_value": "(LISTED,effective_from_ms,effective_to_ms_exclusive)",
+    "missing": "UNKNOWN",
+    "one_membership_per_requested_symbol": true,
+    "resolved_component_evidence_references": 1,
+    "same_normalized_values": "MERGE"
+  },
+  "revision": {
+    "branch": "FORBIDDEN",
+    "cancel_semantics": "WITHDRAW_EVIDENCE_ONLY",
+    "cycle": "FORBIDDEN",
+    "dangling_target": "FORBIDDEN",
+    "lineage_fields": [
+      "policy_id",
+      "authority_id",
+      "source_contract_id",
+      "venue",
+      "market_type",
+      "symbol",
+      "component"
+    ],
+    "same_contract_cross_payload_revision": "ALLOWED",
+    "target_known_at": "STRICTLY_EARLIER",
+    "tie": "FORBIDDEN"
+  },
+  "scope": "OFFLINE_SYNTHETIC_ONLY",
+  "semantic_resolution_hash": {
+    "claim_projection_fields": [
+      "source_id",
+      "symbol",
+      "component",
+      "value",
+      "effective_from_ms",
+      "effective_to_ms_exclusive",
+      "published_at_ms",
+      "assertion_semantics",
+      "revision_action",
+      "revision_target_source_id"
+    ],
+    "excludes": [
+      "policy_id",
+      "authority_id",
+      "source_contract_id",
+      "payload_id",
+      "raw_payload_sha256",
+      "json_pointer",
+      "record_fragment_sha256",
+      "physical_claim_id"
+    ],
+    "includes_scope": [
+      "formation_time_ms",
+      "expected_venue",
+      "expected_market_type",
+      "expected_quote_asset",
+      "requested_symbols"
+    ],
+    "record_order_invariant": true,
+    "semantic_revision_and_resolution_projection": true,
+    "sort": "source_id,symbol,component UTF-8 bytes"
+  },
+  "terminal_status_ceiling": "NEEDS_MORE_DATA"
+}

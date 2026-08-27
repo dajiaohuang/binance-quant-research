@@ -1,9 +1,11 @@
 {
   "experiment_id": "exp_20260824_001",
   "created_at": "2026-08-24T23:17:16.0098977+08:00",
-  "status": "running",
-  "phase": "implementation_and_smoke_complete",
-  "decision_status": null,
+  "status": "completed",
+  "phase": "superseded_due_missing_original_data",
+  "decision_status": "INCONCLUSIVE",
+  "completed_at": "2026-08-25T00:18:18.2603005+08:00",
+  "successor_experiment": "exp_20260825_001",
   "strategy": "DryRunSmaCrossHtfBreakoutGateStrategy",
   "strategy_sha256": "390f94e30e080feb64062a3b9b2b02fd48aef49ce5ccc89f8d3178fbd466e2bc",
   "code_frozen_at": "2026-08-24T23:25:34.0451535+08:00",
@@ -81,5 +83,5 @@
     "validation",
     "test"
   ],
-  "notes": "Existing data is sufficient for this experiment. Additional Binance public data requires a separate data version and experiment. Original download time is unknown and is recorded as null."
+  "notes": "The original untracked Feather files were unavailable on the successor host, so the frozen full training was never run and this experiment was closed INCONCLUSIVE without replacing its historical hashes. exp_20260825_001 uses a newly downloaded data version. Original download time remains unknown."
 }

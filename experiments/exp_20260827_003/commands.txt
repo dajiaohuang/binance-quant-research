@@ -1,0 +1,13 @@
+# Offline implementation and Phase2 preparation only. Formal is not authorized.
+.venv\Scripts\python.exe -m py_compile src/quant_research/binance_spot_forward_schedule_pit_v6.py src/quant_research/binance_spot_forward_schedule_pit_v6_loader.py tests/test_binance_spot_forward_schedule_pit_v6.py
+.venv\Scripts\python.exe -m unittest tests.test_binance_spot_forward_schedule_pit_v6 -v
+uv run python -m unittest discover -s tests -v
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "try { [void][scriptblock]::Create([IO.File]::ReadAllText('src/quant_research/binance_spot_forward_schedule_pit_v6_launcher.ps1')); [void][scriptblock]::Create([IO.File]::ReadAllText('src/quant_research/binance_spot_forward_schedule_pit_v6_wrapper.ps1')); exit 0 } catch { exit 1 }"
+.venv\Scripts\python.exe -c "import json,pathlib; [json.loads(p.read_text(encoding='utf-8')) for p in pathlib.Path('experiments/exp_20260827_003').rglob('*.json')]"
+
+# FROZEN FORMAL LINE — EXECUTED EXACTLY ONCE AFTER DUAL PHASE2 GO. UTF-8/no-newline SHA256: 6f30b127981af3fec837178871540eb48f90947aae5abc37ce75fdf504d0cd9a
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\binance_spot_forward_schedule_pit_v6_launcher.ps1 -ExpectedLauncherSha256 5da75c6a0239b6553828d85ce1dfcc63ecc44b340cc4b5d6b403511810653b2d; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode
+
+# Formal result: exit 0; wall 2.7293683s; stdout EMPTY; stderr EMPTY.
+# Exactly 5 ordered HTTP 200 requests. Trusted loader PASS. Run consumed;
+# rerun forbidden. See logs/formal_execution.txt and report.md.

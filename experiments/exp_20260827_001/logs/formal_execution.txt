@@ -1,0 +1,36 @@
+exp_20260827_001 exact-once formal execution
+
+Formal command SHA256:
+4d39ee8ea74183eacdfa3d09ae10aa73aa2b154bbd47061dcf5e81ec9d51c3af
+
+Observed exit code: 43
+Observed wall time seconds: 0.265804
+Observed stdout: EMPTY
+Observed stderr: EMPTY
+Run consumed: true
+Rerun forbidden: true
+
+Safe stage ledger sequence:
+1 SELF_HASH PASS null
+2 ENV_FILE_READ START null
+3 ENV_FILE_READ PASS null
+4 VALIDATE FAIL 43
+5 FINAL_CLEANUP PASS null
+
+Reservation SHA256:
+38302e346ed61d35a59f011c794ada7fa02cdfe008bf58b59aa4d55b700db24a
+
+Stage ledger SHA256:
+d110225c057a089351883214c01742b4dc98163ef63c46bdb55bd66ee9a91371
+
+Collector launched: false
+Network request count: 0
+Collector final exists: false
+Collector staging exists: false
+Collector control exists: false
+Parent BINANCE_READ_ONLY_API_KEY present after run: false
+Env file content/size/hash read during postflight: false
+
+Terminal status: INCONCLUSIVE
+Data result: NONE
+Eligibility/Alpha/IC/ML/P&L/backtest: not run

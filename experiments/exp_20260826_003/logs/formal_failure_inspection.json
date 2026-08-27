@@ -1,0 +1,72 @@
+{
+  "experiment_id": "exp_20260826_003",
+  "run_id": "exp_20260826_003_formal_001",
+  "inspection_mode": "offline_read_only",
+  "formal_execution_count": 1,
+  "observed_exit_code": 1,
+  "collector_error": "detail publishDate mismatch",
+  "terminal_status": "INCONCLUSIVE",
+  "artifact_state": null,
+  "wire_attempts": 120,
+  "retries": 0,
+  "outcomes": {"OK": 120},
+  "http_statuses": {"200": 120},
+  "authentication": "NONE",
+  "request_counts": {
+    "time_before": 1,
+    "catalog_48_pass_1_list": 45,
+    "catalog_161_pass_1_list": 9,
+    "details": 65,
+    "pass_2_list": 0,
+    "time_after": 0
+  },
+  "response_bytes": {
+    "time": 28,
+    "list": 475082,
+    "detail": 3486207,
+    "total": 3961317
+  },
+  "sidecar_bytes": {
+    "time": 976,
+    "list": 66617,
+    "detail": 81845,
+    "total": 149438
+  },
+  "total_frozen_raw_sidecar_bytes": 4110755,
+  "raw_file_count": 240,
+  "raw_hash_length_content_length_verification_failures": 0,
+  "first_request_started_at_utc": "2026-08-25T20:58:31.871652Z",
+  "last_response_completed_at_utc": "2026-08-25T20:59:08.092133Z",
+  "server_time_before_ms": 1787691514126,
+  "catalog_totals": {"48": 2234, "161": 426},
+  "claimed_interval_counts": {"48": 575, "161": 181},
+  "first_mismatch": {
+    "catalog_id": 48,
+    "article_id_type": "int",
+    "article_id": 216744,
+    "article_code": "209355888f0042f788899dd1a04a0052",
+    "title": "Binance Futures Will Launch USDⓈ-Margined 1000000MOGUSDT Perpetual Contract With up to 75x Leverage",
+    "list_release_date_ms": 1730975333236,
+    "detail_publish_date_ms": 1730975320602,
+    "detail_minus_list_ms": -12634,
+    "list_response_path": "data/raw/binance_spot_announcement_v2/runs/exp_20260826_003_formal_001/requests/catalog_48/pass_1/page_0014/attempt_0001.response",
+    "list_response_sha256": "adbcfcf758ce0c55b772b77de49169702b44759b3e99525e92bb16591d13ce5d",
+    "detail_response_path": "data/raw/binance_spot_announcement_v2/runs/exp_20260826_003_formal_001/requests/details/209355888f0042f788899dd1a04a0052/attempt_0001.response",
+    "detail_response_sha256": "cb27c5578fa9303516b238b0e4845640b21f397d09e6f5a90fd4446d21a2a8d5",
+    "detail_response_known_at_utc": "2026-08-25T20:59:08.092133Z"
+  },
+  "partial_raw_inventory": {
+    "path": "experiments/exp_20260826_003/logs/formal_partial_raw_inventory.tsv",
+    "rows_excluding_header": 240,
+    "bytes": 33216,
+    "sha256": "2d9378a331993742e73000ccb0531358202bd474cc0077e51ad2456db8c51052"
+  },
+  "processed_run_exists": false,
+  "corpus_summary_exists": false,
+  "schema_exists": false,
+  "source_contract_exists": false,
+  "trusted_reload_executed": false,
+  "trusted_reload_reason": "collector failed before processed/root artifacts were created",
+  "historical_eligibility_ready": false,
+  "alpha_ic_ml_backtest_executed": false
+}

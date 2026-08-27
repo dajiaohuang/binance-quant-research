@@ -1,0 +1,90 @@
+{
+  "artifact_status": "PHASE2_CANDIDATE_CONTRACT",
+  "dataclasses": {
+    "EnsembleScore": [
+      "symbol",
+      "formation_time_ms",
+      "known_at_ms",
+      "horizon_hours",
+      "value",
+      "provenance_sha256"
+    ],
+    "ExpectedNetAlpha": [
+      "symbol",
+      "formation_time_ms",
+      "known_at_ms",
+      "horizon_hours",
+      "regime_adjusted_expected_gross_alpha",
+      "trading_cost_penalty",
+      "uncertainty_penalty",
+      "crowding_penalty",
+      "expected_net_alpha",
+      "provenance_sha256"
+    ],
+    "MultiHorizonEnsemble": [
+      "symbol",
+      "formation_time_ms",
+      "known_at_ms",
+      "scores",
+      "provenance_sha256"
+    ],
+    "RegimeAdjustedScore": [
+      "symbol",
+      "formation_time_ms",
+      "known_at_ms",
+      "horizon_hours",
+      "ensemble_value",
+      "multiplier",
+      "adjusted_value",
+      "provenance_sha256"
+    ]
+  },
+  "exact_horizon_type": "built-in int only",
+  "expert_key_consumer_validation": {
+    "before_mapping_equality": true,
+    "fields": [
+      "family",
+      "name",
+      "horizon_hours",
+      "version"
+    ],
+    "locations": [
+      "ExpertOutput.key",
+      "FamilyWeights.expert_weights key"
+    ]
+  },
+  "experiment_id": "exp_20260827_005",
+  "horizons_hours": [
+    1,
+    24,
+    120,
+    480
+  ],
+  "multi_horizon_bundle_forbidden_fields": [
+    "scalar",
+    "value",
+    "weights"
+  ],
+  "multi_horizon_bundle_semantics": "IDENTITY_PRESERVING_CONTAINER_ONLY",
+  "multi_horizon_public_entrypoint": "compose_multi_horizon",
+  "multi_horizon_direct_construction": {
+    "exact_four_sorted_horizons": true,
+    "known_at_equals_score_maximum": true,
+    "provenance_recomputed": true,
+    "shared_symbol_and_formation": true
+  },
+  "output_horizon_fields_required_on": [
+    "EnsembleScore",
+    "RegimeAdjustedScore",
+    "ExpectedNetAlpha",
+    "DiagnosticScore"
+  ],
+  "provenance_preimages": {
+    "diagnostic": "horizon-diagnostic-score-v1,horizon,expected_net_alpha_provenance,float(net)",
+    "ensemble": "horizon-ensemble-score-v1,horizon,sorted ExpertKey/output provenance tuple,weights",
+    "expected_net_alpha": "horizon-expected-net-alpha-v1,horizon,regime_adjusted_provenance,cost,uncertainty,crowding",
+    "multi_horizon": "multi-horizon-ensemble-v1,symbol,formation,known,sorted horizon/value/known/provenance tuple",
+    "regime": "horizon-regime-adjusted-score-v1,horizon,ensemble_provenance,regime_evidence,scalar"
+  },
+  "terminal_status_ceiling": "NEEDS_MORE_DATA"
+}

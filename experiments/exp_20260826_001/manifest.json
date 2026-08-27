@@ -1,0 +1,150 @@
+{
+  "experiment_id": "exp_20260826_001",
+  "created_at": "2026-08-26T02:16:13.6926415+08:00",
+  "status": "complete",
+  "phase": "terminal",
+  "decision_status": "NEEDS_MORE_DATA",
+  "parent_experiments": [
+    "exp_20260825_003",
+    "exp_20260825_005",
+    "exp_20260825_007"
+  ],
+  "objective": "Create an unauthenticated, status-complete, source-bound, fail-closed current/forward Binance Spot PIT snapshot data version.",
+  "git_repository": true,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_clean_before_experiment": false,
+  "git_status_reason": "Prior data experiments, the hierarchical kernel and documentation are intentionally uncommitted; this experiment uses isolated v1 PIT paths.",
+  "frozen_input": {
+    "path": "data/raw/binance_spot_v2/inventory/symbol_index.jsonl",
+    "bytes": 1453935,
+    "records": 3695,
+    "sha256": "0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16",
+    "semantics": "archive symbol strings and suffix_candidate flags only; never status, permission, quote asset, listing or eligibility"
+  },
+  "frozen_alpha_gate": {
+    "path": "src/quant_research/hierarchical_alpha.py",
+    "sha256_at_preregistration": "2637ac6b686ef0d6a0a7dc4c07817fd57e2f2724984cdcccac1671528c7044c5",
+    "changes_allowed": false
+  },
+  "allowed_network_scope": [
+    "GET https://data-api.binance.vision/api/v3/time before exchangeInfo",
+    "GET https://data-api.binance.vision/api/v3/exchangeInfo?showPermissionSets=true",
+    "GET https://data-api.binance.vision/api/v3/time after exchangeInfo"
+  ],
+  "authentication": "none",
+  "forbidden_request_material": [
+    "X-MBX-APIKEY",
+    "Authorization",
+    "Cookie",
+    "Proxy-Authorization",
+    "signature",
+    "API secret"
+  ],
+  "snapshot_id": "exp_20260826_001_formal_001",
+  "raw_output_root": "data/raw/binance_spot_pit_v1/snapshots",
+  "processed_output_root": "data/processed/binance_spot_pit_v1/snapshots",
+  "artifact_outputs": {
+    "summary": "experiments/exp_20260826_001/artifacts/snapshot_summary.json",
+    "membership_schema": "experiments/exp_20260826_001/artifacts/membership_schema.json",
+    "eligibility_gate": "experiments/exp_20260826_001/artifacts/eligibility_gate_result.json"
+  },
+  "implementation_freeze": {
+    "network_requests_executed": 0,
+    "source": {
+      "path": "src/quant_research/binance_spot_pit.py",
+      "sha256": "427b9eab83f14798fdb9b6465dddad397081d6a2c094fb27aa229fd94aee2264"
+    },
+    "tests": {
+      "path": "tests/test_binance_spot_pit.py",
+      "sha256": "b70713fb8d897edb1b8e3740a2bbc42f198268e39ef20212cbbdbe02f222ef0f",
+      "first_narrow_run": "FAILED errors=9 because synthetic UTC epoch fixture was mistyped; full raw output remains in Codex execution transcript chunk 850c9a and consolidated repository log",
+      "post_fix_narrow_run": "PASSED 22/22 after redirect hardening",
+      "post_fix_full_repository_run": "PASSED 107/107 after redirect hardening",
+      "retained_additional_failure": "transport-receipt hardening initially introduced a syntax indentation error; raw output remains in Codex execution transcript chunk 89789f; indentation-only fix followed"
+    },
+    "cli": "quant-binance-spot-pit-snapshot",
+    "pyproject_sha256": "fe9868ec0d667fff0e9146a0b6315e8cdd57b57f882b0e4f28e21a5734d189d7",
+    "frozen_symbol_index_sha256_recomputed": "0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16",
+    "frozen_archive_candidate_count_reloaded": 723,
+    "offline_results_log": "experiments/exp_20260826_001/logs/offline_results.txt"
+  },
+  "auditor_reviews": [
+    {
+      "phase": "stage_2_pre_execution",
+      "decision": "NO_GO",
+      "formal_network_authorized": false,
+      "record": "experiments/exp_20260826_001/logs/auditor_no_go_20260826.txt",
+      "resolved_in_hardening": [
+        "explicit UTF-8 test artifact read",
+        "mandatory Content-Length for every HTTP 200 in collector and loader",
+        "monotone local request/response clocks across the complete bracket",
+        "redacted transport failure receipts and disabled environment proxies",
+        "atomic exclusive snapshot-id raw-directory lease",
+        "root-bound complete retry-attempt ledger verified by trusted loader",
+        "isSpotTradingAllowed documented as the sole eligibility permission predicate"
+      ],
+      "re_review_required": true
+    },
+    {
+      "phase": "stage_2_hardening_re_review",
+      "decision": "NO_GO",
+      "formal_network_authorized": false,
+      "record": "experiments/exp_20260826_001/logs/auditor_redirect_no_go_20260826.txt",
+      "remaining_blocker": "urllib default redirect following could issue a second wire request before final_url validation",
+      "resolved_in_redirect_hardening": [
+        "dedicated no-redirect HTTPRedirectHandler returns None",
+        "original 30x HTTPError status, body, selected headers including Location, and original URL are retained",
+        "30x is terminal and non-retryable",
+        "offline default-fetcher test proves opener.open is called once and cross-domain Location is never requested",
+        "maximum transport scope remains three attempts for each of three logical endpoints, always on the same canonical URL"
+      ],
+      "re_review_required": true
+    }
+  ],
+  "final_limited_go": {
+    "researcher": "GO limited to the exact preregistered formal command",
+    "auditor": "GO limited to the exact preregistered formal command",
+    "record": "experiments/exp_20260826_001/logs/final_limited_go.txt",
+    "scope_expansion_authorized": false,
+    "alpha_or_backtest_authorized": false
+  },
+  "formal_run": {
+    "command_log": "experiments/exp_20260826_001/logs/formal_command.txt",
+    "execution_transcript_chunk": "07d76f",
+    "exit_code": 0,
+    "tool_wall_time_seconds": 3.7182146,
+    "wire_attempts": 3,
+    "wire_retries": 0,
+    "wire_response_bytes": 17512713,
+    "first_request_started_at_utc": "2026-08-25T18:53:16.555508Z",
+    "last_response_completed_at_utc": "2026-08-25T18:53:18.379064Z",
+    "known_at_utc": "2026-08-25T18:53:18.027925Z",
+    "known_at_ms": 1787683998027,
+    "current_response_symbol_count": 3681,
+    "membership_count": 3682,
+    "archive_only_unknown_count": 1,
+    "listing_null_count": 3682,
+    "strict_eligible_count": 0,
+    "raw_exchange_info_sha256": "93815999f9ce41e4918ea836928a8cbb7238eba89d4b1d6ad04823e69f0b4743",
+    "memberships_sha256": "28dca84736c26497a79b3950fad9bd65b9f00f79e50cb6e87ca21d474c39a450",
+    "trusted_loader_postrun": "PASSED; transcript chunk 0f62b4",
+    "historical_backfill_performed": false,
+    "alpha_or_backtest_executed": false
+  },
+  "random_seed": 42,
+  "expected_strict_eligible_count": 0,
+  "expected_terminal_status_after_success": "NEEDS_MORE_DATA",
+  "failure_terminal_status": "INCONCLUSIVE",
+  "forbidden_work": [
+    "validation or final-test market data access",
+    "historical state inference",
+    "Alpha or factor calculation",
+    "rank IC",
+    "model fit or ML",
+    "backtest",
+    "Freqtrade",
+    "dry-run",
+    "live trading",
+    "account or private endpoint access"
+  ]
+}

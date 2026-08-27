@@ -1,0 +1,13 @@
+ M AGENTS.md
+ M PROGRESS.md
+ M README.md
+ M experiments/exp_20260824_001/manifest.json
+ M experiments/exp_20260824_001/metrics.json
+ M experiments/exp_20260824_001/report.md
+ M pyproject.toml
+ M research/RESEARCH_LOG.md
+?? experiments/exp_20260825_001/
+?? experiments/exp_20260825_002/
+?? experiments/exp_20260825_003/
+?? src/quant_research/binance_spot_archive.py
+?? tests/test_binance_spot_archive.py

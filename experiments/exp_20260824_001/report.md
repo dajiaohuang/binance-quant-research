@@ -1,4 +1,4 @@
-# exp_20260824_001 进度报告（未完成）
+# exp_20260824_001 最终报告（数据不可复现）
 
 ## Referenced Skills
 
@@ -81,14 +81,18 @@ Freqtrade 再把信号移到 15:00 open；追加未来行不改变历史 gate。
 
 ## 决定
 
-`IN_PROGRESS`。只允许下一步运行冻结 24 小时候选的完整训练回测；当前无资格
-进入模拟盘。
+`INCONCLUSIVE / SUPERSEDED`。当前主机缺少 Manifest 声明的四份本地 Feather，
+smoke ZIP 不包含源 OHLCV，因此冻结完整训练无法按原数据字节复现。候选 LF
+规范化源码仍匹配冻结 SHA，问题在数据材料而不是已发现的代码漂移。
+
+本实验没有使用重新下载的数据回填，也没有运行验证或最终测试。新数据版本和
+严格共同起点复现在 `exp_20260825_001` 中独立记录。
 
 ## 下一轮方向
 
-当前实验裁决后，单独建立 point-in-time Binance 多币种 universe，研究截面
-残差动量/流动性。funding、OI 与 basis 属于另一数据版本。两资产与当前 Freqtrade
-逐 pair 接口不足以直接宣称完成 cross-sectional LightGBM 研究。
+`exp_20260825_001` 已接替本实验完成训练裁决；之后单独建立 point-in-time
+Binance 多币种 universe，研究截面残差动量/流动性。funding、OI 与 basis 属于
+另一数据版本。
 
 ## 产物索引
 

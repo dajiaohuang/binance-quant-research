@@ -1,0 +1,92 @@
+{
+  "inspection_mode": "offline_read_only_after_failed_formal_run",
+  "run_id": "exp_20260826_004_formal_001",
+  "terminal_status": "INCONCLUSIVE",
+  "artifact_state": null,
+  "failure": {
+    "logical_key": "details/54cf9ec60fc244e3af12beb950e764bd",
+    "outcome": "HTTP_429",
+    "built_in_attempts": 3,
+    "observed_exit_code": 1
+  },
+  "raw_evidence": {
+    "files": 456,
+    "wire_attempts": 228,
+    "unique_logical_request_directories": 226,
+    "successful_wire_attempts": 225,
+    "failed_wire_attempts": 3,
+    "response_bytes": 9420210,
+    "sidecar_bytes": 285035,
+    "tree_bytes": 9705245,
+    "body_hash_mismatches": 0,
+    "body_length_mismatches": 0,
+    "canonical_tree_sha256": "5cf7bae6947864a32773860dfee32295f4c7ab40d4db21c0db5d4f3a63c0fc2b",
+    "canonical_tree_hash_rule": "sort every raw file by run-relative forward-slash path, then SHA-256 the UTF-8 concatenation path<TAB>file_sha256<TAB>file_bytes<LF>",
+    "groups": [
+      {"kind": "time", "outcome": "OK", "status": 200, "attempts": 1, "response_bytes": 28},
+      {"kind": "list", "outcome": "OK", "status": 200, "attempts": 54, "response_bytes": 475082},
+      {"kind": "detail", "outcome": "OK", "status": 200, "attempts": 170, "response_bytes": 8945100},
+      {"kind": "detail", "outcome": "HTTP_429", "status": 429, "attempts": 3, "response_bytes": 0}
+    ],
+    "authentication_violations": 0,
+    "method_violations": 0,
+    "canonical_host_violations": 0,
+    "url_allowlist_violations": 0,
+    "wire_clock_overlaps": 0
+  },
+  "partial_contract_inspection": {
+    "time_before_server_ms": 1787693697129,
+    "time_after_present": false,
+    "first_list_pass_complete": true,
+    "catalog_totals": {"48": 2234, "161": 426},
+    "page_counts": {"48": 45, "161": 9},
+    "inventory_rows": 2660,
+    "list_release_date_claim_interval_counts": {"48": 575, "161": 181},
+    "selected_detail_rows_expected": 756,
+    "successful_detail_rows": 170,
+    "unacquired_detail_rows": 586,
+    "second_list_pass_present": false,
+    "processed_run_present": false,
+    "root_artifacts_present": false
+  },
+  "partial_time_claim_diagnostic": {
+    "canonical_artifact": false,
+    "scope": "only the 170 successfully fetched detail rows; not the preregistered corpus",
+    "nonzero_rows": 2,
+    "zero_rows": 168,
+    "negative_rows": 2,
+    "positive_rows": 0,
+    "minimum_delta_ms": -12634,
+    "maximum_delta_ms": 0,
+    "nonzero_observations": [
+      {
+        "catalog_id": 48,
+        "article_code": "209355888f0042f788899dd1a04a0052",
+        "list_release_date_claim_ms": 1730975333236,
+        "detail_publish_date_claim_ms": 1730975320602,
+        "detail_publish_minus_list_release_claim_ms": -12634
+      },
+      {
+        "catalog_id": 48,
+        "article_code": "541daaa5499d4b34a737c97c50c8547e",
+        "list_release_date_claim_ms": 1678438808772,
+        "detail_publish_date_claim_ms": 1678438802308,
+        "detail_publish_minus_list_release_claim_ms": -6464
+      }
+    ]
+  },
+  "trusted_loader": {
+    "accepted": false,
+    "expected_rejection": true,
+    "error": "CorpusIntegrityError: cannot load experiments\\exp_20260826_004\\artifacts\\corpus_summary.json",
+    "reason": "fail-closed acquisition committed no root summary"
+  },
+  "frozen_integrity": {
+    "extractor_sha256": "e3fd4ec75c450771afe654ccf08a1c1839c4b11ac9dc7ec038a0a1de722aa62e",
+    "test_sha256": "110522cbad14afe8440f253baee02e18076ff7b3f57fa0911307a757efdae81b",
+    "pyproject_sha256": "a994b75f5f5aa2c5b7b543d160751f92b3e1f75c29ed1b10b5d034bc4bd86563",
+    "pre_execution_commands_sha256": "b9e016e207446f3c25b12c548bd5ff9def8a650e5c0e2d4f7ed89b5262841c98",
+    "formal_command_utf8_without_newline_sha256": "de1a7f3457b1d17a9a2abde043bc9e5240b29fa24d1129d2d2a0c45110dbe4b4"
+  },
+  "forbidden_operations_executed": 0
+}

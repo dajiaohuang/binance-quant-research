@@ -1,0 +1,26 @@
+{
+  "contract_revision": "STANDARD_ENV_GRAMMAR_V1",
+  "documents": [
+    {"accessed_at_utc":"2026-08-26T05:33:36.827Z","document_id":"S1","short_supporting_paraphrase_zh":"官方 Spot REST 总览列出 api.binance.com 为基础地址，并说明 JSON、认证类型与限流规则。","url":"https://developers.binance.com/en/docs/products/spot/rest-api"},
+    {"accessed_at_utc":"2026-08-26T05:33:36.827Z","document_id":"S2","short_supporting_paraphrase_zh":"官方 Spot REST 规范把 /api/v3/time 与 /api/v3/exchangeInfo 列为公开端点；showPermissionSets 控制 permissionSets 内容。","url":"https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md"},
+    {"accessed_at_utc":"2026-08-26T05:33:36.827Z","document_id":"S3","short_supporting_paraphrase_zh":"官方 Market Data Only 说明 time 与 exchangeInfo 可在无需认证或 API key 的市场数据接口使用。","url":"https://github.com/binance/binance-spot-api-docs/blob/master/faqs/market_data_only.md"},
+    {"accessed_at_utc":"2026-08-26T05:33:36.827Z","document_id":"S4","short_supporting_paraphrase_zh":"官方 OPEN 接口要求 X-MBX-APIKEY、IP 权重100，返回 openTime 与 symbols；列表表示计划开放交易的符号。","url":"https://developers.binance.com/en/docs/catalog/core-trading-wallet/api/rest-api/asset"},
+    {"accessed_at_utc":"2026-08-26T05:33:36.827Z","document_id":"S5","short_supporting_paraphrase_zh":"官方 Spot DELIST 接口要求 X-MBX-APIKEY、IP 权重100，返回 delistTime 与 symbols。","url":"https://developers.binance.com/en/docs/catalog/core-trading-wallet/api/rest-api/others"}
+  ],
+  "network_contract": "FIVE_FIXED_GETS_ONE_ATTEMPT_NO_REDIRECT_NO_RETRY",
+  "semantic_ceiling": "CURRENT_VISIBLE_FORWARD_SCHEDULE_CLAIMS_AND_CURRENT_SPOT_METADATA_ONLY_NOT_EFFECTIVE_OR_ELIGIBILITY",
+  "single_primary_change": "STANDARD_LOCAL_ENV_FILE_GRAMMAR",
+  "source_observation": "INHERITED_OFFICIAL_DOCUMENT_REFERENCES_NO_NEW_NETWORK_OR_PAGE_SNAPSHOT",
+  "wrapper_contract": {
+    "allowed_collector_exit_codes": [0,10,11,20,24,30,31,32,33,34,35],
+    "env_file": ".env.binance.local",
+    "env_file_read": "SINGLE_READ_ONLY_OPEN_CAP_4097_ACCEPT_AT_MOST_4096",
+    "env_line_endings": "EACH_LINE_LF_OR_CRLF_MIXING_ALLOWED_BARE_CR_FORBIDDEN",
+    "failure_priority": [46,40,42,43,44,45,"ALLOWED_CHILD",0],
+    "handoff": "PRESENCE_ONLY_PARENT_ENV_ABSENT_THEN_WRAPPER_OWNED_CHILD_ENV",
+    "ledger_path": "experiments/exp_20260827_002/formal_control/exp_20260827_002_formal_001.stage_ledger.jsonl",
+    "reservation_path": "experiments/exp_20260827_002/formal_control/exp_20260827_002_formal_001.reservation.lock",
+    "reservation_semantics": "CREATE_NEW_HANDLE_ACQUIRED_CONSUMES_RUN_PERMANENTLY",
+    "stdout_stderr": "EMPTY"
+  }
+}

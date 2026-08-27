@@ -1,0 +1,25 @@
+# exp_20260826_006 LEAN_R2_2_2 command ledger
+# Status: FORMAL_EXECUTED_ONCE / POSTFLIGHT_AUDITED / INCONCLUSIVE
+
+# Offline implementation gates
+.venv\Scripts\python.exe -B -m unittest tests.test_binance_spot_announcement_claims_lean_v1 -v
+uv run python -m unittest discover -s tests -v
+
+# Latest frozen offline results:
+# targeted PASS 32/32; full repository PASS 268/268; py_compile/JSON PASS.
+# Formal final/staging/control paths were absent after all tests.
+
+# Frozen formal command. UTF-8 bytes without newline SHA-256:
+# 182eb47739ac726331014569efa9b1f5c8e15dda60895afe2d2216e888a0f372
+# Researcher+Auditor FINAL GO received. Executed exactly once; DO NOT RERUN.
+.venv\Scripts\python.exe -B src\quant_research\binance_spot_announcement_claims_lean_v1_runner.py --expected-runner-sha256 8f068d89e0fa66840e12706aa8954ca8e5585d271b2a76893abb385f182abe0b --expected-extractor-sha256 552aba2e02db3c0d1ad4e500bac7f3036d24d150abd74dd4ac7e756803f15dac --expected-loader-sha256 76cc371b6f10e2f87b92d7fcc71e648c245fffe8a3f42b83d6be8cc4b7dad347 --expected-source-contract-sha256 87f02dc043fecf8e9fb4b449c83ea60e4b6918216620d4a623219e1151ad0599 --expected-schema-sha256 be475290e4b4626078ad4b103d513e07aff6cf71f22d2e09969e141fdcc32c88 --expected-parameters-sha256 24042cd2e5a99b9cf5b8a2ef42d3473b644c44fac8c91604ff24b7385dcc0ecf
+
+# Formal observed result: exit 1 after 0.1396267 seconds.
+# FileNotFoundError [WinError 3] at CONTROL_ROOT.mkdir because its parent
+# data/processed/binance_spot_announcement_claims_v1/runs did not exist.
+# No lease/control/staging/final/output was created; extraction never began.
+# Complete combined output: logs/formal_execution.txt, SHA-256
+# fa1651b3cb1e491135d6d7e42a962eac1f12de83095e8048f0fa91994e94b880.
+# Offline postflight targeted tests PASS 32/32; this is diagnostic only.
+# Forbidden now: rerun/resume; network; credentials; eligibility;
+# Alpha/Factor/IC/ML/P&L/backtest.

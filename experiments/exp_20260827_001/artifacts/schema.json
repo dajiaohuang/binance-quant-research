@@ -1,0 +1,69 @@
+{
+  "canonicalization": {
+    "json": "UTF-8 no BOM sorted keys indent=2 LF final LF",
+    "jsonl": "UTF-8 no BOM sorted keys compact LF final LF",
+    "reject_duplicate_keys_and_nonfinite_numbers": true
+  },
+  "commit_domain": {
+    "final_root": "data/raw/binance_spot_forward_schedule_pit_v4/runs/exp_20260827_001_formal_001",
+    "payload_files": [
+      "requests/001_time_before.response",
+      "requests/001_time_before.receipt.json",
+      "requests/002_open_symbol_list.response",
+      "requests/002_open_symbol_list.receipt.json",
+      "requests/003_delist_schedule.response",
+      "requests/003_delist_schedule.receipt.json",
+      "requests/004_exchange_info.response",
+      "requests/004_exchange_info.receipt.json",
+      "requests/005_time_after.response",
+      "requests/005_time_after.receipt.json",
+      "plans.jsonl",
+      "current_symbols.jsonl",
+      "joins.jsonl"
+    ],
+    "summary_file": "summary.json"
+  },
+  "control_contract": {
+    "authorization_exact_keys": ["artifact_tree_sha256","experiment_id","final_tree_sha256","run_id","summary_sha256"],
+    "failure_codes": ["PRECONDITION","SOURCE_BINDING","INFRASTRUCTURE","TRANSPORT","HTTP_STATUS","JSON_SCHEMA","TIME_BRACKET","OUTPUT_INTEGRITY","PROMOTION"],
+    "failure_exact_keys": ["exit_code","experiment_id","failure_code","run_id"],
+    "lease_exact_keys": ["expected_bindings_sha256","experiment_id","formal_command_sha256","run_id"]
+  },
+  "derived_contract": {
+    "current_symbols_exact_keys": ["baseAsset","permissionSets","quoteAsset","row_sha256","source_body_sha256","source_record_index","status","symbol"],
+    "current_symbols_unique_key": ["symbol"],
+    "join_status": ["MATCHED","MISSING"],
+    "joins_exact_keys": ["current_symbol_row_sha256","join_status","kind","plan_row_sha256","planned_at_claim_ms","row_sha256","symbol"],
+    "plans_exact_keys": ["kind","planned_at_claim_ms","row_sha256","source_body_sha256","source_endpoint_id","source_record_index","source_symbol_index","symbol"],
+    "plans_unique_key": ["kind","planned_at_claim_ms","symbol"],
+    "row_sha256_rule": "SHA256 canonical compact JSON after removing row_sha256",
+    "symbol_decomposition_forbidden": true
+  },
+  "env_file_contract": {
+    "fixed_path": ".env.binance.local",
+    "max_bytes": 4096,
+    "optional_exact_comment": "# Binance read-only API key; local file, never commit\\n",
+    "read_cap_plus_one": 4097,
+    "strict_bytes_grammar": "(?:# Binance read-only API key; local file, never commit\\n)?BINANCE_READ_ONLY_API_KEY=([A-Za-z0-9]+)\\n?",
+    "user_file_mutation_allowed": false
+  },
+  "experiment_id": "exp_20260827_001",
+  "receipt_exact_keys": ["ordinal","endpoint_id","method","url","client_send_utc_ms","client_recv_utc_ms","http_status","body_bytes","body_sha256","api_key_header_sent"],
+  "run_id": "exp_20260827_001_formal_001",
+  "summary_exact_keys": ["artifact_state","artifact_tree_sha256","code_bindings","current_symbol_count","eligibility_evaluated","experiment_id","historical_eligibility_ready","join_count","join_status_counts","output_artifacts","plan_count","request_count","request_receipts","run_id","semantics","strict_eligible_count","terminal_status","time_bracket","version"],
+  "version": "binance_spot_forward_schedule_pit_v4",
+  "wrapper_stage_control": {
+    "allowed_collector_exit_codes": [0,10,11,20,24,30,31,32,33,34,35],
+    "exit_priority": [46,40,42,43,44,45,"ALLOWED_CHILD",0],
+    "ledger_exact_keys": ["event","exit_code","seq","stage"],
+    "ledger_event_enum": ["START","PASS","FAIL","EXIT"],
+    "ledger_fail_matrix": {"COLLECTOR":45,"ENV_FILE_READ":42,"FINAL_CLEANUP":46,"HANDOFF":44,"VALIDATE":43},
+    "ledger_jsonl": "UTF-8 no BOM sorted keys compact LF; each complete row Flush(true)",
+    "ledger_stage_enum": ["SELF_HASH","ENV_FILE_READ","VALIDATE","HANDOFF","COLLECTOR","FINAL_CLEANUP"],
+    "normal_sequence": ["SELF_HASH/PASS/null","ENV_FILE_READ/START/null","ENV_FILE_READ/PASS/null","VALIDATE/PASS/null","HANDOFF/PASS/null","COLLECTOR/START/null","COLLECTOR/EXIT/ALLOWED_CHILD","FINAL_CLEANUP/PASS/null"],
+    "reservation_canonical_bytes": "{\"experiment_id\":\"exp_20260827_001\",\"run_id\":\"exp_20260827_001_formal_001\"}\\n",
+    "reservation_create_mode": "FileMode.CreateNew FileAccess.Write FileShare.None Flush(true)",
+    "reservation_handle_acquisition_consumes_run": true,
+    "reservation_or_ledger_deleted_or_overwritten": false
+  }
+}

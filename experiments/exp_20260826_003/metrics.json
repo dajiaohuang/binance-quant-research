@@ -1,0 +1,61 @@
+{
+  "experiment_id": "exp_20260826_003",
+  "phase": "formal_run_complete",
+  "implementation_status": "frozen_source_executed_once",
+  "formal_run_executed": true,
+  "network_requests_executed_by_experimenter": 120,
+  "offline_tests": {
+    "first_narrow": {"passed": 28, "failed": 0, "errors": 0, "seconds": 1.687},
+    "first_full_repository": {"passed": 158, "failed": 0, "errors": 0, "seconds": 3.944},
+    "final_frozen_narrow": {"passed": 28, "failed": 0, "errors": 0, "seconds": 1.479},
+    "final_frozen_full_repository": {"passed": 158, "failed": 0, "errors": 0, "seconds": 3.925}
+  },
+  "production_fixture": {
+    "bytes": 7607,
+    "sha256": "ab4676534a3219461555e4127326a1da9a43e9e29afce0df3e8ace3ad0c31876",
+    "article_count": 50,
+    "opaque_decimal_code_count": 38,
+    "formal_evidence": false
+  },
+  "expected_formal_request_inventory": {
+    "list": 108,
+    "detail": 756,
+    "time": 2,
+    "logical_total": 866,
+    "max_wire_attempts": 2598
+  },
+  "formal_corpus_metrics": {
+    "command_executions": 1,
+    "observed_exit_code": 1,
+    "tool_observed_wall_time_seconds": 33.3436274,
+    "collector_error": "detail publishDate mismatch",
+    "wire_attempts": 120,
+    "retries": 0,
+    "http_200_outcome_ok": 120,
+    "response_files": 120,
+    "request_sidecars": 120,
+    "response_body_bytes": 3961317,
+    "sidecar_bytes": 149438,
+    "total_frozen_raw_sidecar_bytes": 4110755,
+    "raw_file_count": 240,
+    "list_requests": 54,
+    "detail_requests": 65,
+    "time_requests": 1,
+    "partial_raw_inventory_sha256": "2d9378a331993742e73000ccb0531358202bd474cc0077e51ad2456db8c51052"
+  },
+  "catalog_totals": {"48": 2234, "161": 426},
+  "claimed_interval_counts": {"48": 575, "161": 181},
+  "first_mismatch": {
+    "article_code": "209355888f0042f788899dd1a04a0052",
+    "list_release_date_ms": 1730975333236,
+    "detail_publish_date_ms": 1730975320602,
+    "detail_minus_list_ms": -12634
+  },
+  "formal_outputs_present": false,
+  "terminal_status": "INCONCLUSIVE",
+  "artifact_state": null,
+  "trusted_reload_executed": false,
+  "trusted_reload_reason": "collector failed before processed/root artifacts were created",
+  "historical_eligibility_ready": false,
+  "alpha_ic_ml_backtest_executed": false
+}

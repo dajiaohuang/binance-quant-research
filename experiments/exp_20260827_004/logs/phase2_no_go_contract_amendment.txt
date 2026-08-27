@@ -1,0 +1,23 @@
+FRESH PHASE 1 MICRO-AMENDMENT
+
+PRIOR CANDIDATE STATUS: PHASE2 NO-GO / SUPERSEDED PRE-FORMAL CANDIDATE
+FORMAL EXECUTED: false
+NETWORK ACCESS: false
+REAL DATA ACCESS: false
+
+Prior frozen candidate hashes:
+- adapter: c5b3ba909ef9c4e7486b668368df5544fb3f37c210686abee16a96c34325a008
+- tests: 92c05f1d3c2553da853be8bf5b8ec50bd0e6d2c95dbe9349da24415c83e54d73
+- source_contract: b24b4f58fdf224dec3bb098ab4f3dfc5f1ce303914a6306d38c2a97f153a3df7
+- schema: 37baf996ae629bae9e52cb220a6358cbc544b44a38f6fa598346f005ef0321f5
+- parameters: 7b842c2707cbced9b8f599c48a181dc9846741faab64c8e8993850c0b6c65183
+- commands: 86224d5e6aca6ca089f86b5a3710538e12a5d8ffd2ee9e1e5a1cad2859f3be32
+
+NO-GO / amendment reasons:
+1. The policy did not freeze one exact authority and source-contract identifier.
+2. The raw binding lacked a canonical payload_id, and claim provenance did not directly bind payload_id plus exact raw SHA.
+3. External component and assertion-semantics enums did not match the amended contract.
+4. A single artifact identity could not simultaneously prove semantic order invariance and exact raw-byte binding. The amendment requires an independent semantic digest plus a final snapshot SHA over a full exact-raw manifest.
+5. Composite locators and full provenance ledgers needed to be explicit and independently replayable.
+
+This record predates all amendment code changes and is intentionally retained. The prior candidate was never formally executed and is not represented as having passed Phase 2.

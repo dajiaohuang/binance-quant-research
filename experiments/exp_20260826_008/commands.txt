@@ -1,0 +1,21 @@
+# exp_20260826_008 command ledger
+# Status: FORMAL_EXECUTED_AWAITING_POSTFLIGHT_AUDIT / INCONCLUSIVE
+
+# Planned offline verification only
+.venv\Scripts\python.exe -B -m unittest tests.test_binance_spot_forward_schedule_pit_v1 -v
+uv run python -m unittest discover -s tests -v
+
+# Frozen formal wrapper command. UTF-8 bytes without newline SHA-256:
+# ee744da16648cfad8857c05d01b02c9d1274c439134ee1b3789d19b0d01d1c70
+# Researcher and Auditor v2 FINAL GO received. Execution remains conditional on
+# the user copying a compliant read-only API Key and using this exact frozen line.
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\binance_spot_forward_schedule_pit_v1_wrapper.ps1 -ExpectedWrapperSha256 0121c290f141d0c977a9b1c1d34528c29c01b908bed31c1b9263f8d251a26c4e -ExpectedCollectorSha256 593281457fbe451ad252e917e9d3fbdc1c888151d8217c1221735e8b49f9552f -ExpectedLoaderSha256 d1522b0d73589d8e5be31cc3257d681f7c07ac2cffd4b4ca81fcd2c5c5726164 -ExpectedSourceContractSha256 cb66a8564377af2d8d5198e8185f475ee3d1829560089f4c51a59405ab5eea29 -ExpectedSchemaSha256 25f5295266246ed6cec3475c10157c8b642590715d69221d166a2501e8eb47d4 -ExpectedParametersSha256 ff18f7d47eed18cbccedf2cdc667ccd55c66daa79827d03835df1bd24e630a26 -ExpectedTestsSha256 01eaeceee58ba8bc377523a93397aee5277448b7a3d17840495bdd0714ff7426
+
+# Phase2 v2 wrapper-hardening result: targeted PASS 35/35; full repository PASS 343/343;
+# py_compile, PowerShell parse, strict experiment JSON, and real-workspace
+# final/staging/control absence checks PASS. Network count remains zero.
+
+# Formal execution count: exactly 1. Observed exit=1, wall=0.2857559s,
+# stdout/stderr empty, collector reservation absent, network attempts=0.
+# Run ID consumed; rerun/resume forbidden. Eligibility, Alpha/Factor/IC/ML,
+# P&L and backtest remain forbidden.

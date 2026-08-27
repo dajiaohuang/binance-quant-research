@@ -1,0 +1,32 @@
+{
+  "code_bindings": {
+    "collector": {"path":"src/quant_research/binance_spot_forward_schedule_pit_v5.py","sha256":"85c6ed716e062d700dd0818ef8ba5a6e256a69e0ac02811f6bc49991c6c7c215"},
+    "loader": {"path":"src/quant_research/binance_spot_forward_schedule_pit_v5_loader.py","sha256":"f88c975d29268dc8def22f744c79a01d1b27e15b41364862755173c639cc5d02"},
+    "parameters": {"path":"experiments/exp_20260827_002/parameters.json","sha256":"df1e045db9b35394bb44cf3548e699107582034ce8ce9292c4d489c152cdf2f4"},
+    "schema": {"path":"experiments/exp_20260827_002/artifacts/schema.json","sha256":"ef2df4137f4485a75e986741593e5fa2360faa8f2079133c6d6a13de82b5b951"},
+    "source_contract": {"path":"experiments/exp_20260827_002/artifacts/source_contract.json","sha256":"7bea7114c0d62f222217eb376424669539cc890b36e4199e852429e7e6281d2a"},
+    "tests": {"path":"tests/test_binance_spot_forward_schedule_pit_v5.py","sha256":"07396891c7848046fbc8522d47d5b20921405bcdf4bb52c24c5a2c297f2061cd"},
+    "wrapper": {"path":"src/quant_research/binance_spot_forward_schedule_pit_v5_wrapper.ps1","sha256":"319b5a0d8e0c7e5ba6380ebf36afe90999ea359f29c042325d3c51fea6276a82"}
+  },
+  "created_at": "2026-08-27T01:33:50.4034569+08:00",
+  "experiment_id": "exp_20260827_002",
+  "formal_command_sha256": "3ca044b860b274d83a75c22c0d36a553587d0e58750db33d7d3680eb6b79e366",
+  "formal_authorization_consumed": true,
+  "formal_execution_attempted": true,
+  "formal_execution_authorized": false,
+  "formal_executed": false,
+  "formal_failure_code": "OUTER_COMMAND_SELECTION_BUG_BEFORE_WRAPPER_START",
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_repository": true,
+  "git_worktree_clean": false,
+  "historical_eligibility_ready": false,
+  "network_access_count": 0,
+  "phase": "POSTFORMAL_AWAITING_AUDITOR",
+  "primary_change": "STANDARD_ENV_GRAMMAR_V1",
+  "run_id": "exp_20260827_002_formal_001",
+  "run_rerun_forbidden": true,
+  "status": "INCONCLUSIVE",
+  "strict_eligible_count": 0,
+  "supersedes": "exp_20260827_001",
+  "version": "binance_spot_forward_schedule_pit_v5"
+}

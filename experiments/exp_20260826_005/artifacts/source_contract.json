@@ -1,0 +1,116 @@
+{
+  "authentication": "NONE",
+  "catalog_ids": [
+    48,
+    161
+  ],
+  "corpus_completeness_scope": "all articles visible through the frozen CMS catalogs during both complete acquisition passes; excludes deleted articles and historical versions not returned now",
+  "detail_url_template": "https://www.binance.com/bapi/composite/v1/public/cms/article/detail/query?articleCode={validated_then_quote_safe_empty_opaque_code}",
+  "fixed_request_headers": {
+    "Accept-Encoding": "identity",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Clienttype": "web",
+    "User-Agent": "quant-binance-announcement-corpus-v4/1",
+    "lang": "en"
+  },
+  "forbidden_derivations": [
+    "pair",
+    "event",
+    "effective time",
+    "listing interval",
+    "eligibility"
+  ],
+  "forbidden_temporal_aliases": [
+    "claimed_published_at_ms",
+    "claimed_published_at_source_field",
+    "detail_publish_date_ms",
+    "claimed_release_interval_ms",
+    "interval_counts"
+  ],
+  "hardcoded_timing_policy": {
+    "base_logical_delay_ns": 1000000000,
+    "max_wire_attempts": 3464,
+    "timeout_cap_ns": 30000000000,
+    "wall_budget_ns": 10800000000000
+  },
+  "implementation_dependencies": "stdlib only; no v3 helper/runtime import",
+  "list_url_template": "https://www.binance.com/bapi/apex/v1/public/apex/cms/article/list/query?type=1&catalogId={48|161}&pageNo=N&pageSize=50",
+  "locale": "en-US,en;q=0.9",
+  "monotonic_rule": "process-local nanosecond claims only; validated from lease start through accepted time_after receipt under the absolute wall deadline",
+  "opaque_article_identifier_contract": {
+    "code": "exact JSON str matching ^(?:[0-9a-f]{32}|[0-9]{1,64})$; no coercion or normalization",
+    "code_kind": "forbidden; 32-digit overlap remains opaque",
+    "detail_url": "validate, urllib.parse.quote(code, safe=''), exact parse/rebuild",
+    "id_equality": "list/detail exact type tag and value",
+    "id_int": "type is int, bool excluded, positive, at most 64 decimal digits",
+    "id_str": "exact [0-9]{1,64}; zero and leading zeros preserved",
+    "id_uniqueness": "type-aware"
+  },
+  "production_response_shape": {
+    "detail_body": "$.data.body; processed output retains SHA-256 and UTF-8 byte length only",
+    "detail_catalog": "$.data.firstCatalogId must equal the selected list catalog",
+    "detail_content_json": "optional JSON value; processed output retains presence plus canonical-JSON SHA-256 and byte length only",
+    "list": "$.data.catalogs must contain exactly one object whose integer catalogId equals the request; total/articles come from $.data.catalogs[0]"
+  },
+  "raw_summary_rule": "raw summary binds runtime/ledger, final receipt head, ordered receipt tree, sorted raw-artifact tree, exact keysets, and counts; raw summary excludes itself; external and processed artifacts are outside the promised tree",
+  "receipt_rule": "attempt_NNNN.receipt.json is immutable canonical JSON written after its exact body+sidecar and any NEXT_WIRE sleep; receipts form one global SHA-256 chain",
+  "response_version_header_semantics": "transport/version clues only; never publish/effective/known_at",
+  "retry_matrix": {
+    "all_other_outcomes": "terminal",
+    "attempt_numbers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "eligible_outcome": "only recomputed well-formed HTTP_<status>",
+    "http_429_delays_seconds": [
+      30,
+      60,
+      120
+    ],
+    "other_retryable_delays_seconds": [
+      1,
+      2
+    ],
+    "retry_after": "any case-insensitive presence on a retryable status is terminal",
+    "statuses": [
+      408,
+      429,
+      500,
+      502,
+      503,
+      504
+    ]
+  },
+  "root_summary_integrity_rule": "corpus_summary.json must be exact canonical pretty JSON with exactly the generated top-level field set; unknown fields and duplicate keys fail closed",
+  "selected_response_version_headers": [
+    "ETag",
+    "Last-Modified",
+    "Age",
+    "Cache-Control",
+    "Date"
+  ],
+  "source_binding_rule": "self-contained extractor expected SHA-256 is checked before lease; before/after runtime contract; before/after every sleep; prefetch; postfetch/pre-raw; post-raw/pre-receipt; before/after raw summary; and before/after final artifacts",
+  "stability_rule": "two complete ordered traversals of every list page; totals, page shapes, per-page semantic hashes and full semantic inventory must match; pass 2 is not merged",
+  "success_bijection_rule": "selected detail keys exactly equal accepted detail keys and ledger attempt keys exactly equal body/sidecar/receipt keys with no orphan, pending, terminal, or extra artifact",
+  "temporal_semantics": {
+    "detail_publish_minus_list_release_claim_ms": "exact signed subtraction with no tolerance, reconciliation, ordering assumption, or magnitude bound",
+    "detail_version_known_at": "detail response completion",
+    "lastUpdateTime": "raw untrusted metadata; not version history",
+    "publishDate": "independent detail_publish_date_claim_ms only; never reconciled with list claim",
+    "releaseDate": "independent list_release_date_claim_ms only; selection clock claim, never effective time"
+  },
+  "terminal_schedule_rule": "write-once no-wire/receiptless controlled failure record; its presence forbids success and it is not an attempt, wire, or receipt-chain member",
+  "time_claim_discrepancy_rule": "time_claim_discrepancies.jsonl is the exact nonzero-delta subset of detail_index rows sorted by catalog_id/article_code; empty is valid; no expected discrepancy count",
+  "time_url": "https://data-api.binance.vision/api/v3/time",
+  "transport_injected_request_headers": {
+    "Host": "optional in Request evidence; if present, must exactly equal the canonical endpoint hostname"
+  },
+  "version": "binance_spot_announcement_v4",
+  "wire_attempt_rule": "hardcoded cap 3464 covers every fetch; each wire needs the immediately preceding receipt authorization except the first",
+  "wire_attempt_summary_fields": {
+    "max_wire_attempts": "positive acquisition-wide runtime bound",
+    "wire_attempt_count": "all fetch calls, including retry and transport-error attempts"
+  }
+}

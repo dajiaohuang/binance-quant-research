@@ -1,0 +1,32 @@
+{
+  "experiment_id": "exp_20260825_002",
+  "formal_run_started_at": "2026-08-25T00:50:11.4409229+08:00",
+  "formal_run_ended_at": "2026-08-25T00:50:14.1904391+08:00",
+  "exit_code": 1,
+  "executed_source_sha256": "f9a7e5e010801edb67ab6eda6b15b61504731b746903cc7b2550963d47f404e3",
+  "error": "invalid archive symbol path segment '币安人生TRY'",
+  "root_common_prefix_count": 3695,
+  "root_common_prefix_unique_count": 3695,
+  "non_ascii_symbols": [
+    "币安人生TRY",
+    "币安人生U",
+    "币安人生USD1",
+    "币安人生USDC",
+    "币安人生USDT"
+  ],
+  "root_evidence": [
+    {"path": "data/raw/binance_spot_v1/inventory/archive_root/page_0001.xml", "bytes": 83723, "sha256": "b7e9b34791df77e5dbd81faa771b986fd39607b58298db855563a0edc932b227"},
+    {"path": "data/raw/binance_spot_v1/inventory/archive_root/page_0001.request.json", "bytes": 1048, "sha256": "f31da02cca1ea27ac40494e050eac5c413f055a2f2623651b4be617af3ff7ba4"},
+    {"path": "data/raw/binance_spot_v1/inventory/archive_root/page_0002.xml", "bytes": 83743, "sha256": "9e0ea9594af0c3004caa45ad21daf0f07c4f005065820e7f97c5cdf306da249f"},
+    {"path": "data/raw/binance_spot_v1/inventory/archive_root/page_0002.request.json", "bytes": 1373, "sha256": "e88951fb1de0f7e9d30a3362db4ebf0aef7e9670b66a80ebfab6624539a6ca03"},
+    {"path": "data/raw/binance_spot_v1/inventory/archive_root/page_0003.xml", "bytes": 83817, "sha256": "f80287ad9466e6282859d48553af00e52afe4f2b0cf542acc9095e24fa687390"},
+    {"path": "data/raw/binance_spot_v1/inventory/archive_root/page_0003.request.json", "bytes": 1375, "sha256": "e118bac6d13c657a877bc765736d48201d2cf2bacfd028b142d5906121b21bd2"},
+    {"path": "data/raw/binance_spot_v1/inventory/archive_root/page_0004.xml", "bytes": 58239, "sha256": "a20a8a2691a534954dcc19f941ee127e9d7d6dc1b8909567df8f98b56e5fc269"},
+    {"path": "data/raw/binance_spot_v1/inventory/archive_root/page_0004.request.json", "bytes": 1294, "sha256": "ee66ea4fe383111e4fcb8a2c0e61b0fc90929146007e84542ed7b3f88314dc60"}
+  ],
+  "exchange_info_fetched": false,
+  "per_symbol_object_pages_fetched": 0,
+  "kline_zip_payloads_downloaded": false,
+  "checksum_payloads_downloaded": false,
+  "decision": "INCONCLUSIVE"
+}

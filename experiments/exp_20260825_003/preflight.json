@@ -1,0 +1,21 @@
+{
+  "experiment_id": "exp_20260825_003",
+  "frozen_at": "2026-08-25T00:55:34.4954900+08:00",
+  "hash_algorithm": "SHA-256 over exact file bytes",
+  "files": {
+    "src/quant_research/binance_spot_archive.py": "ebd27d417e243c997d35942cc41215c3b2ddb170106e11b2099b0f35fab09fee",
+    "tests/test_binance_spot_archive.py": "fed233632c9f4095f3554a954c546634a499b88b4f1387d534312f27982b42cf",
+    "pyproject.toml": "fdd2a131b549128cf73711e2c4faf0c26e7a23fde1489f0f71f62a5321584318",
+    "experiments/exp_20260825_003/manifest.json": "824dcc60bdc9e3e6e859c41b34529e3159a03b5bedab9f32cf43dd20504739bf",
+    "experiments/exp_20260825_003/parameters.json": "5bd6e62f850d3824bdcabd625d57adf415299f464b7dca6a95145365aafd5b59",
+    "experiments/exp_20260825_003/commands.txt": "5cd01b38fc6ee8cb273d48cc7037f0cfed7e1d90bafddcf0e8d0930a4766bd97",
+    "experiments/exp_20260825_003/hypothesis.md": "8f49dca83dbd327837713ae6df4d99045a123ba78cc74ead1b9d0ec4c2d94be4",
+    "experiments/exp_20260825_003/metrics.json": "3bf55eddadf803a38c81560dbce30bdb3ada4a47f114de298f456971a07e1e8b",
+    "experiments/exp_20260825_003/report.md": "52224048dc471291ff14c43da08bf4594f8ea3c0cf2fe236cdbd0aefd4171dc6",
+    "experiments/exp_20260825_003/preflight_git_status.txt": "ea92bb6e27e35f309abd69f58c842e2263ebe42fa5be7b5f3b1837fffd5f0349"
+  },
+  "offline_inventory_tests": {"passed": 14, "failed": 0},
+  "full_repository_tests": {"passed": 26, "failed": 0},
+  "network_access_after_fix_before_freeze": false,
+  "formal_output_paths_absent_before_fetch": true
+}

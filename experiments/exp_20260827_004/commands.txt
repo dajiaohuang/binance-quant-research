@@ -1,0 +1,5 @@
+# Pre-registered offline development commands. These are not formal empirical execution.
+uv run python -m unittest tests.test_historical_pit_evidence -v
+uv run python -m unittest tests.test_hierarchical_alpha -v
+
+# No formal command is authorized in Phase 1.

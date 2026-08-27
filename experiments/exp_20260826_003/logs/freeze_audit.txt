@@ -1,0 +1,39 @@
+exp_20260826_003 final offline freeze audit
+
+JSON parse
+  manifest.json: OK
+  parameters.json: OK
+  metrics.json: OK
+
+Frozen hash bindings
+  source: MATCH 30a45ed781e0335838ec7e6643c04c229c8ff53637aec2e2c7a0d928f22adc10
+  test: MATCH fbbe5571d171ee302398191ea32f931da05e7adb9bdfe2133ce25f4a0ba2156f
+  fixture: MATCH ab4676534a3219461555e4127326a1da9a43e9e29afce0df3e8ace3ad0c31876
+  fixture bytes: 7607
+  pyproject: MATCH 606453ead1702b1646d622f69aed997e3916eea66618fee6c05cfeb08706bda8
+  commands: MATCH 6260bb869b72f7aa3d60a0dd75758cfefd4548e881477b2f51562762fab227a7
+  parameters: MATCH 2caab3da07d511c1dee4ab7f64ebdfa8a2484974a734ab3b54fffeb03f74e79f
+  hypothesis: MATCH 540640273f2bd6dcd0cf7e188d1d182d511dd5a1f64701e83a9795ceae2f09b5
+  formal command UTF-8/no-newline: MATCH 0970899a06cc5e3d324c20c0dc29e1bafc0481bc44c9b75f85e3f751d2d42c73
+
+Isolation
+  exp002 v1 source: UNCHANGED 9c98725d74ce3d5e4f6c2a9ac5f9fbe53926b9fd4dae35520db39e7a086a7d46
+  v2 import of exp002/v1: ABSENT
+  v2 import of PIT module: ABSENT
+  frozen source placeholder: ABSENT
+  frozen formal command line count: 1
+
+Formal output state
+  raw run directory: ABSENT
+  processed run directory: ABSENT
+  corpus_summary.json: ABSENT
+  schema.json: ABSENT
+  source_contract.json: ABSENT
+  formal execution count: 0
+  network request count: 0
+
+Phase: pre_execution_review_pending / formal execution NO-GO
+
+Postscript: this was the pre-execution audit. The later one-time authorized
+formal execution is recorded in formal_run.txt; this freeze snapshot is retained
+without rewriting its original findings.

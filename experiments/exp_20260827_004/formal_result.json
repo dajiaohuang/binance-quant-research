@@ -1,0 +1,42 @@
+{
+  "empirical_authorized": false,
+  "eligibility_evaluated": false,
+  "experiment_id": "exp_20260827_004",
+  "formal_executed": true,
+  "formal_execution_count": 2,
+  "formal_ledger": {
+    "bytes": 2587,
+    "path": "experiments/exp_20260827_004/formal_ledger.json",
+    "sha256": "0de7a2c5bd45f2b9acaeb38e60ab6216ac1d215f06b8bdbcb1c0a03cbf0f5f80"
+  },
+  "frozen_command_results": [
+    {
+      "command_no_newline_sha256": "e7c8f8cec9a2cece6c31895cc18c671b5325ecfcaf5b49488db30fb430a6de0b",
+      "execution_count": 1,
+      "exit_code": 0,
+      "ordinal": 1,
+      "result": "PASS",
+      "test_count": 27
+    },
+    {
+      "command_no_newline_sha256": "20410fbbc49fddcf45d6c052cda48b85aa832aa9c5f2530f27dd9dfb2c80c8e1",
+      "execution_count": 1,
+      "exit_code": 0,
+      "ordinal": 2,
+      "result": "PASS",
+      "test_count": 35
+    }
+  ],
+  "frozen_hashes_postflight": "PASS",
+  "frozen_hashes_preflight": "PASS",
+  "full_repository_tests": "NOT_RUN",
+  "historical_eligibility_ready": false,
+  "independent_documentation_debt": "exp_20260827_003 has stale documentation; it was not read as experiment input and is not part of this result.",
+  "network_request_count": 0,
+  "postflight_state": "terminal_postflight_pending_auditor",
+  "real_data_accessed": false,
+  "retry_count": 0,
+  "status": "NEEDS_MORE_DATA",
+  "strict_eligible_count": 0,
+  "total_test_count": 62
+}

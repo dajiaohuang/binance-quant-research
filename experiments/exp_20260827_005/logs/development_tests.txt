@@ -1,0 +1,33 @@
+experiment_id=exp_20260827_005
+execution_domain=OFFLINE_SYNTHETIC_DEVELOPMENT_NOT_FORMAL
+network_access=false
+real_data_accessed=false
+full_repository_tests=NOT_RUN
+
+command=uv run python -m unittest tests.test_hierarchical_alpha -v
+run_1_result=PASS
+run_1_count=45
+run_1_note=Initial implementation passed; exact built-in-int label-consumer coverage was then added before freeze.
+
+command=uv run python -m unittest tests.test_hierarchical_alpha -v
+run_2_start_local=2026-08-27T15:59:39.3713351+08:00
+run_2_end_local=2026-08-27T15:59:39.7328055+08:00
+run_2_exit_code=0
+run_2_count=46
+run_2_result=PASS
+
+command=uv run python -m unittest tests.test_historical_pit_evidence -v
+start_local=2026-08-27T15:59:44.8088180+08:00
+end_local=2026-08-27T15:59:45.1789225+08:00
+exit_code=0
+count=27
+result=PASS
+
+command=uv run python -m py_compile src/quant_research/hierarchical_alpha.py tests/test_hierarchical_alpha.py
+start_local=2026-08-27T15:59:51.2031896+08:00
+end_local=2026-08-27T15:59:51.3052403+08:00
+exit_code=0
+result=PASS
+
+development_failures=NONE
+formal_executed=false

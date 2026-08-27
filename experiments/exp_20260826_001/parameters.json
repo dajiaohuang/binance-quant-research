@@ -1,0 +1,43 @@
+{
+  "experiment_id": "exp_20260826_001",
+  "snapshot_id": "exp_20260826_001_formal_001",
+  "time_url": "https://data-api.binance.vision/api/v3/time",
+  "exchange_info_url": "https://data-api.binance.vision/api/v3/exchangeInfo?showPermissionSets=true",
+  "exchange_info_query": {
+    "showPermissionSets": "true"
+  },
+  "forbidden_exchange_info_query_parameters": [
+    "symbol",
+    "symbols",
+    "permissions",
+    "symbolStatus"
+  ],
+  "http_method": "GET",
+  "request_timeout_seconds": 30,
+  "max_attempts": 3,
+  "wire_request_bound": "3 logical endpoints * at most 3 attempts = at most 9 wire GETs; retries use only the same endpoint canonical URL",
+  "redirect_rule": "dedicated no-redirect handler; preserve original 30x status/headers/body/original URL; never access Location; redirect is terminal and not retried",
+  "max_response_bytes": 20000000,
+  "max_clock_skew_ms": 300000,
+  "retryable_http_statuses": [408, 429, 500, 502, 503, 504],
+  "terminal_http_statuses": [418],
+  "known_at_rule": "successful exchangeInfo response completion UTC",
+  "server_time_bracket_rule": "time_before.serverTime <= exchangeInfo.serverTime <= time_after.serverTime",
+  "local_clock_rule": "time_before.request_start <= time_before.response_complete <= exchangeInfo.request_start <= exchangeInfo.response_complete(known_at) <= time_after.request_start <= time_after.response_complete",
+  "http_200_content_length_rule": "required and exactly equal to retained raw body bytes",
+  "proxy_policy": "dedicated urllib opener with ProxyHandler({}); environment proxies and Proxy-Authorization are forbidden",
+  "transport_error_receipt_rule": "store only controlled category and fixed safe message; never raw exception text",
+  "snapshot_lease_rule": "atomically create the raw snapshot directory with exist_ok=false before any request; same-id second writer fails closed",
+  "retry_attempt_ledger_rule": "summary includes every consecutive attempt raw/sidecar path, SHA-256 and outcome; loader verifies root binding, no gaps, hashes, retryability and final OK",
+  "allowed_raw_statuses": ["TRADING", "HALT", "BREAK"],
+  "spot_permission_predicate": "isSpotTradingAllowed only; permissions and permissionSets are preserved verbatim evidence, not a second predicate",
+  "archive_symbol_index_path": "data/raw/binance_spot_v2/inventory/symbol_index.jsonl",
+  "archive_symbol_index_sha256": "0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16",
+  "archive_candidate_rule": "consume only frozen suffix_candidate boolean; do not parse the symbol suffix",
+  "missing_current_symbol_rule": "emit explicit UNKNOWN fields; do not infer delisted",
+  "listing_rule": "listing_from_ms and listing_to_ms_exclusive remain null for every row",
+  "strict_eligibility_rule": "always false because UNKNOWN_LISTING_WINDOW is mandatory",
+  "raw_root": "data/raw/binance_spot_pit_v1/snapshots",
+  "processed_root": "data/processed/binance_spot_pit_v1/snapshots",
+  "random_seed": 42
+}

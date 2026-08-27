@@ -1,0 +1,18 @@
+FRESH PHASE 2 READ-ONLY REVIEW: NO-GO
+REMEDIATION: OPTION A / MINIMAL FIDELITY FIX
+
+FORMAL EXECUTED: false
+NETWORK ACCESS: false
+REAL DATA ACCESS: false
+
+Rejected candidate hashes before this fix:
+- adapter: 1dcfcf783376c6edb76c35cf957a2eff1b3d90861449f8a3b5725c3e3563e4b7
+- tests: 9b5af7561c3e934f9a3debce4b84c8a9ef1cc71b8b11635398926662f6d397d9
+- source_contract: b2b2ef20a1742b879c6defae63813acb3a9873c043a1ee12e42c6bf40e8b8c26
+- schema: 2b014f340efb970956ea352b2b4472ceef76ee7ed6e14e5031e2cf3d7a824936
+- parameters: 195ebe5ff9f27911e38b500495872969fc5a21cd436a93b540fa7c8621541136
+
+Single fidelity issue:
+The production EvidenceReference preimage used contributor keys `raw_payload_sha256` and `claim_id`, while the frozen source-contract terminology requires `exact_raw_sha256` and `physical_claim_id`. Values were already correct; only canonical preimage key names and the complete documented envelope require correction.
+
+This candidate was not formally executed and did not receive Fresh Phase 2 GO.

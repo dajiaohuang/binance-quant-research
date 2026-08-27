@@ -1,0 +1,169 @@
+{
+  "experiment_id": "exp_20260825_006",
+  "contract_revision": 2,
+  "contract_revision_reason": "pre-execution direct-construction bypasses",
+  "tests_execution_status": "NOT_EXECUTED",
+  "contract_revision_history": [
+    {
+      "revision": 0,
+      "status": "superseded_before_execution",
+      "retained_contract": "The original phase 2a contract is preserved in repository history and hypothesis.md; no revision-0 test was executed."
+    },
+    {
+      "revision": 1,
+      "status": "superseded_before_execution",
+      "reason": "pre-execution audit blockers"
+    },
+    {
+      "revision": 2,
+      "status": "authoritative_not_executed",
+      "reason": "pre-execution direct-construction bypasses"
+    }
+  ],
+  "kernel": "Hierarchical Alpha Research Kernel",
+  "mode": "data_agnostic_fail_closed",
+  "fixtures": "synthetic_only",
+  "pit_contract": {
+    "required": true,
+    "semantics": "POINT_IN_TIME_BINANCE_SPOT_ELIGIBILITY",
+    "expected_venue": "BINANCE",
+    "expected_market_type": "SPOT",
+    "expected_quote_asset": "USDT",
+    "caller_supplied_eligible_state": false,
+    "derived_from_components": [
+      "venue",
+      "market_type",
+      "trading_status",
+      "spot_permission",
+      "quote_asset",
+      "listing_effective_from",
+      "listing_effective_to_exclusive",
+      "known_at",
+      "evidence_kind",
+      "evidence_sha256"
+    ],
+    "unknown_policy": "fail_closed",
+    "missing_membership_policy": "hard_error",
+    "future_evidence_policy": "derived_ineligible",
+    "archive_derived_evidence_policy": "hard_error",
+    "archive_availability_is_eligibility": false,
+    "exp005_panel_allowed_use": "negative gate fixture only"
+  },
+  "expert_registry": {
+    "key_fields": ["family", "name", "horizon_hours", "version"],
+    "duplicate_key_policy": "hard_error",
+    "registry_order_invariant": true,
+    "missing_expert_policy": "hard_error_without_renormalization",
+    "output_direction": "HIGHER_IS_BETTER only; lower-is-better inputs must be standardized upstream",
+    "exp006_ensemble_readiness": "SYNTHETIC_READY",
+    "blocked_readiness_states": ["PIT_BLOCKED", "DATA_BLOCKED"],
+    "output_provenance_sha256_required": true
+  },
+  "cross_section": {
+    "scope": "one UTC formation time",
+    "eligible_only": true,
+    "winsorization": "deterministic symmetric quantile bounds frozen by test case",
+    "rank_tie_method": "centered average midrank on [-1, 1]",
+    "nonfinite_policy": "hard_error",
+    "low_breadth_policy": "hard_error",
+    "duplicate_symbol_time_policy": "hard_error",
+    "residualization": {
+      "method": "deterministic least squares",
+      "intercept_policy": "explicit in expert specification",
+      "rank_deficiency_policy": "hard_error",
+      "orthogonality_tolerance": 1e-10,
+      "cross_time_fit": false
+    }
+  },
+  "horizons_hours": [1, 24, 120, 480],
+  "label_contract": {
+    "feature_bar_open_time": "bar k open",
+    "decision_time": "feature_bar_open_time + 1 hour",
+    "closed_bar_feature_known_at": "decision_time exactly",
+    "entry_price": "bar k+1 open at decision_time",
+    "exit_price_formula": "bar k+h+1 open at decision_time + h hours",
+    "synthetic_open_price_known_at": "open_time exactly",
+    "forward_label_fields": [
+      "feature_bar_index",
+      "feature_bar_open_time",
+      "decision_time",
+      "entry_bar_index",
+      "entry_time",
+      "exit_bar_index",
+      "exit_time",
+      "known_at"
+    ],
+    "timezone": "UTC",
+    "interval_semantics": "actual information interval [entry_time, exit_time + 1 millisecond)",
+    "labels_allowed_as_expert_inputs": false
+  },
+  "overlap_control": {
+    "minimum_purge_bars_formula": "horizon_hours + 1",
+    "minimum_embargo_bars_formula": "horizon_hours + 1",
+    "shared_multi_horizon_bars": 481,
+    "split_clock": "actual UTC milliseconds including irregular timestamps",
+    "same_formation_fold_policy": "all symbols and horizons share one fold",
+    "pre_evaluation_purge": "label interval end <= evaluation_start - purge_milliseconds",
+    "post_evaluation_embargo": "label interval start >= evaluation_end_exclusive + embargo_milliseconds",
+    "overlap_policy": "hard_error",
+    "direct_construction_validation": "same invariants as PurgeEmbargoSpec.build",
+    "bar_milliseconds": 3600000
+  },
+  "hierarchical_ensemble": {
+    "within_family_weights": "externally frozen finite nonnegative simplex",
+    "across_family_weights": "externally frozen finite nonnegative simplex",
+    "simplex_sum": 1.0,
+    "simplex_tolerance": 1e-12,
+    "data_dependent_weight_fit": false,
+    "missing_expert_renormalization": false
+  },
+  "regime_multiplier": {
+    "source": "external frozen PIT specification",
+    "minimum": 0.7,
+    "maximum": 1.3,
+    "bounds_inclusive": true,
+    "missing_policy": "hard_error",
+    "nonfinite_policy": "hard_error",
+    "out_of_bounds_policy": "hard_error",
+    "sign_preserving": true,
+    "maximum_amplification": 1.3,
+    "learned_router": false,
+    "input_type": "direct provenance-bound EnsembleScore only",
+    "application_order": "apply once after ensemble and never to penalties",
+    "cross_section_scope": "one common scalar per formation",
+    "score_clock_policy": "known_at <= formation_time"
+  },
+  "expected_net_alpha": {
+    "one_way_cost_rates": [0.0015, 0.00225, 0.003],
+    "formula": "regime_adjusted_expected_gross_alpha - explicit_trading_cost_penalty - uncertainty_penalty - crowding_penalty",
+    "penalty_requirements": "finite and nonnegative",
+    "penalty_monotonicity": "increasing any penalty cannot increase expected net alpha",
+    "interpretation": "diagnostic expectation only; not realized P&L"
+  },
+  "synthetic_diagnostics": {
+    "score_type": "exact horizon-bound DiagnosticScore with symbol, formation_time, known_at, horizon, value and provenance SHA-256",
+    "rank_information_coefficient": "same formation, same horizon, complete eligible score-label keys, minimum breadth",
+    "incremental_information": "fixed full versus fixed ablated scores",
+    "fields": ["full_ic", "ablated_ic", "delta_ic"],
+    "optimization_or_fit": false
+  },
+  "direct_construction_guards": {
+    "PurgeEmbargoSpec": "allowed unique horizons, one-hour bar size, integer purge/embargo, and max(h)+1 minimum",
+    "ExpertRegistry": "same complete validation and canonical ordering for constructor and build",
+    "RegimeAdjustedScore": "clock, SHA-256, finite fields, bounds, multiplication identity, direction and amplification revalidated at consumption",
+    "DiagnosticScore": "exact type with PIT, clock, finite, duplicate, breadth, horizon and provenance validation"
+  },
+  "forbidden": {
+    "real_market_data": true,
+    "real_factor_or_score": true,
+    "real_rank_ic": true,
+    "real_pnl": true,
+    "model_fit": true,
+    "backtest": true,
+    "network": true,
+    "cli": true
+  },
+  "successful_terminal_status": "NEEDS_MORE_DATA",
+  "failed_terminal_status": "INCONCLUSIVE",
+  "random_seed": 42
+}

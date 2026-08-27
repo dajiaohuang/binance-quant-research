@@ -1,0 +1,8 @@
+{"event":"PASS","exit_code":null,"seq":1,"stage":"SELF_HASH"}
+{"event":"START","exit_code":null,"seq":2,"stage":"ENV_FILE_READ"}
+{"event":"PASS","exit_code":null,"seq":3,"stage":"ENV_FILE_READ"}
+{"event":"PASS","exit_code":null,"seq":4,"stage":"VALIDATE"}
+{"event":"PASS","exit_code":null,"seq":5,"stage":"HANDOFF"}
+{"event":"START","exit_code":null,"seq":6,"stage":"COLLECTOR"}
+{"event":"EXIT","exit_code":0,"seq":7,"stage":"COLLECTOR"}
+{"event":"PASS","exit_code":null,"seq":8,"stage":"FINAL_CLEANUP"}

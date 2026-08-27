@@ -1,0 +1,22 @@
+COMMANDS:
+uv run python -m py_compile src/quant_research/historical_pit_evidence.py tests/test_historical_pit_evidence.py
+uv run python -m unittest tests.test_historical_pit_evidence -v
+
+OBSERVED EXIT: 1
+
+COMPLETE FAILURE:
+Sorry: IndentationError: unexpected indent (src/quant_research/historical_pit_evidence.py, line 1040)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "tests/test_historical_pit_evidence.py", line 15, in <module>
+    from quant_research.historical_pit_evidence import (
+  File "src/quant_research/historical_pit_evidence.py", line 1040
+    "raw_locator": {
+IndentationError: unexpected indent
+
+ROOT CAUSE:
+An intermediate apply_patch left an orphaned seven-line dictionary fragment after the module __all__ declaration.
+
+MINIMAL CORRECTION:
+Delete only the orphaned fragment. No evidence, revision, resolution, or hash behavior was changed by this correction.

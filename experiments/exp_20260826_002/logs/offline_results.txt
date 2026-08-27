@@ -1,0 +1,169 @@
+exp_20260826_002 offline implementation results
+
+No formal or exploratory network request was executed by the Experimenter.
+No Alpha, IC, ML, backtest, validation-set or final-test command was executed.
+
+Initial narrow run
+  command: uv run python -m unittest tests.test_binance_spot_announcement_corpus -v
+  raw transcript: Codex chunk 065daa
+  result: OK, Ran 11 tests in 0.624s
+
+Semantic-loader narrow run
+  command: uv run python -m unittest tests.test_binance_spot_announcement_corpus -v
+  raw transcript: Codex chunk a8b1c2
+  result: OK, Ran 13 tests in 0.790s
+  added coverage: complete two-page pagination, cross-page total drift,
+  invalid JSON and nonmonotone local request clocks
+
+Final frozen narrow run
+  command: uv run python -m unittest tests.test_binance_spot_announcement_corpus -v
+  raw transcript: Codex chunk 4c1192
+  exit code: 0
+  terminal tail:
+    Ran 13 tests in 0.739s
+    OK
+
+Final frozen full-repository run
+  command: uv run python -m unittest discover -s tests -v
+  raw transcript: Codex chunk ff2f96
+  exit code: 0
+  terminal tail:
+    Ran 120 tests in 1.568s
+    OK
+
+Frozen files
+  source sha256: 4ca0034ff0dbd452579b6b948cec3e5c680c6c5078f305e95ad46af8119670e6
+  test sha256: d74d30415511b58661631e5b4112d69c451fc90ff58b23110f694977e743998d
+  pyproject sha256: 3c7bce595c1db8cafd4fcefb42d5d490de7b59d98442c633cf3cf607bfb52d4f
+  frozen PIT dependency sha256: 427b9eab83f14798fdb9b6465dddad397081d6a2c094fb27aa229fd94aee2264
+
+Formal output state at freeze
+  raw run directory exists: false
+  processed run directory exists: false
+  corpus summary exists: false
+  network requests executed: 0
+
+There were no offline test failures to retain. Formal execution remains blocked
+pending independent Researcher and Auditor GO.
+
+Pre-execution NO-GO correction round
+  retained review: logs/auditor_no_go_fix_round.txt
+  formal network authorization: false
+  scope: production JSON shapes, canonical Host, two full list passes, cap+1
+    network read, terminal retry/outcome recomputation, current-visible wording,
+    and pre-network extractor source SHA binding
+
+Correction-round first narrow run
+  command: uv run python -m unittest tests.test_binance_spot_announcement_corpus -v
+  raw transcript: Codex chunk 7d102f
+  result: OK, Ran 19 tests in 1.215s
+
+Correction-round post-Content-Length narrow run
+  command: uv run python -m unittest tests.test_binance_spot_announcement_corpus -v
+  raw transcript: Codex chunk 465233
+  result: OK, Ran 19 tests in 1.065s
+
+Correction-round final frozen narrow run
+  command: uv run python -m unittest tests.test_binance_spot_announcement_corpus -v
+  raw transcript: Codex chunk fa31ba
+  exit code: 0
+  terminal tail:
+    Ran 19 tests in 1.087s
+    OK
+
+Correction-round final frozen full-repository run
+  command: uv run python -m unittest discover -s tests -v
+  raw transcript: Codex chunk 2ec0d7
+  exit code: 0
+  terminal tail:
+    Ran 126 tests in 1.881s
+    OK
+
+Correction-round source binding
+  extractor sha256: 3ca7731482fb7f319a0eb5bc2303879f97868b47f249d4879783ec29b8420ab8
+  exact formal command now requires that value before lease or GET
+  frozen dependency sha256: 427b9eab83f14798fdb9b6465dddad397081d6a2c094fb27aa229fd94aee2264
+
+Correction-round formal output state
+  raw run directory exists: false
+  processed run directory exists: false
+  corpus summary exists: false
+  network requests executed: 0
+
+Final source-TOCTOU hardening
+  change: recheck extractor and frozen dependency immediately before every
+    logical GET; initial extractor mismatch still stops before lease creation
+  final extractor sha256: 3ca7731482fb7f319a0eb5bc2303879f97868b47f249d4879783ec29b8420ab8
+  final narrow transcript: Codex chunk de33c9
+  final narrow result: OK, Ran 20 tests in 1.175s
+  final full transcript: Codex chunk 807309
+  final full result: OK, Ran 127 tests in 2.007s
+  network requests executed: 0
+
+Final per-wire-attempt source binding
+  change: source/dependency preflight runs before every attempt, including retry
+  final narrow transcript: Codex chunk 3221b7
+  final narrow result: OK, Ran 21 tests in 1.186s
+  final full transcript: Codex chunk 1e70e1
+  final full result: OK, Ran 128 tests in 1.981s
+  network requests executed: 0
+
+Second fresh re-review NO-GO correction round
+  retained review: logs/auditor_second_no_go_fix_round.txt
+  formal network authorization: false
+  change: enforce one shared positive max-wire-attempt cap across every fetch;
+    record and trusted-rebuild the realized count and bound
+  change: central extractor/dependency binding before lease, immediately before
+    every fetch, immediately after each returned response before evidence
+    acceptance, and before artifact completion
+  change: trusted loader independently requires the live dependency SHA to
+    equal the hardcoded frozen SHA
+  pre-freeze narrow transcript: Codex chunk 772c37
+  pre-freeze narrow result: OK, Ran 23 tests in 1.370s
+  post-loader-coverage narrow transcript: Codex chunk adb424
+  post-loader-coverage narrow result: OK, Ran 23 tests in 1.399s
+  frozen extractor sha256:
+    9c98725d74ce3d5e4f6c2a9ac5f9fbe53926b9fd4dae35520db39e7a086a7d46
+  formal max-wire-attempts: 2598
+  successful logical request expectation: 866
+  formal raw run directory exists: false
+  formal processed run directory exists: false
+  formal corpus summary exists: false
+  network requests executed: 0
+  cap fixture strengthening: advertise the frozen 50-page catalog maximum and
+    select exactly the 800-article maximum; with cap 52 the 53rd fetch (first
+    detail) is not issued
+  final frozen narrow transcript: Codex chunk 933518
+  final frozen narrow result: OK, Ran 23 tests in 1.578s
+  final frozen full-repository transcript: Codex chunk 926b81
+  final frozen full-repository result: OK, Ran 130 tests in 2.457s
+  final formal raw run directory exists: false
+  final formal processed run directory exists: false
+  final formal corpus summary exists: false
+  final network requests executed: 0
+
+Formal execution after independent GO/GO
+  exact planned command executions: 1
+  pre-execution command-ledger sha256:
+    44c4b3fb773addb88d1426498e87e8edc7d609cfd8cbb893b33f0872be439039
+  transcript: logs/formal_run.txt; Codex chunk 6833b1
+  observed exit: 1
+  wall time: 11.4427733s
+  stdout: empty
+  stderr: ERROR: invalid article code
+  wire attempts: 39
+  retries: 0
+  terminal status: INCONCLUSIVE
+  artifact state: null
+  partial raw inventory: logs/formal_partial_raw_inventory.tsv
+  formal command was not retried or adapted
+  no Alpha, IC, ML, backtest or eligibility derivation was executed
+
+Formal postflight offline audit
+  command class: read-only local hash/count/status inspection; no network
+  transcript: Codex chunk f780ce
+  result: FORMAL_OFFLINE_AUDIT_OK
+  canonical partial inventory rebuilt byte-for-byte: 78/78 files
+  extractor and dependency still match frozen SHA-256 values
+  processed run and summary/schema/source-contract remain absent
+  trusted reload unavailable because its three root artifacts do not exist

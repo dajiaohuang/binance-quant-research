@@ -1,0 +1,124 @@
+{
+  "experiment_id": "exp_20260825_004",
+  "created_at": "2026-08-25T15:28:40.1921419+08:00",
+  "status": "complete",
+  "phase": "terminal_postflight_complete",
+  "decision_status": "INCONCLUSIVE",
+  "parent_experiment": "exp_20260825_003",
+  "objective": "Acquire and validate the exact frozen Binance Spot monthly 1h Kline payload objects and build a no-fill ARCHIVE_KLINE_AVAILABLE panel.",
+  "git_repository": true,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_clean_before_experiment": false,
+  "git_status_reason": "Prior experiments and documentation are intentionally uncommitted; exp_20260825_004 uses new isolated data and experiment paths.",
+  "frozen_inputs": {
+    "inventory_summary": {
+      "path": "experiments/exp_20260825_003/artifacts/inventory_summary.json",
+      "bytes": 3317729,
+      "sha256": "168fa33118114fd088d03ceb87f920755aea8b088b13f891a37984e75065605d"
+    },
+    "inventory_jsonl": {
+      "path": "data/processed/binance_spot_v2/archive_inventory_1h_2022-12_2024-12.jsonl",
+      "bytes": 8082127,
+      "records": 18480,
+      "sha256": "8be13634629f8fc21e499aaab7df46839510b3a5be4842ab620bfb3089f512b3"
+    },
+    "symbol_index_jsonl": {
+      "path": "data/raw/binance_spot_v2/inventory/symbol_index.jsonl",
+      "bytes": 1453935,
+      "records": 3695,
+      "sha256": "0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16"
+    }
+  },
+  "market": "Binance Spot public monthly Kline archive",
+  "source_base_url": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
+  "source_prefix": "data/spot/monthly/klines/",
+  "interval": "1h",
+  "archive_month_start": "2022-12",
+  "archive_month_end": "2024-12",
+  "timestamp_unit": "milliseconds",
+  "expected_zip_objects": 9240,
+  "expected_checksum_objects": 9240,
+  "expected_zip_bytes_from_inventory": 292861199,
+  "expected_checksum_bytes_from_inventory": 818811,
+  "expected_candidate_symbols": 723,
+  "candidate_symbol_order": "ascending Unicode code point order from suffix_candidate=true symbol-index rows",
+  "candidate_symbol_list_encoding": "UTF-8 without BOM, one symbol per line, final LF",
+  "candidate_symbol_list_bytes": 6501,
+  "candidate_symbol_list_sha256": "abcfbaa4b3a44a2336de962c1da2495d254b4bf37800def41af8c66cba20d121",
+  "expected_panel_hours": 18288,
+  "expected_panel_cells": 13222224,
+  "source_identity_gate": "GET each frozen key with If-Match using the frozen ETag; also require exact response ETag, Content-Length, and Last-Modified",
+  "source_identity_normalization": "Send a quoted If-Match ETag, normalize response ETag quotes before equality, and compare Last-Modified as a parsed UTC instant rather than source-string formatting.",
+  "allowed_network_scope": [
+    "Conditional public S3 GET requests for the exact 18,480 frozen keys"
+  ],
+  "authentication": "none; public data only",
+  "forbidden_network_scope": [
+    "Account endpoints",
+    "Private user data",
+    "Balances",
+    "Orders",
+    "Trading",
+    "Withdrawals"
+  ],
+  "forbidden_claims": [
+    "HISTORICAL_TRADING",
+    "HISTORICAL_SPOT_PERMISSION",
+    "HISTORICAL_QUOTE_ASSET",
+    "HISTORICAL_LISTED",
+    "HISTORICAL_DELISTED",
+    "HISTORICAL_ELIGIBLE",
+    "HISTORICAL_EXECUTABLE"
+  ],
+  "raw_output_root": "data/raw/binance_spot_v3/payloads",
+  "processed_output_root": "data/processed/binance_spot_v3",
+  "normalized_kline_root": "data/processed/binance_spot_v3/klines_1h_by_symbol",
+  "coverage_panel_path": "data/processed/binance_spot_v3/archive_kline_available_1h_2022-12_2024-12.csv.gz",
+  "payload_summary_path": "experiments/exp_20260825_004/artifacts/payload_summary.json",
+  "object_quality_path": "experiments/exp_20260825_004/artifacts/object_quality.jsonl",
+  "coverage_schema_path": "experiments/exp_20260825_004/artifacts/coverage_schema.json",
+  "derived_index_path": "experiments/exp_20260825_004/artifacts/derived_index.jsonl",
+  "object_evidence_contract": "For every object record exact key and URL, frozen ETag/size/Last-Modified, attempts, fetch UTC, HTTP status, selected response headers, downloaded bytes, local SHA-256, validation status, and failure reason.",
+  "implementation_freeze": {
+    "source_path": "src/quant_research/binance_spot_payload.py",
+    "source_sha256": "9daf02d50d084bdb888c4bde0ba3d0ffd2e7056ea8b40de7fbc85858d16518c6",
+    "test_path": "tests/test_binance_spot_payload.py",
+    "test_sha256": "65882d88b8bf048b21c2d465e54fee509c35fa93d99d5bee696e18cd38d4b335",
+    "pyproject_sha256": "12716fd4b585c73cffafca6dd2913be4b1d0d5c3b0069b14aa0cdb87a6e3c617",
+    "full_test_count": 41,
+    "full_test_result": "PASS"
+  },
+  "independent_audit": {
+    "completed_at": "2026-08-25T16:24:52.5092407+08:00",
+    "verdict": "PASS",
+    "formal_fetch_authorized": true,
+    "scope": "Exact commands.txt public S3 payload command and frozen output paths only"
+  },
+  "random_seed": 42,
+  "expected_terminal_status_after_complete_payload_success": "NEEDS_MORE_DATA",
+  "actual_execution": {
+    "started_at_utc": "2026-08-25T08:25:15.513014+00:00",
+    "ended_at_utc": "2026-08-25T08:35:17.585334+00:00",
+    "pairs_downloaded": 9240,
+    "objects_downloaded": 18480,
+    "downloaded_zip_bytes": 292861199,
+    "downloaded_checksum_bytes": 818811,
+    "http_200_objects": 18480,
+    "source_metadata_mismatches": 0,
+    "pairs_validated": 8887,
+    "pairs_invalid": 353,
+    "failure_code": "CSV_VALIDATION_ERROR"
+  },
+  "postflight_audit": {
+    "verdict": "PASS",
+    "raw_payload_scope_complete": true,
+    "valid_derived_months": 8887,
+    "invalid_derived_months": 353,
+    "partial_files_found": 0,
+    "normalized_files_verified": 462,
+    "normalized_rows_verified": 6431739,
+    "panel_cells_verified": 13222224,
+    "restriction": "The 353 U months are raw evidence only and are not valid derived data"
+  },
+  "notes": "All frozen public payload bytes were acquired, but 353 symbol-months failed the preregistered exact close-time gate and remain U. This experiment is terminal INCONCLUSIVE. Historical market status and eligibility remain separate evidence requirements."
+}

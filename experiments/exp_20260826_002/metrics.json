@@ -1,0 +1,47 @@
+{
+  "experiment_id": "exp_20260826_002",
+  "phase": "formal_run_complete",
+  "implementation_status": "frozen_source_executed_once",
+  "formal_run_executed": true,
+  "network_requests_executed_by_experimenter": 39,
+  "offline_tests": {
+    "narrow": {"passed": 23, "failed": 0, "errors": 0, "seconds": 1.578},
+    "full_repository": {"passed": 130, "failed": 0, "errors": 0, "seconds": 2.457}
+  },
+  "formal_corpus_metrics": {
+    "command_executions": 1,
+    "exit_code": 1,
+    "wall_time_seconds": 11.4427733,
+    "collector_error": "invalid article code",
+    "wire_attempts": 39,
+    "retries": 0,
+    "response_files": 39,
+    "request_sidecars": 39,
+    "http_200_outcome_ok": 39,
+    "response_body_bytes": 355184,
+    "sidecar_bytes": 47730,
+    "total_frozen_raw_sidecar_bytes": 402914,
+    "list_pages_acquired": 38,
+    "list_articles_raw_acquired": 1900,
+    "detail_requests": 0,
+    "partial_raw_inventory_sha256": "c3bee614c75899c07729cf3d26ff88244550871f69ffec25dad6b8d841f3be9c"
+  },
+  "catalog_totals": {"48": 2234, "161": null},
+  "claimed_interval_counts": null,
+  "detail_count": 0,
+  "wire_attempts": 39,
+  "response_bytes": 355184,
+  "terminal_status": "INCONCLUSIVE",
+  "artifact_state": null,
+  "expected_formal_request_inventory": {
+    "list": 108,
+    "detail": 756,
+    "time": 2,
+    "logical_total": 866,
+    "max_wire_attempts": 2598
+  },
+  "historical_eligibility_ready": false,
+  "trusted_reload_executed": false,
+  "trusted_reload_reason": "collector failed before corpus_summary/schema/source_contract creation",
+  "alpha_ic_ml_backtest_executed": false
+}

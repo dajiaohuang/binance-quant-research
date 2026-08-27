@@ -1,0 +1,74 @@
+{
+  "accepted_detail_contract": {
+    "accepted_detail_count": 756,
+    "accepted_detail_keyset_sha256": "9acbd3b26999fba4e00aabf4147965975ef51b02da192f1eca89cda8e907da0c",
+    "accepted_receipt": "EXACTLY_ONE_PER_DETAIL;FINAL_ATTEMPT;accepted=true;outcome=OK;http_status=200",
+    "attempt_body_sidecar_receipt_keyset_sha256": "3c1e379a3b50d7decd9c710eb64b51e2bddefcdf51d9c658c6cff891b4969d47",
+    "only_accepted_response_body_is_semantic_input": true,
+    "unselected_attempt_scope": "RECEIPT_ONLY;NO_FAILED_RESPONSE_OR_SIDECAR_READ"
+  },
+  "action_reduction": "ENUMERATE_ASCII_CI_ASCII_ALNUM_BOUNDARY;WITHIN_FAMILY_REMOVE_FULLY_CONTAINED_SHORTER;IDENTICAL_KEEP_ASCII_SMALLER_ID;THEN_REQUIRE_ONE_SURVIVING_SPAN_AND_FAMILY",
+  "actions": {
+    "O1": "open trading for the following spot trading pairs",
+    "O2": "open trading for these spot trading pairs",
+    "O3": "will open trading for the following trading pairs",
+    "O4": "add the following spot trading pairs",
+    "O5": "add new spot trading pairs",
+    "O6": "launch trading for the following spot trading pairs",
+    "R1": "remove and cease trading on the following spot trading pairs",
+    "R2": "remove and cease trading on these spot trading pairs",
+    "R3": "remove the following spot trading pairs and cease trading",
+    "R4": "cease trading on the following spot trading pairs",
+    "R5": "delist and cease trading on all spot trading pairs"
+  },
+  "binding_model": "SIX_EXTERNAL_ORDINARY_FILE_SHA256_ARGUMENTS_NO_SELF_OR_CROSS_HASH",
+  "cli_flag_order": [
+    "--expected-runner-sha256",
+    "--expected-extractor-sha256",
+    "--expected-loader-sha256",
+    "--expected-source-contract-sha256",
+    "--expected-schema-sha256",
+    "--expected-parameters-sha256"
+  ],
+  "contract_revision": "LEAN_R2_2_2",
+  "coverage_contract": "CLAIMED_AMBIGUOUS_NO_MATCH_DISJOINT_EXACT_PARTITION_OF_756;CLAIMED_IFF_POSITIVE_CLAIM_COUNT_AND_NO_AMBIGUITY;AMBIGUOUS_IFF_ONE_AMBIGUITY_AND_ZERO_CLAIMS;NO_MATCH_IFF_ZERO_AND_ZERO",
+  "experiment_id": "exp_20260826_006",
+  "formal_paths": {
+    "control": "data/processed/binance_spot_announcement_claims_v1/runs/.exp_20260826_006_formal_001.control",
+    "final": "data/processed/binance_spot_announcement_claims_v1/runs/exp_20260826_006_formal_001",
+    "staging": "data/processed/binance_spot_announcement_claims_v1/runs/.exp_20260826_006_formal_001.staging"
+  },
+  "frozen_inputs": {
+    "exp005_corpus_summary": {"path":"experiments/exp_20260826_005/artifacts/corpus_summary.json","sha256":"03900ad203d15483f7dd968b77390abdb675ef77519d60f35e3071d6ccfe8a19"},
+    "exp005_detail_index": {"path":"data/processed/binance_spot_announcement_v4/runs/exp_20260826_005_formal_001/detail_index.jsonl","sha256":"aa9608faa48ec15a2beae209085c2139dec70672c9e9346103d485ad694a6d96"},
+    "exp005_raw_summary": {"path":"data/raw/binance_spot_announcement_v4/runs/exp_20260826_005_formal_001/summary.json","sha256":"912282eea1a4f9e691d34e0bffeb28053cae61cc1ec6581f16a7c298c987ea48"},
+    "exp005_request_ledger": {"path":"data/raw/binance_spot_announcement_v4/runs/exp_20260826_005_formal_001/request_ledger.jsonl","sha256":"455afba5577a2c56d1a1c16604c9becacc0308806a9a28bbdee7137746be7928"},
+    "exp005_schema": {"path":"experiments/exp_20260826_005/artifacts/schema.json","sha256":"041c867ebbe82ffea9d22e14204e9ae6ca4586287dd448d3fd333ba74b3b1d0c"},
+    "exp005_source_contract": {"path":"experiments/exp_20260826_005/artifacts/source_contract.json","sha256":"9a99ebc97803228dbb1bb20f4eb8cfe03b9a381a076959355353c3f9a7c4d852"}
+  },
+  "frozen_raw_facts": {
+    "logical_request_count": 866,
+    "raw_artifact_file_count": 2655,
+    "raw_artifact_total_bytes": 44020359,
+    "raw_artifact_tree_sha256": "5969f39532b39d322f6e4b8e44e06a27b5962071c4454154ec87628937d9e2fd",
+    "receipt_tree_sha256": "49d332dda5bedf9a6b3fd0c598937f0d80540e8b688447f1dc1d8def0ae04360",
+    "wire_attempt_count": 884
+  },
+  "grammar": {
+    "nonselected_collision": "PAIR_TOKEN_OR_ACTION_OR_FULL_SELECTED_WRAPPER_OR_VISIBLE_URL;ISOLATED_T00_UTC_AT_WITHOUT_THOSE_IS_IGNORED",
+    "open": "ACTION_SUFFIX_EXACT_SPACE_AT_T00_PERIOD;NEXT_ROOT_CHILD_FLAT_UL;EXACTLY_ONE_DIRECT_LI_FULLMATCH_NEW_SPOT_TRADING_PAIRS_PAIR_LIST_PERIOD",
+    "pair": "[A-Z0-9][A-Z0-9_-]{0,63}/[A-Z0-9][A-Z0-9_-]{0,63}",
+    "pair_list": "PAIR(?:, PAIR)*(?:,? and PAIR)?",
+    "removal": "ACTION_SUFFIX_EXACT_COLON;NEXT_ROOT_CHILD_FLAT_UL;ONE_TO_64_DIRECT_LI_FULLMATCH_AT_T00_COLON_PAIR_LIST_OPTIONAL_PERIOD",
+    "time": "VALID_GREGORIAN_UTC_YYYY-MM-DD_HH:MM_(UTC)"
+  },
+  "input_read_scope": "SIX_TOP_LEVEL_BINDINGS_PLUS_756_DETAIL_LEDGER_RECEIPTS_AND_ONLY_THEIR_ACCEPTED_RESPONSE_AND_SIDECAR",
+  "lifecycle": "PREEXISTENCE_ZERO_WRITE;O_EXCL_CONTROL_AND_LEASE;STAGING_WRITE;TRUSTED_LOADER;PRE_PROMOTION_SIX_SHA_RECHECK;WRITE_ONCE_AUTHORIZATION;SAME_VOLUME_ATOMIC_RENAME",
+  "network_access": false,
+  "output_files": ["claims.jsonl", "ambiguity.jsonl", "coverage.jsonl", "summary.json"],
+  "reason_priority": ["MULTIPLE_ACTION_FAMILIES","MULTIPLE_ACTION_SPANS","SPOT_SCOPE_MISSING","HEADER_SUFFIX_INVALID","CARRIER_MISSING","PAIR_WRAPPER_MISMATCH","MULTIPLE_PAIR_WRAPPERS","NONSELECTED_CARRIER_COLLISION","UTC_INVALID","PAIR_TOKEN_REJECTED","DUPLICATE_PAIR","PAIR_BOUND_TO_MULTIPLE_TIMES"],
+  "renderer": "DOM_TEXTCONTENT_DFS_NO_STRUCTURAL_SEPARATOR;ASCII_CI_&nbsp;_TO_SPACE_ENTITY_NBSP_ATOM;OTHER_ENTITIES_LITERAL;COLLAPSE_STR_ISSPACE_RUNS;TRIM;REJECT_ACTION_TIME_PAIR_GLUED_ACROSS_TEXT_NODE_WITHOUT_RAW_WHITESPACE_OR_NBSP",
+  "run_id": "exp_20260826_006_formal_001",
+  "semantics": "CURRENT_VISIBLE_ANNOUNCEMENT_SCHEDULE_CLAIMS_ONLY;NOT_TRADING_STATUS_PERMISSION_LISTING_INTERVAL_EFFECTIVE_AT_OR_KNOWN_AT;NOT_HISTORICAL_ELIGIBILITY",
+  "version": "binance_spot_announcement_claims_lean_v1"
+}

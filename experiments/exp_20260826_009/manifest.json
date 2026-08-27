@@ -1,0 +1,96 @@
+{
+  "authorization": {
+    "formal_execution_authorized": false,
+    "formal_execution_authorized_once_then_consumed": true,
+    "phase1_decision": "FINAL_GO_OFFLINE_IMPLEMENTATION_AND_PHASE2_PREPARATION_ONLY",
+    "phase2_decisions": [
+      "RESEARCHER_FINAL_GO",
+      "AUDITOR_FINAL_GO"
+    ],
+    "rerun_forbidden": true
+  },
+  "contract_revision": "WRAPPER_STAGE_AND_NATIVE_EXIT_PROPAGATION_V1_1",
+  "created_at": "2026-08-26T21:45:14.3967624+08:00",
+  "created_at_source": "local Get-Date observation immediately before preregistration",
+  "decision_status": "INCONCLUSIVE",
+  "experiment_id": "exp_20260826_009",
+  "formal_command_sha256": "5da7e8bdeafba4e34fbe3b289ccbf8125578729f7dad68fed76e7b23219d5c3e",
+  "formal_command_utf8_bytes_without_newline": 824,
+  "formal_executed": true,
+  "formal_execution": {
+    "collector_started": false,
+    "execution_count": 1,
+    "network_request_count": 0,
+    "observed_exit_code": 46,
+    "observed_wall_seconds": 0.3296141,
+    "stderr_bytes": 0,
+    "stdout_bytes": 0,
+    "wrapper_ledger_sha256": "d45d0e9adf9567a7e5370a511400ef8b99f9524f9b3900afd92e9c0598faa911",
+    "wrapper_reservation_sha256": "b2ce461ee5897c2eacfc2da9e2ec134373ee6a74789cdc4441dd12b98e3b184b"
+  },
+  "git_clean_before_experiment": false,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_repository": true,
+  "historical_eligibility_ready": false,
+  "implementation_freeze": {
+    "collector": {
+      "bytes": 29780,
+      "path": "src/quant_research/binance_spot_forward_schedule_pit_v2.py",
+      "sha256": "a6310ffd8c80da8a243d8d490338c22bdbd61084cc85ca88921171df2a34c34d"
+    },
+    "loader": {
+      "bytes": 22371,
+      "path": "src/quant_research/binance_spot_forward_schedule_pit_v2_loader.py",
+      "sha256": "cf5cc822955dff110518f600debdbb18020714b41be881d387287323c3cc6542"
+    },
+    "parameters": {
+      "bytes": 1952,
+      "path": "experiments/exp_20260826_009/parameters.json",
+      "sha256": "403f008549c2e25f18d039b0e26fbb30ef5cf213699cbf27eb60f51e48a944af"
+    },
+    "schema": {
+      "bytes": 4701,
+      "path": "experiments/exp_20260826_009/artifacts/schema.json",
+      "sha256": "d621930579fb5b68b1454336611c512292f8ae929a8252610eba3bffdb076378"
+    },
+    "source_contract": {
+      "bytes": 2736,
+      "path": "experiments/exp_20260826_009/artifacts/source_contract.json",
+      "sha256": "0c00f77b0209f4f0cc3cd8bd5a68f62622c4f9eb436b6d3437b8a1f4b1affc62"
+    },
+    "tests": {
+      "bytes": 45991,
+      "path": "tests/test_binance_spot_forward_schedule_pit_v2.py",
+      "sha256": "d5cefd17d947eb7ebc6ee751bdf3f2052cbee17f6bba076d0d66719f72fe779f"
+    },
+    "wrapper": {
+      "bytes": 11667,
+      "path": "src/quant_research/binance_spot_forward_schedule_pit_v2_wrapper.ps1",
+      "sha256": "96a2eb33469f7adefde188ee86eb5d49505cccc99d7ac3489904099e768f61ab"
+    }
+  },
+  "network_access": false,
+  "parent_experiment": "exp_20260826_008",
+  "phase": "POSTFLIGHT_AWAITING_AUDITOR",
+  "postformal_safety_remediation": {
+    "classification": "INDEPENDENT_NONFORMAL_NONNETWORK_FIXED_MARKER_OVERWRITE",
+    "clipboard_readback_performed": false,
+    "command_as_reported": "powershell.exe ... Set-Clipboard -Value 'CLEARED_BY_CODEX'; exit 0",
+    "command_text_is_byte_exact": false,
+    "command_text_note": "Lead transfer preserved the operative Set-Clipboard statement but abbreviated middle invocation arguments with an ellipsis.",
+    "executed_by": "RESEARCH_LEAD",
+    "formal_request_count_changed": false,
+    "observed_exit_code": 0,
+    "stderr_bytes": 0,
+    "stdout_bytes": 0
+  },
+  "postflight_observed_at": "2026-08-27T00:27:58.9583995+08:00",
+  "preregistration_status": "FORMAL_RUN_CONSUMED",
+  "referenced_skill": ".codex/skills/quant-strategy-research/SKILL.md",
+  "run_id": "exp_20260826_009_formal_001",
+  "run_id_consumed": true,
+  "single_primary_change": "Wrapper stage evidence, irreversible pre-clipboard reservation, and exact outer native exit propagation.",
+  "status": "inconclusive",
+  "strict_eligible_count": 0,
+  "version": "binance_spot_forward_schedule_pit_v2"
+}

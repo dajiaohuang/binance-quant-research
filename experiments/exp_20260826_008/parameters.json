@@ -1,0 +1,58 @@
+{
+  "api_key_environment_variable": "BINANCE_READ_ONLY_API_KEY",
+  "body_caps_bytes": [
+    65536,
+    2097152,
+    2097152,
+    33554432,
+    65536
+  ],
+  "collector_path": "src/quant_research/binance_spot_forward_schedule_pit_v1.py",
+  "endpoint_plan": [
+    {
+      "api_key_header": false,
+      "endpoint_id": "time_before",
+      "ordinal": 1,
+      "url": "https://api.binance.com/api/v3/time"
+    },
+    {
+      "api_key_header": true,
+      "endpoint_id": "open_symbol_list",
+      "ordinal": 2,
+      "url": "https://api.binance.com/sapi/v1/spot/open-symbol-list"
+    },
+    {
+      "api_key_header": true,
+      "endpoint_id": "delist_schedule",
+      "ordinal": 3,
+      "url": "https://api.binance.com/sapi/v1/spot/delist-schedule"
+    },
+    {
+      "api_key_header": false,
+      "endpoint_id": "exchange_info",
+      "ordinal": 4,
+      "url": "https://api.binance.com/api/v3/exchangeInfo?showPermissionSets=true"
+    },
+    {
+      "api_key_header": false,
+      "endpoint_id": "time_after",
+      "ordinal": 5,
+      "url": "https://api.binance.com/api/v3/time"
+    }
+  ],
+  "experiment_id": "exp_20260826_008",
+  "formal_command_shell": "Windows PowerShell",
+  "formal_run_authorized": false,
+  "loader_path": "src/quant_research/binance_spot_forward_schedule_pit_v1_loader.py",
+  "max_attempts_per_endpoint": 1,
+  "max_total_body_bytes": 41943040,
+  "network_access_during_phase2": false,
+  "redirects_allowed": false,
+  "request_count": 5,
+  "run_id": "exp_20260826_008_formal_001",
+  "timeout_seconds_per_request": 30,
+  "total_wall_seconds": 180,
+  "version": "binance_spot_forward_schedule_pit_v1",
+  "wrapper_path": "src/quant_research/binance_spot_forward_schedule_pit_v1_wrapper.ps1"
+}
+

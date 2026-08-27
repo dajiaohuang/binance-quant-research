@@ -1,0 +1,14 @@
+# Offline implementation and Phase2 preparation only. Formal is not authorized.
+.venv\Scripts\python.exe -m py_compile src/quant_research/binance_spot_forward_schedule_pit_v5.py src/quant_research/binance_spot_forward_schedule_pit_v5_loader.py tests/test_binance_spot_forward_schedule_pit_v5.py
+.venv\Scripts\python.exe -m unittest tests.test_binance_spot_forward_schedule_pit_v5 -v
+uv run python -m unittest discover -s tests -v
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "try { [void][scriptblock]::Create([IO.File]::ReadAllText('src/quant_research/binance_spot_forward_schedule_pit_v5_wrapper.ps1')); exit 0 } catch { exit 1 }"
+.venv\Scripts\python.exe -c "import json,pathlib; [json.loads(p.read_text(encoding='utf-8')) for p in pathlib.Path('experiments/exp_20260827_002').rglob('*.json')]"
+
+# FROZEN FORMAL LINE — NOT AUTHORIZED OR EXECUTED. UTF-8/no-newline SHA256: 3ca044b860b274d83a75c22c0d36a553587d0e58750db33d7d3680eb6b79e366
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\binance_spot_forward_schedule_pit_v5_wrapper.ps1 -ExpectedWrapperSha256 319b5a0d8e0c7e5ba6380ebf36afe90999ea359f29c042325d3c51fea6276a82 -ExpectedCollectorSha256 85c6ed716e062d700dd0818ef8ba5a6e256a69e0ac02811f6bc49991c6c7c215 -ExpectedLoaderSha256 f88c975d29268dc8def22f744c79a01d1b27e15b41364862755173c639cc5d02 -ExpectedSourceContractSha256 7bea7114c0d62f222217eb376424669539cc890b36e4199e852429e7e6281d2a -ExpectedSchemaSha256 ef2df4137f4485a75e986741593e5fa2360faa8f2079133c6d6a13de82b5b951 -ExpectedParametersSha256 df1e045db9b35394bb44cf3548e699107582034ce8ce9292c4d489c152cdf2f4 -ExpectedTestsSha256 07396891c7848046fbc8522d47d5b20921405bcdf4bb52c24c5a2c297f2061cd; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode
+
+# 2026-08-27 formal authorization attempt: external launcher exit 1 in 0.585s.
+# The launcher selected scalar_string[0] and executed only `p`; the frozen line
+# above did not start. Wrapper reservation/ledger and all collector paths are
+# absent, so requests=0. Authorization is consumed and rerun is forbidden.

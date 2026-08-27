@@ -1,0 +1,25 @@
+{
+  "contract_revision": "LEAN_R2_2_2_PARENT_BOOTSTRAP_V1_1",
+  "experiment_id": "exp_20260826_007",
+  "fixtures": [
+    {"body_sha256":"d2a1e40f6ace4f9ee317ce6b03edd68fdd478fd42cf99cb83779cece056c6c63","carrier_pointer":"/child/2/child/0","code":"00095277601046a38159f649b5f0e55b","epoch_ms":1707231600000,"header_pointer":"/child/1","pairs":["DYM/BTC","DYM/USDT","DYM/FDUSD","DYM/TRY"],"raw_sha256":"ce9d5569352288bd2d1152cd74d8278f2332c38fb2e364f07698e7c2c7aea9b5"},
+    {"body_sha256":"e9e94708004ba320c03696a099538e24df99284706c4d67d68fa751fcf90955f","carrier_pointer":"/child/2/child/0","code":"1592b7a6ec9a408daf4b778f50ab1ca6","epoch_ms":1702627200000,"header_pointer":"/child/1","pairs":["BONK/USDT","BONK/FDUSD","BONK/TRY"],"raw_sha256":"e58e59cf89e717f54ea601797df643edefb4dbb71572c751956f6423d13a4283"},
+    {"body_sha256":"66d9cd1be91b3b660f15b52598ac1099228c2d0ebc63893933d3d18354de0e3c","carrier_pointer":"/child/3/child/0","code":"28a21b10ed23416386b40d263b71cd99","epoch_ms":1718884800000,"header_pointer":"/child/2","pairs":["ZRO/BTC","ZRO/USDT","ZRO/FDUSD","ZRO/TRY"],"raw_sha256":"e8edbb41be8b6a3a3c9acebd774aaa54d213c925510390784a5c7e8233edd652"},
+    {"body_sha256":"0839082f0941b798bc88efb28ff1fe551fb28d5675856f9ee0abadcfbfddd775","carrier_pointer":"/child/4/child/0","code":"0003e83470f14aed8935327636d87d49","epoch_ms":1731034800000,"header_pointer":"/child/3","pairs":["COS/BTC","FXS/BTC"],"raw_sha256":"a03f68d1ed104cf6dc603836362825271d1b83385c000e191f70666f7d62157c"},
+    {"body_sha256":"615e3d536cc9a05102f76198c176eae58a8b1bf7bb8232ba500180e898d49bbf","carrier_pointer":"/child/4/child/0","code":"04be5fb46fe84e2eadc01fbc2c445cfa","epoch_ms":1715310000000,"header_pointer":"/child/3","pairs":["AAVE/BNB","DEGO/BTC","LTC/TUSD","SAND/ETH"],"raw_sha256":"4ddabf2439bbb8bb678ac08cd9ad6e91475cddb630c78da77523fc5598e16c5b"},
+    {"body_sha256":"f207f91d427b3589f06abb0d2a0455cced2b35455a45bb111328f0165f2c8160","carrier_pointer":"/child/4/child/0","code":"1f93ef0e7ac84561bec9741f3393b55b","epoch_ms":1715914800000,"header_pointer":"/child/3","pairs":["CFX/TUSD","CHESS/BTC","ORDI/TUSD"],"raw_sha256":"44cefe9fb1ed2e6e17f4ac51279e9dbf3b50c311c5f599af677ca56935f931e8"}
+  ],
+  "formal_executed": false,
+  "network_access": false,
+  "output_files": ["claims.jsonl", "ambiguity.jsonl", "coverage.jsonl", "summary.json"],
+  "parent_bootstrap": {
+    "control_reservation_consumes_run": true,
+    "infrastructure_exit_code": 24,
+    "shared_parents_before_control": [
+      "data/processed/binance_spot_announcement_claims_v2",
+      "data/processed/binance_spot_announcement_claims_v2/runs"
+    ]
+  },
+  "run_id": "exp_20260826_007_formal_001",
+  "version": "binance_spot_announcement_claims_lean_v2"
+}

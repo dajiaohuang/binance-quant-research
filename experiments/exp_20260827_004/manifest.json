@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-08-27T09:54:04.6828949+08:00",
+  "fresh_phase1_amendment": "EXACT_POLICY_PAYLOAD_PROVENANCE_AND_TWO_LAYER_HASHES",
+  "experiment_id": "exp_20260827_004",
+  "eligibility_evaluated": false,
+  "empirical_authorized": false,
+  "formal_command_sha256s": [
+    "e7c8f8cec9a2cece6c31895cc18c671b5325ecfcaf5b49488db30fb430a6de0b",
+    "20410fbbc49fddcf45d6c052cda48b85aa832aa9c5f2530f27dd9dfb2c80c8e1"
+  ],
+  "formal_executed": true,
+  "formal_execution_count": 2,
+  "formal_ledger": {
+    "path": "experiments/exp_20260827_004/formal_ledger.json",
+    "sha256": "0de7a2c5bd45f2b9acaeb38e60ab6216ac1d215f06b8bdbcb1c0a03cbf0f5f80"
+  },
+  "formal_result": {
+    "path": "experiments/exp_20260827_004/formal_result.json",
+    "sha256": "c9adf014e8d278f9cec8255832cb18fa702a90f6dc4b211c7eba1c7430533083"
+  },
+  "frozen_files": {
+    "commands": "86224d5e6aca6ca089f86b5a3710538e12a5d8ffd2ee9e1e5a1cad2859f3be32",
+    "existing_kernel": "2637ac6b686ef0d6a0a7dc4c07817fd57e2f2724984cdcccac1671528c7044c5",
+    "existing_kernel_tests": "6d13ba56248305b9990f9422be79d476b64228d266691f4b6db8ac9416935870",
+    "historical_pit_evidence": "15d67d394d6b9510a65ead86a90bce4dd181a48c213bb8ec59115911bc8b72ed",
+    "historical_pit_evidence_tests": "e0299cadf97409b520afcc5ad52144e5c8e0bfa947f47006027c596e5e89cb63",
+    "parameters": "195ebe5ff9f27911e38b500495872969fc5a21cd436a93b540fa7c8621541136",
+    "schema": "d147acf5ef46cf1a6886926d21c17e80676b091c6d4045a873145dac2a3037bd",
+    "source_contract": "0c037db23460cc90c18d46debe7a3f0b3ebf06762efc4b180ecdce4db8a6e37f"
+  },
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_repository": true,
+  "historical_eligibility_ready": false,
+  "network_access": false,
+  "full_repository_tests": "NOT_RUN",
+  "phase": "terminal_postflight_pending_auditor",
+  "primary_change": "BOUND_HISTORICAL_PIT_EVIDENCE_ADAPTER_V1",
+  "prior_candidate_phase2_status": "NO_GO_RETAINED_IN_LOG",
+  "phase2_fidelity_option_a_applied": true,
+  "real_data_accessed": false,
+  "status": "NEEDS_MORE_DATA",
+  "strict_eligible_count": 0,
+  "terminal_status_ceiling": "NEEDS_MORE_DATA"
+}

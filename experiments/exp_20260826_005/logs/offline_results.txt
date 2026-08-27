@@ -1,0 +1,88 @@
+exp_20260826_005 offline implementation/test ledger
+network requests: 0
+formal command executions: 0
+
+Preregistration
+- hypothesis.md, parameters.json, commands.txt and manifest.json were created
+  before implementation.
+- The formal command initially contained INVALID_NOT_FROZEN_YET.
+- Formal/network execution remained forbidden throughout this ledger.
+
+Implementation iterations retained
+1. First adapted v4 narrow suite: 32 total, 3 failures, 0 errors.
+   Scope: one inherited string expectation and two source-drift call-count
+   assumptions. No formal evidence or network was involved.
+2. First corrected narrow suite: 32/32 PASS, 6.791 s, chunk 77d93d.
+3. Expanded adversarial suite: 41 total, 40 pass, 1 failure, 0 errors,
+   10.807 s, chunk d7ec5d. The test chose a receipt by lexical path order rather
+   than semantic content; implementation evidence was not the failure.
+4. Corrected expanded suite: 41/41 PASS, 7.866 s, chunk d7605d.
+5. After adding final-artifact source-drift and loader delay-recomputation
+   adversarial checks: 43/43 PASS, 11.563 s, chunk fca459.
+6. First full repository run: 233/233 PASS, 22.089 s, chunk 9264f9.
+7. CLI --help: PASS; only the two frozen retry tuple flags appear among timing
+   policy inputs. Python py_compile: PASS. Chunk 885221.
+
+Two-stage freeze
+- Source became stable before its hash was written into commands.txt.
+- Source: 127694 bytes,
+  SHA-256 717731da62e2c5e4c910706c3d2bbacc633e300d11cd21409492518e5cb9c0b4.
+- Pre-placeholder commands SHA-256:
+  524557d5f17a638715fd22986f6f0eeeba7afcd2519a9edb8c2a6ec666f17f65.
+- The placeholder was then replaced only in commands/docs/manifest; the source
+  was not edited.
+- Frozen commands SHA-256:
+  bc556b50c09f9d8ee088714a327bb87f182d1f1124cbbcb0138fb09a7cc2160e.
+- Exact formal command UTF-8 bytes without newline: 1060 bytes,
+  SHA-256 f5b3d50508eb8c1f570505841d9c837db57cc395591d66ccaeb711518a4480fa.
+
+Final frozen verification
+- uv run python -m unittest tests.test_binance_spot_announcement_corpus_v4 -v
+  Result: 43/43 PASS, 11.195 s, chunk 18c42c.
+- uv run python -m unittest discover -s tests -v
+  Result: 233/233 PASS, 14.715 s, chunk 8cd67b.
+
+Formal path audit
+- data/raw/binance_spot_announcement_v4/runs/exp_20260826_005_formal_001: absent
+- data/processed/binance_spot_announcement_v4/runs/exp_20260826_005_formal_001: absent
+- experiments/exp_20260826_005/artifacts/corpus_summary.json: absent
+- experiments/exp_20260826_005/artifacts/schema.json: absent
+- experiments/exp_20260826_005/artifacts/source_contract.json: absent
+
+No event, pair, effective-time, listing-interval, eligibility, Alpha, IC, ML,
+backtest, validation-data or final-test command was run. All exp005 writes used
+apply_patch. Existing tracked semantic fixtures were read only.
+
+Auditor NO-GO reproduction and fix round
+- Auditor counterexample: add canonical top-level
+  `"alpha":{"fabricated":true}` to a valid corpus_summary.json.
+- Offline reproduction before fix: `load_corpus()` accepted the tampered summary
+  and returned `REPRO_ACCEPTED unit NEEDS_MORE_DATA`; process exit 0, chunk
+  a42db1. This invalidated the first source/command freeze.
+- Minimal fix: require exact canonical root-summary bytes, exact generated
+  top-level field set, and duplicate-key-rejecting trusted JSON parsing. The
+  schema/source contract disclose the exact rule. V3 and acquisition policy
+  were not changed.
+- Focused regressions added for canonical fabricated alpha, noncanonical bytes,
+  and duplicate top-level run_id.
+- First post-fix narrow: 46/46 PASS, 12.263 s, chunk ecf575.
+- First post-fix full repository: 236/236 PASS, 16.743 s, chunk cd12f3.
+- py_compile and installed CLI help: PASS, chunk 8721c5.
+
+Auditor-fix refreeze
+- Superseded source SHA-256:
+  717731da62e2c5e4c910706c3d2bbacc633e300d11cd21409492518e5cb9c0b4.
+- Refrozen source: 129900 bytes,
+  SHA-256 cd6447ba861e7c02a3307456b60adadbb9e1b71e51879e2f03f424007d8943c4.
+- Refrozen tests: 71050 bytes,
+  SHA-256 2c59c20573d20685e45e1bda785ca364e329adc01e68b113fab7badee3e4395d.
+- Refrozen commands SHA-256:
+  6d8704ba0839f55ba1cff52da37e83d2af6c49bd5c97dc2bd5ef20f151527ea7.
+- Exact formal command UTF-8 bytes without newline: 1060 bytes,
+  SHA-256 b0d3a1e2a9479b8c20d5cfe905f49313d249a09dee7ac26f286f6df4119eb5ce.
+- Final refrozen narrow: 46/46 PASS, 12.531 s, chunk 264287.
+- Final refrozen full repository: 236/236 PASS, 19.150 s, chunk abce55.
+- Exact original counterexample rerun after refreeze: rejected with
+  `CorpusIntegrityError: root summary top-level field set mismatch`; exit 0 for
+  the rejection assertion, chunk 65a0f7.
+- Network/formal command count remains zero; formal run id remains unused.

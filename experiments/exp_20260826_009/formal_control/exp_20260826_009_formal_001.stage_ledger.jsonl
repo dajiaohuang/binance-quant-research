@@ -1,0 +1,6 @@
+{"event":"PASS","exit_code":null,"seq":1,"stage":"SELF_HASH"}
+{"event":"START","exit_code":null,"seq":2,"stage":"CLIPBOARD_READ"}
+{"event":"PASS","exit_code":null,"seq":3,"stage":"CLIPBOARD_READ"}
+{"event":"PASS","exit_code":null,"seq":4,"stage":"VALIDATE"}
+{"event":"FAIL","exit_code":44,"seq":5,"stage":"PRECLEAR"}
+{"event":"FAIL","exit_code":46,"seq":6,"stage":"FINAL_CLEANUP"}

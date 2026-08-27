@@ -1,0 +1,132 @@
+{
+  "binding_exact_fields": [
+    "raw_bytes",
+    "expected_sha256",
+    "source_contract_id",
+    "payload_id",
+    "policy_id"
+  ],
+  "claim_fields": [
+    "policy_id",
+    "source_contract_id",
+    "payload_id",
+    "raw_payload_sha256",
+    "authority_id",
+    "venue",
+    "market_type",
+    "source_id",
+    "symbol",
+    "component",
+    "value",
+    "effective_from_ms",
+    "effective_to_ms_exclusive",
+    "published_at_ms",
+    "assertion_semantics",
+    "revision_action",
+    "revision_target_source_id",
+    "raw_locator",
+    "record_fragment_sha256",
+    "claim_id"
+  ],
+  "component_values": {
+    "LISTING_WINDOW": [
+      "LISTED"
+    ],
+    "QUOTE_ASSET": "NONEMPTY_OPAQUE_STRING",
+    "SPOT_PERMISSION": [
+      "ENABLED",
+      "DISABLED"
+    ],
+    "TRADING_STATUS": [
+      "TRADING",
+      "NOT_TRADING"
+    ]
+  },
+  "external_assertion_semantics": [
+    "HISTORICAL_EFFECTIVE_FACT",
+    "PLANNED_SCHEDULE_CLAIM",
+    "CURRENT_OBSERVATION",
+    "ARCHIVE_AVAILABILITY",
+    "RESPONSE_ABSENCE"
+  ],
+  "evidence_reference_preimage": {
+    "active_contributor_exact_fields": [
+      "source_contract_id",
+      "payload_id",
+      "exact_raw_sha256",
+      "json_pointer",
+      "record_fragment_sha256",
+      "physical_claim_id"
+    ],
+    "active_contributors_sort": "physical_claim_id ascending",
+    "envelope_exact_fields": [
+      "active_contributors",
+      "component",
+      "formation_time_ms",
+      "normalized_value",
+      "policy_id",
+      "symbol"
+    ]
+  },
+  "payload": {
+    "record_exact_keys": [
+      "source_id",
+      "symbol",
+      "component",
+      "value",
+      "effective_from_ms",
+      "effective_to_ms_exclusive",
+      "published_at_ms",
+      "assertion_semantics",
+      "revision_action",
+      "revision_target_source_id"
+    ],
+    "top_exact_keys": [
+      "schema_version",
+      "authority_id",
+      "venue",
+      "market_type",
+      "records"
+    ]
+  },
+  "raw_locator_fields": [
+    "source_contract_id",
+    "payload_id",
+    "raw_payload_sha256",
+    "json_pointer"
+  ],
+  "resolution_components": [
+    "TRADING_STATUS",
+    "SPOT_PERMISSION",
+    "QUOTE_ASSET",
+    "LISTING_WINDOW"
+  ],
+  "resolution_fields": [
+    "symbol",
+    "component",
+    "state",
+    "reason",
+    "normalized_value",
+    "considered_claim_ids",
+    "active_claim_ids",
+    "evidence_reference"
+  ],
+  "result_fields": [
+    "snapshot",
+    "resolution_ledger",
+    "revision_ledger",
+    "raw_payloads",
+    "claims",
+    "policy_info",
+    "semantic_resolution_sha256"
+  ],
+  "revision_action_contract": {
+    "ASSERT": "target null; value/from/to assertion fields present",
+    "CANCEL": "target nonnull; value/from/to all null",
+    "REPLACE": "target nonnull; value/from/to assertion fields present"
+  },
+  "states": [
+    "RESOLVED",
+    "UNKNOWN"
+  ]
+}

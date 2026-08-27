@@ -1,0 +1,130 @@
+{
+  "canonicalization": {
+    "json": "UTF-8 no BOM sorted keys indent=2 LF final LF",
+    "jsonl": "UTF-8 no BOM sorted keys compact LF final LF",
+    "reject_duplicate_keys_and_nonfinite_numbers": true
+  },
+  "commit_domain": {
+    "final_root": "data/raw/binance_spot_forward_schedule_pit_v1/runs/exp_20260826_008_formal_001",
+    "payload_files": [
+      "requests/001_time_before.response",
+      "requests/001_time_before.receipt.json",
+      "requests/002_open_symbol_list.response",
+      "requests/002_open_symbol_list.receipt.json",
+      "requests/003_delist_schedule.response",
+      "requests/003_delist_schedule.receipt.json",
+      "requests/004_exchange_info.response",
+      "requests/004_exchange_info.receipt.json",
+      "requests/005_time_after.response",
+      "requests/005_time_after.receipt.json",
+      "plans.jsonl",
+      "current_symbols.jsonl",
+      "joins.jsonl"
+    ],
+    "summary_file": "summary.json"
+  },
+  "derived_contract": {
+    "current_symbols_exact_keys": [
+      "baseAsset",
+      "permissionSets",
+      "quoteAsset",
+      "row_sha256",
+      "source_body_sha256",
+      "source_record_index",
+      "status",
+      "symbol"
+    ],
+    "current_symbols_unique_key": ["symbol"],
+    "joins_exact_keys": [
+      "current_symbol_row_sha256",
+      "join_status",
+      "kind",
+      "plan_row_sha256",
+      "planned_at_claim_ms",
+      "row_sha256",
+      "symbol"
+    ],
+    "join_status": ["MATCHED", "MISSING"],
+    "plans_exact_keys": [
+      "kind",
+      "planned_at_claim_ms",
+      "row_sha256",
+      "source_body_sha256",
+      "source_endpoint_id",
+      "source_record_index",
+      "source_symbol_index",
+      "symbol"
+    ],
+    "plans_unique_key": ["kind", "planned_at_claim_ms", "symbol"],
+    "row_sha256_rule": "SHA256 canonical compact JSON after removing row_sha256",
+    "symbol_decomposition_forbidden": true
+  },
+  "experiment_id": "exp_20260826_008",
+  "receipt_exact_keys": [
+    "ordinal",
+    "endpoint_id",
+    "method",
+    "url",
+    "client_send_utc_ms",
+    "client_recv_utc_ms",
+    "http_status",
+    "body_bytes",
+    "body_sha256",
+    "api_key_header_sent"
+  ],
+  "summary_exact_keys": [
+    "artifact_state",
+    "artifact_tree_sha256",
+    "code_bindings",
+    "current_symbol_count",
+    "eligibility_evaluated",
+    "experiment_id",
+    "historical_eligibility_ready",
+    "join_count",
+    "join_status_counts",
+    "output_artifacts",
+    "plan_count",
+    "request_count",
+    "request_receipts",
+    "run_id",
+    "semantics",
+    "strict_eligible_count",
+    "terminal_status",
+    "time_bracket",
+    "version"
+  ],
+  "control_contract": {
+    "authorization_exact_keys": [
+      "artifact_tree_sha256",
+      "experiment_id",
+      "final_tree_sha256",
+      "run_id",
+      "summary_sha256"
+    ],
+    "failure_codes": [
+      "PRECONDITION",
+      "SOURCE_BINDING",
+      "INFRASTRUCTURE",
+      "TRANSPORT",
+      "HTTP_STATUS",
+      "JSON_SCHEMA",
+      "TIME_BRACKET",
+      "OUTPUT_INTEGRITY",
+      "PROMOTION"
+    ],
+    "failure_exact_keys": [
+      "exit_code",
+      "experiment_id",
+      "failure_code",
+      "run_id"
+    ],
+    "lease_exact_keys": [
+      "expected_bindings_sha256",
+      "experiment_id",
+      "formal_command_sha256",
+      "run_id"
+    ]
+  },
+  "run_id": "exp_20260826_008_formal_001",
+  "version": "binance_spot_forward_schedule_pit_v1"
+}

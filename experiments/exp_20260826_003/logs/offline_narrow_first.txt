@@ -1,0 +1,44 @@
+command: $env:PYTHONUTF8='1'; uv run python -m unittest tests.test_binance_spot_announcement_corpus_v2 -v
+network_requests: 0
+exit_code: 0
+wall_time_seconds: 3.1697747
+
+   Building quant-research @ file:///D:/repo/binance-quant-research
+      Built quant-research @ file:///D:/repo/binance-quant-research
+Uninstalled 1 package in 1ms
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+Installed 1 package in 304ms
+test_anchor_drift_and_expected_count_mismatch_are_inconclusive ... ok
+test_article_id_uniqueness_is_type_aware_and_type_hashes_differ ... ok
+test_artifact_and_source_tamper_fail_loader ... ok
+test_atomic_run_lease_and_output_no_overwrite ... ok
+test_bounded_default_reader_uses_cap_plus_one_and_oversize_is_terminal ... ok
+test_complete_corpus_rebuilds_and_is_corpus_only ... ok
+test_detail_body_and_optional_content_json_are_hash_only ... ok
+test_detail_code_category_publish_and_content_contracts ... ok
+test_duplicate_and_page_shape_fail_closed ... ok
+test_expected_extractor_hash_mismatch_stops_before_lease_or_fetch ... ok
+test_extractor_drift_after_lease_stops_before_first_get ... ok
+test_extractor_drift_between_retry_attempts_stops_second_get ... ok
+test_global_wire_attempt_cap_is_hard_and_positive ... ok
+test_invalid_json_and_nonmonotone_local_clock_fail_closed ... ok
+test_list_requires_exactly_one_matching_production_catalog_object ... ok
+test_malformed_retryable_response_is_terminal_and_loader_recomputes_outcomes ... ok
+test_missing_content_length_and_reversed_clock_fail_closed ... ok
+test_multi_page_pagination_is_complete_and_total_drift_fails ... ok
+test_opaque_code_grammar_and_exact_canonical_rebuild ... ok
+test_production_transport_injected_host_is_canonical_and_audited ... ok
+test_retry_attempt_chain_is_root_bound_and_tamper_fails_loader ... ok
+test_selected_headers_are_retained_only_as_transport_clues ... ok
+test_source_drift_during_final_fetch_is_rejected ... ok
+test_tracked_production_page38_fixture_is_exact_and_opaque ... ok
+test_type_preserving_article_id_contract_and_detail_equality ... ok
+test_url_allowlist_and_fixed_english_unauthenticated_headers ... ok
+test_url_contract_rejects_catalog_page_size_code_and_extra_query ... ok
+test_v2_extractor_is_self_contained ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 1.687s
+
+OK

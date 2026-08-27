@@ -1,0 +1,45 @@
+exp_20260827_003 preregistered before implementation.
+formal_executed=false
+network_access_count=0
+real_env_content_size_hash_read=false
+eligibility_alpha_ic_ml_pnl_backtest=false
+
+Initial targeted implementation run:
+.venv\Scripts\python.exe -m unittest tests.test_binance_spot_forward_schedule_pit_v6 -v
+Ran 49 tests in 24.884s; 23 reported failures; exit 1.
+The preserved failures were limited to pre-freeze launcher/formal placeholders,
+one copied EOF newline in mechanically generated v6 sources, and a synthetic
+marker quoting error. No production transport or real env file was used.
+
+Minimal repairs:
+- Removed the copied EOF newline so v6 normalizes exactly to v5.
+- Corrected only the synthetic marker newline.
+- Froze seven child bindings, then embedded them literally in launcher, then
+  froze launcher SHA and the direct formal command.
+
+Final targeted run:
+.venv\Scripts\python.exe -m unittest tests.test_binance_spot_forward_schedule_pit_v6 -v
+Ran 49 tests in 23.016s; OK; exit 0.
+
+Full repository:
+uv run python -m unittest discover -s tests -v
+Ran 569 tests in 109.118s; 567 PASS; 2 expected lifecycle mismatches; exit 1.
+Expected mismatch 1:
+test_binance_spot_forward_schedule_pit_v2.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero
+Reason: preserved consumed exp009 reservation.
+Expected mismatch 2:
+test_binance_spot_forward_schedule_pit_v4.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero
+Reason: preserved consumed exp001 reservation.
+
+py_compile=PASS
+powershell_parse=PASS
+strict_json=PASS
+formal_executed=false
+network_access_count=0
+real_env_content_size_hash_read=false
+formal_paths_absent=true
+eight_manifest_bindings_match_live_bytes=true
+launcher_embeds_each_seven_child_sha_exactly_once=true
+formal_direct_line_sha_match=true
+env_metadata=ORDINARY_NONREPARSE_IGNORED_UNTRACKED
+parent_key_environment=ABSENT

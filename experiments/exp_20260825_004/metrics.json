@@ -1,0 +1,49 @@
+{
+  "experiment_id": "exp_20260825_004",
+  "status": "COMPLETE",
+  "tests": {
+    "full_repository": "41/41 PASS",
+    "independent_code_audit": "PASS"
+  },
+  "payload_pairs_expected": 9240,
+  "payload_pairs_downloaded": 9240,
+  "payload_pairs_checksum_verified": 9240,
+  "payload_pairs_csv_validated": 8887,
+  "payload_pairs_invalid_or_unverified": 353,
+  "objects_downloaded": 18480,
+  "objects_http_200": 18480,
+  "objects_with_metadata_mismatch": 0,
+  "objects_with_download_size_mismatch": 0,
+  "zip_bytes": 292861199,
+  "checksum_bytes": 818811,
+  "failure_counts": {
+    "CSV_VALIDATION_ERROR": 353
+  },
+  "close_time_anomaly_rows": 354,
+  "close_time_anomaly_objects": 353,
+  "close_time_anomaly_breakdown": {
+    "2023-03-24T12:00:00Z": 351,
+    "AEURUSDT_2023-12": 2,
+    "FDUSDUSDT_2023-07": 1
+  },
+  "candidate_symbols_expected": 723,
+  "panel_hours_expected": 18288,
+  "panel_cells_expected": 13222224,
+  "coverage_state_counts": {
+    "A": 6431739,
+    "M": 65805,
+    "N": 6462048,
+    "U": 262632
+  },
+  "normalized_rows": 6431739,
+  "normalized_symbols": 462,
+  "hashes": {
+    "object_quality_sha256": "3e7675986d7c3f22b1c02ff0beae4532015dc2993be9f69b984d0223f5c6acc2",
+    "payload_summary_sha256": "40419cb5bfc1990930adf662650a73a2531a42830991987fdae7057ac86b6684",
+    "coverage_schema_sha256": "e556e04e32e7a442553d99a0da64848b5a463c7d2199ff2516594a8c2f2e32e7",
+    "derived_index_sha256": "9d5ce1c10e14f304ffa1b5a998668629eed8af5639995bf4270d65656d10fdf1",
+    "coverage_panel_sha256": "4e62a3757df62545ab23aa3e57a14098427dd97c17a8fdf64fbd449e67ec96f6"
+  },
+  "decision": "INCONCLUSIVE",
+  "decision_reason": "All 18,480 frozen objects were acquired and checksum-bound, but 353 symbol-months contain 354 source rows whose close_time is earlier than open_time + 3,599,999. The preregistered exact close-time gate therefore atomically marks those months U."
+}

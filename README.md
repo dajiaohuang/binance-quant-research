@@ -8,8 +8,22 @@
 
 - 没有 Champion，没有策略达到 `READY_FOR_PAPER_TRADING`。
 - 已完成的 SMA、SMA+ADX、1h SMA+ADX、最短持仓实验全部 `REJECTED`。
-- 最新候选 `DryRunSmaCrossHtfBreakoutGateStrategy` 只完成实现、12/12 单测、
-  策略加载和 7 天训练子集冒烟；冒烟 0 笔交易，完整训练尚未运行，不能称为有效策略。
+- 最新 `exp_20260825_001` 已完成 24 小时高周期突破门控训练：39 笔、净收益
+  -0.73%、成本前 P&L -1.45 USDT、PF 0.4776，裁决 `INCONCLUSIVE`。样本不足，
+  且边际与短持仓机制同时失败；未打开验证或最终测试。
+- `exp_20260825_004` 已完整获取 9,240 个 Binance Spot 月度 1h ZIP 与 CHECKSUM；
+  严格 close-time 恒等式实验因 353 个异常对象月保留为 `INCONCLUSIVE`。
+- `exp_20260825_005` 已离线重验全部原始对象并建立无回填
+  `ARCHIVE_KLINE_AVAILABLE` 面板：6,687,797 根 K 线，723×18,288 个状态单元，
+  `U=0`；354 条区间内非名义 close time 原样保留并中性标记。
+- `exp_20260826_001` 建立了从 2026 known-at 起可用的 current/forward Spot PIT
+  快照，但 3,682/3,682 个 membership 的 listing interval 仍未知，strict eligible=0。
+- `exp_20260827_004` 和 `exp_20260827_005` 分别完成历史 PIT 证据适配器合同、
+  以及 1h/24h/120h/480h Alpha horizon identity 的端到端合成验证；这两项都不是
+  真实 Alpha、IC、收益或回测结果。
+- 数据状态仍为 `NEEDS_MORE_DATA`，因为 archive Kline 可用性不是历史
+  `TRADING`/上市/权限/eligibility 证据。下一条路线是独立补历史状态，不是继续
+  搜索 SMA/ADX/突破参数，也不直接上 ML。
 - 当前 `quant-dry-run` 仍加载已拒绝的基础 SMA，只能用于短时基础设施验证，
   不得无人值守运行。
 
@@ -36,6 +50,30 @@ SHA-256、行数和 UTC 范围引用数据。2023-03-24 的 Binance 事件窗口
 缺口，原始文件不填充；Freqtrade 回测加载器会在内存中生成零量 no-action K 线，
 正式候选必须披露并做敏感性检查。
 
+## Modern Alpha Research V1
+
+当前新增了一个通过合成测试的 fail-closed 分层 Alpha 研究内核，但实证研究仍为
+`NEEDS_MORE_DATA`：缺少历史 PIT Binance Spot eligibility universe，因此不允许
+计算真实 factor/score/IC/P&L、拟合模型或回测。完整架构、合同、readiness 与下一步
+见 [Modern Alpha Research V1](research/MODERN_ALPHA_RESEARCH_V1.md)。
+
+`exp_20260825_006` 因 SciPy list 输入兼容性错误以 `INCONCLUSIVE` 关闭；独立
+successor `exp_20260825_007` 完成预注册修复并通过窄测 35/35、全仓 85/85 与
+postflight audit，终态为 `NEEDS_MORE_DATA`，不是策略或收益结论。
+
+`exp_20260826_001` 又冻结了一份无需认证的 Binance Spot current/forward PIT
+快照：3,681 个当前 symbol 与 archive candidates 合并为 3,682 条 membership，
+artifact SHA-256 为
+`28dca84736c26497a79b3950fad9bd65b9f00f79e50cb6e87ca21d474c39a450`。
+所有 listing interval 仍未知，因此 strict eligible=0。这不是历史 universe，不能
+回填 2023–2024，也没有解锁 Alpha、IC、模型或回测。
+
+`exp_20260827_004` 通过 27/27 evidence-adapter tests 和 35/35 既有 kernel tests；
+`exp_20260827_005` 通过 48/48 horizon contract tests 和 27/27 adapter regression，
+两条正式命令各执行一次、零重试，并完成独立 postflight。最新内核会拒绝混合
+horizon 和 Python 数值别名绕过，并用 `compose_multi_horizon` 提供无标量、无权重
+的 exact-four identity bundle。终态仍是 `NEEDS_MORE_DATA`。
+
 ## 研究流程
 
 ```text
@@ -55,11 +93,21 @@ SHA-256、行数和 UTC 范围引用数据。2023-03-24 的 Binance 事件窗口
 ```powershell
 $env:PYTHONUTF8 = "1"
 uv sync --frozen
-uv run python -m unittest discover -s tests -v
+uv run quant-release-tests
 uv run freqtrade --version
 uv run quant-freqtrade-research list-strategies --strategy-path strategies
 uv run quant-freqtrade-research list-data --config config/freqtrade-dry-run.json --show-timerange --data-format-ohlcv feather
 ```
+
+绝大多数公共数据研究不需要 API Key。确需只读 Key 的本地实验，可复制
+`.env.example` 为 `.env.binance.local` 后仅在本机填写；所有 `.env*` 默认忽略，
+唯独无秘密的 `.env.example` 可以提交。不要使用带交易或提现权限的 Key，详见
+[SECURITY.md](SECURITY.md)。
+
+`quant-release-tests` 运行除三个 consumed-run workspace-absence precondition 之外的
+全部测试。这三个测试只适用于对应正式运行前；其 reservation/ledger 现已作为失败
+实验的不可变证据保留。因此在完整证据仓库上直接运行原始 `unittest discover` 会
+得到这三个预期失败，发布入口不会删除证据或改写冻结测试来制造全绿。
 
 正式训练回测模板：
 
@@ -82,7 +130,8 @@ uv run quant-freqtrade-research backtesting `
 ## 仓库内容
 
 - `strategies/`：全部当前及失败策略；失败实现不会删除。
-- `experiments/`：Manifest、假设、参数、命令、指标、报告和回测 ZIP。
+- `experiments/`：Manifest、假设、参数、命令、指标、报告和回测 ZIP；入口见
+  [实验索引](experiments/README.md)。
 - `tests/`：下一根成交、安全 launcher、数据和 informative 1h 时序测试。
 - `src/quant_research/`：安全 Freqtrade launcher 与最小显式参考实现。
 - `.codex/skills/quant-strategy-research/`：本仓库固定研究工作流。

@@ -1,0 +1,34 @@
+{
+  "experiment_id": "exp_20260825_004",
+  "network_fetch_started": false,
+  "implementation_freeze": {
+    "source_path": "src/quant_research/binance_spot_payload.py",
+    "source_sha256": "9daf02d50d084bdb888c4bde0ba3d0ffd2e7056ea8b40de7fbc85858d16518c6",
+    "test_path": "tests/test_binance_spot_payload.py",
+    "test_sha256": "65882d88b8bf048b21c2d465e54fee509c35fa93d99d5bee696e18cd38d4b335",
+    "pyproject_path": "pyproject.toml",
+    "pyproject_sha256": "12716fd4b585c73cffafca6dd2913be4b1d0d5c3b0069b14aa0cdb87a6e3c617"
+  },
+  "frozen_inputs_verified": {
+    "inventory_records": 18480,
+    "payload_pairs": 9240,
+    "candidate_symbols": 723,
+    "candidate_symbol_list_sha256": "abcfbaa4b3a44a2336de962c1da2495d254b4bf37800def41af8c66cba20d121",
+    "panel_hours": 18288,
+    "panel_cells": 13222224
+  },
+  "tests": {
+    "command": "uv run python -m unittest discover -s tests -v",
+    "tests_run": 41,
+    "result": "PASS"
+  },
+  "output_roots_absent_before_formal_run": [
+    "data/raw/binance_spot_v3",
+    "data/processed/binance_spot_v3",
+    "experiments/exp_20260825_004/artifacts"
+  ],
+  "authentication": "none",
+  "audit_status": "PASS",
+  "audit_completed_at": "2026-08-25T16:24:52.5092407+08:00",
+  "formal_fetch_authorized": true
+}

@@ -1,0 +1,36 @@
+{
+  "eligibility_evaluated": false,
+  "env_file_content_read_during_phase2": false,
+  "env_file_postflight_content_size_hash_read": false,
+  "formal_execution": {
+    "collector_started": false,
+    "combined_stdout_stderr_bytes": 0,
+    "exit_code": 43,
+    "network_request_count": 0,
+    "terminal_stage": "VALIDATE",
+    "wall_time_seconds": 0.265804
+  },
+  "formal_executed": true,
+  "formal_paths": {
+    "collector_control_exists": false,
+    "final_exists": false,
+    "reservation_exists": true,
+    "stage_ledger_exists": true,
+    "staging_exists": false
+  },
+  "full_suite": {
+    "expected_lifecycle_mismatch": "test_binance_spot_forward_schedule_pit_v2.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero",
+    "failed": 1,
+    "passed": 476,
+    "total": 477
+  },
+  "network_access_count": 0,
+  "phase": "POSTFLIGHT_PENDING_AUDIT",
+  "power_shell_parse": "PASS",
+  "py_compile": "PASS",
+  "run_consumed": true,
+  "status": "INCONCLUSIVE",
+  "strict_eligible_count": 0,
+  "strict_json": "PASS",
+  "targeted_tests": {"failed":0,"passed":42,"skipped":0,"total":42}
+}

@@ -1,0 +1,25 @@
+# exp_20260826_009 command ledger
+# Status: FORMAL_EXECUTED_EXACTLY_ONCE / POSTFLIGHT_AWAITING_AUDITOR / INCONCLUSIVE
+
+# Executed offline verification only
+uv run python -m unittest tests.test_binance_spot_forward_schedule_pit_v2 -v
+uv run python -m unittest discover -s tests -v
+uv run python -m py_compile src/quant_research/binance_spot_forward_schedule_pit_v2.py src/quant_research/binance_spot_forward_schedule_pit_v2_loader.py tests/test_binance_spot_forward_schedule_pit_v2.py
+
+# Frozen formal line. UTF-8/no-newline SHA-256:
+# 5da7e8bdeafba4e34fbe3b289ccbf8125578729f7dad68fed76e7b23219d5c3e
+# Executed exactly once after independent Phase2 Researcher and Auditor GO.
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\binance_spot_forward_schedule_pit_v2_wrapper.ps1 -ExpectedWrapperSha256 96a2eb33469f7adefde188ee86eb5d49505cccc99d7ac3489904099e768f61ab -ExpectedCollectorSha256 a6310ffd8c80da8a243d8d490338c22bdbd61084cc85ca88921171df2a34c34d -ExpectedLoaderSha256 cf5cc822955dff110518f600debdbb18020714b41be881d387287323c3cc6542 -ExpectedSourceContractSha256 0c00f77b0209f4f0cc3cd8bd5a68f62622c4f9eb436b6d3437b8a1f4b1affc62 -ExpectedSchemaSha256 d621930579fb5b68b1454336611c512292f8ae929a8252610eba3bffdb076378 -ExpectedParametersSha256 403f008549c2e25f18d039b0e26fbb30ef5cf213699cbf27eb60f51e48a944af -ExpectedTestsSha256 d5cefd17d947eb7ebc6ee751bdf3f2052cbee17f6bba076d0d66719f72fe779f; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode
+
+# Observed formal result: exit 46; wall 0.3296141 seconds; stdout/stderr empty.
+# Ledger: preclear FAIL/44, final cleanup FAIL/46; collector never started.
+# Actual network requests: 0. Run ID consumed permanently; DO NOT RERUN.
+
+# Post-formal independent safety remediation reported by Research Lead:
+# powershell.exe ... Set-Clipboard -Value 'CLEARED_BY_CODEX'; exit 0
+# Observed exit 0; stdout/stderr empty; no clipboard readback; no network.
+# This is fixed-marker overwrite evidence only, not formal execution and not
+# proof of an empty clipboard. It does not change INCONCLUSIVE / NO DATA RESULT.
+
+# Forbidden after consumed run: any retry/resume or other network probe.
+# Always forbidden here: eligibility, Alpha/Factor/IC/ML/P&L/backtest.

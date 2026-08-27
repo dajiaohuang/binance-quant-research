@@ -1,0 +1,12 @@
+# PRECONDITION — execute exactly once before implementation; development evidence only.
+uv run python -c "import dataclasses,json; from quant_research.hierarchical_alpha import EnsembleScore,ExpertKey,ExpertOutput,ExpertReadiness,ExpertRegistry,ExpertSpec,FamilyWeights,HierarchicalWeights,combine_hierarchical; k1=ExpertKey('Price','one_hour',1,'v1'); k24=ExpertKey('Flow','one_day',24,'v1'); registry=ExpertRegistry.build((ExpertSpec(k1,('x',),'known_at <= formation_time','HIGHER_IS_BETTER',ExpertReadiness.SYNTHETIC_READY,'a'*64),ExpertSpec(k24,('y',),'known_at <= formation_time','HIGHER_IS_BETTER',ExpertReadiness.SYNTHETIC_READY,'b'*64))); outputs=(ExpertOutput(k1,'BTCUSDT',1700000000000,1699999999999,1.0,'c'*64),ExpertOutput(k24,'BTCUSDT',1700000000000,1699999999999,3.0,'d'*64)); weights=HierarchicalWeights((FamilyWeights('Price',((k1,1.0),)),FamilyWeights('Flow',((k24,1.0),))),(('Price',0.5),('Flow',0.5))); result=combine_hierarchical(outputs,registry,weights); print(json.dumps({'fields':[field.name for field in dataclasses.fields(EnsembleScore)],'has_horizon_hours':hasattr(result,'horizon_hours'),'value':result.value},sort_keys=True,separators=(',',':')))"
+
+# DEVELOPMENT — offline synthetic checks only; not formal.
+uv run python -m unittest tests.test_hierarchical_alpha -v
+uv run python -m unittest tests.test_historical_pit_evidence -v
+uv run python -m py_compile src/quant_research/hierarchical_alpha.py tests/test_hierarchical_alpha.py
+
+# FORMAL CANDIDATES — not authorized in Phase 1; each exactly once/no retry after Fresh Phase 2 GO.
+uv run python -m unittest tests.test_hierarchical_alpha -v
+# Run only if the preceding formal candidate passes.
+uv run python -m unittest tests.test_historical_pit_evidence -v

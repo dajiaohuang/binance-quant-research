@@ -1,0 +1,16 @@
+# exp_20260825_005 command ledger
+# Preregistered before implementation and before formal offline revalidation.
+
+uv run python -m unittest discover -s tests -v
+
+# Planned formal command. No network access is authorized.
+uv run quant-binance-spot-revalidate --inventory data/processed/binance_spot_v2/archive_inventory_1h_2022-12_2024-12.jsonl --inventory-sha256 8be13634629f8fc21e499aaab7df46839510b3a5be4842ab620bfb3089f512b3 --symbol-index data/raw/binance_spot_v2/inventory/symbol_index.jsonl --symbol-index-sha256 0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16 --inventory-summary experiments/exp_20260825_003/artifacts/inventory_summary.json --inventory-summary-sha256 168fa33118114fd088d03ceb87f920755aea8b088b13f891a37984e75065605d --exp004-object-quality experiments/exp_20260825_004/artifacts/object_quality.jsonl --exp004-object-quality-sha256 3e7675986d7c3f22b1c02ff0beae4532015dc2993be9f69b984d0223f5c6acc2 --exp004-payload-summary experiments/exp_20260825_004/artifacts/payload_summary.json --exp004-payload-summary-sha256 40419cb5bfc1990930adf662650a73a2531a42830991987fdae7057ac86b6684 --raw-run-contract data/raw/binance_spot_v3/payloads/run_contract.json --raw-run-contract-sha256 77335ef92b84513d73e6152ef3b2b3ddb5c14d6e1560ec86348793d186860683 --raw-root data/raw/binance_spot_v3/payloads --processed-root data/processed/binance_spot_v4 --summary-output experiments/exp_20260825_005/artifacts/revalidation_summary.json --object-quality-output experiments/exp_20260825_005/artifacts/object_quality.jsonl --non-nominal-close-output experiments/exp_20260825_005/artifacts/non_nominal_close_time_rows.jsonl --coverage-schema-output experiments/exp_20260825_005/artifacts/coverage_schema.json --derived-index-output experiments/exp_20260825_005/artifacts/derived_index.jsonl
+
+# No network, factor, backtest, ML, account or order command is authorized.
+
+# Final independent audit PASS at 2026-08-25T17:05:10.4476337+08:00.
+# Formal offline revalidation starts only after this ledger entry.
+
+# Formal command executed successfully and completed before
+# 2026-08-25T17:13:11.8408408+08:00. Result: NEEDS_MORE_DATA, 9,240 VALID,
+# zero invalid, zero contract failures, and all frozen count invariants matched.

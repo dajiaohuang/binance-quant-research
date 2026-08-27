@@ -1,0 +1,29 @@
+{
+  "experiment_id": "exp_20260825_003",
+  "frozen_at": "2026-08-25T01:07:31.0382811+08:00",
+  "hash_algorithm": "SHA-256 over exact file bytes",
+  "files": {
+    "src/quant_research/binance_spot_archive.py": {"bytes": 35274, "sha256": "ebd27d417e243c997d35942cc41215c3b2ddb170106e11b2099b0f35fab09fee"},
+    "tests/test_binance_spot_archive.py": {"bytes": 20433, "sha256": "fed233632c9f4095f3554a954c546634a499b88b4f1387d534312f27982b42cf"},
+    "pyproject.toml": {"bytes": 752, "sha256": "fdd2a131b549128cf73711e2c4faf0c26e7a23fde1489f0f71f62a5321584318"},
+    "experiments/exp_20260825_003/manifest.json": {"bytes": 4204, "sha256": "891acdcc1832e3a3a32b004410b31383aa0f23fc24511db09d48766058d553bf"},
+    "experiments/exp_20260825_003/parameters.json": {"bytes": 777, "sha256": "5bd6e62f850d3824bdcabd625d57adf415299f464b7dca6a95145365aafd5b59"},
+    "experiments/exp_20260825_003/commands.txt": {"bytes": 1088, "sha256": "407bf0fc2793df7c9044e4950459d8ab7a7e78975752bca4a6551165c2f55c6a"},
+    "experiments/exp_20260825_003/hypothesis.md": {"bytes": 1329, "sha256": "8f49dca83dbd327837713ae6df4d99045a123ba78cc74ead1b9d0ec4c2d94be4"},
+    "experiments/exp_20260825_003/metrics.json": {"bytes": 1773, "sha256": "46c3a25a09bbf6fa9ebdcc256e756f588974ede913f0739f6ef18d1ad401e278"},
+    "experiments/exp_20260825_003/report.md": {"bytes": 2563, "sha256": "996f9522c96cc905301ecb43fae569fc677dcbb5d314a07e25b45fdab24a9945"},
+    "experiments/exp_20260825_003/preflight.json": {"bytes": 1531, "sha256": "3e356e52d1e8001ba973864c1e57db19d24d95f191e072799cffe89eb550c841"},
+    "experiments/exp_20260825_003/preflight_git_status.txt": {"bytes": 403, "sha256": "ea92bb6e27e35f309abd69f58c842e2263ebe42fa5be7b5f3b1837fffd5f0349"},
+    "experiments/exp_20260825_003/artifacts/inventory_summary.json": {"bytes": 3317729, "sha256": "168fa33118114fd088d03ceb87f920755aea8b088b13f891a37984e75065605d"},
+    "experiments/exp_20260825_003/artifacts/evidence_summary.json": {"bytes": 1425, "sha256": "a3f2af6063d2e714c9c8d77bb1162405dd29c5bf544c621f64187a8800591780"},
+    "data/processed/binance_spot_v2/archive_inventory_1h_2022-12_2024-12.jsonl": {"bytes": 8082127, "sha256": "8be13634629f8fc21e499aaab7df46839510b3a5be4842ab620bfb3089f512b3"},
+    "data/raw/binance_spot_v2/inventory/symbol_index.jsonl": {"bytes": 1453935, "sha256": "0b6df35cab25c9e393f901c923c0412084afbfdc956b171e1bef655907808c16"}
+  },
+  "raw_tree": {
+    "file_count": 1457,
+    "total_bytes": 24043020,
+    "reconstructed_sorted_evidence_index_sha256": "b45635a4a882d5f8337ad709ccdd278a2749b66311b0a4b2905789ad3385f518"
+  },
+  "tests": {"inventory": "14/14 passed", "repository": "26/26 passed"},
+  "decision": "NEEDS_MORE_DATA"
+}

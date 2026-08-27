@@ -1,0 +1,44 @@
+# exp_20260825_006 planned command ledger
+# TERMINAL RESULT: INCONCLUSIVE after one failed narrow-test execution.
+# The phase-2a text immediately below is retained as revision-0 history; the
+# revision-1 audit contract is retained later in this ledger.
+# PHASE 2A HISTORICAL PLAN: no command had been executed when this was written.
+# This file preregisters later offline synthetic-test commands; it does not
+# authorize market-data reads, factor evaluation, model fitting, backtesting,
+# network access, or a CLI implementation.
+
+# Planned narrow synthetic kernel test command after implementation:
+uv run python -m unittest tests.test_hierarchical_alpha -v
+
+# Planned repository regression command only after the narrow tests pass:
+uv run python -m unittest discover -s tests -v
+
+# Explicitly not planned or authorized in exp_20260825_006:
+# - no quant-alpha-research CLI
+# - no exp005 panel or normalized Kline read
+# - no real factor, score, rank IC, return, turnover or P&L calculation
+# - no model fit or training
+# - no backtest, Freqtrade research command, dry-run or live trade
+# - no network or account command
+
+# At preregistration, no command had yet been executed.
+
+# CONTRACT REVISION 1 (pre-execution audit blockers)
+# The phase-2a command plan above is retained as revision-0 history.
+# Revision 1 was written before execution and does not authorize a command run.
+# At revision-1 authoring time, no command had yet been executed.
+# The same two commands remain planned for a later explicitly authorized phase;
+# neither the narrow synthetic test nor repository regression has been run.
+
+# CONTRACT REVISION 2 (pre-execution direct-construction bypasses)
+# Revisions 0 and 1 remain historical and were never executed.
+# At revision-2 authoring time, no command had yet been executed.
+
+# EXECUTED AROUND 2026-08-25T20:05+08:00 (approximate; exact time not captured):
+uv run python -m unittest tests.test_hierarchical_alpha -v
+# RESULT: FAILED — 35 run, 34 passed, 0 assertion failures, 1 error.
+# ERROR: scipy.linalg.lstsq rejected list inputs with
+# AttributeError: 'list' object has no attribute 'shape'.
+# ENVIRONMENT: NumPy 2.5.1; SciPy 1.18.0.
+# The planned full-repository regression command was NOT RUN.
+# No real-data, network, model, backtest, dry-run, live-trade, or CLI command ran.

@@ -1,0 +1,44 @@
+exp_20260826_004 formal execution transcript
+=============================================
+
+Authorization:
+- Independent Researcher: GO for the exact frozen command.
+- Independent Auditor: GO for the exact frozen command.
+- Formal command UTF-8-without-newline SHA-256:
+  de1a7f3457b1d17a9a2abde043bc9e5240b29fa24d1129d2d2a0c45110dbe4b4
+- Frozen extractor SHA-256 verified before execution:
+  e3fd4ec75c450771afe654ccf08a1c1839c4b11ac9dc7ec038a0a1de722aa62e
+
+Execution:
+- Run id: exp_20260826_004_formal_001
+- Exact frozen command execution count: 1
+- First local request start: 2026-08-25T21:34:54.762214Z
+- Last local response completion: 2026-08-25T21:35:59.888559Z
+- Raw lease creation to final sidecar commit evidence span: 65.1333464 seconds
+- Tool active-wait observations: 30.0023772 + 0.0002285 seconds; the process
+  continued between the yielded execution handle and the completion poll, so
+  these tool waits are not represented as an exact end-to-end process timer.
+- Observed process exit code: 1
+- stdout: empty
+- stderr (complete):
+  ERROR: details/54cf9ec60fc244e3af12beb950e764bd failed closed: HTTP_429
+
+Failure:
+- Logical request: details/54cf9ec60fc244e3af12beb950e764bd
+- Attempts: 3/3 built-in attempts
+- Outcomes: HTTP_429, HTTP_429, HTTP_429
+- Response bodies: 0 bytes each, SHA-256
+  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- No adaptive retry, second formal command, out-of-band request, probe, cleanup,
+  or run-id reuse occurred.
+
+Formal outcome:
+- Status: INCONCLUSIVE
+- Artifact state: null
+- Run id is consumed.
+- Partial raw evidence is preserved in
+  data/raw/binance_spot_announcement_v3/runs/exp_20260826_004_formal_001/.
+- No processed run, root summary/schema/source-contract, canonical detail index,
+  or canonical time-claim discrepancy artifact was committed.
+- No Alpha, IC, ML, backtest, event, listing interval, or eligibility operation
+  was executed.

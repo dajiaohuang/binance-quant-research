@@ -1,0 +1,62 @@
+{
+  "experiment_id": "exp_20260825_007",
+  "mode": "single_change_synthetic_compatibility_repair",
+  "parent_experiment": "exp_20260825_006",
+  "parent_failure": {
+    "narrow_tests_run": 35,
+    "passed": 34,
+    "errors": 1,
+    "exception": "AttributeError: 'list' object has no attribute 'shape'",
+    "numpy_version": "2.5.1",
+    "scipy_version": "1.18.0"
+  },
+  "frozen_files": {
+    "implementation_pre_fix": {
+      "path": "src/quant_research/hierarchical_alpha.py",
+      "sha256": "c19fd1953b18205d4757e54d67b4d1127dd11d2f52f47738a2b9d9159275601e"
+    },
+    "test": {
+      "path": "tests/test_hierarchical_alpha.py",
+      "sha256": "6d13ba56248305b9990f9422be79d476b64228d266691f4b6db8ac9416935870",
+      "changes_allowed": false
+    }
+  },
+  "allowed_code_change": {
+    "function": "residualize_cross_section",
+    "location": "immediately before scipy.linalg.lstsq",
+    "design_conversion": "numpy.asarray(matrix, dtype=float)",
+    "target_conversion": "numpy.asarray(target_vector, dtype=float)",
+    "lstsq_inputs": "the two converted float arrays"
+  },
+  "frozen_behavior": {
+    "mathematics": true,
+    "api": true,
+    "tests": true,
+    "contracts": true,
+    "orthogonality_tolerance": 1e-10,
+    "dependency_declarations": true
+  },
+  "test_sequence": [
+    {
+      "gate": 1,
+      "suite": "narrow",
+      "required_result": "35/35 pass"
+    },
+    {
+      "gate": 2,
+      "suite": "full repository",
+      "condition": "run only after gate 1 passes",
+      "required_result": "all pass"
+    }
+  ],
+  "forbidden": {
+    "real_market_data": true,
+    "network": true,
+    "real_factor_score_ic_or_pnl": true,
+    "model_fit": true,
+    "backtest": true,
+    "cli": true
+  },
+  "successful_terminal_status": "NEEDS_MORE_DATA",
+  "failed_terminal_status": "INCONCLUSIVE"
+}

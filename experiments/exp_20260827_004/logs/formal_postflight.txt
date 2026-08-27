@@ -1,0 +1,17 @@
+EXP004 FRESH PHASE2 FORMAL POSTFLIGHT HASH AUDIT
+UTC OBSERVED: 2026-08-27T02:44:39.2075872Z
+LOCAL OBSERVED: 2026-08-27T10:44:39.2094918+08:00
+EXIT: 0
+
+PASS src/quant_research/historical_pit_evidence.py 15d67d394d6b9510a65ead86a90bce4dd181a48c213bb8ec59115911bc8b72ed
+PASS tests/test_historical_pit_evidence.py e0299cadf97409b520afcc5ad52144e5c8e0bfa947f47006027c596e5e89cb63
+PASS experiments/exp_20260827_004/artifacts/source_contract.json 0c037db23460cc90c18d46debe7a3f0b3ebf06762efc4b180ecdce4db8a6e37f
+PASS experiments/exp_20260827_004/artifacts/schema.json d147acf5ef46cf1a6886926d21c17e80676b091c6d4045a873145dac2a3037bd
+PASS experiments/exp_20260827_004/parameters.json 195ebe5ff9f27911e38b500495872969fc5a21cd436a93b540fa7c8621541136
+PASS experiments/exp_20260827_004/commands.txt 86224d5e6aca6ca089f86b5a3710538e12a5d8ffd2ee9e1e5a1cad2859f3be32
+PASS src/quant_research/hierarchical_alpha.py 2637ac6b686ef0d6a0a7dc4c07817fd57e2f2724984cdcccac1671528c7044c5
+PASS tests/test_hierarchical_alpha.py 6d13ba56248305b9990f9422be79d476b64228d266691f4b6db8ac9416935870
+COMMAND PASS uv run python -m unittest tests.test_historical_pit_evidence -v e7c8f8cec9a2cece6c31895cc18c671b5325ecfcaf5b49488db30fb430a6de0b
+COMMAND PASS uv run python -m unittest tests.test_hierarchical_alpha -v 20410fbbc49fddcf45d6c052cda48b85aa832aa9c5f2530f27dd9dfb2c80c8e1
+
+DECISION: PASS; all frozen inputs and exact command bytes remained unchanged after both one-time executions.

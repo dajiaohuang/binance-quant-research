@@ -1,0 +1,175 @@
+{
+  "experiment_id": "exp_20260826_002",
+  "created_at": "2026-08-26T03:15:17+08:00",
+  "created_at_source": "workspace/app task creation evidence supplied during preregistration audit; second precision",
+  "status": "completed",
+  "phase": "formal_run_complete",
+  "decision_status": "INCONCLUSIVE",
+  "parent_experiments": ["exp_20260825_003", "exp_20260826_001"],
+  "git_repository": true,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_clean_before_experiment": false,
+  "single_primary_change": "Freeze a complete, auditable Binance CMS announcement corpus without deriving events, listing intervals or eligibility.",
+  "frozen_transport_dependency": {
+    "path": "src/quant_research/binance_spot_pit.py",
+    "sha256": "427b9eab83f14798fdb9b6465dddad397081d6a2c094fb27aa229fd94aee2264",
+    "changes_allowed": false
+  },
+  "expected_totals": {"48": 2234, "161": 426},
+  "expected_interval_counts": {"48": 575, "161": 181},
+  "corpus_completeness_scope": "current-visible articles returned by both complete CMS passes; excludes deleted articles and unavailable historical versions",
+  "expected_request_inventory": {
+    "list": 108,
+    "detail": 756,
+    "time": 2,
+    "logical_total": 866,
+    "max_wire_attempts": 2598
+  },
+  "raw_output_root": "data/raw/binance_spot_announcement_v1/runs",
+  "processed_output_root": "data/processed/binance_spot_announcement_v1/runs",
+  "run_id": "exp_20260826_002_formal_001",
+  "implementation_freeze": {
+    "network_requests_executed": 0,
+    "formal_raw_run_exists": false,
+    "formal_processed_run_exists": false,
+    "formal_summary_exists": false,
+    "source": {
+      "path": "src/quant_research/binance_spot_announcement_corpus.py",
+      "bytes": 69116,
+      "sha256": "9c98725d74ce3d5e4f6c2a9ac5f9fbe53926b9fd4dae35520db39e7a086a7d46",
+      "pre_network_cli_binding_required": true
+    },
+    "tests": {
+      "path": "tests/test_binance_spot_announcement_corpus.py",
+      "bytes": 34382,
+      "sha256": "405e81db2b35f33c87a1841d5ebc936d365900baecaf485fcd14e48701fd049b",
+      "final_narrow_run": "PASSED 23/23; 1.578s; transcript chunk 933518",
+      "final_full_repository_run": "PASSED 130/130; 2.457s; transcript chunk 926b81"
+    },
+    "cli": "quant-binance-spot-announcement-corpus",
+    "pyproject_sha256": "3c7bce595c1db8cafd4fcefb42d5d490de7b59d98442c633cf3cf607bfb52d4f",
+    "pre_execution_formal_command_ledger_sha256": "44c4b3fb773addb88d1426498e87e8edc7d609cfd8cbb893b33f0872be439039",
+    "post_execution_command_ledger_sha256": "f84d433562b10443650c45b319891df9226bfcfec1f5af359c9dd2f9511f669f",
+    "experiment_contract_hashes": {
+      "hypothesis_sha256": "75e2870fef821fbe5a7606e29e3e625e5839647e167886bf3e390ef0beea45cd",
+      "parameters_sha256": "cf06490e197e742193a07ed5c656fd785129ce3bc21f85c52dc152459cb4bdf8",
+      "metrics_sha256": "9c3b91143772740c3bc4c1fa432ab5f15279325186d87e39d5b72a0f8c6bcb46",
+      "report_sha256": "f72478306c95872922558fc8e7af3568e02697a143fea17ebacd219515643ce1",
+      "offline_results_sha256": "329165be49db3eaa8136475cda2275cba69baac2c104b759d7ff943de88bd29f",
+      "auditor_no_go_record_sha256": "02d199b941daeb50d6820275bf6356f3b2c766f6b3b9e65300ee3eb4a361ce8d",
+      "auditor_second_no_go_record_sha256": "ba32c744a784dbbab2628239f3fe8b5eae72ffd5f02d940e209874c5e2da81a7",
+      "postfreeze_inspection_failure_sha256": "a552377739060c0ea1ef181c6a2080ce64d0537e557bc531ee820249e4abaaa4"
+    },
+    "frozen_transport_dependency_sha256_recomputed": "427b9eab83f14798fdb9b6465dddad397081d6a2c094fb27aa229fd94aee2264",
+    "offline_results_log": "experiments/exp_20260826_002/logs/offline_results.txt",
+    "test_failures": []
+  },
+  "formal_run": {
+    "run_id": "exp_20260826_002_formal_001",
+    "command_executions": 1,
+    "arguments_unchanged_from_planned_line": true,
+    "frozen_extractor_sha256": "9c98725d74ce3d5e4f6c2a9ac5f9fbe53926b9fd4dae35520db39e7a086a7d46",
+    "frozen_dependency_sha256": "427b9eab83f14798fdb9b6465dddad397081d6a2c094fb27aa229fd94aee2264",
+    "pre_execution_command_ledger_sha256": "44c4b3fb773addb88d1426498e87e8edc7d609cfd8cbb893b33f0872be439039",
+    "exec_transcript_chunk": "6833b1",
+    "wall_time_seconds": 11.4427733,
+    "observed_exit_code": 1,
+    "stdout_exact": "",
+    "stderr_exact": "ERROR: invalid article code\r\n",
+    "collector_error": "invalid article code",
+    "wire_attempts": 39,
+    "retries": 0,
+    "http_200_outcome_ok": 39,
+    "response_files": 39,
+    "request_sidecars": 39,
+    "response_body_bytes": 355184,
+    "sidecar_bytes": 47730,
+    "total_frozen_raw_sidecar_bytes": 402914,
+    "catalog_48_total_observed": 2234,
+    "list_pages_acquired": 38,
+    "list_articles_raw_acquired": 1900,
+    "detail_requests": 0,
+    "first_request_started_at_utc": "2026-08-25T20:20:40.650396Z",
+    "last_response_completed_at_utc": "2026-08-25T20:20:51.543148Z",
+    "raw_run_exists": true,
+    "processed_run_exists": false,
+    "summary_exists": false,
+    "schema_exists": false,
+    "source_contract_exists": false,
+    "trusted_reload_executed": false,
+    "trusted_reload_reason": "collector failed before summary/schema/source-contract creation",
+    "partial_raw_inventory": {
+      "path": "experiments/exp_20260826_002/logs/formal_partial_raw_inventory.tsv",
+      "bytes": 10213,
+      "file_count": 78,
+      "sha256": "c3bee614c75899c07729cf3d26ff88244550871f69ffec25dad6b8d841f3be9c"
+    },
+    "failure_raw": {
+      "path": "data/raw/binance_spot_announcement_v1/runs/exp_20260826_002_formal_001/requests/catalog_48/pass_1/page_0038/attempt_0001.response",
+      "sha256": "ab4676534a3219461555e4127326a1da9a43e9e29afce0df3e8ace3ad0c31876"
+    },
+    "formal_evidence_logs": {
+      "transcript": {
+        "path": "experiments/exp_20260826_002/logs/formal_run.txt",
+        "sha256": "d368e9ac7306be3f17b9216df4c822e3ac928aff62f0a230a1ff9fd56f9b1446"
+      },
+      "failure_inspection": {
+        "path": "experiments/exp_20260826_002/logs/formal_failure_inspection.json",
+        "sha256": "07e173737b0eb452c2d4fd9cadd218c0baa5e24cc99b018a226d39b250e4f85c"
+      }
+    },
+    "terminal_status": "INCONCLUSIVE",
+    "artifact_state": null,
+    "run_id_reusable": false,
+    "rerun_or_adaptation_performed": false
+  },
+  "pre_execution_reviews": [
+    {
+      "decision": "NO_GO",
+      "formal_network_authorized": false,
+      "record": "experiments/exp_20260826_002/logs/auditor_no_go_fix_round.txt",
+      "resolution_round": "production response shapes, canonical Host evidence, two complete list passes, bounded reads, terminal outcome/retry recomputation and pre-network extractor SHA binding",
+      "resolution_status": "implemented_offline_pending_re_review"
+    },
+    {
+      "decision": "NO_GO",
+      "formal_network_authorized": false,
+      "record": "experiments/exp_20260826_002/logs/auditor_second_no_go_fix_round.txt",
+      "resolution_round": "hard global 2598-wire cap, complete attempt-count rebuild, and source/dependency checks before lease, before/after every fetch and before artifact completion",
+      "resolution_status": "implemented_offline_pending_re_review"
+    },
+    {
+      "role": "Researcher",
+      "decision": "GO",
+      "formal_network_authorized": true,
+      "frozen_source_sha256": "9c98725d74ce3d5e4f6c2a9ac5f9fbe53926b9fd4dae35520db39e7a086a7d46",
+      "record": "parent task authorization payload; no separate local review file supplied"
+    },
+    {
+      "role": "Auditor",
+      "decision": "GO",
+      "formal_network_authorized": true,
+      "frozen_source_sha256": "9c98725d74ce3d5e4f6c2a9ac5f9fbe53926b9fd4dae35520db39e7a086a7d46",
+      "record": "parent task authorization payload; no separate local review file supplied"
+    }
+  ],
+  "expected_success_status": "NEEDS_MORE_DATA",
+  "expected_success_artifact_state": "ANNOUNCEMENT_CORPUS_AVAILABLE",
+  "failure_status": "INCONCLUSIVE",
+  "forbidden_outputs": [
+    "event ledger",
+    "listing interval",
+    "historical eligibility",
+    "Alpha or factor",
+    "IC",
+    "ML or model fit",
+    "backtest",
+    "validation or final-test market data"
+  ],
+  "referenced_skill": ".codex/skills/quant-strategy-research/SKILL.md",
+  "missing_skill_references": [
+    ".codex/skills/quant-strategy-research/references/methodology.md",
+    ".codex/skills/quant-strategy-research/references/experiment-contract.md",
+    ".codex/skills/quant-strategy-research/references/source-map.md"
+  ]
+}

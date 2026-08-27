@@ -1,0 +1,32 @@
+# exp_20260825_001 command ledger
+# Preregistered before data download. Append exact timestamps, exit codes, and outputs after execution.
+
+# Environment checks completed before experiment allocation on the same clean HEAD:
+# 2026-08-25 local; exit 0; 12 tests passed; Freqtrade 2026.6; CCXT 4.5.65; candidate load OK.
+uv sync --frozen
+uv run python -m unittest discover -s tests -v
+uv run freqtrade --version
+uv run quant-freqtrade-research list-strategies --strategy-path strategies
+
+# Public-data connection check completed before experiment allocation; exit 0; BTC/USDT and ETH/USDT active.
+uv run quant-freqtrade-research list-markets --config config/freqtrade-dry-run.json --base BTC ETH --quote USDT --trading-mode spot --one-column
+
+# New data-version download. Validation/test values must not be inspected or backtested before their gates.
+uv run quant-freqtrade-research download-data --config config/freqtrade-dry-run.json --pairs BTC/USDT ETH/USDT --timeframes 5m 1h --timerange 20230101-20260715 --data-format-ohlcv feather --trading-mode spot --logfile experiments/exp_20260825_001/logs/download.log
+# Executed 2026-08-25T00:14:16.3076831+08:00 -> 2026-08-25T00:14:27.6348676+08:00; exit 0.
+# Output files and hashes are frozen in manifest.json. list-data and the read-only data audit passed.
+
+# Formal parent and candidate training on the exact common effective start.
+uv run quant-freqtrade-research backtesting --config config/freqtrade-dry-run.json --strategy DryRunSmaCrossStrategy --strategy-path strategies --timeframe 5m --timerange 1672621200-1735689600 --fee 0.0015 --cache none --export trades --backtest-directory experiments/exp_20260825_001/backtests/baseline_train_common_start --logfile experiments/exp_20260825_001/logs/baseline_train_common_start.log
+uv run quant-freqtrade-research backtesting --config config/freqtrade-dry-run.json --strategy DryRunSmaCrossHtfBreakoutGateStrategy --strategy-path strategies --timeframe 5m --timerange 1672621200-1735689600 --fee 0.0015 --cache none --export trades --backtest-directory experiments/exp_20260825_001/backtests/candidate_train_common_start --logfile experiments/exp_20260825_001/logs/candidate_train_common_start.log
+# Executed serially 2026-08-25T00:16:28.4823426+08:00 -> 2026-08-25T00:16:51.2135210+08:00; both exit 0.
+# Baseline archive SHA-256: 083770ee0b59a8a21b72443119a024b1d635ab320c83bb29f7e69f7ee88307be
+# Candidate archive SHA-256: 4f86b1ab71cd5ad1962d238afe49b0a734d689055789900caf96580f46f348bb
+# Candidate failed the preregistered sample-sufficiency gate: 39 total trades and 8/11/8/12 per pair x UTC close-year cell.
+
+# Forbidden until the complete 24-hour training gate passes:
+# - validation and final test
+# - 18/36-hour neighbors
+# - cost and signal-delay stress
+# - lookahead-analysis and recursive-analysis
+# Not run because the primary training gate failed.

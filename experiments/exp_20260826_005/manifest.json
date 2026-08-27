@@ -1,0 +1,236 @@
+{
+  "experiment_id": "exp_20260826_005",
+  "created_at": "2026-08-26T06:06:33.7335786+08:00",
+  "created_at_source": "local Get-Date observation immediately before preregistration",
+  "status": "completed",
+  "phase": "postflight_audit_pass_complete",
+  "decision_status": "NEEDS_MORE_DATA",
+  "parent_experiment": "exp_20260826_004",
+  "git_repository": true,
+  "git_commit": "ad4624fa79670fe6233874f6143357a8c2939480",
+  "git_clean_before_experiment": false,
+  "git_status_entry_count_before_experiment": 37,
+  "single_primary_change": "Replace only v3 acquisition timing/retry evidence with an absolute decision matrix, monotonic wall budget, immutable receipt chain, controlled terminal schedule, and exact success bijections.",
+  "extractor_version": "binance_spot_announcement_v4",
+  "module_path": "src/quant_research/binance_spot_announcement_corpus_v4.py",
+  "test_path": "tests/test_binance_spot_announcement_corpus_v4.py",
+  "cli": "quant-binance-spot-announcement-corpus-v4",
+  "raw_output_root": "data/raw/binance_spot_announcement_v4/runs",
+  "processed_output_root": "data/processed/binance_spot_announcement_v4/runs",
+  "run_id": "exp_20260826_005_formal_001",
+  "formal_outputs": {
+    "summary": "experiments/exp_20260826_005/artifacts/corpus_summary.json",
+    "schema": "experiments/exp_20260826_005/artifacts/schema.json",
+    "source_contract": "experiments/exp_20260826_005/artifacts/source_contract.json"
+  },
+  "expected_counts": {
+    "catalog_totals": {"48": 2234, "161": 426},
+    "list_release_date_claim_interval": {"48": 575, "161": 181},
+    "logical_requests": 866,
+    "hardcoded_max_wire_attempts": 3464
+  },
+  "implementation": {
+    "self_contained": true,
+    "imports_v3_helpers": false,
+    "source_sha256": "cd6447ba861e7c02a3307456b60adadbb9e1b71e51879e2f03f424007d8943c4",
+    "source_bytes": 129900,
+    "source_sha256_stage": "initial freeze invalidated by Auditor fail-open; refrozen after focused tamper closure plus narrow/full offline tests",
+    "formal_command_placeholder_replaced": true,
+    "only_acquisition_timing_retry_evidence_changed": true,
+    "v3_corpus_semantics_preserved": true,
+    "root_summary_canonical_bytes_required": true,
+    "root_summary_exact_top_level_field_set_required": true,
+    "trusted_json_duplicate_keys_rejected": true
+  },
+  "frozen_files": {
+    "superseded_source_sha256_after_auditor_no_go": "717731da62e2c5e4c910706c3d2bbacc633e300d11cd21409492518e5cb9c0b4",
+    "superseded_formal_command_utf8_without_newline_sha256": "f5b3d50508eb8c1f570505841d9c837db57cc395591d66ccaeb711518a4480fa",
+    "source_sha256": "cd6447ba861e7c02a3307456b60adadbb9e1b71e51879e2f03f424007d8943c4",
+    "test_sha256": "2c59c20573d20685e45e1bda785ca364e329adc01e68b113fab7badee3e4395d",
+    "pyproject_sha256": "c97b3e4a72d8b1538dd621d93596535824af99e21a4e29d3417a63ed744f8295",
+    "commands_placeholder_sha256": "524557d5f17a638715fd22986f6f0eeeba7afcd2519a9edb8c2a6ec666f17f65",
+    "commands_sha256": "6d8704ba0839f55ba1cff52da37e83d2af6c49bd5c97dc2bd5ef20f151527ea7",
+    "parameters_sha256": "db8d1f169354a0d85ee321e75c4ae719b5bb66722ba46f1f28d27131825fa016",
+    "hypothesis_sha256": "728f5ce42a234cb845b071cf59f80c490e4aead5b047e121c1898cea3bcc09ad",
+    "metrics_sha256_before_manifest_finalization": "27f62f8d1685f0753bdf64546b3cca5505d8a8b38b274fbc22942f9a390270b5",
+    "report_sha256_before_manifest_finalization": "2056c20ae8e160916328c5eb6e9fbc815a154d8aa509b4b81c592327ee5f516c",
+    "offline_results_sha256": "d69d82a0378b48f7f97b1a56c2b5a69d3dc416a963c51897cbccf46d906a50ae",
+    "freeze_audit_sha256": "cce903fb0ed0b4a118760b6db9bdeb3c82de58b34fdbce5127d366ab54804c92",
+    "formal_command_utf8_without_newline_bytes": 1060,
+    "formal_command_utf8_without_newline_sha256": "b0d3a1e2a9479b8c20d5cfe905f49313d249a09dee7ac26f286f6df4119eb5ce"
+  },
+  "frozen_parent": {
+    "v3_source_path": "src/quant_research/binance_spot_announcement_corpus_v3.py",
+    "v3_source_sha256": "e3fd4ec75c450771afe654ccf08a1c1839c4b11ac9dc7ec038a0a1de722aa62e",
+    "modification_allowed": false
+  },
+  "reused_tracked_semantic_fixtures": [
+    {
+      "path": "tests/fixtures/binance_cms_catalog_48_page_0014_time_claims.response",
+      "bytes": 9949,
+      "sha256": "adbcfcf758ce0c55b772b77de49169702b44759b3e99525e92bb16591d13ce5d",
+      "formal_evidence": false
+    },
+    {
+      "path": "tests/fixtures/binance_cms_article_209355888f0042f788899dd1a04a0052_time_claims.response",
+      "bytes": 78567,
+      "sha256": "cb27c5578fa9303516b238b0e4845640b21f397d09e6f5a90fd4446d21a2a8d5",
+      "formal_evidence": false
+    }
+  ],
+  "pyproject_sha256_at_preregistration": "a994b75f5f5aa2c5b7b543d160751f92b3e1f75c29ed1b10b5d034bc4bd86563",
+  "offline_tests": {
+    "initial_adaptation": {"passed": 29, "failed": 3, "errors": 0},
+    "first_fixed_narrow": {"passed": 32, "failed": 0, "errors": 0, "seconds": 6.791},
+    "expanded_narrow_first": {"passed": 40, "failed": 1, "errors": 0, "seconds": 10.807},
+    "expanded_narrow_fixed": {"passed": 41, "failed": 0, "errors": 0, "seconds": 7.866},
+    "pre_freeze_final_additions": {"passed": 43, "failed": 0, "errors": 0, "seconds": 11.563},
+    "first_full_repository": {"passed": 233, "failed": 0, "errors": 0, "seconds": 22.089},
+    "final_frozen_narrow": {"passed": 43, "failed": 0, "errors": 0, "seconds": 11.195},
+    "final_frozen_full_repository": {"passed": 233, "failed": 0, "errors": 0, "seconds": 14.715},
+    "auditor_fail_open_reproduction": {
+      "accepted_tampered_summary": true,
+      "observed_result": "unit / NEEDS_MORE_DATA",
+      "process_exit_code": 0
+    },
+    "post_auditor_fix_narrow": {"passed": 46, "failed": 0, "errors": 0, "seconds": 12.263},
+    "post_auditor_fix_full_repository": {"passed": 236, "failed": 0, "errors": 0, "seconds": 16.743},
+    "final_refrozen_narrow": {"passed": 46, "failed": 0, "errors": 0, "seconds": 12.531},
+    "final_refrozen_full_repository": {"passed": 236, "failed": 0, "errors": 0, "seconds": 19.150},
+    "py_compile": "PASS",
+    "cli_help": "PASS"
+  },
+  "network_requests_executed_by_experimenter": 884,
+  "formal_output_paths_present_at_preregistration": false,
+  "formal_output_paths_present_at_freeze": false,
+  "formal_output_paths_present_after_execution": true,
+  "authorization": {
+    "auditor_decision": "GO",
+    "scope": "one exact frozen formal command after hash/path preflight",
+    "formal_network_authorized": true,
+    "researcher_pre_execution_decision": "GO",
+    "auditor_pre_execution_decision": "GO",
+    "auditor_postflight_decision": "PASS",
+    "auditor_no_go_reason": "trusted loader accepted canonical unknown top-level alpha field in corpus_summary.json",
+    "formal_execution_count_authorized": 1,
+    "formal_execution_count_observed": 1
+  },
+  "formal_run": {
+    "run_id": "exp_20260826_005_formal_001",
+    "command_utf8_without_newline_sha256": "b0d3a1e2a9479b8c20d5cfe905f49313d249a09dee7ac26f286f6df4119eb5ce",
+    "preflight_frozen_hashes_match": true,
+    "preflight_five_formal_paths_absent": true,
+    "execution_count": 1,
+    "observed_exit_code": 0,
+    "request_first_started_at_utc": "2026-08-25T22:55:15.041503Z",
+    "response_last_completed_at_utc": "2026-08-25T23:33:28.480168Z",
+    "acquisition_wall_seconds": 2293.438,
+    "observed_outer_wall_seconds_approx": 2304,
+    "logical_request_count": 866,
+    "wire_attempt_count": 884,
+    "outcome_counts": {"OK": 866, "HTTP_429": 18},
+    "response_bytes": 39718211,
+    "catalog_totals": {"48": 2234, "161": 426},
+    "inventory_count": 2660,
+    "detail_count": 756,
+    "list_release_date_claim_interval_counts": {"48": 575, "161": 181},
+    "time_claim_discrepancy_count": 7,
+    "terminal_status": "NEEDS_MORE_DATA",
+    "artifact_state": "ANNOUNCEMENT_CORPUS_AVAILABLE",
+    "historical_eligibility_ready": false,
+    "program_trusted_reload_completed": true,
+    "postflight_audit_executed": true,
+    "postflight_audit": {
+      "verdict": "PASS",
+      "network_requests": 0,
+      "trusted_load": {
+        "terminal_status": "NEEDS_MORE_DATA",
+        "artifact_state": "ANNOUNCEMENT_CORPUS_AVAILABLE",
+        "inventory_count": 2660,
+        "detail_count": 756,
+        "time_claim_discrepancy_count": 7
+      },
+      "request_reconciliation": {
+        "logical_request_count": 866,
+        "wire_attempt_count": 884,
+        "outcome_counts": {"OK": 866, "HTTP_429": 18},
+        "http_429_retry_groups": 6,
+        "group_shape": "HTTP_429x3_THEN_OK",
+        "delays_seconds": [30, 60, 120],
+        "retry_after_present": false
+      },
+      "raw_reconciliation": {
+        "file_count": 2655,
+        "total_bytes": 44020359,
+        "body_count": 884,
+        "sidecar_count": 884,
+        "receipt_count": 884,
+        "terminal_count": 0,
+        "orphan_count": 0,
+        "extra_count": 0
+      },
+      "pagination": {
+        "pages_per_pass": {"48": 45, "161": 9},
+        "passes_equal": true
+      },
+      "receipt_tree_hash_match": true,
+      "raw_tree_hash_match": true,
+      "all_declared_hashes_match": true,
+      "root_summary_canonical_bytes_check": "PASS",
+      "root_summary_exact_top_level_key_check": "PASS",
+      "duplicate_json_key_rejection_check": "PASS",
+      "extractor_sha256_unchanged": true,
+      "formal_command_sha256_unchanged": true,
+      "acquisition_wall_seconds": 2293.438,
+      "formal_stderr_file_present": false,
+      "stderr_contract_caveat": "Frozen contract had no standalone stderr-file binding; hashed formal_execution.txt binds stderr_bytes=0 and stderr=EMPTY.",
+      "future_recommendation": "Freeze and hash a zero-byte stderr artifact in the next acquisition contract."
+    },
+    "stdout": {
+      "path": "experiments/exp_20260826_005/logs/formal_stdout.txt",
+      "bytes": 10867,
+      "sha256": "1d7b0cb5fdbe38ad641375b4909e28d992181cd68b1fbcc9e181e51aab3ca394"
+    },
+    "stderr_bytes": 0,
+    "evidence": {
+      "root_corpus_summary_sha256": "03900ad203d15483f7dd968b77390abdb675ef77519d60f35e3071d6ccfe8a19",
+      "root_schema_sha256": "041c867ebbe82ffea9d22e14204e9ae6ca4586287dd448d3fd333ba74b3b1d0c",
+      "root_source_contract_sha256": "9a99ebc97803228dbb1bb20f4eb8cfe03b9a381a076959355353c3f9a7c4d852",
+      "raw_summary_sha256": "912282eea1a4f9e691d34e0bffeb28053cae61cc1ec6581f16a7c298c987ea48",
+      "runtime_contract_sha256": "5c3f17084723a2a4184a358f36a4c4476f38311869c24a8350646fb97a626a8e",
+      "request_ledger_sha256": "455afba5577a2c56d1a1c16604c9becacc0308806a9a28bbdee7137746be7928",
+      "inventory_sha256": "4ca0d770fbbb1da95732a8d84a5dc45c8e6b39de60ec7e03ae684a4b16be947f",
+      "detail_index_sha256": "aa9608faa48ec15a2beae209085c2139dec70672c9e9346103d485ad694a6d96",
+      "time_claim_discrepancies_sha256": "c7bddd3f49b1e67125b1d009d107baa66fbdb266adf1922c8d2246fdd978b830",
+      "raw_artifact_tree_sha256": "5969f39532b39d322f6e4b8e44e06a27b5962071c4454154ec87628937d9e2fd",
+      "receipt_tree_sha256": "49d332dda5bedf9a6b3fd0c598937f0d80540e8b688447f1dc1d8def0ae04360",
+      "final_receipt_sha256": "09cc1138c318806fa953c24317ea5792a6d232edc078721d42912c7c5a8e2c9a"
+    },
+    "record_files": {
+      "commands_sha256_after_execution_ledger_update": "834b0645fa9243a9646cbc70cf92e9a2d27693edee1b111b02f5b59ed5175e4e",
+      "formal_execution_log_sha256_before_manifest_finalization": "bd584acd90bab18dd0a3fa0f10ced45c1499595cd4967198c30c8ad66969fae7",
+      "metrics_sha256_after_formal_execution": "d17af1c618fa99fa3474130261743e55f8da5ff38760d149a980b3f69e251545",
+      "report_sha256_after_formal_execution": "3f6f15e97fea5c981a6776cb91dcc2f94ddd7f5b08a5d0527133c2baaeeb5666",
+      "postflight_audit_log_sha256": "9f6fccf71aaa4fccff42c88491b98e54e3fa5cc1e18ce5b83f4f49a62596938f",
+      "commands_sha256_after_postflight_update": "b9de43bfeb3b7e1286ddfac5ec8156fe9559f8ac4d178768ecb0aeafcdae9634",
+      "metrics_sha256_after_postflight_update": "01da7d3953c5e0bd17e3260d089c78f32527fa81b938cffe68cd29677d2676ed",
+      "report_sha256_after_postflight_update": "20df8bda5983f7070fc203ab6feb3f3327bcd5f6d17e300d65e400c06a48d2f8"
+    }
+  },
+  "forbidden_outputs": [
+    "event ledger",
+    "listing interval",
+    "historical eligibility",
+    "Alpha or factor",
+    "IC",
+    "ML or model fit",
+    "backtest",
+    "validation or final-test market data"
+  ],
+  "referenced_skill": ".codex/skills/quant-strategy-research/SKILL.md",
+  "missing_skill_references": [
+    ".codex/skills/quant-strategy-research/references/methodology.md",
+    ".codex/skills/quant-strategy-research/references/experiment-contract.md",
+    ".codex/skills/quant-strategy-research/references/source-map.md"
+  ]
+}
