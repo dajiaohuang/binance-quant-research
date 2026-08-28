@@ -1,0 +1,23 @@
+Dependency preparation observations (not a formal research result)
+
+Initial resolution before the explicit official CUDA source was frozen:
+- torch resolved as 2.12.1+cpu
+- torch.cuda.is_available() was False
+- this is recorded only as a nonformal capability probe and is not GPU support
+
+After pyproject.toml bound torch to the explicit official cu130 index:
+- uv lock changed torch 2.12.1 to torch 2.12.1+cu130
+- uv sync --extra modern-ml installed the official Windows cp312 cu130 wheel
+- torch.__version__ = 2.12.1+cu130
+- torch.version.cuda = 13.0
+- torch.cuda.is_available() = True
+- device = NVIDIA GeForce RTX 5070 Ti
+- compute capability = 12.0
+- torch.cuda.is_bf16_supported() = True
+
+Installer observations:
+- uv reported build 1.5.1 as yanked while resolving the existing environment
+- hardlinking was unavailable, so uv used its copy fallback
+
+No torchvision was added. No third-party DDGL repository was downloaded,
+imported, copied, or executed. No market endpoint or real dataset was accessed.

@@ -1,0 +1,11 @@
+dry_plan_exit=0
+dry_plan_network_request_count=0
+dry_plan_logical_query_count=5
+dry_plan_sha256=90ab7da6087a9b226a10a3e23ccaebef2acc88814a1729172437d0d89d4e7dc4
+py_compile=PASS
+powershell_launcher_parse=PASS
+freeze_verification_files=10
+freeze_verification=PASS
+key_read=false
+network_request_count=0
+formal_execution_count=0

@@ -1,0 +1,11 @@
+command=uv run --extra modern-ml python -m unittest tests.test_sspt_v2 -v
+execution_role=DEVELOPMENT_AFTER_PHASE2_NO_GO
+exit_code=1
+tests_run=28
+tests_passed=27
+tests_failed=1
+failure_test=tests.test_sspt_v2.SSPTV2ImplementationBindingTests.test_canonical_tree_known_vector_and_live_frozen_binding
+failure=hardcoded expected SHA contained 65 characters; production result was the correct 64-character known-vector SHA
+disposition=retained; correct test constant only; rerun development targeted after refreeze
+formal=false
+network_request_count=0

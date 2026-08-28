@@ -1,0 +1,110 @@
+{
+  "files": [
+    {
+      "bytes": 281,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v4/__init__.py",
+      "sha256": "71a8035982f1cc6ecf6aa113549258f367a8cfd10a2b924bc0cdab122b1bea63"
+    },
+    {
+      "bytes": 1743,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v4/__main__.py",
+      "sha256": "5f77baa618a428ba02c99d632e86f7af22d03afc2d6c1021b04ebcc6f98b473c"
+    },
+    {
+      "bytes": 2953,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v4/contracts.py",
+      "sha256": "8276333923dfb139869b8073d27040075e1d22a0278e6d21c60b875ba7b29094"
+    },
+    {
+      "bytes": 5645,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v4/source.py",
+      "sha256": "15fb1eb2b418982467604b2d7e04996026269a8daefbe98d19b2c0b357ce07db"
+    },
+    {
+      "bytes": 33544,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v4/monthly.py",
+      "sha256": "715dbde50fae76c60f1aba9e9d20c7a53ead6a4509e623ac7e1b95bdda356c63"
+    },
+    {
+      "bytes": 6695,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v4/launcher.ps1",
+      "sha256": "ff443b57fa185a4a207ac991fefa52e7940eec9188d17fa28bca441d13da9a68"
+    },
+    {
+      "bytes": 21294,
+      "path": "tests/test_jquants_v2_bars_monthly_v4.py",
+      "sha256": "64389c97387e174dc4762ff4da773722a0592c92cc19d283676aad9378a8ab98"
+    },
+    {
+      "bytes": 2887,
+      "path": "experiments/exp_20260828_010/hypothesis.md",
+      "sha256": "7f3d0028a3942c935bdf501a1b560eb7724aa68a03005ddbf1731c43fa637733"
+    },
+    {
+      "bytes": 654,
+      "path": "experiments/exp_20260828_010/parameters.json",
+      "sha256": "befd9de8bbfb32d3bea0f7c5fa14e44552076885f84fb96b7f02e36cb0470194"
+    },
+    {
+      "bytes": 1059,
+      "path": "experiments/exp_20260828_010/artifacts/source_contract_snapshot.json",
+      "sha256": "3edaec606cff6ffd2d473115a74a3e6e3f925932feedef2f4d76b7bea7ec4fb0"
+    },
+    {
+      "bytes": 996,
+      "path": "experiments/exp_20260828_010/artifacts/monthly_contract_summary.json",
+      "sha256": "031c857a9f1f1606f5c315ad341d39b76291b74d12733e0fa091c14bdafc8f2f"
+    },
+    {
+      "bytes": 2707,
+      "path": "experiments/exp_20260828_009/artifacts/postflight_closure_manifest.json",
+      "sha256": "d850789b436bb918b3c621085a0ea7cc76b4c9ba6ab3c7d5a2a60373ffae650a"
+    },
+    {
+      "bytes": 3728,
+      "path": "experiments/exp_20260828_009/artifacts/candidate_freeze_manifest.json",
+      "sha256": "c137e0bdc8a3b16ef13ef6ad1d918038a49310d5ba85150f8be8de3159527873"
+    },
+    {
+      "bytes": 293,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/__init__.py",
+      "sha256": "b78983d0434082c077277c2253428ba0951e341564f58eb56a4689ed70b934f3"
+    },
+    {
+      "bytes": 1647,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/contracts.py",
+      "sha256": "549dae83132937bd9dcd37dec14e3130117d8ca0b153741b9f8c34d51637eb5b"
+    },
+    {
+      "bytes": 11558,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/loader.py",
+      "sha256": "b96f369220cc043c44a5a369c21fb5b9bba71e0a4187ed5d98b9c13c771381aa"
+    },
+    {
+      "bytes": 4591,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/planner.py",
+      "sha256": "5a29e1770935e14fad045f226f4ed566e3e3e5f404dce0a95d43d70948382c02"
+    },
+    {
+      "bytes": 457,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/__init__.py",
+      "sha256": "1e04ca401940c53e9e0ab73794efa37b04776d257eec9a19ff068f1b97763377"
+    },
+    {
+      "bytes": 15489,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/contracts.py",
+      "sha256": "8133a7d7b128fc784cbee892cec881c89a0ef4d5a4730bdc7249b6fe395414fe"
+    },
+    {
+      "bytes": 22430,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/loader.py",
+      "sha256": "0651211d7696b3371ef100b54298ee36cab8141b9896cfcd98df1cd3bb2bc0dd"
+    },
+    {
+      "bytes": 13826,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/collector.py",
+      "sha256": "ec95b3f95f206bc7e57bc1505b20bfa2ebe1dfe1bf4a6143a9e17d12fa355b0e"
+    }
+  ],
+  "schema_version": "JQUANTS_V2_BARS_MONTHLY_V4_CANDIDATE_FREEZE_V1"
+}

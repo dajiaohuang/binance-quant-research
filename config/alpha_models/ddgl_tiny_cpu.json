@@ -1,0 +1,51 @@
+{
+  "architecture": {
+    "dropout": 0.0,
+    "graph_top_k": 2,
+    "hidden_dim": 16,
+    "moe_experts": 2,
+    "moe_hidden_dim": 16
+  },
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260827_006",
+  "horizon_hours": 24,
+  "model_name": "DDGL_CLEAN_ROOM_SYNTHETIC_V1",
+  "optimization": {
+    "allow_precision_fallback": true,
+    "batch_size": 3,
+    "epochs": 2,
+    "grad_clip_norm": 1.0,
+    "learning_rate": 0.005,
+    "precision": "FP32",
+    "weight_decay": 0.0
+  },
+  "runtime": {
+    "device": "cpu",
+    "max_vram_mib": 0,
+    "min_free_vram_mib": 0
+  },
+  "schema_version": "ddgl_synthetic_config_v1",
+  "seed": 20260827,
+  "source": {
+    "community_commit": "9c1152d8572550d0a869d898f65f208c52706747",
+    "community_license_claim": "MIT_REPORTED",
+    "community_repository": "doitforlove/DDGL-Net-2026",
+    "implementation_claim": "CLEAN_ROOM_NOT_OFFICIAL_NOT_PAPER_FAITHFUL",
+    "paper_doi": "10.1145/3770855.3817765",
+    "paper_license_claim": "CC_BY_4_0_REPORTED",
+    "paper_metadata_status": "LEAD_SUPPLIED_CROSSREF_CONFIRMED_KDD_2026",
+    "source_status": "UNVERIFIED_THIRD_PARTY"
+  },
+  "stage": "SYNTHETIC_CONTRACT_ONLY",
+  "synthetic": {
+    "coarse_features": 3,
+    "coarse_steps": 4,
+    "fine_features": 4,
+    "fine_steps": 8,
+    "formation_start_ms": 1800000000000,
+    "global_features": 2,
+    "global_steps": 8,
+    "num_assets": 4,
+    "num_samples": 6
+  }
+}

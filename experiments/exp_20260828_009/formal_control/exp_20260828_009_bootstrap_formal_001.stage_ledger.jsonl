@@ -1,0 +1,4 @@
+{"event":"ZERO_WRITE_REUSE_PREFLIGHT_AND_O_EXCL_CONTROL_RESERVATION_PASS","run_id":"exp_20260828_009_bootstrap_formal_001"}
+{"event":"ATTEMPT_OWNED_SOURCE_BINDING_EMITTED_BEFORE_ENV","run_id":"exp_20260828_009_bootstrap_formal_001"}
+{"event":"ENV_ONLY_KEY_READY_AFTER_SOURCE_BINDING","run_id":"exp_20260828_009_bootstrap_formal_001"}
+{"event":"FORMAL_BOOTSTRAP_EXIT_0","run_id":"exp_20260828_009_bootstrap_formal_001"}

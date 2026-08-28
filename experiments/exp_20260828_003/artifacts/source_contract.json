@@ -1,0 +1,13 @@
+{
+  "api_base":"https://api.jquants.com",
+  "api_version":"V2",
+  "authentication":{"environment_file":".env.jquants.local","environment_variable":"JQUANTS_API_KEY","header":"x-api-key","secret_persistence":false},
+  "endpoints":["/v2/markets/calendar","/v2/equities/master","/v2/equities/bars/daily"],
+  "historical_known_at_claim":false,
+  "observation_semantics":"AVAILABLE_AT_IS_MAX_OF_POLICY_DERIVED_OBSERVATION_AND_ACTUAL_RECEIPT",
+  "pagination":{"global_http_cap":60,"max_pages_per_query":25,"retry":false},
+  "rate_limit":{"minimum_request_spacing_seconds":13,"policy":"EVERY_HTTP_PAGE_INCLUDING_PAGINATION"},
+  "split_authority":{"effective_date":"2025-04-01","empirical_api_expectation":{"AdjFactor":0.5,"ExRT":"1","observation_date":"2025-03-28","status":"FALSIFIABLE_NOT_PRECLAIMED"},"ex_right_date":"2025-03-28","symbol":"9433","url":"https://www.jpx.co.jp/english/news/2020/20250318-01.html"},
+  "raw_redistribution_authorized":false,
+  "schema_version":"JQUANTS_V2_FREE_SOURCE_CONTRACT_V2"
+}

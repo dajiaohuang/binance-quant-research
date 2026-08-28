@@ -1,0 +1,9 @@
+# Development only
+uv run python -m quant_research.alpha_models.data.jquants_v2_v2.collector --dry-plan
+uv run python -m unittest tests.test_jquants_v2_v2 -v
+uv run python -m py_compile src/quant_research/alpha_models/data/jquants_v2_v2/__init__.py src/quant_research/alpha_models/data/jquants_v2_v2/contracts.py src/quant_research/alpha_models/data/jquants_v2_v2/collector.py src/quant_research/alpha_models/data/jquants_v2_v2/loader.py src/quant_research/alpha_models/data/jquants_v2_v2/adapters.py tests/test_jquants_v2_v2.py
+
+# Exact formal candidate. SHA256 of this UTF-8 line without newline:
+# 721c10d5257bc119cc718c4f5ea1f07c1f280f39769edd0c932597a47510b832
+# NOT EXECUTED; requires Fresh Phase 2 authorization.
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\alpha_models\data\jquants_v2_v2\launcher.ps1 -ExpectedLauncherSha256 4123ddeeba5a87cd11f05e5ae16caa16a487030ebb1ca14e19e39af65481a3be -ExpectedFreezeManifestSha256 7b17da9d7ce27229a3bf303a3244e97784972912a8c5edb70dd030408bc225f6; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode

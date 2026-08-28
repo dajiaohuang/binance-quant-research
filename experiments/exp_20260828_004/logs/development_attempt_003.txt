@@ -1,0 +1,10 @@
+command: uv run python -m unittest tests.test_jquants_v2_v3.JQuantsV2V3LauncherTests -v
+classification: DEVELOPMENT_NOT_FORMAL
+exit_code: 0
+tests_run: 8
+failures: 0
+errors: 0
+skips: 0
+network_request_count: 0
+real_key_read: false
+result: PASS

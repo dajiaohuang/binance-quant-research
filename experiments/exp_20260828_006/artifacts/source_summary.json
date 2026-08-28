@@ -1,0 +1,31 @@
+{
+  "artifact_state": "JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_RECOVERED",
+  "calendar": {
+    "civil_date_rows": 4,
+    "non_session_rows": 2,
+    "preregistered_holiday_pattern_matches": true,
+    "session_rows": 2
+  },
+  "daily_bars": {
+    "merged_distinct_rows": 4414,
+    "q04_distinct_symbols": 4410,
+    "q04_null_ohlc_rows": 188,
+    "q04_rows": 4410,
+    "q05_expected_session_coverage_matches": true,
+    "q05_rows": 5,
+    "split_factor_and_ex_right_expectation_matches": true
+  },
+  "listing_presence": "UNKNOWN",
+  "master": {
+    "nontrading_query_rows": 1,
+    "nontrading_requested_date_mapped_to_next_business_date": true,
+    "normal_query_rows": 1,
+    "product_category_expectation_matches": true,
+    "sector17_nonempty": true,
+    "sector33_nonempty": true,
+    "unique_merged_rows": 1
+  },
+  "source_experiment_id": "exp_20260828_005",
+  "source_run_id": "exp_20260828_005_formal_001",
+  "terminal_status": "NEEDS_MORE_DATA"
+}

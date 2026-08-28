@@ -1,0 +1,19 @@
+{
+  "adopted_date_count": 28,
+  "completed_immutable_month_prefix": 1,
+  "expected_first_network_date": "2024-08-13",
+  "focused_tests_final": "PASS_6_OF_6_ONCE",
+  "key_read_count": 1,
+  "month_count": 23,
+  "network_date_count_all_sources": 462,
+  "network_overlap_count": 0,
+  "network_request_count": 434,
+  "page_request_count_all_sources": 462,
+  "raw_body_bytes_all_sessions": 568985417,
+  "preregistered_network_date_count_after_adoption": 434,
+  "remaining_network_date_count_after_formal": 0,
+  "retry_count": 0,
+  "row_count_all_sessions": 2052323,
+  "session_date_count": 465,
+  "status": "COMPLETE_23_IMMUTABLE_MONTH_SHARDS"
+}

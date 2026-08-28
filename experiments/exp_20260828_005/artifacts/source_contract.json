@@ -1,0 +1,18 @@
+{
+  "api_base": "https://api.jquants.com",
+  "authority_before_import": true,
+  "collector_runtime_verification": ["PRE_REQUEST", "PRE_PROMOTION"],
+  "daily_bars_official_source": "https://jpx-jquants.com/en/spec/eq-bars-daily",
+  "experiment_id": "exp_20260828_005",
+  "holdiv_official_source": "https://jpx-jquants.com/en/spec/mkt-cal/holiday-division",
+  "holdiv_tse_non_session_values": ["0", "3"],
+  "holdiv_tse_session_values": ["1", "2"],
+  "listing_presence": "UNKNOWN_ONLY_CODE_FILTERED_MASTER",
+  "master_official_source": "https://jpx-jquants.com/en/spec/eq-master",
+  "non_premium_daily_bars_exact_fields": ["Date", "Code", "O", "H", "L", "C", "UL", "LL", "Vo", "Va", "AdjFactor", "AdjO", "AdjH", "AdjL", "AdjC", "AdjVo", "MktCap", "ExRT"],
+  "parent_experiment_id": "exp_20260828_004",
+  "query_semantics": "UNCHANGED_FROM_EXP004",
+  "raw_first_order": ["TRANSPORT_CHECKS", "ATOMIC_RAW_WRITE", "ATOMIC_SAFE_RECEIPT_WRITE", "STRICT_PARSE", "SEMANTIC_VALIDATION"],
+  "runtime_import": "FIXED_INTERPRETER_I_S_B_PRIVATE_EXPLICIT_SOURCE_NAMESPACE",
+  "source_contract_version": "JQUANTS_V2_V4_SOURCE_CONTRACT_V1"
+}

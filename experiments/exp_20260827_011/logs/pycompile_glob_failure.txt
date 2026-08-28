@@ -1,0 +1,6 @@
+phase=DEVELOPMENT_STATIC_CHECK
+command=uv run --extra modern-ml python -m py_compile src/quant_research/alpha_models/sspt_v2/*.py tests/test_sspt_v2.py
+observed_exit_code=1
+error=[Errno 22] Invalid argument: 'src/quant_research/alpha_models/sspt_v2/*.py'
+cause=PowerShell did not expand the wildcard for Python py_compile.
+effect=The chained targeted command did not start. This was not a formal or test execution.

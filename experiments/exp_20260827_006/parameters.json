@@ -1,0 +1,31 @@
+{
+  "classification": "METHOD_REPRODUCTION_ON_NEW_DATA",
+  "community_commit": "9c1152d8572550d0a869d898f65f208c52706747",
+  "community_license_claim": "MIT",
+  "community_repository": "doitforlove/DDGL-Net-2026",
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260827_006",
+  "formal_retry_limit": 0,
+  "gpu_shared_cap": {
+    "coarse_steps_max": 8,
+    "fine_steps_max": 30,
+    "hidden_dim_max": 96,
+    "max_assets": 32,
+    "max_vram_mib": 8192,
+    "micro_batch_size": 1
+  },
+  "horizons_hours": [
+    1,
+    24,
+    120,
+    480
+  ],
+  "paper_doi": "10.1145/3770855.3817765",
+  "paper_license_claim": "CC_BY_4_0",
+  "paper_metadata_status": "LEAD_SUPPLIED_CROSSREF_CONFIRMED",
+  "random_seed": 20260827,
+  "source_status": "UNVERIFIED_THIRD_PARTY",
+  "stage": "SYNTHETIC_CONTRACT_ONLY",
+  "torch_version": ">=2.12,<2.13"
+}
+

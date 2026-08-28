@@ -1,0 +1,61 @@
+{
+  "api_base": "https://api.jquants.com",
+  "api_key_environment_variable": "JQUANTS_API_KEY",
+  "global_http_request_cap": 60,
+  "logical_query_count": 5,
+  "logical_queries": [
+    {
+      "endpoint": "/v2/markets/calendar",
+      "id": "Q01_CALENDAR",
+      "parameters": {
+        "from": "2025-05-01",
+        "to": "2025-06-30"
+      },
+      "result_contract": "EXACT_DATE_RANGE"
+    },
+    {
+      "endpoint": "/v2/equities/master",
+      "id": "Q02_MASTER_NORMAL",
+      "parameters": {
+        "date": "2025-06-02"
+      },
+      "result_contract": "EXACT_RESPONSE_DATE"
+    },
+    {
+      "endpoint": "/v2/equities/master",
+      "id": "Q03_MASTER_WEEKEND_REJECTION",
+      "parameters": {
+        "date": "2025-06-01"
+      },
+      "result_contract": "EXPECTED_REJECTION"
+    },
+    {
+      "endpoint": "/v2/equities/bars/daily",
+      "id": "Q04_ALL_BARS_NORMAL",
+      "parameters": {
+        "date": "2025-06-02"
+      },
+      "result_contract": "EXACT_RESPONSE_DATE"
+    },
+    {
+      "endpoint": "/v2/equities/bars/daily",
+      "id": "Q05_6501_SPLIT_RANGE",
+      "parameters": {
+        "code": "6501",
+        "from": "2024-07-01",
+        "to": "2026-06-30"
+      },
+      "result_contract": "EXACT_CODE_AND_DATE_RANGE"
+    }
+  ],
+  "max_pages_per_logical_query": 25,
+  "pagination_contract": "NOT_A_RETRY; KEY_ONLY_FROM_IMMEDIATELY_PRECEDING_PAGE; NON_KEY_QUERY_PARAMETERS_IMMUTABLE; EACH_PAGE_HAS_OWN_RECEIPT_AND_SHA",
+  "pre_service_floor_probe": "OFFLINE_FIXTURE_ONLY",
+  "receipt_headers_persisted": false,
+  "redirects_allowed": false,
+  "retries": 0,
+  "sspt_bar_known_at": "16:30 Asia/Tokyo same official session",
+  "sspt_master_known_at": "08:00 Asia/Tokyo snapshot date",
+  "tips_execution_timing": "NO_SAME_CLOSE_EXECUTION",
+  "training_authorized": false
+}

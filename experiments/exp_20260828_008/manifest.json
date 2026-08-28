@@ -1,0 +1,31 @@
+{
+  "artifact_state": "CANDIDATE_FROZEN_PENDING_FRESH_PHASE2",
+  "candidate_freeze_manifest_sha256": "758be2c679ba655723c8df91aba30aa48b1937beb42870e15af7c35b7bde9598",
+  "classification": "JQUANTS_V2_BARS_MONTHLY_TRUSTED_REUSE_BINDING_REPAIR",
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260828_008",
+  "formal_execution_count": 0,
+  "formal_candidate": {
+    "command_sha256_no_newline": "27ba8511c21abd0695097add692f9833968db8d8472ce23427e0b3fdc3c5774e",
+    "exact_command_bytes_no_newline": 393,
+    "executed": false,
+    "freeze_manifest_sha256": "758be2c679ba655723c8df91aba30aa48b1937beb42870e15af7c35b7bde9598",
+    "launcher_sha256": "8ef5eea4c76978a68dcb315e6b9fb9a8e8dab888dee8060a8e78f25a57d27091"
+  },
+  "full_repository_test_count": 0,
+  "key_read_count": 0,
+  "git_commit_at_freeze": "6fd05b8690f99643002a9f310d3c6e0d8bae9346",
+  "git_worktree_clean": false,
+  "monthly_network_authorized": false,
+  "network_request_count": 0,
+  "parent_disposition": "PHASE2_NO_GO",
+  "parent_experiment_id": "exp_20260828_007",
+  "retry_count": 0,
+  "stage": "PHASE1_CANDIDATE_FROZEN",
+  "status": "PAUSED_FOR_FRESH_PHASE2",
+  "targeted_v1_regression": "PASS_37_SKIP_1_OF_38",
+  "targeted_v2_final": "PASS_24_OF_24",
+  "targeted_v2_runs": 3,
+  "terminal_status": "NEEDS_DATA",
+  "version": "JQUANTS_V2_BARS_MONTHLY_V2"
+}

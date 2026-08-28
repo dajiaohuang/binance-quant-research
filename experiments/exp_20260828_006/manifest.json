@@ -1,0 +1,47 @@
+{
+  "artifact_state": "JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_RECOVERED",
+  "classification": "OFFLINE_SOURCE_BOUND_RECOVERY_NOT_FINAL_PROMOTION",
+  "created_at": "2026-08-28T03:47:06.4275432+08:00",
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260828_006",
+  "formal_execution_count": 0,
+  "freeze_manifest": {
+    "bytes": 1737,
+    "file_count": 10,
+    "path": "experiments/exp_20260828_006/artifacts/expected_freeze_manifest.json",
+    "sha256": "d443e45f59a545609a3dec713b53c9ce0d8898ac541fb4f4fa1d071f06bb3928"
+  },
+  "git_commit": "6fd05b8690f99643002a9f310d3c6e0d8bae9346",
+  "git_dirty_entry_count_at_preregistration": 32,
+  "historical_eligibility_ready": false,
+  "key_read_count": 0,
+  "network_request_count": 0,
+  "offline_recovery_execution_count": 1,
+  "pacing_status": "RUNTIME_MONOTONIC_GUARD_INFERRED_NOT_REPLAYABLE",
+  "parent_experiment_id": "exp_20260828_005",
+  "raw_tree_sha256": "d14273cc49e9de82b0295e9ab76db8c01eea02e5f4e0af940400b64550b8209c",
+  "retry_count": 0,
+  "source_run_id": "exp_20260828_005_formal_001",
+  "status": "COMPLETED",
+  "independent_offline_audit": "PASS",
+  "audit_closure": {
+    "audit_evidence_path": "experiments/exp_20260828_006/logs/independent_offline_audit.txt",
+    "audit_evidence_sha256": "40c48ce2dc783804031da6fd39294525a0798caa093bac3316661071f82be0f8",
+    "audit_id": "EXP_20260828_006_INDEPENDENT_OFFLINE_AUDIT_001",
+    "auditor_task": "/root/jquants_postflight_auditor",
+    "capture_semantics": "ROOT_CAPTURED_FROM_AUDITOR_FINAL_NOT_A_CRYPTOGRAPHIC_SIGNATURE",
+    "closure_manifest_path": "experiments/exp_20260828_006/artifacts/closure_manifest.json",
+    "closure_manifest_sha256": "4e8488fa3ca8ec5636093edca43b1a709f8077803bac4f10e80951e726f98bf6",
+    "targeted_offline_tests": "PASS_12_OF_12_ONCE",
+    "verdict": "PASS"
+  },
+  "strict_eligible_count": 0,
+  "targeted_test_evidence": {
+    "errors": 0,
+    "failures": 0,
+    "skips": 0,
+    "tests": 12
+  },
+  "terminal_status": "NEEDS_MORE_DATA",
+  "version": "JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_RECOVERY_V1"
+}

@@ -1,0 +1,5 @@
+{
+  "result_exact_keys":["acquisition_manifest_sha256","expected_manifest_sha256","mini_inference","network_request_count","raw_file_count","raw_total_bytes","raw_verification_passes","schema_version","small_golden","source_files","terminal_status"],
+  "schema_version":"KRONOS_OFFLINE_REVERIFICATION_SCHEMA_V1",
+  "terminal_status":"NEEDS_MORE_DATA"
+}

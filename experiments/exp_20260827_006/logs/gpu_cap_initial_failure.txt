@@ -1,0 +1,14 @@
+Command:
+uv run --extra modern-ml python -m quant_research.alpha_models.smoke --config config/alpha_models/ddgl_16gb_gpu.json --output experiments/exp_20260827_006/artifacts/gpu_smoke_metrics_v2.json --checkpoint experiments/exp_20260827_006/artifacts/gpu_smoke_checkpoint_v2.pt
+
+Observed exit: 1
+Observed stderr:
+synthetic smoke failed: ValueError: Expected a torch.device with a specified index or an integer, but got:cuda
+
+Diagnosis:
+The new per-process CUDA allocator cap requires an indexed cuda device.  The
+minimal fix changes torch.device("cuda") to the current indexed CUDA device;
+the resource cap, model, data contract and training semantics are unchanged.
+
+No output or checkpoint was committed by this failed development smoke.  It
+was not formal and accessed no market data, validation/final data, IC or P&L.

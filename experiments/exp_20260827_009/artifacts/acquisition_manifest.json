@@ -1,0 +1,242 @@
+{
+  "application_network_policy": "HTTPS_ALLOWLIST_MAX_ONE_REDIRECT_NO_RETRY",
+  "expected_manifest_sha256": "3d2b370f172b17f090099d8ef2e3d9e530ed4d6cf4cb3c2ef57d04db7747d52e",
+  "files": [
+    {
+      "bytes": 225,
+      "final_host": "huggingface.co",
+      "final_path": "/api/resolve-cache/models/NeoQuasar/Kronos-mini/f4e68697d9d5aed55cef5c96aabc3376bcad9f81/config.json",
+      "http_status": 200,
+      "immutable_url": "https://huggingface.co/NeoQuasar/Kronos-mini/resolve/f4e68697d9d5aed55cef5c96aabc3376bcad9f81/config.json",
+      "ordinal": 1,
+      "path": "data/raw/kronos_official_v2/Kronos-mini/f4e68697d9d5aed55cef5c96aabc3376bcad9f81/config.json",
+      "redirect_count": 1,
+      "sha256": "70daca2cb11e3a979dd6b8ac12ee08e2aace877acf28f5b8dfb4fe5609736201"
+    },
+    {
+      "bytes": 16440776,
+      "final_host": "us.aws.cdn.hf.co",
+      "final_path": "/xet-bridge-us/6863e21fe97620813b3613ae/794f27892d7d06fa845dbbfeadafa7098dfc42d49932e32c9d1a4fd59d326950",
+      "http_status": 200,
+      "immutable_url": "https://huggingface.co/NeoQuasar/Kronos-mini/resolve/f4e68697d9d5aed55cef5c96aabc3376bcad9f81/model.safetensors",
+      "ordinal": 2,
+      "path": "data/raw/kronos_official_v2/Kronos-mini/f4e68697d9d5aed55cef5c96aabc3376bcad9f81/model.safetensors",
+      "redirect_count": 1,
+      "sha256": "a7d5f37e2e9fbd9891f7d7d4f72574512dd1f704fee14223e0a8cd0fbf54197c"
+    },
+    {
+      "bytes": 228,
+      "final_host": "huggingface.co",
+      "final_path": "/api/resolve-cache/models/NeoQuasar/Kronos-small/901c26c1332695a2a8f243eb2f37243a37bea320/config.json",
+      "http_status": 200,
+      "immutable_url": "https://huggingface.co/NeoQuasar/Kronos-small/resolve/901c26c1332695a2a8f243eb2f37243a37bea320/config.json",
+      "ordinal": 3,
+      "path": "data/raw/kronos_official_v2/Kronos-small/901c26c1332695a2a8f243eb2f37243a37bea320/config.json",
+      "redirect_count": 1,
+      "sha256": "5e0f6a605d5f81b5c9b559fe5cf716a1acb041c744e6f41bd05b097b7a685396"
+    },
+    {
+      "bytes": 98980656,
+      "final_host": "us.aws.cdn.hf.co",
+      "final_path": "/xet-bridge-us/6862ae0e784f3246d2bd0fe3/f5064f305e84e1cb10e92cacdd84cdcdf63fa102cefea4493f9621276837ddef",
+      "http_status": 200,
+      "immutable_url": "https://huggingface.co/NeoQuasar/Kronos-small/resolve/901c26c1332695a2a8f243eb2f37243a37bea320/model.safetensors",
+      "ordinal": 4,
+      "path": "data/raw/kronos_official_v2/Kronos-small/901c26c1332695a2a8f243eb2f37243a37bea320/model.safetensors",
+      "redirect_count": 1,
+      "sha256": "b082dfcbd8e8c142a725c8bbb99781802f38fec81210e13479effb32b3c3e020"
+    },
+    {
+      "bytes": 228,
+      "final_host": "huggingface.co",
+      "final_path": "/api/resolve-cache/models/NeoQuasar/Kronos-base/2b554741eca47781b64468546e77fef3e85130e6/config.json",
+      "http_status": 200,
+      "immutable_url": "https://huggingface.co/NeoQuasar/Kronos-base/resolve/2b554741eca47781b64468546e77fef3e85130e6/config.json",
+      "ordinal": 5,
+      "path": "data/raw/kronos_official_v2/Kronos-base/2b554741eca47781b64468546e77fef3e85130e6/config.json",
+      "redirect_count": 1,
+      "sha256": "77ebc3038b647709b92be002f801d72e1a385f4c8c2c5aa1cc6cf21fcfe44eb2"
+    },
+    {
+      "bytes": 409264008,
+      "final_host": "us.aws.cdn.hf.co",
+      "final_path": "/xet-bridge-us/6862c53843c5d350ace97398/d5d9fb8349bb54389d86f99586c57d4133b2c112564d0e29d1455ce564570484",
+      "http_status": 200,
+      "immutable_url": "https://huggingface.co/NeoQuasar/Kronos-base/resolve/2b554741eca47781b64468546e77fef3e85130e6/model.safetensors",
+      "ordinal": 6,
+      "path": "data/raw/kronos_official_v2/Kronos-base/2b554741eca47781b64468546e77fef3e85130e6/model.safetensors",
+      "redirect_count": 1,
+      "sha256": "abff193acab6db1a0368e9773e75799d11403b6d054ee6d5f0a11aeabc5f4b83"
+    },
+    {
+      "bytes": 301,
+      "final_host": "huggingface.co",
+      "final_path": "/api/resolve-cache/models/NeoQuasar/Kronos-Tokenizer-2k/26966d0035065a0cae0ebad7af8ece35bc1fb51c/config.json",
+      "http_status": 200,
+      "immutable_url": "https://huggingface.co/NeoQuasar/Kronos-Tokenizer-2k/resolve/26966d0035065a0cae0ebad7af8ece35bc1fb51c/config.json",
+      "ordinal": 7,
+      "path": "data/raw/kronos_official_v2/Kronos-Tokenizer-2k/26966d0035065a0cae0ebad7af8ece35bc1fb51c/config.json",
+      "redirect_count": 1,
+      "sha256": "0b30a443affb03e05a876a083857de9164f899feb7b4d261da02c485c9a3e3b6"
+    },
+    {
+      "bytes": 15842376,
+      "final_host": "us.aws.cdn.hf.co",
+      "final_path": "/xet-bridge-us/6863a1561dbb3c2c5a8bd739/244b7367606f580cf4de8a5a78930746849b70c16713a0ad3a19aba7ff325bb9",
+      "http_status": 200,
+      "immutable_url": "https://huggingface.co/NeoQuasar/Kronos-Tokenizer-2k/resolve/26966d0035065a0cae0ebad7af8ece35bc1fb51c/model.safetensors",
+      "ordinal": 8,
+      "path": "data/raw/kronos_official_v2/Kronos-Tokenizer-2k/26966d0035065a0cae0ebad7af8ece35bc1fb51c/model.safetensors",
+      "redirect_count": 1,
+      "sha256": "b97ec46b3b72160509e289183eaf7bdf5f0dac5bb9b49522f6d46638a99a8717"
+    },
+    {
+      "bytes": 301,
+      "final_host": "huggingface.co",
+      "final_path": "/api/resolve-cache/models/NeoQuasar/Kronos-Tokenizer-base/0e0117387f39004a9016484a186a908917e22426/config.json",
+      "http_status": 200,
+      "immutable_url": "https://huggingface.co/NeoQuasar/Kronos-Tokenizer-base/resolve/0e0117387f39004a9016484a186a908917e22426/config.json",
+      "ordinal": 9,
+      "path": "data/raw/kronos_official_v2/Kronos-Tokenizer-base/0e0117387f39004a9016484a186a908917e22426/config.json",
+      "redirect_count": 1,
+      "sha256": "2366e7ccfec76cbc19cf3c4c1b9c5d901be336ca1e83f2d2292c9bff381b77a2"
+    },
+    {
+      "bytes": 15842368,
+      "final_host": "us.aws.cdn.hf.co",
+      "final_path": "/xet-bridge-us/6862c18f3f46c4f43c817d10/37f0525a4e4797e437229dfddc6f9623eac479961a3f0313a6e2dcd0e96c6fc5",
+      "http_status": 200,
+      "immutable_url": "https://huggingface.co/NeoQuasar/Kronos-Tokenizer-base/resolve/0e0117387f39004a9016484a186a908917e22426/model.safetensors",
+      "ordinal": 10,
+      "path": "data/raw/kronos_official_v2/Kronos-Tokenizer-base/0e0117387f39004a9016484a186a908917e22426/model.safetensors",
+      "redirect_count": 1,
+      "sha256": "59d85f6af76a2c3b8240ea06cb21db4213b4eeca053f246b23e29cf832fc6bee"
+    },
+    {
+      "bytes": 1062,
+      "final_host": "raw.githubusercontent.com",
+      "final_path": "/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/LICENSE",
+      "http_status": 200,
+      "immutable_url": "https://raw.githubusercontent.com/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/LICENSE",
+      "ordinal": 11,
+      "path": "data/raw/kronos_official_v2/source/67b630e67f6a18c9e9be918d9b4337c960db1e9a/LICENSE",
+      "redirect_count": 0,
+      "sha256": "acb2d194d378204e5f2be4dcd24d39ecac437903620c790c3315a96dab388fdc"
+    },
+    {
+      "bytes": 412,
+      "final_host": "raw.githubusercontent.com",
+      "final_path": "/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/model/__init__.py",
+      "http_status": 200,
+      "immutable_url": "https://raw.githubusercontent.com/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/model/__init__.py",
+      "ordinal": 12,
+      "path": "data/raw/kronos_official_v2/source/67b630e67f6a18c9e9be918d9b4337c960db1e9a/model/__init__.py",
+      "redirect_count": 0,
+      "sha256": "f8f856ca3fedadcaac97e196be23d1aeda1c3c9ffe8903d66d43ea3bcac6240c"
+    },
+    {
+      "bytes": 30133,
+      "final_host": "raw.githubusercontent.com",
+      "final_path": "/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/model/kronos.py",
+      "http_status": 200,
+      "immutable_url": "https://raw.githubusercontent.com/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/model/kronos.py",
+      "ordinal": 13,
+      "path": "data/raw/kronos_official_v2/source/67b630e67f6a18c9e9be918d9b4337c960db1e9a/model/kronos.py",
+      "redirect_count": 0,
+      "sha256": "0a5f90282e2039c2de0771473419715c845def154896dbd0f5747837e6241032"
+    },
+    {
+      "bytes": 23426,
+      "final_host": "raw.githubusercontent.com",
+      "final_path": "/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/model/module.py",
+      "http_status": 200,
+      "immutable_url": "https://raw.githubusercontent.com/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/model/module.py",
+      "ordinal": 14,
+      "path": "data/raw/kronos_official_v2/source/67b630e67f6a18c9e9be918d9b4337c960db1e9a/model/module.py",
+      "redirect_count": 0,
+      "sha256": "a07edbadc0e96804c8158c021bbc6063bb7cc43b34d7fc470d5c8ff2005a409f"
+    },
+    {
+      "bytes": 5852037,
+      "final_host": "raw.githubusercontent.com",
+      "final_path": "/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/finetune_csv/data/HK_ali_09988_kline_5min_all.csv",
+      "http_status": 200,
+      "immutable_url": "https://raw.githubusercontent.com/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/finetune_csv/data/HK_ali_09988_kline_5min_all.csv",
+      "ordinal": 15,
+      "path": "data/raw/kronos_official_v2/samples/finetune_csv/data/HK_ali_09988_kline_5min_all.csv",
+      "redirect_count": 0,
+      "sha256": "65725aeebc3de8f59725f9b717b8621a1ce80b014288a6d64e05ac7a303f527f"
+    },
+    {
+      "bytes": 147854,
+      "final_host": "raw.githubusercontent.com",
+      "final_path": "/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/tests/data/regression_input.csv",
+      "http_status": 200,
+      "immutable_url": "https://raw.githubusercontent.com/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/tests/data/regression_input.csv",
+      "ordinal": 16,
+      "path": "data/raw/kronos_official_v2/samples/tests/data/regression_input.csv",
+      "redirect_count": 0,
+      "sha256": "aa5efe0121b7cc098db1a169ed38f9878681ef14a93c85d54a618fd073048899"
+    },
+    {
+      "bytes": 2814,
+      "final_host": "raw.githubusercontent.com",
+      "final_path": "/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/tests/data/generate_regression_output.py",
+      "http_status": 200,
+      "immutable_url": "https://raw.githubusercontent.com/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/tests/data/generate_regression_output.py",
+      "ordinal": 17,
+      "path": "data/raw/kronos_official_v2/samples/tests/data/generate_regression_output.py",
+      "redirect_count": 0,
+      "sha256": "66e29271b0ab2d5a5ee2464598b3d44e60a0a97f71f2887951b1fe59288bb826"
+    },
+    {
+      "bytes": 674,
+      "final_host": "raw.githubusercontent.com",
+      "final_path": "/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/tests/data/regression_output_256.csv",
+      "http_status": 200,
+      "immutable_url": "https://raw.githubusercontent.com/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/tests/data/regression_output_256.csv",
+      "ordinal": 18,
+      "path": "data/raw/kronos_official_v2/samples/tests/data/regression_output_256.csv",
+      "redirect_count": 0,
+      "sha256": "5064d09ef7fe186b9c2aeed9dfdf234721b4b182a8305d92db9d3d5d6b37f29e"
+    },
+    {
+      "bytes": 673,
+      "final_host": "raw.githubusercontent.com",
+      "final_path": "/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/tests/data/regression_output_512.csv",
+      "http_status": 200,
+      "immutable_url": "https://raw.githubusercontent.com/shiyu-coder/Kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/tests/data/regression_output_512.csv",
+      "ordinal": 19,
+      "path": "data/raw/kronos_official_v2/samples/tests/data/regression_output_512.csv",
+      "redirect_count": 0,
+      "sha256": "bb69a96cbfcf385ba433b8db7e9630b45a4b3032d091d12a7b0bac5996bad18b"
+    }
+  ],
+  "logical_request_count": 19,
+  "network_retry_count": 0,
+  "raw_file_count": 19,
+  "raw_total_bytes": 562430552,
+  "schema_version": "KRONOS_ACQUISITION_MANIFEST_V2",
+  "vendored_sources": [
+    {
+      "bytes": 1062,
+      "path": "third_party/kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/LICENSE",
+      "sha256": "acb2d194d378204e5f2be4dcd24d39ecac437903620c790c3315a96dab388fdc"
+    },
+    {
+      "bytes": 412,
+      "path": "third_party/kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/model/__init__.py",
+      "sha256": "f8f856ca3fedadcaac97e196be23d1aeda1c3c9ffe8903d66d43ea3bcac6240c"
+    },
+    {
+      "bytes": 30133,
+      "path": "third_party/kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/model/kronos.py",
+      "sha256": "0a5f90282e2039c2de0771473419715c845def154896dbd0f5747837e6241032"
+    },
+    {
+      "bytes": 23426,
+      "path": "third_party/kronos/67b630e67f6a18c9e9be918d9b4337c960db1e9a/model/module.py",
+      "sha256": "a07edbadc0e96804c8158c021bbc6063bb7cc43b34d7fc470d5c8ff2005a409f"
+    }
+  ]
+}

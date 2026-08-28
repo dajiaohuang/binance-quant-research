@@ -1,0 +1,11 @@
+command=uv run python -m quant_research.alpha_models.data.jquants_v2.collector --dry-plan
+kind=DEVELOPMENT_NOT_FORMAL
+exit_code=0
+wall_seconds=0.2392055
+logical_query_count=5
+max_pages_per_query=25
+global_http_cap=60
+query_plan_sha256=fdb31bf4266e04c581836678698e3a621dcf47c724df24d17b434093055ca07b
+network_request_count=0
+retry_count=0
+api_key_environment_read=false

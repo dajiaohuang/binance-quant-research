@@ -1,0 +1,29 @@
+from __future__ import annotations
+
+from ..jquants_v2_bars_monthly_v1.contracts import canonical_json_bytes, json_file_bytes, sha256_bytes
+
+
+EXPERIMENT_ID = "exp_20260828_011"
+VERSION = "JQUANTS_V2_BARS_MONTHLY_V5_RECOVERY"
+BATCH_ID = "exp_20260828_010_monthly_formal_002"
+FAILED_BATCH_ID = "exp_20260828_010_monthly_formal_001"
+FAILED_ATTEMPT_ID = "jquants-bars-202407-attempt001"
+RECOVERY_ATTEMPT_ID = "jquants-bars-202407-attempt002"
+FAILED_STAGING_RELATIVE = (
+    "data/raw/jquants_v2_bars_monthly_v4/months/2024-07/"
+    ".jquants-bars-202407-attempt001.staging"
+)
+EXPECTED_ADOPTED_DATES = (
+    "2024-07-02",
+    "2024-07-03",
+    "2024-07-04",
+    "2024-07-05",
+)
+EXPECTED_FIRST_NETWORK_DATE = "2024-07-08"
+EXPECTED_PARTIAL_RAW_TREE_SHA256 = (
+    "2e75b8dae0f7e13b7b65e18111143279075df4d231120854f813e864a08a5493"
+)
+RECOVERY_REGISTRY_SCHEMA = "JQUANTS_V2_BARS_MONTHLY_V5_RECOVERY_REGISTRY_V1"
+RECOVERY_CATALOG_SCHEMA = "JQUANTS_V2_BARS_MONTHLY_V5_RECOVERY_CATALOG_V1"
+_RECOVERY_DOMAIN = b"JQUANTS_V2_BARS_MONTHLY_V5_RECOVERY_REGISTRY\x00"
+

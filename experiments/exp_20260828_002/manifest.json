@@ -1,0 +1,28 @@
+{
+  "artifact_state": "JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_CONTRACT_VERIFIED",
+  "candidate_bindings": {
+    "formal_command_no_newline_sha256": "558041ad0e392a1c97892cb5a2d805d42002179147b2303ca8b79d7afab324da",
+    "frozen_hashes_path": "experiments/exp_20260828_002/artifacts/frozen_hashes.json",
+    "implementation_tree_sha256": "2613e4b53ca1f3e885babc41e842e0425f38a8ed00a717729a736b2dff03e764",
+    "query_plan_sha256": "fdb31bf4266e04c581836678698e3a621dcf47c724df24d17b434093055ca07b",
+    "test_sha256": "0f10cd0a7b69dced50b1bfa86621c666f1a5a8b9bec2aab2a7cda0e81e54dfb5"
+  },
+  "classification": "SOURCE_PROBE_AND_TYPED_DATA_ADAPTER_CONTRACT",
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260828_002",
+  "formal_execution_count": 0,
+  "historical_eligibility_ready": false,
+  "network_request_count": 0,
+  "primary_change": "JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_CONTRACT_V1",
+  "real_data_accessed": false,
+  "referenced_skills": [
+    ".codex/skills/quant-strategy-research/SKILL.md"
+  ],
+  "retry_count": 0,
+  "run_id": "exp_20260828_002_formal_001",
+  "stage": "OFFLINE_CONTRACT_ONLY",
+  "status": "PREFORMAL_AWAITING_PHASE2_REVIEW",
+  "strict_eligible_count": 0,
+  "terminal_status": "NEEDS_MORE_DATA",
+  "version": "JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_CONTRACT_V1"
+}

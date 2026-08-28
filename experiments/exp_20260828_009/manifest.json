@@ -1,0 +1,33 @@
+{
+  "artifact_state": "FORMAL_BOOTSTRAP_POSTFLIGHT_CLOSED",
+  "candidate_freeze_manifest_sha256": "c137e0bdc8a3b16ef13ef6ad1d918038a49310d5ba85150f8be8de3159527873",
+  "classification": "JQUANTS_V2_BARS_MONTHLY_ZERO_WRITE_PREFLIGHT_AND_TRUSTED_PLANNER_REPAIR",
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260828_009",
+  "formal_execution_count": 1,
+  "formal_candidate": {
+    "command_sha256_no_newline": "15696cf13895fd7bce91940f66d21c53102a29eb5d76fbeefa504df4f582d654",
+    "exact_command_bytes_no_newline": 393,
+    "executed": true,
+    "exit_code": 0,
+    "freeze_manifest_sha256": "c137e0bdc8a3b16ef13ef6ad1d918038a49310d5ba85150f8be8de3159527873",
+    "launcher_sha256": "fc68a3f59da8bd6e9c2ab55ad425e8e803d24a7140ffee00a7539b65a0df8293"
+  },
+  "full_repository_test_count": 0,
+  "key_read_count": 1,
+  "git_commit_at_freeze": "6fd05b8690f99643002a9f310d3c6e0d8bae9346",
+  "git_worktree_clean": false,
+  "monthly_network_authorized": false,
+  "network_request_count": 3,
+  "parent_disposition": "FRESH_PHASE2_NO_GO",
+  "parent_experiment_id": "exp_20260828_008",
+  "retry_count": 0,
+  "postflight_closure_manifest_sha256": "d850789b436bb918b3c621085a0ea7cc76b4c9ba6ab3c7d5a2a60373ffae650a",
+  "stage": "PHASE4_POSTFLIGHT_CLOSED",
+  "status": "COMPLETE",
+  "targeted_prior_regressions": "PASS_61_SKIP_1_OF_62",
+  "targeted_v3": "PASS_15_OF_15",
+  "terminal_status": "JQUANTS_V2_FREE_ALL_MARKET_DAILY_BARS_BOOTSTRAP_VALIDATED / NEEDS_MORE_DATA",
+  "user_future_network_authorization_recorded": true,
+  "version": "JQUANTS_V2_BARS_MONTHLY_V3"
+}

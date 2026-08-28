@@ -1,0 +1,13 @@
+experiment_id=exp_20260827_010
+phase=POSTFLIGHT_TARGETED
+command=uv run --extra modern-ml python -m unittest tests.test_kronos_offline_reverification -v
+execution_count=1
+retry_count=0
+observed_exit_code=0
+observed_wall_seconds=3.4196361
+tests_run=11
+tests_passed=11
+tests_failed=0
+result=PASS
+network_request_count=0
+note=Frozen targeted suite executed once after the contemporaneous formal ledger and formal-count record update; it was not rerun.

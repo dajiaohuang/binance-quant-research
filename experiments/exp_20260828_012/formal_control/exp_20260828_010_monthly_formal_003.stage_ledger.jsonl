@@ -1,0 +1,4 @@
+{"batch_id":"exp_20260828_010_monthly_formal_003","event":"READ_ONLY_GENERIC_RECOVERY_PREFLIGHT_AND_O_EXCL_CONTROL_PASS"}
+{"batch_id":"exp_20260828_010_monthly_formal_003","event":"GENERIC_POINTER_REGISTRY_EMITTED_BEFORE_ENV"}
+{"batch_id":"exp_20260828_010_monthly_formal_003","event":"ENV_ONLY_KEY_READY_AFTER_GENERIC_POINTER_REGISTRY"}
+{"batch_id":"exp_20260828_010_monthly_formal_003","event":"FORMAL_RECOVERY_EXIT_0"}

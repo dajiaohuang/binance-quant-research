@@ -1,0 +1,49 @@
+{
+  "checkpoint_contract": {
+    "load_api": "torch.load(weights_only=True)",
+    "top_level_exact_keys": [
+      "config_sha256",
+      "state_dict"
+    ]
+  },
+  "config_schema": {
+    "schema_version": "ddgl_synthetic_config_v1",
+    "top_level_exact_keys": [
+      "architecture",
+      "empirical_authorized",
+      "experiment_id",
+      "horizon_hours",
+      "model_name",
+      "optimization",
+      "runtime",
+      "schema_version",
+      "seed",
+      "source",
+      "stage",
+      "synthetic"
+    ],
+    "unknown_fields_allowed": false
+  },
+  "input_contract": {
+    "coarse_shape": "[sample,time,asset,feature]",
+    "fine_shape": "[sample,time,asset,feature]",
+    "global_market_shape": "[sample,time,feature]",
+    "known_at_rule": "strictly increasing and <= formation_time_ms",
+    "label_member_allowed": false
+  },
+  "metrics_contract": {
+    "artifact_state_success": "SYNTHETIC_CONTRACT_VERIFIED",
+    "empirical_authorized": false,
+    "historical_eligibility_ready": false,
+    "real_data_accessed": false,
+    "terminal_status": "NEEDS_MORE_DATA"
+  },
+  "model_contract": {
+    "cross_sectional_encoder": "dynamic attention graph without symbol embeddings",
+    "fusion": "feature-wise coarse/fine/global softmax",
+    "head": "base plus gated residual mixture of experts",
+    "output_shape": "[sample,asset]",
+    "temporal_encoder": "GRU"
+  },
+  "version": "ddgl_synthetic_contract_v1"
+}

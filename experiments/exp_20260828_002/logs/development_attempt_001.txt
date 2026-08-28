@@ -1,0 +1,13 @@
+command=uv run python -m unittest tests.test_jquants_v2 -v
+kind=DEVELOPMENT_NOT_FORMAL
+exit_code=1
+tests_run=15
+passed=13
+failed=1
+errors=1
+skipped=0
+failure=test_null_zero_and_adjusted_field_relationships expected ADJUSTED_PRICE_RATIO but fixture violated OHLC_IDENTITY first
+error=test_secret_redaction_atomic_publish_and_loader_tamper loader used exact type(Path), rejecting WindowsPath subclass as RUN_ROOT
+network_request_count=0
+retry_count=0
+fix=accept pathlib Path subclasses; change the negative adjusted-price fixture so OHLC remains valid while cross-field ratio is inconsistent

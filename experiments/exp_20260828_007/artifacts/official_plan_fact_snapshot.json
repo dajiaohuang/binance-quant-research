@@ -1,0 +1,15 @@
+{
+  "facts": {
+    "all_market_daily_bars_query": "DATE_ONLY",
+    "free_access_history": "2_YEARS",
+    "free_access_publication_delay": "12_WEEKS",
+    "free_rate_limit_requests_per_minute": 5
+  },
+  "observed_at": "2026-08-28",
+  "semantics": "CANONICAL_FACT_SNAPSHOT_NOT_RAW_BYTE_WEBPAGE_ARCHIVE",
+  "source_urls": [
+    "https://jpx-jquants.com/en/spec/data-spec",
+    "https://jpx-jquants.com/en/spec/rate-limits",
+    "https://jpx-jquants.com/en/spec/eq-bars-daily"
+  ]
+}

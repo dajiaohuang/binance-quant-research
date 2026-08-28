@@ -1,0 +1,12 @@
+{
+  "adopted_network_date_count": 28,
+  "automatic_retries": 0,
+  "batch_id": "exp_20260828_010_monthly_formal_003",
+  "connection_policy": "ONE_VERIFIED_HTTPS_CONNECTION_PER_MONTH_ATTEMPT",
+  "expected_first_network_date": "2024-08-13",
+  "experiment_id": "exp_20260828_012",
+  "month_attempt_suffix": "attempt003",
+  "network_date_count_after_adoption": 434,
+  "pointer_only_no_raw_copy": true,
+  "version": "JQUANTS_V2_BARS_MONTHLY_V6_OPERATIONAL_RECOVERY"
+}

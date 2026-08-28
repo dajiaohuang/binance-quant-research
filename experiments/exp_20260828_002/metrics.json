@@ -1,0 +1,22 @@
+{
+  "adapter_tests_failed": 0,
+  "adapter_tests_passed": 19,
+  "artifact_state": "JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_CONTRACT_VERIFIED",
+  "development_attempt_count": 3,
+  "development_failures_retained": true,
+  "empirical_authorized": false,
+  "formal_execution_count": 0,
+  "historical_eligibility_ready": false,
+  "network_request_count": 0,
+  "formal_candidate_command_sha256": "558041ad0e392a1c97892cb5a2d805d42002179147b2303ca8b79d7afab324da",
+  "global_http_cap": 60,
+  "implementation_tree_sha256": "2613e4b53ca1f3e885babc41e842e0425f38a8ed00a717729a736b2dff03e764",
+  "logical_query_count": 5,
+  "max_pages_per_query": 25,
+  "py_compile": "PASS",
+  "real_data_accessed": false,
+  "retry_count": 0,
+  "strict_eligible_count": 0,
+  "targeted_tests": "PASS_19_OF_19",
+  "terminal_status": "NEEDS_MORE_DATA"
+}

@@ -1,0 +1,55 @@
+{
+  "artifact_state": "CONTROLLED_FORMAL_FAILURE_PARTIAL_STAGING_RETAINED",
+  "classification": "SOURCE_PROBE_RUNTIME_AUTHORITY_REMEDIATION",
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260828_004",
+  "formal_execution_count": 1,
+  "formal_candidate": {
+    "command_sha256_no_newline": "cd2a88ef0324e3d1d0125d1198be42697c079410e12562e62401db7dcf6e0610",
+    "exact_command_bytes_no_newline": 380,
+    "executed": true,
+    "exit_code": 20,
+    "run_id": "exp_20260828_004_formal_001"
+  },
+  "freeze_manifest": {
+    "bytes": 1981,
+    "path": "experiments/exp_20260828_004/artifacts/expected_freeze_manifest.json",
+    "row_count": 10,
+    "sha256": "72005cdfe34c0fea8f6161dcd1d421361faf3b401992f4cdc0a335b8bda38941"
+  },
+  "historical_eligibility_ready": false,
+  "network_request_count": 2,
+  "network_request_count_evidence": "ONE_RESPONSE_PERSISTED; SECOND_RESPONSE_INFERRED_FROM_FAIL_CLOSED_MASTER_FIELDS_CONTROL_FLOW",
+  "parent_experiment_id": "exp_20260828_003",
+  "parent_phase2_result": "FRESH_PHASE2_GO_FOR_EXACTLY_ONE_FORMAL_ATTEMPT",
+  "phase2_authorized": true,
+  "postflight_audit": {
+    "authorization_absent": true,
+    "final_absent": true,
+    "freeze_files_matching": 10,
+    "ledger_exact": true,
+    "result": "PASS",
+    "staging_retained": true
+  },
+  "primary_change": "AUTHORITY_BEFORE_IMPORT_EXACT_ONCE_AND_PRESENCE_UNKNOWN",
+  "q01_persisted_response": {
+    "bytes": 166,
+    "path": "data/raw/jquants_v2_v3/runs/.exp_20260828_004_formal_001.staging/responses/01_Q01_CALENDAR_page_0001.json",
+    "row_count": 4,
+    "sha256": "97f544ad7fecdc2189383b5fdcef925b94914be00e2fd4a59aafb3d8cd63bdee"
+  },
+  "real_data_accessed": true,
+  "retry_count": 0,
+  "run_id": "exp_20260828_004_formal_001",
+  "stage": "PHASE4_CLOSED",
+  "status": "INCONCLUSIVE",
+  "strict_eligible_count": 0,
+  "targeted_test_evidence": {
+    "errors": 0,
+    "failures": 0,
+    "skips": 0,
+    "tests": 31
+  },
+  "terminal_status": "INCONCLUSIVE",
+  "version": "JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_CONTRACT_V3"
+}

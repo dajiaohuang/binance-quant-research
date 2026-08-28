@@ -1,0 +1,21 @@
+{
+  "automatic_retries": 0,
+  "bootstrap_final_relative": "data/raw/jquants_v2_bars_monthly_v3/runs/exp_20260828_009_bootstrap_formal_001",
+  "catalog_policy": "DETERMINISTIC_FROM_23_IMMUTABLE_SHARDS_NO_CLOBBER",
+  "experiment_id": "exp_20260828_010",
+  "first_request_cooldown_ns": 15000000000,
+  "max_pages_per_date": 8,
+  "month_count": 23,
+  "network_date_count": 462,
+  "redirects": 0,
+  "reuse_dates": [
+    "2024-07-01",
+    "2025-03-28",
+    "2026-05-29"
+  ],
+  "rolling_request_limit_per_minute": 5,
+  "session_date_count": 465,
+  "source_experiment": "exp_20260828_009",
+  "spacing_ns": 15000000000,
+  "version": "JQUANTS_V2_BARS_MONTHLY_V4"
+}

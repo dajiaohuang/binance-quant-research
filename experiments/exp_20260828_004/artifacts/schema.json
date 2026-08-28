@@ -1,0 +1,8 @@
+{
+  "attempt_exit_codes": {"ALREADY_CONSUMED":47,"CLEANUP":46,"COLLECTOR":45,"ENV_VALIDATE_OR_HANDOFF":44,"ENV_READ":43,"FREEZE_PREFLIGHT":42,"SELF_HASH":41,"CONTROL_IO":40},
+  "attempt_ledger_row_keys": ["event","exit_code","seq","stage"],
+  "attempt_ledger_stages": ["SELF_HASH","FREEZE_PREFLIGHT","ENV_FILE_READ","VALIDATE","COLLECTOR","FINAL_CLEANUP"],
+  "attempt_reservation_keys": ["experiment_id","run_id"],
+  "listing_presence_status": ["UNKNOWN"],
+  "schema_version": "JQUANTS_V2_FREE_OFFLINE_SCHEMA_V3"
+}

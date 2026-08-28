@@ -1,0 +1,77 @@
+{
+  "files": [
+    {
+      "bytes": 211,
+      "path": ".env.example",
+      "sha256": "83acd15bafdac046631aa4ff50f5738add23d35040b9d7a0e798c48d54f6e0c8"
+    },
+    {
+      "bytes": 825,
+      "path": "experiments/exp_20260828_002/artifacts/schema.json",
+      "sha256": "879e40d663d61bc358aa7007cdce712979292510fa81dfee10d6cc3363952a73"
+    },
+    {
+      "bytes": 1151,
+      "path": "experiments/exp_20260828_002/artifacts/source_contract.json",
+      "sha256": "3e455dfc1557a9f9079f43c013896aec89e235eb2b4adae6e028e33dfac38085"
+    },
+    {
+      "bytes": 703,
+      "path": "experiments/exp_20260828_002/commands.txt",
+      "sha256": "3ff96c45cfada765bc32c50a831739210c68156e47646a7d78183557eef34090"
+    },
+    {
+      "bytes": 1926,
+      "path": "experiments/exp_20260828_002/hypothesis.md",
+      "sha256": "c9e01604de52eacd0f3a942428de4bb99a661704ff43208b62ac8ac191708172"
+    },
+    {
+      "bytes": 1795,
+      "path": "experiments/exp_20260828_002/parameters.json",
+      "sha256": "1fbe82137936c0b1408de7609d3ce8176bc25ddf196e4059c9c85f0c95703eea"
+    },
+    {
+      "bytes": 67,
+      "path": "src/quant_research/alpha_models/data/__init__.py",
+      "sha256": "5315dcf92c8ebae60e30fb79a562c57e04b86ad13d20282114369c32b042c1d9"
+    },
+    {
+      "bytes": 470,
+      "path": "src/quant_research/alpha_models/data/jquants_v2/__init__.py",
+      "sha256": "0553751fcdfca8c48ac59bccdec360d2cbe78cd24f3635b169d9c9925c64dbd4"
+    },
+    {
+      "bytes": 10248,
+      "path": "src/quant_research/alpha_models/data/jquants_v2/adapters.py",
+      "sha256": "411ec1e2616a09e8d77a1b995cfd99b73cc276fc1a92cd0ce70f538baf7fae9f"
+    },
+    {
+      "bytes": 16742,
+      "path": "src/quant_research/alpha_models/data/jquants_v2/collector.py",
+      "sha256": "e4d36f9221d9135fc84fb2a0c7d9466f74be7240e17339b86201d78d55e661a3"
+    },
+    {
+      "bytes": 14641,
+      "path": "src/quant_research/alpha_models/data/jquants_v2/contracts.py",
+      "sha256": "03cfd763b2193972be29519c5918b95fd6d10aa4ef9cdc787e186298494d0bc8"
+    },
+    {
+      "bytes": 21784,
+      "path": "src/quant_research/alpha_models/data/jquants_v2/loader.py",
+      "sha256": "f34d02c2313450bd2c7238888baa3296bdcc058931b64be87a3df22e2e81c8d7"
+    },
+    {
+      "bytes": 21180,
+      "path": "tests/test_jquants_v2.py",
+      "sha256": "0f10cd0a7b69dced50b1bfa86621c666f1a5a8b9bec2aab2a7cda0e81e54dfb5"
+    }
+  ],
+  "formal_candidate_command": "uv run python -m quant_research.alpha_models.data.jquants_v2.collector --execute",
+  "formal_candidate_command_no_newline_sha256": "558041ad0e392a1c97892cb5a2d805d42002179147b2303ca8b79d7afab324da",
+  "implementation_tree": {
+    "file_count": 6,
+    "preimage": "canonical compact sorted-key JSON array of path/bytes/sha256 rows in listed source order",
+    "sha256": "2613e4b53ca1f3e885babc41e842e0425f38a8ed00a717729a736b2dff03e764"
+  },
+  "schema_version": "JQUANTS_V2_PHASE2_CANDIDATE_FREEZE_V1"
+}

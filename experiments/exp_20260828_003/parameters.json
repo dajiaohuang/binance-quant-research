@@ -1,0 +1,21 @@
+{
+  "api_base": "https://api.jquants.com",
+  "api_key_environment_variable": "JQUANTS_API_KEY",
+  "global_http_cap": 60,
+  "logical_query_count": 5,
+  "max_pages_per_query": 25,
+  "queries": [
+    {"id":"Q01_CALENDAR","path":"/v2/markets/calendar","parameters":{"from":"2025-03-28","to":"2025-03-31"},"coverage":"EVERY_CIVIL_DATE_EXACTLY_ONCE_AND_NONEMPTY"},
+    {"id":"Q02_MASTER_NORMAL","path":"/v2/equities/master","parameters":{"code":"9433","date":"2025-03-31"},"coverage":"NONEMPTY_ALL_ROWS_EXACT_CODE_AND_DATE"},
+    {"id":"Q03_MASTER_NONTRADING_MAPPING","path":"/v2/equities/master","parameters":{"code":"9433","date":"2025-03-30"},"coverage":"HTTP200_NONEMPTY_ALL_ROWS_EXACT_CODE_AND_RETURNED_DATE_2025-03-31"},
+    {"id":"Q04_ALL_BARS_NORMAL","path":"/v2/equities/bars/daily","parameters":{"date":"2025-03-28"},"coverage":"NONEMPTY_ALL_ROWS_EXACT_DATE"},
+    {"id":"Q05_9433_SPLIT_RANGE","path":"/v2/equities/bars/daily","parameters":{"code":"9433","from":"2025-03-27","to":"2025-04-02"},"coverage":"NONEMPTY_EXACT_CODE_AND_EXPECTED_SESSION_DATES; falsifiable 2025-03-28 AdjFactor=0.5 ExRT=1"}
+  ],
+  "pagination":"KEY_FROM_IMMEDIATELY_PREVIOUS_PAGE_ONLY; BASE_PARAMETERS_IMMUTABLE; NOT_A_RETRY",
+  "pre_service_floor":"OFFLINE_FIXTURE_ONLY",
+  "minimum_request_spacing_seconds":13,
+  "rate_limit_basis":"FREE_5_REQUESTS_PER_MINUTE; EACH_PAGE_IS_A_REQUEST",
+  "split_factor_empirical_probe":"KDDI_9433_2025-03-28_EXPECT_ADJFACTOR_0.5_EXRT_1_NOT_PRECLAIMED",
+  "split_source":"https://www.jpx.co.jp/english/news/2020/20250318-01.html",
+  "trusted_rebuild_required_before_promotion":true
+}

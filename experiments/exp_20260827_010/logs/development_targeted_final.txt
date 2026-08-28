@@ -1,0 +1,7 @@
+Command: uv run python -m py_compile src/quant_research/alpha_models/external/kronos_offline_reverification.py tests/test_kronos_offline_reverification.py
+Exit: 0
+Command: uv run --extra modern-ml python -m unittest tests.test_kronos_offline_reverification -v
+Exit: 0
+Result: Ran 11 tests in 1.708s; all 11 passed.
+Covered: two immutable manifest hashes, 19-file start/end bytes/SHA/OID/tree equality, acquisition receipt binding, source tamper, checkpoint tamper, private source-only execution, hostile sys.modules model entry, malicious unbound pyc, synthetic namespace collision, socket/DNS/urllib/Hub blocking, mini inference, official small golden, redistribution/empirical ceiling.
+Network requests: 0. Retries: 0. Raw copies/downloads: 0. Formal executions: 0.

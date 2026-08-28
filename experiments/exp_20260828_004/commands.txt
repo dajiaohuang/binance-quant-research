@@ -1,0 +1,11 @@
+# Development only
+uv run python -m unittest tests.test_jquants_v2_v3 -v
+uv run python -m py_compile src/quant_research/alpha_models/data/jquants_v2_v3/__init__.py src/quant_research/alpha_models/data/jquants_v2_v3/contracts.py src/quant_research/alpha_models/data/jquants_v2_v3/collector.py src/quant_research/alpha_models/data/jquants_v2_v3/loader.py src/quant_research/alpha_models/data/jquants_v2_v3/adapters.py tests/test_jquants_v2_v3.py
+
+# Frozen formal candidate. Executed exactly once after Fresh Phase2 GO; exit 20.
+# UTF-8/no-newline SHA-256: cd2a88ef0324e3d1d0125d1198be42697c079410e12562e62401db7dcf6e0610
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\alpha_models\data\jquants_v2_v3\launcher.ps1 -ExpectedLauncherSha256 c3d6749f81bad5b684c312c65275ae6e94a00fe6eeb59ef1e0b31dd3d621883a -ExpectedFreezeManifestSha256 72005cdfe34c0fea8f6161dcd1d421361faf3b401992f4cdc0a335b8bda38941; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode
+
+# Phase 4 postflight was read-only: ten-file freeze, exact stage ledger,
+# reservation, failure marker, Q01 hash, absent authorization/final tree, and
+# retained staging were independently checked without key or network access.

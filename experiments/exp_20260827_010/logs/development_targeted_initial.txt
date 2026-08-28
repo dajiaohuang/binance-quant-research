@@ -1,0 +1,8 @@
+Command: uv run python -m py_compile src/quant_research/alpha_models/external/kronos_offline_reverification.py tests/test_kronos_offline_reverification.py
+Exit: 0
+Command: uv run --extra modern-ml python -m unittest tests.test_kronos_offline_reverification -v
+Exit: 1
+Result: 9 tests, 3 errors.
+Errors: model-hijack test, full read-only verification, and malicious-pyc test all stopped because upstream `model/kronos.py` uses absolute `from model.module import *`.
+Remediation: during verified source execution only, replace `model` and `model.module` aliases with the exact-hash synthetic package, then restore every prior sys.modules entry in finally. No attacker module or pyc is read.
+Network requests: 0. Raw copies/downloads: 0. Formal executions: 0.

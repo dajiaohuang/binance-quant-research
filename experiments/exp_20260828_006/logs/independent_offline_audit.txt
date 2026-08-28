@@ -1,0 +1,13 @@
+audit_id=EXP_20260828_006_INDEPENDENT_OFFLINE_AUDIT_001
+auditor_task=/root/jquants_postflight_auditor
+verdict=PASS
+candidate_freeze_manifest_sha256=d443e45f59a545609a3dec713b53c9ce0d8898ac541fb4f4fa1d071f06bb3928
+exp005_frozen_source_manifest_sha256=75c22f6a0ef8f46e2e24514603261a07a3b6437ae64f62523e6f6c50b10a37e8
+exp005_source_control_pre_post_sha256=9874eaef2106aca2ff719cf9b07733f29e78aeff1fc0702d0255f521e030aae1
+targeted_offline_tests=PASS_12_OF_12_ONCE
+network_requests=0
+key_reads=0
+pacing=RUNTIME_MONOTONIC_GUARD_INFERRED_NOT_REPLAYABLE
+allowed_claim=JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_RECOVERED / NEEDS_MORE_DATA
+prohibited=exp005 final promotion; replayable pacing proof; historical listing eligibility/PIT universe; training/inference/IC/P&L/backtest
+This append-only evidence record is root-captured from the auditor final and is not a cryptographic signature.

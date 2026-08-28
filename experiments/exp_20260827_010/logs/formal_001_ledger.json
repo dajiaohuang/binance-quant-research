@@ -1,0 +1,14 @@
+{
+  "command": "uv run --extra modern-ml python -m quant_research.alpha_models.external.kronos_offline_reverification --expected-manifest-sha256 3d2b370f172b17f090099d8ef2e3d9e530ed4d6cf4cb3c2ef57d04db7747d52e --expected-acquisition-manifest-sha256 811cd603d640a7acfab7776e3a97a9a753a0e3d053670587eb700f89167419c6",
+  "command_no_newline_sha256": "cee555a59dbe26350d0448a788f1a9147c81eaed2b6d72545659246ace241ded",
+  "contemporaneous": true,
+  "experiment_id": "exp_20260827_010",
+  "formal_execution_count": 1,
+  "network_request_count": 0,
+  "observed_exit_code": 0,
+  "observed_stderr": "EMPTY",
+  "observed_stdout": "EMPTY",
+  "observed_wall_seconds": 3.3898401,
+  "retry_count": 0,
+  "start_utc": "2026-08-27T14:03:48.443Z"
+}

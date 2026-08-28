@@ -1,0 +1,7 @@
+command=uv run python -m unittest tests.test_jquants_v2_v4 -v
+tests=37
+failures=0
+errors=0
+skips=0
+elapsed_seconds=7.077
+result=PASS

@@ -1,0 +1,40 @@
+{
+  "application_network_boundary": {
+    "initial_hosts": [
+      "huggingface.co",
+      "raw.githubusercontent.com"
+    ],
+    "maximum_redirects_per_logical_request": 1,
+    "redirect_target_hosts": [
+      "huggingface.co",
+      "us.aws.cdn.hf.co"
+    ],
+    "retry_count": 0,
+    "scheme": "https"
+  },
+  "authority": {
+    "expected_manifest_path": "experiments/exp_20260827_009/expected_manifest.json",
+    "expected_manifest_sha256": "3d2b370f172b17f090099d8ef2e3d9e530ed4d6cf4cb3c2ef57d04db7747d52e",
+    "github_commit": "67b630e67f6a18c9e9be918d9b4337c960db1e9a",
+    "github_license": "MIT",
+    "row_count": 19,
+    "total_bytes": 562430552
+  },
+  "evidence_rules": {
+    "git_blob_oid": "sha1(b'blob '+ascii_decimal(expected_bytes)+b'\\0'+exact_body)",
+    "hf_lfs_oid": "exact_body_sha256",
+    "publish": "exact byte count, SHA-256, and authority OID must pass before same-volume atomic rename",
+    "transport_log": "immutable URL plus sanitized final host/path/status/redirect count only; query is forbidden",
+    "tree": "the fresh v2 raw file set must equal the 19 expected paths"
+  },
+  "experiment_id": "exp_20260827_009",
+  "forbidden_inputs": [
+    "data/raw/kronos_official_v1",
+    "experiments/exp_20260827_007/artifacts/download_manifest.json",
+    "Hub cache as runtime checkpoint source"
+  ],
+  "research_ceiling": "SUPPLY_CHAIN_AND_OFFLINE_INTERFACE_VERIFIED / NO_EMPIRICAL_ALPHA",
+  "schema_version": "KRONOS_SUPPLY_CHAIN_SOURCE_CONTRACT_V2",
+  "source_attestation_change": "Externally frozen expected values precede every v2 request; acquisition output cannot authorize itself.",
+  "stale_documentation_debt": "The exp007 report statement about an exp006 full run is not treated as input evidence and is not repeated as fact."
+}

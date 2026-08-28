@@ -1,0 +1,22 @@
+command=uv run python -m unittest tests.test_jquants_v2_recovery -v
+tests=12
+failures=0
+errors=0
+skips=0
+result=PASS
+
+test_all_five_raw_and_receipt_files_are_bijective=PASS
+test_exact_source_binding=PASS
+test_failed_promotion_state_is_preserved=PASS
+test_git_safe_bundle_contains_no_raw_rows=PASS
+test_nontrading_master_mapping_is_explicit=PASS
+test_pacing_is_not_promoted_to_pass=PASS
+test_persisted_git_safe_artifacts_match_validator=PASS
+test_raw_hashes_and_schema_validate=PASS
+test_recovery_does_not_authorize_research=PASS
+test_source_counts_are_stable=PASS
+test_split_probe_expectation_is_preserved=PASS
+test_transport_receipts_are_direct_successes=PASS
+
+py_compile=PASS
+full_repository_tests=NOT_RUN_SCOPE_LIMITED

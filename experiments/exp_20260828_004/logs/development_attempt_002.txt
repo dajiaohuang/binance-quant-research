@@ -1,0 +1,15 @@
+command: uv run python -m unittest tests.test_jquants_v2_v3 -v
+classification: DEVELOPMENT_NOT_FORMAL
+exit_code: 1
+tests_run: 31
+failures: 6
+skips: 0
+network_request_count: 0
+real_key_read: false
+failure_summary:
+- All non-launcher tests passed; successful/allowed-child launcher cases returned COLLECTOR/45.
+- Root cause: the fixed child intentionally runs python -I -S, while ZoneInfo('Asia/Tokyo') needs the optional tzdata package on Windows.
+retained_response:
+- Replaced ZoneInfo with fixed UTC+09:00 JST, which is equivalent for Japan because there is no daylight-saving transition.
+- Source-only child execution remains python -I -S -B.
+- No formal attempt path was touched.

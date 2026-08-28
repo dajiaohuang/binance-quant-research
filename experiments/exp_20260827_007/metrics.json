@@ -1,0 +1,12 @@
+{
+  "artifact_state": "PUBLIC_CHECKPOINT_INTERFACE_VERIFIED_POSTFLIGHT_BLOCKED",
+  "cpu_smoke_rows": 24,
+  "formal_execution_count": 6,
+  "full_repository_tests": "629_PASS_3_EXISTING_FORMAL_LIFECYCLE_FAILURES",
+  "gpu_peak_cuda_bytes": 74509312,
+  "gpu_smoke_rows": 24,
+  "network_request_count": 19,
+  "retry_count": 0,
+  "targeted_tests": "11_PASS",
+  "terminal_status": "INCONCLUSIVE"
+}

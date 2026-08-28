@@ -1,0 +1,8 @@
+{
+  "device": "cuda:0",
+  "finetune_loss": 3.8249082565307617,
+  "finite": true,
+  "parameter_updated": true,
+  "peak_cuda_bytes": 75303424,
+  "pretrain_loss": 6.302399158477783
+}

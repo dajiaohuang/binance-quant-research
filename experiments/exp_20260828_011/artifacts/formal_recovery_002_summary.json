@@ -1,0 +1,53 @@
+{
+  "attempt001_adopted": {
+    "date_count": 4,
+    "page_count": 4,
+    "partial_raw_tree_sha256": "2e75b8dae0f7e13b7b65e18111143279075df4d231120854f813e864a08a5493",
+    "raw_bytes": 4850787,
+    "row_count": 17492
+  },
+  "attempt002": {
+    "batch_id": "exp_20260828_010_monthly_formal_002",
+    "completed_http_response_count": 24,
+    "exit_code": 40,
+    "formal_execution_count": 1,
+    "send_attempt_count": 25
+  },
+  "catalog_count": 0,
+  "completed_months": [
+    {
+      "month": "2024-07",
+      "network_date_count": 17,
+      "page_count": 17,
+      "raw_bytes": 20631378,
+      "raw_tree_sha256": "0ae120f541c3ed1acd87d4bab25c07ce8b6838e8bdb6b1808dd865b49677e96d",
+      "row_count": 74396
+    }
+  ],
+  "coverage": {
+    "available_official_session_count_including_bootstrap_reuse": 31,
+    "available_unique_network_date_count": 28,
+    "planned_network_date_count": 462,
+    "remaining_network_date_count": 434,
+    "total_official_session_count": 465
+  },
+  "error": "socket.gaierror: [Errno 11002] getaddrinfo failed",
+  "git_ignored": true,
+  "key_process_environment_present_after_exit": false,
+  "network_inventory_sha256": "96fbac65c2e4b03f44e85241f9ccc54a10463016f129bab057cbdf68aaf5dc88",
+  "next_missing_date": "2024-08-13",
+  "partial_month": {
+    "date_count": 7,
+    "first_date": "2024-08-01",
+    "last_date": "2024-08-09",
+    "month": "2024-08",
+    "page_count": 7,
+    "raw_bytes": 8523586,
+    "raw_tree_sha256": "fc65a71502014073e75ccdbc6f983b3dc88070bf396de0a4d203f9c9897604f8",
+    "remaining_date_count": 14,
+    "row_count": 30694
+  },
+  "recovery_registry_sha256": "cce055f98ad209faa6fb448f5697df4fcafa631e2a96f7b6395885f5c050e2a6",
+  "retry_count": 0,
+  "status": "INCONCLUSIVE_DNS_RESOLUTION_FAILURE_ONE_MONTH_FINAL_NEXT_MONTH_PARTIAL"
+}

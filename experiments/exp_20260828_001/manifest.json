@@ -1,0 +1,62 @@
+{
+  "artifact_state": "INTEGRATION_REGRESSION_NO_NEW_FAILURES_OBSERVED_BUT_STDERR_CAPTURE_INCOMPLETE",
+  "created_at_local": "2026-08-28T00:51:28.7562089+08:00",
+  "created_at_utc": "2026-08-27T16:51:28.7562089Z",
+  "documentation_remediation": {
+    "bytes": 910,
+    "path": "experiments/exp_20260828_001/logs/closeout_documentation_remediation.json",
+    "sha256": "0d36e6d0fe1d22c1c9d77682556c2c49e48bcb2f17950a99d8f791b9f99d9544"
+  },
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260828_001",
+  "formal_execution_count": 1,
+  "formal_records": {
+    "execution": {
+      "bytes": 918,
+      "path": "experiments/exp_20260828_001/logs/full_execution_001.json",
+      "sha256": "e86b02c6df24482aea1a3cf76c6e458185f4ad98672903849fafd25f2d3115d4"
+    },
+    "stderr_capture_failure": {
+      "bytes": 1912,
+      "complete": false,
+      "path": "experiments/exp_20260828_001/logs/full_stderr_capture_failure.txt",
+      "sha256": "c0161fef563bf144257b16a47902b9d3aa70a63305df74dac6fea9576b88aaf1"
+    },
+    "stdout": {
+      "bytes": 148,
+      "complete": true,
+      "path": "experiments/exp_20260828_001/logs/full_stdout.txt",
+      "sha256": "2464bf7d23438bdc4484f30e92adb2b2f5b4b95ae678a9301fee2160ccb6f45a"
+    }
+  },
+  "full_repository_command_sha256": "a52178eea71b24883172b925275aac96dcc0bf201c45b5ea49b9f3486d8059be",
+  "git_commit": "6fd05b8690f99643002a9f310d3c6e0d8bae9346",
+  "git_diff_check_command_sha256": "466c2f308b48c7661d646fdd068fbecea974c665fe65dbf8ed508f224180ce0b",
+  "git_diff_check_records": {
+    "execution": {
+      "bytes": 519,
+      "path": "experiments/exp_20260828_001/logs/git_diff_check_execution_001.json",
+      "sha256": "397c1c0cf75fe519bf99c5efe7c061fee9e47d8aacb6e8d2be89c5167c6c891a"
+    },
+    "stderr": {
+      "bytes": 438,
+      "path": "experiments/exp_20260828_001/logs/git_diff_check_stderr.txt",
+      "sha256": "4c45d9e4bf0945ebfd68f71e39b2f1e1f52e59cdf75f1053a54e9705a76bbd9b"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "experiments/exp_20260828_001/logs/git_diff_check_stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "git_repository": true,
+  "historical_eligibility_ready": false,
+  "network_request_count": 0,
+  "primary_change": "POST_CLOSURE_FULL_REPOSITORY_INTEGRATION_REGRESSION",
+  "real_data_accessed": false,
+  "retry_count": 0,
+  "stage": "INTEGRATION_EXECUTION_COMPLETE",
+  "status": "RUN_CONSUMED_INCONCLUSIVE_EVIDENCE_CAPTURE_INCOMPLETE",
+  "strict_eligible_count": 0,
+  "terminal_status": "INCONCLUSIVE"
+}

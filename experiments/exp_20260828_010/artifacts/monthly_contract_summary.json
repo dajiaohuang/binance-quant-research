@@ -1,0 +1,23 @@
+{
+  "automatic_retries": 0,
+  "catalog": "DETERMINISTIC_23_IMMUTABLE_SHARDS_NO_OVERWRITE",
+  "chronological_first_month": "2024-07",
+  "chronological_last_month": "2026-05",
+  "estimated_minimum_send_wait_seconds": 6930,
+  "estimated_observed_payload_bytes_one_page_per_date": 565472754,
+  "estimated_payload_gib_max_eight_pages_every_date": 4.214963912963867,
+  "estimated_payload_mib_one_page_per_date": 539.2768421173096,
+  "key_policy": "DOTENV_TO_CHILD_ENV_ONLY_CLEAN_ON_EXIT",
+  "max_pages_per_date": 8,
+  "minimum_request_count": 462,
+  "month_attempt": "UNIQUE_O_EXCL_NEW_BATCH_ID_FOR_REPAIR",
+  "network_executed": false,
+  "pagination": "PRIOR_RESPONSE_KEY_ONLY",
+  "publish": "IMMUTABLE_MONTH_FINAL_NO_CLOBBER",
+  "raw_policy": "RAW_FIRST_SAFE_RECEIPT_THEN_INTERPRET_GITIGNORED",
+  "redirects": 0,
+  "schema": "EXACT_JQUANTS_V2_FREE18",
+  "spacing_ns": 15000000000,
+  "stop_policy": "STOP_FIRST_FAILURE",
+  "validation": "EXACT_DATE_NONEMPTY_UNIQUE_ORDERED_DATE_CODE_NULL_COHERENCE"
+}

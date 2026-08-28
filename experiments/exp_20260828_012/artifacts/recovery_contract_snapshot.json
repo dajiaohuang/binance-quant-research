@@ -1,0 +1,31 @@
+{
+  "adopted_date_count": 28,
+  "adopted_sources": [
+    {
+      "date_count": 4,
+      "kind": "FAILED_STAGING_COMPLETE_DAY_POINTERS",
+      "raw_tree_sha256": "2e75b8dae0f7e13b7b65e18111143279075df4d231120854f813e864a08a5493",
+      "relative_path": "data/raw/jquants_v2_bars_monthly_v4/months/2024-07/.jquants-bars-202407-attempt001.staging"
+    },
+    {
+      "date_count": 17,
+      "kind": "IMMUTABLE_MONTH_FINAL_COMPLETE_DAY_POINTERS",
+      "raw_tree_sha256": "0ae120f541c3ed1acd87d4bab25c07ce8b6838e8bdb6b1808dd865b49677e96d",
+      "relative_path": "data/raw/jquants_v2_bars_monthly_v4/months/2024-07/final"
+    },
+    {
+      "date_count": 7,
+      "kind": "FAILED_STAGING_COMPLETE_DAY_POINTERS",
+      "raw_tree_sha256": "fc65a71502014073e75ccdbc6f983b3dc88070bf396de0a4d203f9c9897604f8",
+      "relative_path": "data/raw/jquants_v2_bars_monthly_v4/months/2024-08/.jquants-bars-202408-attempt002.staging"
+    }
+  ],
+  "batch_id": "exp_20260828_010_monthly_formal_003",
+  "connection_policy": "ONE_VERIFIED_HTTPS_CONNECTION_PER_MONTH_ATTEMPT_CLOSE_ON_MONTH_OR_FAILURE",
+  "first_network_date": "2024-08-13",
+  "network_overlap_count": 0,
+  "recovery_registry_sha256": "0d3db35f8afbcc6a65d24f80c234969937e745518f87ed04295fde9f77fe37cb",
+  "remaining_network_date_count": 434,
+  "retry_count": 0,
+  "schema_version": "JQUANTS_V2_BARS_MONTHLY_V6_RECOVERY_CONTRACT_SNAPSHOT_V1"
+}

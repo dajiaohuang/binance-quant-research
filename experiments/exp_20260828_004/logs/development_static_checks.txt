@@ -1,0 +1,7 @@
+classification: DEVELOPMENT_NOT_FORMAL
+network_request_count: 0
+real_key_read: false
+checks:
+- PowerShell parser: PASS
+- py_compile six v3 Python files plus tests/test_jquants_v2_v3.py: PASS
+- full repository suite: NOT_RUN

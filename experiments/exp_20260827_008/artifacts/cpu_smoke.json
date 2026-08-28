@@ -1,0 +1,8 @@
+{
+  "device": "cpu",
+  "finetune_loss": 3.43923282623291,
+  "finite": true,
+  "parameter_updated": true,
+  "peak_cuda_bytes": 0,
+  "pretrain_loss": 6.360107421875
+}

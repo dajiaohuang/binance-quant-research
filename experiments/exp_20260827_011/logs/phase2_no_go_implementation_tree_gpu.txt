@@ -1,0 +1,13 @@
+review_phase=PHASE2
+review_result=NO_GO
+candidate_manifest_implementation_tree_sha256=09177c3b9e2eac348b55d7ddc7039eca27fa32d7a1d184445adcfdd46fbfdede
+candidate_smoke_runtime_path_sha_projection_sha256=ded20c4de94ac7f6390379c2da16d4a6f40c4df520bee6192d118de619869e8b
+blocker_1=implementation tree algorithms disagreed because smoke omitted bytes from each implementation row
+blocker_2=GPU smoke moved the trained model to CPU before deterministic inference evidence
+blocker_3=external checkpoint load did not require a frozen manifest id or weights sha256
+blocker_4=constant min-max columns used an implicit unit denominator instead of the frozen MAP_TO_ZERO policy
+blocker_5=public integer arrays could truncate fractional floats or booleans through astype before validation
+disposition=RETAINED_REJECTED_CANDIDATE; MINIMAL_PHASE1_REPAIR; FRESH_PHASE2_REQUIRED
+formal_execution_count=0
+network_request_count=0
+real_data_accessed=false

@@ -1,0 +1,53 @@
+Fresh Phase2 repair-2 candidate received FINAL NO-GO before formal execution. The repair-2 freeze remains preserved at frozen_hashes_repair2.json SHA256 d7f6c41d350d0bcd260b51ad9080e6174c3e3400af15416beafab11075cdd180, implementation tree 36ea6867be14bb579212d6c482405a2175799639d23d5a061cc44049511e7d89, and 30/30 development PASS.
+
+The third NO-GO found that save_checkpoint still accepted FrozenSWAStudent rather than an exact STUDENT_FROZEN TIPSPipeline, student updates lacked pipeline-issued monotonic receipts, the paper-vs-synthetic required SWA count was not bound, and SWASnapshot construction cloned/normalized instead of applying a pure strict validator at every boundary. No formal, full-suite, network, real-data, upstream-code, or pickle action occurred.
+
+Fresh-3 repair changes only that authority boundary. save_checkpoint accepts exact TIPSPipeline at STUDENT_FROZEN and extracts its student, seven frozen teacher hashes, exact config, pipeline-issued step receipts, and SWA snapshots. Paper config maps the final ten epochs to exactly ten SWA updates as a LOCAL_DISCLOSED_CHOICE; the typed synthetic-only override requires exactly two. Every successful student_step issues a monotonically increasing receipt, and each snapshot update ID is the receipt ID. The pure validate_swa_snapshot routine rejects malformed structure, non-CPU/non-contiguous/non-floating/nonfinite tensors, bad ordering/keysets/shape/dtype, receipt/state mismatch, and non-increasing receipts without cloning, sorting, or normalization. This is a pipeline-state-bound synthetic contract, not a claim that Python in-memory objects are cryptographically unforgeable.
+
+Fresh-3 development targeted attempt 1:
+command=uv run --extra modern-ml python -m unittest tests.test_tips_v1 -v
+exit_code=1
+tests=35
+passed=32
+failures=1
+errors=2
+failure=test_snapshot_final_key_shape_dtype_and_replacement_rejected index=22 did not change the selected tensor shape
+error=test_checkpoint_roundtrip_external_bindings Windows safetensors mapping retained model.safetensors during TemporaryDirectory cleanup
+error=test_single_and_symmetric_forged_artifacts_cannot_publish handcrafted plus/minus-one tensors did not reproduce the final model bitwise
+disposition=DEVELOPMENT_FAILURE_PRESERVED; LOCAL_FIX_REQUIRED; NOT_FORMAL
+
+Fresh-3 development targeted attempt 2:
+command=uv run --extra modern-ml python -m py_compile <all tips_v1 modules> tests/test_tips_v1.py; then uv run --extra modern-ml python -m unittest tests.test_tips_v1 -v
+exit_code=0
+tests=35
+passed=35
+failures=0
+errors=0
+cuda_test_executed=true
+disposition=DEVELOPMENT_PASS; NOT_FORMAL; FULL_REPOSITORY_NOT_RUN
+
+Fresh-3 synthetic smokes:
+cpu_command=run_smoke(torch.device('cpu')) via uv run --extra modern-ml python -c; exit0; wall2.636683s
+gpu_command=run_smoke(torch.device('cuda:0')) via uv run --extra modern-ml python -c; exit0; wall3.5051957s
+cpu_checkpoint_roundtrip=PASS
+gpu_checkpoint_roundtrip=PASS
+gpu_device_inference_deterministic=true
+gpu_peak_memory_bytes=74123264
+implementation_tree_sha256=11b64659ff1a0f6b27e4b87608c663cbf672ab8294138e0b7e32861db0b151c9
+formal_execution_count=0
+network_request_count=0
+real_data_accessed=false
+upstream_code_executed=false
+pickle_loaded=false
+
+Fresh-3 final development gate before freeze:
+command=uv run --extra modern-ml python -m py_compile <all tips_v1 modules> tests/test_tips_v1.py; then uv run --extra modern-ml python -m unittest tests.test_tips_v1 -v
+exit_code=0
+tests=35
+passed=35
+failures=0
+errors=0
+cuda_test_executed=true
+wall_seconds=4.7434286
+formal_execution_count=0
+full_repository_tests=NOT_RUN

@@ -1,0 +1,75 @@
+{
+  "allowed_claim": "JQUANTS_V2_FREE_ALL_MARKET_DAILY_BARS_BOOTSTRAP_VALIDATED / NEEDS_MORE_DATA",
+  "calendar": {
+    "civil_date_count": 698,
+    "first_date": "2024-07-01",
+    "last_date": "2026-05-29",
+    "session_count": 465,
+    "session_list_sha256": "e51e2d635155f34119e18bf4e9cc9d6640ae00c73b212ed67dd4f09e42ea90e5"
+  },
+  "candidate_freeze_manifest_sha256": "c137e0bdc8a3b16ef13ef6ad1d918038a49310d5ba85150f8be8de3159527873",
+  "control_present": true,
+  "edge_days": [
+    {
+      "date": "2024-07-01",
+      "raw_sha256": "29e34e025e6326393d454488a3419098ecf812950b48a300ede16a4ddcceffe9",
+      "row_count": 4372
+    },
+    {
+      "date": "2026-05-29",
+      "raw_sha256": "3a0f1c360b389a8488e26117ea138d5e1ba3f422a6c41864bf2496346aebda25",
+      "row_count": 4451
+    }
+  ],
+  "experiment_id": "exp_20260828_009",
+  "final": {
+    "acquisition_manifest_bytes": 6870,
+    "acquisition_manifest_sha256": "2b2ffae4f948124cb949c213d5c1ad34ac6e83ebdc3a1486bbf079fc221929df",
+    "exact_file_set": true,
+    "file_count_excluding_manifest": 38,
+    "hashes_pass": true,
+    "path": "data/raw/jquants_v2_bars_monthly_v3/runs/exp_20260828_009_bootstrap_formal_001",
+    "present": true,
+    "raw_tree_sha256": "5eaed53748fd46141987d37032b99a1f812ca35251f101beecbd25d3eead84f8",
+    "summary_sha256": "7a4f529fbc63bf7a30b0a7a0a49631646df9193bcb5cd7696f976ddc3b155099"
+  },
+  "formal_command_sha256_no_newline": "15696cf13895fd7bce91940f66d21c53102a29eb5d76fbeefa504df4f582d654",
+  "formal_execution_count": 1,
+  "key_artifact_marker_hits": 0,
+  "key_process_environment_present_after_exit": false,
+  "monthly_network_authorized_by_this_closure": false,
+  "pacing": {
+    "first_full_cooldown_pass": true,
+    "minimum_send_spacing_ns": 15000000000,
+    "send_gaps_ns": [
+      15000000000,
+      15000000000
+    ]
+  },
+  "prohibited_claims": [
+    "complete_monthly historical panel",
+    "historical listing eligibility or PIT universe",
+    "training or inference",
+    "IC, P&L or backtest"
+  ],
+  "request_count": 3,
+  "requests_all_direct_http_200_json_no_redirect": true,
+  "retry_count": 0,
+  "reuse": {
+    "dates": [
+      "2024-07-01",
+      "2025-03-28",
+      "2026-05-29"
+    ],
+    "registry_artifact_sha256": "5e1ac6c740d51281f3840fa998e14d315d3aba114ed4f5ba73aa11337af773bc",
+    "registry_binding_sha256": "871f64faeaa7c583ac77e7c2a05cd67618eb35b8552e184b1011cd46a49f5056"
+  },
+  "session_artifact": {
+    "bytes": 8586,
+    "sha256": "6a0f03df72639931ec953739980e91bff72310953979cecc40c543e807ff5a4a"
+  },
+  "stage_ledger_sha256": "85b7cda273eeb96086a152e9de3cf0cdf2290c31db0f1c81baa168fa92bbf3f9",
+  "staging_present": false,
+  "status": "NEEDS_MORE_DATA",
+  "verdict": "PASS"
+}

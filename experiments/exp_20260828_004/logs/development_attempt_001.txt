@@ -1,0 +1,16 @@
+command: uv run python -m unittest tests.test_jquants_v2_v3 -v
+classification: DEVELOPMENT_NOT_FORMAL
+exit_code: 1
+tests_run: 31
+failures: 14
+skips: 1
+network_request_count: 0
+real_key_read: false
+failure_summary:
+- Every launcher path that attempted to write a non-null FAIL/EXIT code returned CONTROL_IO/40.
+- Root cause: PowerShell Nullable[int] was unwrapped with .Value after parameter binding had produced a boxed int.
+- The reparse test used a symbolic link and skipped when Windows denied symlink creation.
+retained_response:
+- Replaced the exit-code writer parameter with object plus an exact built-in-int check and invariant integer serialization.
+- Replaced the privileged symlink fixture with an ordinary Windows directory junction fixture.
+- No formal attempt path was touched.

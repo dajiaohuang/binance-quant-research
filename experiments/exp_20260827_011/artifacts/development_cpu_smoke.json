@@ -1,0 +1,18 @@
+{
+  "artifact_role": "DEVELOPMENT_SYNTHETIC_SMOKE",
+  "device": "cpu",
+  "device_inference_deterministic": true,
+  "fine_tune_loss": 0.42157799005508423,
+  "finite": true,
+  "freeze_state_sha256": "deeac7397a3799b0b3acef2dfe94d136bc159d0fe506abfb2879fc60f28268ec",
+  "frozen_unchanged_bitwise": true,
+  "implementation_tree_sha256": "1c395dfe27c8e820e25507f7aab446a18e82fe89ef0502ebeee6615588775c9d",
+  "map_prf_sha256": "82010f39b0598b1c7f356a7635e098cc1452f0add75a43265690dfe14a42cd2c",
+  "network_request_count": 0,
+  "peak_cuda_bytes": 0,
+  "prediction_deterministic_bitwise": true,
+  "pretrain_loss": 15128.955078125,
+  "pretrain_updated": true,
+  "real_data_accessed": false,
+  "trainable_updated": true
+}

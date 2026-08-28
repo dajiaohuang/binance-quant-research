@@ -1,0 +1,16 @@
+{
+  "cuda_execution_required_if_available": true,
+  "expected_known_lifecycle_failure_count": 3,
+  "expected_known_lifecycle_failures": [
+    "test_binance_spot_forward_schedule_pit_v2.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero",
+    "test_binance_spot_forward_schedule_pit_v4.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero",
+    "test_binance_spot_forward_schedule_pit_v6.ForwardSchedulePitTests.test_real_workspace_formal_paths_absent_and_network_zero"
+  ],
+  "full_repository_command": "uv run --extra modern-ml python -m unittest discover -s tests -v",
+  "full_repository_command_sha256_utf8_no_newline": "a52178eea71b24883172b925275aac96dcc0bf201c45b5ea49b9f3486d8059be",
+  "git_diff_check_command": "git diff --check",
+  "git_diff_check_command_sha256_utf8_no_newline": "466c2f308b48c7661d646fdd068fbecea974c665fe65dbf8ed508f224180ce0b",
+  "network_allowed": false,
+  "real_data_allowed": false,
+  "retry_count": 0
+}

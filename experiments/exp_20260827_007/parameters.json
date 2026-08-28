@@ -1,0 +1,15 @@
+{
+  "batch_size": 1,
+  "context_length": 256,
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260827_007",
+  "horizon": 24,
+  "model": "Kronos-mini",
+  "model_revision": "f4e68697d9d5aed55cef5c96aabc3376bcad9f81",
+  "official_commit": "67b630e67f6a18c9e9be918d9b4337c960db1e9a",
+  "sample_count": 1,
+  "seed": 20260827,
+  "tokenizer": "Kronos-Tokenizer-2k",
+  "tokenizer_revision": "26966d0035065a0cae0ebad7af8ece35bc1fb51c",
+  "trust_remote_code": false
+}

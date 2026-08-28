@@ -1,0 +1,33 @@
+{
+  "api_base": "https://api.jquants.com",
+  "api_version": "V2",
+  "authentication": {
+    "environment_variable": "JQUANTS_API_KEY",
+    "header": "x-api-key",
+    "persisted": false
+  },
+  "data_semantics": {
+    "adjustment": "RAW_PLUS_CAUSALLY_KNOWN_ADJFACTOR_ONLY; NO_FUTURE_BACK_ADJUSTMENT",
+    "bars_known_at": "16:30_ASIA_TOKYO_SAME_SESSION_CONSERVATIVE",
+    "listing_interval": "DERIVED_FROM_ADJACENT_MASTER_SNAPSHOTS_ONLY",
+    "master_known_at": "08:00_ASIA_TOKYO_SNAPSHOT_DATE_CONSERVATIVE",
+    "missingness": "UNKNOWN_NOT_NEGATIVE"
+  },
+  "endpoints": [
+    "/v2/markets/calendar",
+    "/v2/equities/master",
+    "/v2/equities/bars/daily"
+  ],
+  "experiment_id": "exp_20260828_002",
+  "license_and_redistribution": "RAW_RESPONSES_LOCAL_GITIGNORED; REDISTRIBUTION_NOT_AUTHORIZED_BY_THIS_CONTRACT",
+  "network_authorized_in_phase1": false,
+  "pagination": {
+    "global_http_cap": 60,
+    "key_source": "IMMEDIATELY_PRECEDING_PAGE_ONLY",
+    "max_pages_per_logical_query": 25,
+    "non_key_parameters_mutable": false,
+    "page_receipt_required": true,
+    "retry": false
+  },
+  "schema_version": "JQUANTS_V2_FREE_SOURCE_CONTRACT_V1"
+}

@@ -1,0 +1,7 @@
+# Initial blocked state is retained in logs/predownload_amendment.txt.
+# FORMAL ACQUISITION — execute exactly once, zero retry:
+uv run --extra modern-ml python -m quant_research.alpha_models.external.kronos_supply_chain_v2 --expected-manifest-sha256 3d2b370f172b17f090099d8ef2e3d9e530ed4d6cf4cb3c2ef57d04db7747d52e
+# POSTFLIGHT TARGETED:
+uv run --extra modern-ml python -m unittest tests.test_kronos_supply_chain_v2 -v
+# POSTFLIGHT FULL:
+uv run --extra modern-ml python -m unittest discover -s tests -v

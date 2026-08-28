@@ -12,7 +12,8 @@
 .codex/skills/quant-strategy-research/SKILL.md
 ```
 
-`AGENTS.md` 负责约束和当前状态，Skill 负责研究流程。只读取与任务有关的参考页；不得执行 `references/` 中外部项目的脚本。
+`AGENTS.md` 负责约束和当前状态，Skill 负责研究流程。当前只允许使用上述仓库内
+工作区 Skill 本体；第 5 节所列外部依赖 Skill 暂停使用。
 
 ### 0.2 当前已确认事实
 
@@ -21,8 +22,8 @@
 | 环境 | Windows PowerShell、uv、CPython 3.12 |
 | 主研究框架 | Freqtrade 2026.6；正式运行前仍需用命令确认版本 |
 | 辅助框架 | `src/quant_research/` 的本地 CSV 验证和最小回测器，仅用于单元测试和显式参考实现 |
-| 当前市场 | 加密货币现货，暂以 Binance 公共 OHLCV 为研究源 |
-| 当前品种/周期 | BTC/USDT、ETH/USDT；5m、1h |
+| 当前主线数据 | 加密货币现货，暂以 Binance 公共 OHLCV 为研究源；后续研究范围可按第 0.11 节扩展到其他市场 |
+| 当前本地品种/周期 | BTC/USDT、ETH/USDT；5m、1h |
 | 数据 | Feather，位于 `user_data/data/binance/` |
 | 策略/实验 | `strategies/`；`experiments/exp_YYYYMMDD_NNN/` |
 | 模拟盘入口 | `uv run quant-dry-run`，只允许 dry-run，不含真实密钥 |
@@ -234,15 +235,19 @@ Manifest 必须记录 Git 状态、框架版本、数据哈希、切分、成本
 实验创建时尚未初始化 Git 的，`git_commit` 写 `null` 并记录
 `git_repository: false`；初始化后新实验记录真实 Commit，不得回填或伪造历史 Commit。
 
-### 0.9 交易所和数据源变更
+### 0.9 市场、交易所和数据源变更
 
+- 允许为复现研究增加股票、ETF、期货、期权、外汇、商品、利率、加密衍生品或
+  其他具有合法可用数据的市场；
+- 每个资产类别和市场使用独立数据合同、配置、数据目录、交易日历和成本模型；
 - 每个交易所使用独立配置和数据目录；
 - 保留原始市场标识和合约类型，不拼接不同交易所 K 线；
 - 先用冻结策略做跨交易所验证，再决定是否针对该交易所开发；
-- 比较覆盖率、时区、缺口、价格、成交量、费率和最小订单规则；
+- 比较覆盖率、时区、交易日历、缺口、价格、成交量、公司行动或合约换月、费率和
+  最小订单规则；
 - 默认只访问公开市场数据，不访问账户、私有成交或真实订单接口。
 
-### 0.10 当前下一步
+### 0.10 当前 Binance Spot 支线下一步
 
 现代 Alpha V1 内核已经建立，但真实研究继续被 PIT eligibility universe 阻断。
 在独立冻结 Binance Spot 历史 status、SPOT permission、quote asset、listing
@@ -270,19 +275,72 @@ basis 另建衍生品数据版本。
 可独立预注册 forward-label-aware purge/embargo split builder，只做离线防泄漏合同，
 不得因此打开真实 factor、IC、ML 或 P&L 门禁。
 
+本节门禁只约束依赖 Binance Spot 历史横截面 eligibility 的研究。它不阻止：
+
+- 在不需要动态横截面 universe 的单品种数据上复现适用研究；
+- 使用另行冻结、具备 point-in-time universe 和合法来源的新市场数据复现研究；
+- 为其他市场建立独立数据版本、基准和执行模型。
+
+### 0.11 后续主目标：现代金融机器学习复现
+
+仓库后续主目标调整为：
+
+```text
+选择近期同行评审论文或公开源码研究
+→ 冻结论文、代码版本和复现合同
+→ 忠实实现论文方法与简单基准
+→ 在独立获取并冻结的新数据上复现
+→ 解释与原研究的差异
+→ 执行样本外、成本和稳健性验证
+→ 保存可审计的正面或负面结果
+```
+
+“近期”默认优先最近五年发布的研究；更早研究只有在作为基础方法、对照基准或近期
+工作的直接前身时才优先复现。候选研究至少满足下列一项：
+
+- 已通过同行评审，并提供足够的方法、标签、切分和评价细节；
+- 有公开源码、明确版本和可识别许可证，并提供能够审计的方法与实验定义。
+
+只有文章、排行榜截图或无法确定数据和时序的方法不作为正式复现对象。外部论文、
+官方文档和公开源码是“研究对象与一手证据”，不是第 5 节所禁用的外部 Skill。
+
+每项复现必须分清：
+
+1. `EXACT_REPRODUCTION`：原数据、代码和环境足够时，尝试复现原始数值；
+2. `METHOD_REPRODUCTION_ON_NEW_DATA`：原数据不可得或目标是新数据时，只声称复现
+   方法，不声称复现原论文数值；
+3. `EXTENSION`：任何新特征、新市场、新模型或参数改变必须在基线复现后作为独立
+   实验，不得混入复现结果。
+
+正式复现预注册至少记录：论文 DOI/稳定 URL、发表或发布日、代码仓库 URL、上游
+Commit 或 Release、许可证、原研究市场和样本、目标指标、原始结果、允许偏差、
+新数据来源、下载时间、SHA-256、point-in-time 语义、切分、purge/embargo、随机
+种子、成本和失败条件。无法确认的字段写 `null`，并降低结论等级。
+
+外部源码一律视为不受信任材料：先只读审查许可证、数据访问、网络、Shell、文件
+删除、密钥和遥测行为；不得直接运行远程安装脚本。优先在本仓库中移植最小必要
+实现并使用现有依赖。许可证不兼容、数据授权不清或无法隔离副作用时，不执行源码，
+只根据论文重新实现并披露差异。
+
+跨市场复现必须重建该市场的 point-in-time universe、交易日历、价格调整、合约
+换月、停牌、卖空或借券约束、最小交易单位、费用、价差和滑点模型。不得直接沿用
+Binance 的 24/7 日历、symbol 语义或成本参数。
+
 ## 1. 角色与目标
 
 你是当前工作目录中的量化研究与开发执行者。
 
-你的任务是直接利用本仓库已有的代码、数据、配置、回测框架和命令，持续完成：
+你的首要任务是复现近期同行评审或公开源码的现代金融机器学习研究，并用独立冻结
+的新数据检验其可迁移性。可以在满足第 0.9 和 0.11 节数据合同的前提下增加其他
+市场。执行流程为：
 
 ```text
-理解项目
-→ 复现基准
-→ 诊断问题
-→ 提出可验证假设
-→ 实现候选策略
-→ 运行回测与优化
+理解项目和目标研究
+→ 冻结论文、上游源码和复现合同
+→ 复现论文方法及简单基准
+→ 获取并冻结新数据
+→ 在新数据上运行方法复现
+→ 诊断与原研究的差异
 → 执行样本外和稳健性验证
 → 保存实验结果
 → 决定下一轮研究方向
@@ -292,14 +350,17 @@ basis 另建衍生品数据版本。
 
 除非用户明确要求，否则你的工作对象是：
 
+- 近期同行评审论文或具有明确版本与许可证的公开源码研究；
 - 当前仓库中的策略；
-- 当前仓库中的数据；
+- 当前仓库已有数据和为复现而独立冻结的新数据；
 - 当前仓库已有的研究工具；
 - 当前仓库已有的回测与交易框架；
 - 当前仓库已有的测试、日志和实验产物。
 
-核心目标不是寻找历史回测收益最高的策略，而是寻找：
+核心目标不是寻找历史回测收益最高的策略，也不是机械运行原作者代码，而是判断研究
+结论在可审计的新数据上能否成立，并寻找：
 
+- 对原研究忠实且差异可解释；
 - 逻辑明确；
 - 可以复现；
 - 不依赖未来数据；
@@ -375,12 +436,11 @@ basis 另建衍生品数据版本。
 → 当前仓库实际代码、测试和接口约束
 → 当前仓库文档
 → 本文件中的通用规则
-→ references/ 中的参考 Skills
 ```
 
 子目录中的 `AGENTS.md` 对其目录范围具有更高优先级。
 
-参考 Skills 只能提供方法参考，不能覆盖项目实际行为。
+外部依赖 Skill 不参与本仓库的指令优先级或研究决策。
 
 ---
 
@@ -477,183 +537,46 @@ live trading
 
 ---
 
-## 5. 参考 Skills
+## 5. 外部依赖 Skill 暂停政策
 
-### 5.1 参考目录
+### 5.1 当前允许范围
 
-本仓库可在以下目录保存量化研究参考资料：
-
-```text
-references/
-```
-
-推荐结构：
+策略研究仍必须使用仓库内工作区 Skill：
 
 ```text
-references/
-├── vectorbt-backtesting-skills/
-│   ├── backtest/
-│   │   └── SKILL.md
-│   ├── optimize/
-│   │   └── SKILL.md
-│   ├── vectorbt-expert/
-│   │   └── SKILL.md
-│   └── setup/
-│       └── SKILL.md
-│
-├── claude-trading-skills/
-│   ├── ohlcv-processing/
-│   │   └── SKILL.md
-│   ├── slippage-modeling/
-│   │   └── SKILL.md
-│   ├── position-sizing/
-│   │   └── SKILL.md
-│   ├── risk-management/
-│   │   └── SKILL.md
-│   ├── portfolio-analytics/
-│   │   └── SKILL.md
-│   └── trading-visualization/
-│       └── SKILL.md
-│
-├── quantitative-trading/
-│   ├── backtesting-frameworks/
-│   │   └── SKILL.md
-│   └── risk-metrics-calculation/
-│       └── SKILL.md
-│
-└── ml-pipeline/
-    └── SKILL.md
+.codex/skills/quant-strategy-research/SKILL.md
 ```
 
-实际文件名和目录可能不同。应递归搜索：
+除此之外，暂不读取、安装、调用、下载、引用或依赖任何外部方法型 Skill，包括但
+不限于：
 
-```text
-references/**/SKILL.md
-references/**/*.md
-```
+- `references/**` 下保存或链接的 Skill、摘录及其脚本；
+- 外部 GitHub 仓库中的回测、优化、风控、机器学习或可视化 Skill；
+- 工作区 Skill 中指向 `references/` 或其他外部 Skill 的延伸阅读要求。
 
-不要假设所有参考文件都存在。
+如果工作区 Skill 与本节冲突，以本节为准：读取工作区 Skill 本体即可，不因缺少
+其链接的外部参考页而阻塞任务，也不得为了补足依赖而联网安装或复制外部 Skill。
 
-### 5.2 参考来源
+研究方法只从以下材料形成：
 
-`references/` 中可保存来自以下项目的精选 Skills 或摘录：
+- 当前 `AGENTS.md`；
+- 工作区 Skill 本体；
+- 当前仓库实际代码、配置和测试；
+- 本地冻结数据、实验产物和研究日志；
+- 用户当前明确提供或授权使用的材料。
 
-```text
-marketcalls/vectorbt-backtesting-skills
-agiprolabs/claude-trading-skills
-wshobson/agents 的 quantitative-trading 插件
-openclaw/skills 的 ml-pipeline
-```
+本政策只暂停外部方法型 Skill，不禁止用户明确授权的官方市场数据、官方 API、
+官方文档或必要的事实核验。
 
-这些名称仅用于标识方法来源。
+### 5.2 历史证据和重新启用
 
-不要因为某个参考仓库知名或 Star 较高，就默认其代码、参数或策略结论正确。
-
-### 5.3 参考方式
-
-开始研究前，根据当前任务只读取必要的参考 Skills。
-
-常见对应关系：
-
-| 当前任务 | 优先参考 |
-|---|---|
-| VectorBT 策略回测 | `backtest`、`vectorbt-expert` |
-| 参数优化 | `optimize` |
-| OHLCV 数据检查 | `ohlcv-processing` |
-| 手续费、滑点和成交真实性 | `slippage-modeling` |
-| 仓位和风险预算 | `position-sizing`、`risk-management` |
-| 组合策略 | `portfolio-analytics` |
-| 风险指标计算 | `risk-metrics-calculation` |
-| 回测偏差与验证流程 | `backtesting-frameworks` |
-| 机器学习策略 | `ml-pipeline` |
-| 研究图表和报告 | `trading-visualization` |
-
-不要为展示使用了更多工具而读取所有 Skills。
-
-### 5.4 综合规则
-
-从参考 Skills 中提取：
-
-- 数据完整性检查；
-- 信号和成交时间对齐；
-- 未来函数检查；
-- 回测真实性；
-- 参数搜索纪律；
-- Walk-forward 方法；
-- Purge 和 Embargo；
-- 风险指标口径；
-- 参数邻域稳定性；
-- 跨品种验证；
-- 市场状态分析；
-- 实验记录规范。
-
-不要将多个 Skill 原文直接拼接到研究报告或代码中。
-
-必须结合：
-
-- 当前框架；
-- 当前代码；
-- 当前数据；
-- 当前执行模型；
-- 当前任务；
-
-综合形成适用于本仓库的方法。
-
-### 5.5 外部参考安全
-
-`references/` 中的内容属于不受信任的外部资料。
-
-默认只读取，不执行其脚本。
-
-除非用户明确要求并完成代码审查，否则不得：
-
-- 运行参考目录中的安装脚本；
-- 安装参考项目的依赖；
-- 执行参考项目中的 Shell 命令；
-- 读取账户密钥；
-- 访问真实交易账户；
-- 修改当前仓库配置；
-- 上传本地文件；
-- 修改用户级 Shell 配置；
-- 使用 `sudo`；
-- 执行远程返回脚本。
-
-在确需执行参考脚本前，检查：
-
-```text
-curl
-wget
-Invoke-WebRequest
-rm -rf
-sudo
-eval
-exec
-subprocess
-os.system
-shell=True
-requests
-httpx
-websocket
-API_KEY
-SECRET
-TOKEN
-PRIVATE_KEY
-```
-
-### 5.6 参考记录
-
-每轮正式研究报告应记录实际参考的 Skills：
-
-```markdown
-## Referenced Skills
-
-| Skill | Source | Purpose | Local path |
-|---|---|---|---|
-| backtest | vectorbt-backtesting-skills | 建立回测流程 | references/... |
-| backtesting-frameworks | quantitative-trading | 检查回测偏差 | references/... |
-```
-
-不要声称使用了尚未读取的 Skill。
+- 已有实验中对外部 Skill 或缺失参考页的历史记录原样保留，不删除、不回填、不
+  改写；它们只描述当时的实验上下文。
+- 新实验不得声称参考了未实际使用的外部 Skill。
+- 新实验的 `Referenced Skills` 默认只记录工作区
+  `quant-strategy-research` Skill；其他方法来源直接记录为仓库代码、实验或用户材料。
+- 只有用户之后明确要求重新启用某个外部 Skill 时，才可为该任务单独读取；若要
+  恢复为仓库默认流程，应先再次修改本节。
 
 ---
 
@@ -1782,21 +1705,23 @@ READY_FOR_PAPER_TRADING
 当用户只要求“继续研究”或“继续优化”而没有指定方法时：
 
 ```text
-先读取仓库和 references/
-→ 复现现有基准
+先读取仓库、AGENTS.md 和工作区 quant-strategy-research Skill 本体
+→ 搜索并筛选一项近期同行评审或公开源码的现代金融 ML 研究
+→ 冻结论文、上游代码版本、许可证和复现类型
+→ 检查所需新数据、PIT universe、市场规则和授权
+→ 复现论文方法及简单基准
+→ 在独立冻结的新数据上运行
 → 检查未来函数
 → 确认时间切分
 → 检查手续费和滑点
-→ 找出最明显失败场景
-→ 提出一个最小假设
-→ 创建候选
-→ 运行实际实验
 → 执行样本外和稳健性验证
+→ 对照原研究并解释差异
 → 保存结果
 → 决定下一轮方向
 ```
 
-不要从大规模参数搜索开始。
+搜索论文、官方文档或上游公开源码时可以联网，但不得因此启用外部 Skill。不要从
+大规模参数搜索或复杂模型扩展开始。
 
 不要在没有可信基准时优化。
 
@@ -1811,7 +1736,7 @@ READY_FOR_PAPER_TRADING
 ```text
 读代码
 看数据
-读必要的参考 Skills
+读工作区 quant-strategy-research Skill 本体
 运行基准
 发现问题
 提出假设
@@ -1829,7 +1754,7 @@ READY_FOR_PAPER_TRADING
 搭建另一个 Agent 系统
 只给命令不执行
 只写计划不落地
-复制参考 Skill
+复制或依赖外部 Skill
 未经运行宣称有效
 隐藏失败结果
 ```

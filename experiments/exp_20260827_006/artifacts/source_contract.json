@@ -1,0 +1,31 @@
+{
+  "classification": "METHOD_REPRODUCTION_ON_NEW_DATA",
+  "community_source": {
+    "commit": "9c1152d8572550d0a869d898f65f208c52706747",
+    "license_claim": "MIT_REPORTED",
+    "repository": "doitforlove/DDGL-Net-2026",
+    "status": "UNVERIFIED_THIRD_PARTY"
+  },
+  "experiment_id": "exp_20260827_006",
+  "implementation_claim": "CLEAN_ROOM_NOT_OFFICIAL_NOT_PAPER_FAITHFUL",
+  "paper_source": {
+    "conference_claim": "KDD_2026",
+    "doi": "10.1145/3770855.3817765",
+    "license_claim": "CC_BY_4_0_REPORTED",
+    "metadata_status": "LEAD_SUPPLIED_CROSSREF_CONFIRMED"
+  },
+  "pytorch_runtime": {
+    "cuda_index": "https://download.pytorch.org/whl/cu130",
+    "official_install_reference": "https://pytorch.org/get-started/previous-versions/",
+    "required_distribution": "torch==2.12.1",
+    "torchvision_allowed": false
+  },
+  "source_use_policy": {
+    "community_code_copied": false,
+    "community_code_downloaded": false,
+    "community_code_executed": false,
+    "empirical_authorized": false,
+    "real_market_data_allowed": false
+  },
+  "stage": "SYNTHETIC_CONTRACT_ONLY"
+}

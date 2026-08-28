@@ -1,0 +1,49 @@
+{
+  "acquisition_manifest": {
+    "exact_top_level_keys": [
+      "application_network_policy",
+      "expected_manifest_sha256",
+      "files",
+      "logical_request_count",
+      "network_retry_count",
+      "raw_file_count",
+      "raw_total_bytes",
+      "schema_version",
+      "vendored_sources"
+    ],
+    "file_exact_keys": [
+      "bytes",
+      "final_host",
+      "final_path",
+      "http_status",
+      "immutable_url",
+      "ordinal",
+      "path",
+      "redirect_count",
+      "sha256"
+    ],
+    "signed_query_persisted": false
+  },
+  "expected_manifest": {
+    "exact_top_level_keys": [
+      "files",
+      "row_count",
+      "schema_version",
+      "total_bytes"
+    ],
+    "git_blob_row_exact_keys": [
+      "authority_oid",
+      "authority_oid_kind",
+      "expected_bytes",
+      "expected_sha256",
+      "immutable_url",
+      "ordinal",
+      "path",
+      "revision",
+      "source_kind"
+    ],
+    "hf_lfs_additional_exact_key": "xet_oid"
+  },
+  "raw_root": "data/raw/kronos_official_v2",
+  "schema_version": "KRONOS_SUPPLY_CHAIN_SCHEMA_V2"
+}

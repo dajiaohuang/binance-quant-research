@@ -1,0 +1,12 @@
+{
+  "authority_before_import": true,
+  "collector_runtime_verification": ["PRE_REQUEST", "PRE_PROMOTION"],
+  "experiment_id": "exp_20260828_004",
+  "external_freeze_manifest_files": 10,
+  "listing_presence": "UNKNOWN_ONLY_CODE_FILTERED_MASTER",
+  "parent_experiment_id": "exp_20260828_003",
+  "parent_no_go_preserved": true,
+  "query_semantics": "UNCHANGED_FROM_EXP003_CORRECTED_2025-03-28_SPLIT_EXPECTATION",
+  "runtime_import": "FIXED_INTERPRETER_I_S_B_PRIVATE_EXPLICIT_SOURCE_NAMESPACE",
+  "source_contract_version": "JQUANTS_V2_V3_SOURCE_CONTRACT_V1"
+}

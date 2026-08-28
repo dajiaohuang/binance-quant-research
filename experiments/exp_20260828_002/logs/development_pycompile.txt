@@ -1,0 +1,7 @@
+command=uv run python -m py_compile src/quant_research/alpha_models/data/jquants_v2/__init__.py src/quant_research/alpha_models/data/jquants_v2/contracts.py src/quant_research/alpha_models/data/jquants_v2/collector.py src/quant_research/alpha_models/data/jquants_v2/loader.py src/quant_research/alpha_models/data/jquants_v2/adapters.py tests/test_jquants_v2.py
+kind=DEVELOPMENT_NOT_FORMAL
+initial_exit_code=0
+final_exit_code=0
+final_wall_seconds=0.1712451
+network_request_count=0
+formal_execution_count=0

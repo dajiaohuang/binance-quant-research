@@ -1,0 +1,13 @@
+# Phase 1 development only; no network and no local key read.
+uv run python -m unittest tests.test_jquants_v2_v4 -v
+uv run python -m py_compile src/quant_research/alpha_models/data/jquants_v2_v4/__init__.py src/quant_research/alpha_models/data/jquants_v2_v4/contracts.py src/quant_research/alpha_models/data/jquants_v2_v4/collector.py src/quant_research/alpha_models/data/jquants_v2_v4/loader.py src/quant_research/alpha_models/data/jquants_v2_v4/adapters.py tests/test_jquants_v2_v4.py
+
+# Frozen formal candidate. NOT AUTHORIZED; do not execute before Fresh Phase2 GO.
+# launcher SHA-256: 32350e9b436e5704199ee8ba552937a1e0ece0c216d0f2453f2a50a3dbfb7ade
+# freeze manifest SHA-256: 75c22f6a0ef8f46e2e24514603261a07a3b6437ae64f62523e6f6c50b10a37e8
+# exact line UTF-8/no-newline SHA-256: 199fda972bedc08692ccd2fbb8e2bef5369ec0f142f75721f662b9a241e922b4
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\alpha_models\data\jquants_v2_v4\launcher.ps1 -ExpectedLauncherSha256 32350e9b436e5704199ee8ba552937a1e0ece0c216d0f2453f2a50a3dbfb7ade -ExpectedFreezeManifestSha256 75c22f6a0ef8f46e2e24514603261a07a3b6437ae64f62523e6f6c50b10a37e8; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode
+
+# Phase 4 append-only note: the frozen formal command above executed exactly once.
+# No retry or second formal invocation was made. Postflight was read-only.
+# Terminal: INCONCLUSIVE / RATE_PACING_POSTFLIGHT_CLOCK_DOMAIN_MISMATCH.

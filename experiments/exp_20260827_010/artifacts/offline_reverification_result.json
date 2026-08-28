@@ -1,0 +1,64 @@
+{
+  "acquisition_manifest_sha256": "811cd603d640a7acfab7776e3a97a9a753a0e3d053670587eb700f89167419c6",
+  "expected_manifest_sha256": "3d2b370f172b17f090099d8ef2e3d9e530ed4d6cf4cb3c2ef57d04db7747d52e",
+  "mini_inference": {
+    "checkpoint": {
+      "model": {
+        "config_sha256": "70daca2cb11e3a979dd6b8ac12ee08e2aace877acf28f5b8dfb4fe5609736201",
+        "tensor_count": 80,
+        "weights_sha256": "a7d5f37e2e9fbd9891f7d7d4f72574512dd1f704fee14223e0a8cd0fbf54197c"
+      },
+      "tokenizer": {
+        "config_sha256": "0b30a443affb03e05a876a083857de9164f899feb7b4d261da02c485c9a3e3b6",
+        "tensor_count": 96,
+        "weights_sha256": "b97ec46b3b72160509e289183eaf7bdf5f0dac5bb9b49522f6d46638a99a8717"
+      }
+    },
+    "finite": true,
+    "rows": 2
+  },
+  "network_request_count": 0,
+  "raw_file_count": 19,
+  "raw_total_bytes": 562430552,
+  "raw_verification_passes": 2,
+  "schema_version": "KRONOS_OFFLINE_REVERIFICATION_RESULT_V1",
+  "small_golden": {
+    "checkpoint": {
+      "model": {
+        "config_sha256": "5e0f6a605d5f81b5c9b559fe5cf716a1acb041c744e6f41bd05b097b7a685396",
+        "tensor_count": 136,
+        "weights_sha256": "b082dfcbd8e8c142a725c8bbb99781802f38fec81210e13479effb32b3c3e020"
+      },
+      "tokenizer": {
+        "config_sha256": "2366e7ccfec76cbc19cf3c4c1b9c5d901be336ca1e83f2d2292c9bff381b77a2",
+        "tensor_count": 96,
+        "weights_sha256": "59d85f6af76a2c3b8240ea06cb21db4213b4eeca053f246b23e29cf832fc6bee"
+      }
+    },
+    "fixture_sha256": "5064d09ef7fe186b9c2aeed9dfdf234721b4b182a8305d92db9d3d5d6b37f29e",
+    "rows": 8
+  },
+  "source_files": [
+    {
+      "bytes": 1062,
+      "path": "LICENSE",
+      "sha256": "acb2d194d378204e5f2be4dcd24d39ecac437903620c790c3315a96dab388fdc"
+    },
+    {
+      "bytes": 412,
+      "path": "model/__init__.py",
+      "sha256": "f8f856ca3fedadcaac97e196be23d1aeda1c3c9ffe8903d66d43ea3bcac6240c"
+    },
+    {
+      "bytes": 30133,
+      "path": "model/kronos.py",
+      "sha256": "0a5f90282e2039c2de0771473419715c845def154896dbd0f5747837e6241032"
+    },
+    {
+      "bytes": 23426,
+      "path": "model/module.py",
+      "sha256": "a07edbadc0e96804c8158c021bbc6063bb7cc43b34d7fc470d5c8ff2005a409f"
+    }
+  ],
+  "terminal_status": "NEEDS_MORE_DATA"
+}

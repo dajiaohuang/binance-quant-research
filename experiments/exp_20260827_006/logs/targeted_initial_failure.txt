@@ -1,0 +1,23 @@
+Command:
+uv run --extra modern-ml python -m unittest tests.test_ddgl_synthetic -v
+
+Observed result:
+Ran 11 tests in 6.834s
+FAILED (errors=2)
+
+Passing tests: 9
+Failing tests:
+- test_checkpoint_weights_only_roundtrip
+- test_cpu_smoke_writes_bounded_metrics_and_checkpoint
+
+Shared exception:
+quant_research.alpha_models.contracts.DDGLContractError: checkpoint state_dict mismatch
+
+Diagnosis:
+torch.load(..., weights_only=True) returned an OrderedDict-compatible state_dict;
+the trusted checkpoint loader incorrectly required exact type dict.  The
+minimal correction accepts dict subclasses for state_dict while preserving the
+exact two-key checkpoint envelope, config SHA binding and strict state loading.
+
+This was a development failure, not a formal command or research result.
+No real data, validation/final data, IC, P&L, eligibility or backtest ran.

@@ -1,0 +1,14 @@
+check_kind=PRESENCE_AND_METADATA_ONLY
+path=.env.jquants.local
+exists=true
+is_file=true
+link_type=empty
+reparse=false
+gitignored=true
+gitignore_rule=.gitignore:8:.env.*
+tracked=false
+process_environment_JQUANTS_API_KEY_present=false
+content_read=false
+size_read=false
+hash_read=false
+value_logged=false

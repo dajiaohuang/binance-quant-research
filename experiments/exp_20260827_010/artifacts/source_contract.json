@@ -1,0 +1,14 @@
+{
+  "acquisition_manifest":{"path":"experiments/exp_20260827_009/artifacts/acquisition_manifest.json","sha256":"811cd603d640a7acfab7776e3a97a9a753a0e3d053670587eb700f89167419c6"},
+  "expected_manifest":{"path":"experiments/exp_20260827_009/expected_manifest.json","sha256":"3d2b370f172b17f090099d8ef2e3d9e530ed4d6cf4cb3c2ef57d04db7747d52e"},
+  "experiment_id":"exp_20260827_010",
+  "frozen_exp009_inputs":{"adapter_sha256":"215f5cccd7d6802e1499d057799a63334ac46dce280a25a64055cd983c3886fa","downloader_sha256":"0602f1a2daf290f4da4f2087d10406f9f0184ff04c1f0a31b92dc4c503710ec0","test_sha256":"c0b54f2566d4f438d8a7e29522421cc176ac3ff997bcce74d15a0f532fff87b0"},
+  "loader_policy":"PRIVATE_SOURCE_BYTES_COMPILE_EXEC_NO_PYC_NO_HUB_NO_NETWORK; FULL_RAW_BYTES_SHA_OID_TREE_REVERIFIED_AT_START_AND_END",
+  "network_request_count":0,
+  "raw_copy_count":0,
+  "real_data_accessed":true,
+  "raw_root":"data/raw/kronos_official_v2",
+  "redistribution_notice":"Checkpoint-weight redistribution permission is not established; do not redistribute.",
+  "research_ceiling":"SUPPLY_CHAIN_AND_OFFLINE_INTERFACE_VERIFIED / NO_EMPIRICAL_ALPHA",
+  "schema_version":"KRONOS_OFFLINE_REVERIFICATION_SOURCE_CONTRACT_V1"
+}

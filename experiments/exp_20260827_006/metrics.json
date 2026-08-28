@@ -1,0 +1,15 @@
+{
+  "cpu_smoke": "NOT_RUN",
+  "empirical_authorized": false,
+  "formal_execution_count": 0,
+  "full_repository_tests": "NOT_RUN",
+  "gpu_smoke": "NOT_RUN",
+  "historical_eligibility_ready": false,
+  "market_network_request_count": 0,
+  "real_data_accessed": false,
+  "retry_count": 0,
+  "strict_eligible_count": 0,
+  "targeted_tests": "NOT_RUN",
+  "terminal_status": "PLANNED"
+}
+

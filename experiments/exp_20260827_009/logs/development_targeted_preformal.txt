@@ -1,0 +1,8 @@
+Command: uv run python -m py_compile src/quant_research/alpha_models/external/kronos_supply_chain_v2.py src/quant_research/alpha_models/external/kronos_adapter_v2.py tests/test_kronos_supply_chain_v2.py
+Exit: 0
+Command: uv run --extra modern-ml python -m unittest tests.test_kronos_supply_chain_v2 -v
+Exit: 0
+Result: Ran 11 tests; 9 passed; 2 skipped because the one-time v2 formal acquisition had not yet run.
+Skipped tests: hermetic mini offline load/inference; official small 256 golden from v2.
+Network request count: 0
+Retry count: 0

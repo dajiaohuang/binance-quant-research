@@ -1,0 +1,11 @@
+phase=DEVELOPMENT_TARGETED_INITIAL
+command=uv run --extra modern-ml python -m unittest tests.test_sspt_v2 -v
+observed_exit_code=1
+tests_run=23
+tests_passed=12
+errors=11
+failures=0
+root_cause_1=Checkpoint API incorrectly used exact type(Path), rejecting concrete WindowsPath arguments before any checkpoint write.
+root_cause_2=Development smoke checkpoint-binding helper referenced an undefined ROOT constant.
+root_cause_3=Eq5 fixed-vector test supplied decimal returns instead of recomputing the exact floating return identity enforced by CrossSectionTrainingBatch.
+scope=Development evidence only; no formal, network, real data, upstream code, pickle, Alpha, IC, PnL, or backtest was run.

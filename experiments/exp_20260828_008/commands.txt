@@ -1,0 +1,24 @@
+# RTK availability check; failed once with CommandNotFoundException.
+rtk --version
+
+# Offline development only. The v2 suite ran three times: initial 23-test run
+# with one manifest-verifier error, repaired 23/23 PASS, final 24/24 PASS.
+uv run python -m unittest tests.test_jquants_v2_bars_monthly_v2 -v
+
+# Frozen v1 regression only; 38 tests OK (37 pass, 1 Windows symlink skip).
+uv run python -m unittest tests.test_jquants_v2_bars_monthly_v1 -v
+
+uv run python -m py_compile src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v2/__init__.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v2/__main__.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v2/contracts.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v2/loader.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v2/planner.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v2/collector.py tests/test_jquants_v2_bars_monthly_v2.py
+powershell.exe -NoLogo -NoProfile -NonInteractive -Command "<parse launcher.ps1 without execution>"
+uv run python -m quant_research.alpha_models.data.jquants_v2_bars_monthly_v2 --repo-root . --dry-plan
+uv run python -c "<validate exp007 frozen candidate remains unchanged>"
+uv run python -c "<validate exp008 candidate manifest canonical bytes and all 17 hashes>"
+
+# Frozen formal candidate. NOT EXECUTED; wait for Fresh Phase2 GO.
+# launcher SHA-256: 8ef5eea4c76978a68dcb315e6b9fb9a8e8dab888dee8060a8e78f25a57d27091
+# freeze manifest SHA-256: 758be2c679ba655723c8df91aba30aa48b1937beb42870e15af7c35b7bde9598
+# exact line UTF-8/no-newline bytes: 393
+# exact line UTF-8/no-newline SHA-256: 27ba8511c21abd0695097add692f9833968db8d8472ce23427e0b3fdc3c5774e
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\alpha_models\data\jquants_v2_bars_monthly_v2\launcher.ps1 -ExpectedLauncherSha256 8ef5eea4c76978a68dcb315e6b9fb9a8e8dab888dee8060a8e78f25a57d27091 -ExpectedFreezeManifestSha256 758be2c679ba655723c8df91aba30aa48b1937beb42870e15af7c35b7bde9598; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode
+
+# Monthly CLI/network is intentionally absent and unauthorized.

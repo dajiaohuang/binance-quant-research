@@ -1,0 +1,49 @@
+{
+  "adjusted_series": {
+    "causal_rule": "at formation F, apply only AdjFactor observations with known_at_ms <= F",
+    "future_factor_backfill": false,
+    "raw_preserved": true
+  },
+  "calendar_short_fields": [
+    "Date",
+    "HolDiv"
+  ],
+  "daily_bars_short_fields": [
+    "Date",
+    "Code",
+    "O",
+    "H",
+    "L",
+    "C",
+    "Vo",
+    "Va",
+    "AdjFactor",
+    "AdjO",
+    "AdjH",
+    "AdjL",
+    "AdjC",
+    "AdjVo"
+  ],
+  "master_short_fields": [
+    "Date",
+    "Code",
+    "CoName",
+    "CoNameEn",
+    "S17",
+    "S17Nm",
+    "S33",
+    "S33Nm",
+    "ScaleCat",
+    "Mkt",
+    "MktNm",
+    "Mrgn",
+    "MrgnNm",
+    "SecType",
+    "SecTypeNm"
+  ],
+  "outer_response": {
+    "data": "array",
+    "pagination_key": "optional nonempty string"
+  },
+  "schema_version": "JQUANTS_V2_FREE_OFFLINE_SCHEMA_V1"
+}

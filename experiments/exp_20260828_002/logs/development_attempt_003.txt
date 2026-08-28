@@ -1,0 +1,12 @@
+command=uv run python -m unittest tests.test_jquants_v2 -v
+kind=DEVELOPMENT_NOT_FORMAL
+exit_code=0
+tests_run=19
+passed=19
+failed=0
+errors=0
+skipped=0
+wall_seconds=1.7366292
+network_request_count=0
+retry_count=0
+coverage_added=duplicate rows; dry-plan environment non-read; raw-tree extra path; exception secret reduction

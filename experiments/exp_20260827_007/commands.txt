@@ -1,0 +1,6 @@
+# Planned exact-once commands; preregistered before network acquisition.
+uv run --extra modern-ml python -m quant_research.alpha_models.external.kronos_download
+uv run --extra modern-ml python -m unittest tests.test_kronos_adapter -v
+uv run --extra modern-ml python -m quant_research.alpha_models.external.kronos_smoke --device cpu
+uv run --extra modern-ml python -m quant_research.alpha_models.external.kronos_smoke --device cuda:0
+uv run --extra modern-ml python -m unittest discover -s tests -v

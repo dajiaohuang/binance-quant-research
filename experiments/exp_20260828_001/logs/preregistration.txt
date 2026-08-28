@@ -1,0 +1,10 @@
+experiment_id=exp_20260828_001
+created_at_utc=2026-08-27T16:51:28.7562089Z
+git_commit=6fd05b8690f99643002a9f310d3c6e0d8bae9346
+full_repository_command_sha256=a52178eea71b24883172b925275aac96dcc0bf201c45b5ea49b9f3486d8059be
+git_diff_check_command_sha256=466c2f308b48c7661d646fdd068fbecea974c665fe65dbf8ed508f224180ce0b
+formal_execution_count=0
+retry_count=0
+network_request_count=0
+real_data_accessed=false
+status=PLANNED

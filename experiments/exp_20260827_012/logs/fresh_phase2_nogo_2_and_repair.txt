@@ -1,0 +1,14 @@
+EXP_20260827_012 SECOND FRESH PHASE2 NO-GO AND SNAPSHOT REPAIR
+
+The repair-1 candidate index remains preserved at SHA256 fe8b9ffa785be660a13ba476a7a678fb8fc997e4768761f53c1ab1892c7c70fc with implementation tree 93697386a8b9f9f839afb248f65fe0c169eb6b384632fbfdf87340ce8a766e38 and 28/28 development PASS. Fresh Phase2 again returned FINAL NO-GO before formal execution because an importable _PIPELINE_TOKEN was still treated as provenance and checkpoint evidence did not contain the actual SWA snapshots.
+
+Repair-2 removes _PIPELINE_TOKEN. SWASnapshot stores every complete sorted state-dict tensor set plus update identity. Count, IDs, state hashes and trajectory proof are properties derived only from snapshots. Duplicate IDs and duplicate state hashes fail. The frozen averaging contract converts every same-shape/same-dtype finite floating tensor to CPU float64, sums snapshots in update order, divides by exact snapshot count, converts once to the final tensor dtype, and requires torch.equal bitwise equality to every final student tensor.
+
+Checkpoint model.safetensors contains exact keys final::{state_key} and snapshot::{zero_padded_index_4}::{state_key}; manifest binds encodings, exact tensor manifest, final identity and the fully derived snapshot trajectory. Loader reconstructs snapshots and FrozenSWAStudent, then replays the bitwise mean. Arbitrary model, missing/replaced/extra/nonfinite snapshot, duplicate state/ID, wrong final average, unsafe extra file, tamper and synchronized re-sign attacks fail closed.
+
+Repair-2 py_compile: PASS.
+Repair-2 targeted: 30/30 PASS, failures=0, errors=0, skipped=0; CUDA test executed.
+Repair-2 CPU smoke: exit0, wall2.5438661s, complete checkpoint snapshot roundtrip PASS.
+Repair-2 CUDA smoke: exit0, wall3.7961097s, peak74123264 bytes, same-device deterministic inference and CPU checkpoint snapshot roundtrip PASS.
+
+Formal execution count=0. Full repository suite=NOT_RUN. Network=0. Real data=0. Upstream source/content read or executed=0. Downloads=0. Pickle=0. Empirical Alpha/IC/P&L/backtest=0.

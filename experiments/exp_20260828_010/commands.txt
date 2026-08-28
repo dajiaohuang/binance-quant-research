@@ -1,0 +1,49 @@
+# RTK availability check attempted exactly once for this experiment and failed
+# with CommandNotFound because `rtk` is unavailable in this environment.
+rtk Get-FileHash -Algorithm SHA256 experiments/exp_20260828_009/artifacts/postflight_closure_manifest.json
+
+# All following development commands use minimal PowerShell fallback. They are
+# appended only after execution. No key read or network call is authorized in
+# Phase1 development.
+
+# Initial focused run: 19 run, 18 PASS, 1 FAIL. The only failure was an
+# over-broad secret-marker assertion matching the launcher's key grammar, not a
+# secret. The assertion was narrowed before the final run.
+uv run python -m unittest tests.test_jquants_v2_bars_monthly_v4 -v
+
+# Final focused v4: 22 run, 21 PASS, 1 Windows symlink-privilege skip.
+uv run python -m unittest tests.test_jquants_v2_bars_monthly_v4 -v
+
+# Direct frozen v3/v2/v1 regressions: 77 run, 76 PASS, 1 Windows symlink skip.
+uv run python -m unittest tests.test_jquants_v2_bars_monthly_v3 tests.test_jquants_v2_bars_monthly_v2 tests.test_jquants_v2_bars_monthly_v1 -v
+
+# PASS.
+uv run python -m py_compile src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v4/__init__.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v4/__main__.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v4/contracts.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v4/source.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v4/monthly.py tests/test_jquants_v2_bars_monthly_v4.py
+
+# PASS; syntax parse only, no launcher execution.
+powershell.exe -NoLogo -NoProfile -NonInteractive -Command '<parse v4 launcher without execution>'
+
+# PASS; read-only, network 0, key reads 0.
+uv run python -B -m quant_research.alpha_models.data.jquants_v2_bars_monthly_v4 --repo-root . --dry-plan
+
+# Full repository suite intentionally not run; scope is focused v4 plus direct
+# frozen J-Quants regressions.
+
+# Canonical 21-file candidate freeze validation: PASS.
+# candidate freeze manifest SHA-256:
+# 0c9d47e2e6678ac1125b37a11fd3a9e77e2c4b0328bef3062b435a5d9e6b103a
+uv run python -B -c '<validate canonical 21-file exp010 candidate freeze>'
+
+# Frozen formal candidate. NOT EXECUTED; wait for Fresh Phase2 GO.
+# launcher SHA-256: ff443b57fa185a4a207ac991fefa52e7940eec9188d17fa28bca441d13da9a68
+# freeze manifest SHA-256: 0c9d47e2e6678ac1125b37a11fd3a9e77e2c4b0328bef3062b435a5d9e6b103a
+# exact line UTF-8/no-newline bytes: 393
+# exact line UTF-8/no-newline SHA-256: 73a489ccb969470fbc1b4ce6510eb59fa146fd541ea7d9e48e0f16181d30bb7b
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\alpha_models\data\jquants_v2_bars_monthly_v4\launcher.ps1 -ExpectedLauncherSha256 ff443b57fa185a4a207ac991fefa52e7940eec9188d17fa28bca441d13da9a68 -ExpectedFreezeManifestSha256 0c9d47e2e6678ac1125b37a11fd3a9e77e2c4b0328bef3062b435a5d9e6b103a; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode
+
+# The exact command above was subsequently executed exactly once. It exited 40
+# after send attempt 5 with socket.gaierror/getaddrinfo failure. Four HTTP 200
+# raw bodies and receipts were preserved; zero automatic retries.
+
+# Lightweight organization only: enumerate partial raw/receipts, rows/bytes,
+# ledgers, catalog/final status, key cleanup and Git-ignore status.

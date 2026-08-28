@@ -1,0 +1,7 @@
+# Development only; may run repeatedly with every attempt retained.
+uv run python -m quant_research.alpha_models.data.jquants_v2.collector --dry-plan
+uv run python -m unittest tests.test_jquants_v2 -v
+uv run python -m py_compile src/quant_research/alpha_models/data/jquants_v2/__init__.py src/quant_research/alpha_models/data/jquants_v2/contracts.py src/quant_research/alpha_models/data/jquants_v2/collector.py src/quant_research/alpha_models/data/jquants_v2/loader.py src/quant_research/alpha_models/data/jquants_v2/adapters.py tests/test_jquants_v2.py
+
+# Candidate formal source probe. NOT AUTHORIZED OR RUN in Phase 1.
+uv run python -m quant_research.alpha_models.data.jquants_v2.collector --execute

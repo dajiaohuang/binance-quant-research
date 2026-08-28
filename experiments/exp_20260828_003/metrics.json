@@ -1,0 +1,18 @@
+{
+  "artifact_state":"JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_CONTRACT_CANDIDATE_FROZEN",
+  "formal_execution_count":0,
+  "network_request_count":0,
+  "real_data_accessed":false,
+  "retry_count":0,
+  "targeted_tests":{"command":"uv run python -m unittest tests.test_jquants_v2_v2 -v","failed":0,"passed":27,"skipped":0},
+  "py_compile":"PASS",
+  "powershell_parse":"PASS",
+  "strict_json_parse":"PASS",
+  "formal_paths_absent":true,
+  "parent_api_key_environment_present":false,
+  "local_env_file_presence_only":true,
+  "historical_eligibility_ready":false,
+  "empirical_authorized":false,
+  "strict_eligible_count":0,
+  "terminal_status":"NEEDS_MORE_DATA"
+}

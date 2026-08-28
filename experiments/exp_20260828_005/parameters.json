@@ -1,0 +1,30 @@
+{
+  "api_base": "https://api.jquants.com",
+  "api_key_environment_variable": "JQUANTS_API_KEY",
+  "adjusted_price_validation": "FINITE_POSITIVE_OHLC_ORDER_ONLY_DUE_TO_OFFICIAL_ONE_DECIMAL_ROUNDING",
+  "attempt_ledger": "experiments/exp_20260828_005/formal_control/exp_20260828_005_formal_001.stage_ledger.jsonl",
+  "attempt_reservation": "experiments/exp_20260828_005/formal_control/exp_20260828_005_formal_001.reservation.lock",
+  "global_http_cap": 60,
+  "bars_non_premium_fields": ["Date", "Code", "O", "H", "L", "C", "UL", "LL", "Vo", "Va", "AdjFactor", "AdjO", "AdjH", "AdjL", "AdjC", "AdjVo", "MktCap", "ExRT"],
+  "bars_premium_session_fields_rejected": ["MO", "MH", "ML", "MC", "MUL", "MLL", "MVo", "MVa", "MAdjO", "MAdjH", "MAdjL", "MAdjC", "MAdjVo", "AO", "AH", "AL", "AC", "AUL", "ALL", "AVo", "AVa", "AAdjO", "AAdjH", "AAdjL", "AAdjC", "AAdjVo"],
+  "ex_right_type_values": [null, "1", "2", "3"],
+  "holdiv_tse_non_session_values": ["0", "3"],
+  "holdiv_tse_session_values": ["1", "2"],
+  "listing_presence_policy": "ALWAYS_UNKNOWN_FOR_CODE_FILTERED_MASTER_QUERIES",
+  "logical_query_count": 5,
+  "master_fields": ["Date", "Code", "CoName", "CoNameEn", "S17", "S17Nm", "S33", "S33Nm", "ScaleCat", "Mkt", "MktNm", "Mrgn", "MrgnNm", "ProdCat"],
+  "master_kddi_product_category": "011",
+  "max_pages_per_query": 25,
+  "minimum_request_spacing_seconds": 13,
+  "price_limit_flag_values": ["0", "1"],
+  "queries": [
+    {"id":"Q01_CALENDAR","path":"/v2/markets/calendar","parameters":{"from":"2025-03-28","to":"2025-03-31"}},
+    {"id":"Q02_MASTER_NORMAL","path":"/v2/equities/master","parameters":{"code":"9433","date":"2025-03-31"}},
+    {"id":"Q03_MASTER_NONTRADING_MAPPING","path":"/v2/equities/master","parameters":{"code":"9433","date":"2025-03-30"}},
+    {"id":"Q04_ALL_BARS_NORMAL","path":"/v2/equities/bars/daily","parameters":{"date":"2025-03-28"}},
+    {"id":"Q05_9433_SPLIT_RANGE","path":"/v2/equities/bars/daily","parameters":{"code":"9433","from":"2025-03-27","to":"2025-04-02"}}
+  ],
+  "raw_first_order": ["TRANSPORT_CHECKS", "ATOMIC_RAW_WRITE", "ATOMIC_SAFE_RECEIPT_WRITE", "STRICT_PARSE", "SEMANTIC_VALIDATION"],
+  "retry_count": 0,
+  "runtime_authority_order": ["LAUNCHER_SELF_HASH", "O_EXCL_RESERVATION", "LEDGER", "TEN_FILE_PREFLIGHT", "ENV_FILE_READ", "COLLECTOR_IMPORT_AND_EXECUTION"]
+}

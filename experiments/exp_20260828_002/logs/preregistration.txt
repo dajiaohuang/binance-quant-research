@@ -1,0 +1,11 @@
+experiment_id=exp_20260828_002
+stage=OFFLINE_CONTRACT_ONLY
+status=PLANNED
+formal_execution_count=0
+network_request_count=0
+retry_count=0
+real_data_accessed=false
+empirical_authorized=false
+historical_eligibility_ready=false
+strict_eligible_count=0
+note=Pre-registration written before J-Quants implementation files.

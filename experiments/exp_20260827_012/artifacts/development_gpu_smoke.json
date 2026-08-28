@@ -1,0 +1,102 @@
+{
+  "artifact_kind": "DEVELOPMENT_SYNTHETIC_SMOKE",
+  "device": "cuda:0",
+  "device_inference_deterministic": true,
+  "empirical_authorized": false,
+  "gpu_peak_bytes": 74123264,
+  "implementation_entries": [
+    {
+      "bytes": 1037,
+      "path": "src/quant_research/alpha_models/tips_v1/__init__.py",
+      "sha256": "d50948b6fe9e2ec56cde8c90fdbd3c68b0e0f066014bd8f51dd980f5f327a5c3"
+    },
+    {
+      "bytes": 2076,
+      "path": "src/quant_research/alpha_models/tips_v1/biases.py",
+      "sha256": "a92493a14ed0d713de8a254936c2e4c6e20673e25abeb3dddab4d40a7909f2aa"
+    },
+    {
+      "bytes": 8846,
+      "path": "src/quant_research/alpha_models/tips_v1/checkpoint.py",
+      "sha256": "1c7b004c249d976bb4ce5bb0e62810416677d574d04d74f2ddc39e912026b507"
+    },
+    {
+      "bytes": 12807,
+      "path": "src/quant_research/alpha_models/tips_v1/contracts.py",
+      "sha256": "0e7fd90d0aceb1c953f821042ea400c64fd985c7dbb881aa2e897b498ab65a1a"
+    },
+    {
+      "bytes": 8392,
+      "path": "src/quant_research/alpha_models/tips_v1/data.py",
+      "sha256": "12e5e97f200bb0510ca81f4c034df087e7020323bfa8386c85e74ed1820f3d25"
+    },
+    {
+      "bytes": 2978,
+      "path": "src/quant_research/alpha_models/tips_v1/losses.py",
+      "sha256": "57f517f6fa41f483817b65aff28bd8b8c8d85338e8f403a38c1b3ebb675eddcc"
+    },
+    {
+      "bytes": 4665,
+      "path": "src/quant_research/alpha_models/tips_v1/model.py",
+      "sha256": "435fd1d75b58883065872d42521c0083681d7d66a0877598c8481244d0eadab3"
+    },
+    {
+      "bytes": 7563,
+      "path": "src/quant_research/alpha_models/tips_v1/pipeline.py",
+      "sha256": "dc9fb1ddaaa39096b04823dfdc00aa3f327a2a9b4d340621ef90828bf17d531c"
+    },
+    {
+      "bytes": 1784,
+      "path": "src/quant_research/alpha_models/tips_v1/provenance.py",
+      "sha256": "d25675c5d59f62460a80326e0054f1b5f964ff46a6655a2b13a48bc65d83c73e"
+    },
+    {
+      "bytes": 5969,
+      "path": "src/quant_research/alpha_models/tips_v1/smoke.py",
+      "sha256": "0b2510f9136220a175124795db27e056ca6907ceabd01c9f195563514cc87e47"
+    }
+  ],
+  "implementation_tree_sha256": "979bc530b951f2537c3d2a75f814507c00989fa0a9ab1039516b41baa189e9a1",
+  "inference_finite": true,
+  "paper_config": {
+    "d_model": 64,
+    "dropout": 0.0,
+    "effective_batch_size": 256,
+    "feature_count": 8,
+    "ffn_dim": 256,
+    "heads": 4,
+    "label_q": 5,
+    "layers": 2,
+    "lookback": 20,
+    "paper_student_epochs": 20,
+    "paper_teacher_epochs": 100,
+    "paper_training_lr": 0.0001,
+    "rank_a": 1.0,
+    "student_smoothing": 0.9,
+    "student_temperature": 0.01,
+    "swa_final_epochs": 10
+  },
+  "real_data_accessed": false,
+  "smoke_override": {
+    "student_steps": 2,
+    "swa_updates": 2,
+    "synthetic_only": true,
+    "teacher_steps_each": 1
+  },
+  "student_losses": [
+    1.3872911930084229,
+    1.3853853940963745
+  ],
+  "student_state_sha256": "189565a8087a97903948018630462c69cf55345cbc99619ff41ef454b113bb0c",
+  "swa_update_count": 2,
+  "teacher_count": 7,
+  "teacher_losses": {
+    "ALIBI": -0.9553688168525696,
+    "FIXED_PERIODIC_LOCAL_SINUSOIDAL": -0.6881527900695801,
+    "FUTURE_REVERSE_SELF_SAFE": 0.17524375021457672,
+    "LEARNED_RPB": -0.9375574588775635,
+    "PAST_CAUSAL": 0.942338228225708,
+    "PATCH_LEN2_STRIDE1": -0.595199465751648,
+    "VANILLA": -0.7699087858200073
+  }
+}

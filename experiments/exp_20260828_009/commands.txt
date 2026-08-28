@@ -1,0 +1,29 @@
+# RTK availability check; failed once with CommandNotFoundException.
+rtk --version
+
+# Focused v3: 15/15 PASS.
+uv run python -m unittest tests.test_jquants_v2_bars_monthly_v3 -v
+
+# Frozen v2/v1 regressions: 62 tests OK (61 pass, 1 Windows symlink skip).
+uv run python -m unittest tests.test_jquants_v2_bars_monthly_v2 tests.test_jquants_v2_bars_monthly_v1 -v
+
+uv run python -m py_compile src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/__init__.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/__main__.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/contracts.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/loader.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/planner.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/collector.py tests/test_jquants_v2_bars_monthly_v3.py
+powershell.exe -NoLogo -NoProfile -NonInteractive -Command "<parse v3 launcher without execution>"
+uv run python -m quant_research.alpha_models.data.jquants_v2_bars_monthly_v3 --repo-root . --dry-plan
+uv run python -c "<validate canonical 18-file exp009 candidate freeze>"
+
+# Frozen formal candidate. NOT EXECUTED; wait for Fresh Phase2 GO.
+# launcher SHA-256: fc68a3f59da8bd6e9c2ab55ad425e8e803d24a7140ffee00a7539b65a0df8293
+# freeze manifest SHA-256: c137e0bdc8a3b16ef13ef6ad1d918038a49310d5ba85150f8be8de3159527873
+# exact line UTF-8/no-newline bytes: 393
+# exact line UTF-8/no-newline SHA-256: 15696cf13895fd7bce91940f66d21c53102a29eb5d76fbeefa504df4f582d654
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\alpha_models\data\jquants_v2_bars_monthly_v3\launcher.ps1 -ExpectedLauncherSha256 fc68a3f59da8bd6e9c2ab55ad425e8e803d24a7140ffee00a7539b65a0df8293 -ExpectedFreezeManifestSha256 c137e0bdc8a3b16ef13ef6ad1d918038a49310d5ba85150f8be8de3159527873; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode
+
+# User future-network authorization is recorded, but formal/monthly execution
+# remains gated in this phase.
+
+# Fresh Phase2 formal execution: executed exactly once; exit 0; zero retry.
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\alpha_models\data\jquants_v2_bars_monthly_v3\launcher.ps1 -ExpectedLauncherSha256 fc68a3f59da8bd6e9c2ab55ad425e8e803d24a7140ffee00a7539b65a0df8293 -ExpectedFreezeManifestSha256 c137e0bdc8a3b16ef13ef6ad1d918038a49310d5ba85150f8be8de3159527873; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode
+
+# Independent append-only postflight closure manifest SHA-256:
+# d850789b436bb918b3c621085a0ea7cc76b4c9ba6ab3c7d5a2a60373ffae650a

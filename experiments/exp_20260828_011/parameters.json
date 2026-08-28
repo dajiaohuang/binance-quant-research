@@ -1,0 +1,19 @@
+{
+  "adopted_dates": [
+    "2024-07-02",
+    "2024-07-03",
+    "2024-07-04",
+    "2024-07-05"
+  ],
+  "automatic_retries": 0,
+  "batch_id": "exp_20260828_010_monthly_formal_002",
+  "experiment_id": "exp_20260828_011",
+  "expected_first_network_date": "2024-07-08",
+  "failed_source_attempt_id": "jquants-bars-202407-attempt001",
+  "failed_source_partial_raw_tree_sha256": "2e75b8dae0f7e13b7b65e18111143279075df4d231120854f813e864a08a5493",
+  "month_attempt_id": "jquants-bars-202407-attempt002",
+  "network_date_count_after_adoption": 458,
+  "pointer_only_no_raw_copy": true,
+  "retry_count": 0,
+  "version": "JQUANTS_V2_BARS_MONTHLY_V5_RECOVERY"
+}

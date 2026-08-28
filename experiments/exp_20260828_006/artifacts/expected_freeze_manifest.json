@@ -1,0 +1,15 @@
+{
+  "files": [
+    {"bytes": 686, "path": "experiments/exp_20260828_006/artifacts/adapter_pointer.json", "sha256": "62b78aa59fc5eeed79d7c396a378377604f6ae9afa8b0c9e5d8f464f56b3ee87"},
+    {"bytes": 3736, "path": "experiments/exp_20260828_006/artifacts/recovery_manifest.json", "sha256": "0f6653f1b68c2c81a6e515152bd4f36f41ae499372297963a27a1919c373d257"},
+    {"bytes": 948, "path": "experiments/exp_20260828_006/artifacts/source_summary.json", "sha256": "2f1b8fd207710d96bd286e96a5897307c5389634669c91740de0f83636ddbe80"},
+    {"bytes": 676, "path": "experiments/exp_20260828_006/commands.txt", "sha256": "2f59e323523417d7d4a2efdedcd223d054212447bd9eedb04da70ab7d20929ab"},
+    {"bytes": 1943, "path": "experiments/exp_20260828_006/hypothesis.md", "sha256": "3fe68eb34dd28b2cfb72b1e2d18890eb138f7664fdaf2255903a244a44471e1a"},
+    {"bytes": 439, "path": "experiments/exp_20260828_006/parameters.json", "sha256": "937642335a21316a50eb70733947b957546a902f7b5f2fdbead4a6ce125ce96f"},
+    {"bytes": 360, "path": "src/quant_research/alpha_models/data/jquants_v2_recovery/__init__.py", "sha256": "57325a6e8beaf3af6fea0b09be03e9ac3c8d93448d00a5c2262fc9d4f11f6d12"},
+    {"bytes": 507, "path": "src/quant_research/alpha_models/data/jquants_v2_recovery/__main__.py", "sha256": "8594bdfb6634a9c854acb65b8a58a85e62795ea36bb904baee85a48a940b43b4"},
+    {"bytes": 19414, "path": "src/quant_research/alpha_models/data/jquants_v2_recovery/recovery.py", "sha256": "1c73a4d1cfd28d3d4767cbfffa403bb19991b6d005be61c6d5176090960a2257"},
+    {"bytes": 5341, "path": "tests/test_jquants_v2_recovery.py", "sha256": "ac98f7d0446ddb759166c3641aa558232bb00312505af41a26a93b2c0620e6c7"}
+  ],
+  "schema_version": "JQUANTS_V2_OFFLINE_RECOVERY_EXTERNAL_FREEZE_V1"
+}

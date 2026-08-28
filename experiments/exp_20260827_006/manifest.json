@@ -1,0 +1,29 @@
+{
+  "classification": "METHOD_REPRODUCTION_ON_NEW_DATA",
+  "created_at_local": "2026-08-27T20:27:45.1233208+08:00",
+  "created_at_utc": "2026-08-27T12:27:45.1196692+00:00",
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260827_006",
+  "formal_execution_count": 0,
+  "git_commit": "6fd05b8690f99643002a9f310d3c6e0d8bae9346",
+  "git_repository": true,
+  "historical_eligibility_ready": false,
+  "network_policy": {
+    "market_network_allowed": false,
+    "package_index_allowed_for_frozen_dependency_install": true
+  },
+  "preimplementation_hashes": {
+    "pyproject_toml": "142eb2bc1824e4be40418e26eda9bad599176aec7441145255922b21a4fa7e7b",
+    "uv_lock": "902a3e38826d17d06685fb4dcf3d76d5af44b398efb3a9438ad386562628f3f2"
+  },
+  "preexisting_dirty_paths": [
+    "AGENTS.md"
+  ],
+  "primary_change": "DDGL_SYNTHETIC_CONTRACT_V1",
+  "real_data_accessed": false,
+  "retry_count": 0,
+  "stage": "SYNTHETIC_CONTRACT_ONLY",
+  "status": "PAUSED_BY_USER_PRIORITY_CHANGE",
+  "strict_eligible_count": 0,
+  "terminal_status_ceiling": "NEEDS_MORE_DATA"
+}

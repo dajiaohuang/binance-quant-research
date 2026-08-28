@@ -1,0 +1,20 @@
+{
+  "api_base": "https://api.jquants.com",
+  "bootstrap_global_http_cap": 20,
+  "bootstrap_max_pages_per_query": 8,
+  "bootstrap_queries": [
+    {"id":"Q01_CALENDAR","path":"/v2/markets/calendar","parameters":{"from":"2024-07-01","to":"2026-05-29"}},
+    {"id":"Q02_BARS_FIRST","path":"/v2/equities/bars/daily","parameters":{"date":"2024-07-01"}},
+    {"id":"Q03_BARS_LAST","path":"/v2/equities/bars/daily","parameters":{"date":"2026-05-29"}}
+  ],
+  "calendar_civil_date_count": 698,
+  "calendar_month_plan_count": 23,
+  "calendar_session_count_max": 475,
+  "calendar_session_count_min": 450,
+  "first_request_full_cooldown": true,
+  "minimum_send_spacing_ns": 15000000000,
+  "monthly_network_authorized": false,
+  "raw_data_gitignored": true,
+  "retry_count_per_http_request": 0,
+  "stop_on_first_failure": true
+}

@@ -1,0 +1,5 @@
+exp_20260828_004 preregistered before implementation.
+Parent exp003 Fresh Phase2 NO-GO preserved.
+Formal execution count: 0
+Network request count: 0
+Real key read: false

@@ -12,6 +12,23 @@ dependencies = [
     "scipy>=1.15.3",
 ]
 
+[project.optional-dependencies]
+modern-ml = [
+    "einops==0.8.1",
+    "huggingface-hub==0.33.1",
+    "safetensors==0.6.2",
+    "torch==2.12.1",
+    "tqdm==4.67.1",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
 [project.scripts]
 quant-validate-data = "quant_research.validate_data:main"
 quant-backtest = "quant_research.backtest:main"
@@ -26,6 +43,7 @@ quant-binance-spot-announcement-corpus-v2 = "quant_research.binance_spot_announc
 quant-binance-spot-announcement-corpus-v3 = "quant_research.binance_spot_announcement_corpus_v3:main"
 quant-binance-spot-announcement-corpus-v4 = "quant_research.binance_spot_announcement_corpus_v4:main"
 quant-release-tests = "quant_research.release_tests:main"
+quant-ddgl-synthetic-smoke = "quant_research.alpha_models.smoke:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

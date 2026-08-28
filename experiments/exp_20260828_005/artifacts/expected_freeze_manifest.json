@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "bytes": 1346,
+      "path": "experiments/exp_20260828_005/artifacts/schema.json",
+      "sha256": "d79c7958eb573cfee8b9e13ae6cc6cf65fad04e075c1b32d5c668d14f2cfaf15"
+    },
+    {
+      "bytes": 1123,
+      "path": "experiments/exp_20260828_005/artifacts/source_contract.json",
+      "sha256": "920421c899e0dcc85fd4efef43095c821bdd2f3891ca35fa4615b98b276f6c97"
+    },
+    {
+      "bytes": 2313,
+      "path": "experiments/exp_20260828_005/parameters.json",
+      "sha256": "699901cb700f043e8d13765d686f9f2bd59475adf598fe82442987bc5806aaf4"
+    },
+    {
+      "bytes": 237,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_v4/__init__.py",
+      "sha256": "e09f7fcd7efb103f6d05e8823dd62e9e452b8ddf0ae1dae6b259ad282da1f9dc"
+    },
+    {
+      "bytes": 5784,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_v4/adapters.py",
+      "sha256": "ebcadefe0b872bea487630fa238bfab002594440f9b22ecb4df692b94c23940b"
+    },
+    {
+      "bytes": 15760,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_v4/collector.py",
+      "sha256": "67981bc94e74eb10a764ef3f096028d53afafb27baf52851c4078da15ce084b2"
+    },
+    {
+      "bytes": 12019,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_v4/contracts.py",
+      "sha256": "ac0bc86f980998b14f0683e12eefa0e5af41b38d96e4194ec789de5300955e30"
+    },
+    {
+      "bytes": 12310,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_v4/launcher.ps1",
+      "sha256": "32350e9b436e5704199ee8ba552937a1e0ece0c216d0f2453f2a50a3dbfb7ade"
+    },
+    {
+      "bytes": 18369,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_v4/loader.py",
+      "sha256": "9425de3bb8cd58e4c8d6e9605f9a43d178fa84ffe1744c552fb44e552e86bcc0"
+    },
+    {
+      "bytes": 53379,
+      "path": "tests/test_jquants_v2_v4.py",
+      "sha256": "931cb42c5eb31de2776c9ec84bb2c007b764411d1ed92e73143e141d436532ab"
+    }
+  ],
+  "schema_version": "JQUANTS_V2_V4_EXTERNAL_FREEZE_V1"
+}

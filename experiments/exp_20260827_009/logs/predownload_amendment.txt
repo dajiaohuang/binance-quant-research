@@ -1,0 +1,7 @@
+2026-08-27 PRE-DOWNLOAD AMENDMENT
+Initial preregistration stopped before network because the received task omitted the required 19 authority OIDs.
+Researcher subsequently supplied and independently verified all 19 expected byte counts, SHA-256 values, Git blob/LFS OIDs, and Xet OIDs for the fixed GitHub commit and five fixed Hugging Face revisions.
+The external authority mapping is now transcribed into expected_manifest.json before any v2 request.
+The initial blocked state is retained in hypothesis.md and report.md; it is not rewritten as if authority had always been present.
+No exp007 runtime manifest or v1 raw payload is an authority or runtime input.
+At amendment time: v2 network requests=0, retries=0, formal executions=0, v2 raw root absent.

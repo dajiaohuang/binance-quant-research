@@ -216,6 +216,19 @@ delta_ic = full_ic - ablated_ic
 
 ## 模型晋级门
 
+### DDGL synthetic contract（exp_20260827_006）
+
+`src/quant_research/alpha_models/` 另有一套隔离的 clean-room DDGL-style 合成合同：
+输入明确分离 coarse、fine 与 global market tensors，训练标签不能进入 inference
+接口；模型只实现 dynamic temporal/cross-sectional encoding、feature-wise multi-scale
+fusion 和 base-plus-residual MoE 的最小可训练结构。它不是论文官方实现，也没有复制
+或执行社区仓库；社区仓库身份始终标记为 `UNVERIFIED_THIRD_PARTY`。
+
+该实现只允许固定种子的 synthetic MSE smoke、checkpoint roundtrip 和资源门禁测试。
+即使 CPU/CUDA smoke 通过，也不代表真实 Alpha、IC、收益或论文复现成立，更不改变
+历史 PIT eligibility 门禁。真实数据适配、训练/验证/最终测试、模型选择与回测均不在
+本实验授权范围。
+
 任何真实模型工作开始前，必须依次满足：
 
 1. 冻结历史 PIT Binance Spot eligibility snapshot，并证明不是 archive availability

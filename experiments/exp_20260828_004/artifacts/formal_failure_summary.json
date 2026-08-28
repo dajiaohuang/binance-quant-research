@@ -1,0 +1,22 @@
+{
+  "artifact_state": "CONTROLLED_FORMAL_FAILURE_PARTIAL_STAGING_RETAINED",
+  "authorization_absent": true,
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260828_004",
+  "failure_code": "MASTER_FIELDS",
+  "final_absent": true,
+  "formal_execution_count": 1,
+  "formal_exit_code": 20,
+  "network_request_count": 2,
+  "network_request_count_evidence": "ONE_RESPONSE_PERSISTED; SECOND_RESPONSE_INFERRED_FROM_FAIL_CLOSED_MASTER_FIELDS_CONTROL_FLOW",
+  "persisted_response_count": 1,
+  "q01_persisted_response": {
+    "bytes": 166,
+    "row_count": 4,
+    "sha256": "97f544ad7fecdc2189383b5fdcef925b94914be00e2fd4a59aafb3d8cd63bdee"
+  },
+  "retry_count": 0,
+  "run_id": "exp_20260828_004_formal_001",
+  "staging_retained": true,
+  "terminal_status": "INCONCLUSIVE"
+}

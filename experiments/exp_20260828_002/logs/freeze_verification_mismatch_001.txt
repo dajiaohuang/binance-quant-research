@@ -1,0 +1,10 @@
+kind=PREFORMAL_FREEZE_VERIFICATION_FAILURE
+formal_executed=false
+files_checked=13
+individual_file_hash_mismatches=0
+recorded_implementation_tree_sha256=8d4dee37a40c9e7ccc5164b2c75b2b5be458fcfca01ae0797bc8959cca081274
+recomputed_from_frozen_source_rows_sha256=2613e4b53ca1f3e885babc41e842e0425f38a8ed00a717729a736b2dff03e764
+cause=initial tree command used a manual source order while the frozen file lists source rows in path order
+remediation=use the source rows in their actual frozen-list order as the only canonical preimage
+network_request_count=0
+source_or_test_files_changed=false

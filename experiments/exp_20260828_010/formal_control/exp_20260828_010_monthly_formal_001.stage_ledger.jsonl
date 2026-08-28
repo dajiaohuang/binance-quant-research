@@ -1,0 +1,4 @@
+{"batch_id":"exp_20260828_010_monthly_formal_001","event":"READ_ONLY_SOURCE_PREFLIGHT_AND_O_EXCL_CONTROL_PASS"}
+{"batch_id":"exp_20260828_010_monthly_formal_001","event":"BATCH_SOURCE_BINDING_EMITTED_BEFORE_ENV"}
+{"batch_id":"exp_20260828_010_monthly_formal_001","event":"ENV_ONLY_KEY_READY_AFTER_SOURCE_BINDING"}
+{"batch_id":"exp_20260828_010_monthly_formal_001","event":"STOPPED_FIRST_FAILURE"}

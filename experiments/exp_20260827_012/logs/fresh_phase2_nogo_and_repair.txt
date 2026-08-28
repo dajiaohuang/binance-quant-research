@@ -1,0 +1,32 @@
+EXP_20260827_012 FRESH PHASE2 NO-GO AND REPAIR
+
+The original candidate was independently rejected before formal execution. Formal count remained 0. The original candidate evidence is retained verbatim in artifacts/frozen_hashes.json (SHA256 1750360a041d396428dafc04557eb968796159784251d81fc491da2066e897b2), including implementation tree 979bc530b951f2537c3d2a75f814507c00989fa0a9ab1039516b41baa189e9a1, tests SHA 88d3b479cdcfe29a28485060c63b5a0db5086e1c4404133fb7f43ca319a8d168, and the original 23/23 development PASS evidence.
+
+NO-GO blockers:
+1. Feature and label rows lacked an independently checkable row-to-symbol binding.
+2. The teacher entrypoint did not independently replay q=5 continuity and times against a typed MarketCalendar.
+3. SWA snapshots could repeat an unchanged student state, and SWA_ACTIVE did not express continuing student training/trajectory proof.
+4. Checkpoint save accepted an arbitrary frozen vanilla model plus caller-provided SWA count rather than a pipeline-issued typed FrozenSWAStudent.
+
+Repair implementation:
+- Required feature_row_symbols/label_row_symbols plus SHA-256 row-content bindings; builder input order is normalized and semantically invariant.
+- Added exact q=5 session/time path and mandatory MarketCalendar validation inside teacher_step.
+- SWA_ACTIVE accepts label-free student updates; snapshot IDs and model state hashes must both be unique; exact tensor mean and trajectory proof are bound.
+- Added pipeline-issued FrozenSWAStudent and removed arbitrary-model/caller-count checkpoint save API. Manifest binds final state, all update IDs/state hashes, count, trajectory proof, teacher hashes, and external manifest/weights identities.
+
+Repair development run R001:
+command: uv run python -m unittest tests.test_tips_v1 -v
+exit: 1
+result: Ran 28; failures=2; errors=1.
+failures: positional array reorder was not detectable from symbols alone; two legacy tests attempted a second SWA snapshot without an intervening student update.
+repair: bind exact row content to symbol with row SHA-256 and make every second snapshot follow a real SWA_ACTIVE student optimizer step.
+
+Repair development run R002:
+command: uv run python -m unittest tests.test_tips_v1 -v
+exit: 0
+result: Ran 28; PASS 28; failures=0; errors=0; skipped=0; CUDA test executed.
+
+Repair CPU smoke: exit0, wall 2.8438935s, implementation tree 93697386a8b9f9f839afb248f65fe0c169eb6b384632fbfdf87340ce8a766e38.
+Repair CUDA smoke: exit0, wall 3.8234502s, peak 74123264 bytes, bitwise same-device inference PASS, same implementation tree.
+
+No formal command, full repository suite, network request, real-data access, upstream code read/execution, download, pickle load, empirical Alpha, IC, P&L, or backtest occurred.

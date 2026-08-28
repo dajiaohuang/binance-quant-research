@@ -1,0 +1,31 @@
+{
+  "cuda_tests_executed": true,
+  "documentation_remediation": {
+    "bytes": 910,
+    "path": "experiments/exp_20260828_001/logs/closeout_documentation_remediation.json",
+    "sha256": "0d36e6d0fe1d22c1c9d77682556c2c49e48bcb2f17950a99d8f791b9f99d9544",
+    "status": "APPLIED_WITHOUT_RERUN_OR_FROZEN_EVIDENCE_CHANGE"
+  },
+  "formal_execution_count": 1,
+  "full_repository": {
+    "errors": 0,
+    "exit_code": 1,
+    "failures": 3,
+    "known_lifecycle_failures": 3,
+    "new_failures": 0,
+    "passed": 724,
+    "skipped": 0,
+    "status": "EXPECTED_LIFECYCLE_FAILURES_ONLY_BUT_STDERR_CAPTURE_INCOMPLETE",
+    "stderr_complete": false,
+    "tests_run": 727
+  },
+  "git_diff_check": {
+    "exit_code": 0,
+    "line_ending_warnings": 4,
+    "status": "PASS"
+  },
+  "network_request_count": 0,
+  "real_data_accessed": false,
+  "retry_count": 0,
+  "terminal_status": "INCONCLUSIVE"
+}

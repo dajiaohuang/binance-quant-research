@@ -1,0 +1,12 @@
+command=uv run python -m unittest tests.test_jquants_v2 -v
+kind=DEVELOPMENT_NOT_FORMAL
+exit_code=0
+tests_run=15
+passed=15
+failed=0
+errors=0
+skipped=0
+wall_seconds=1.5572291
+network_request_count=0
+retry_count=0
+note=Second run after the two narrowly scoped fixes recorded in development_attempt_001.txt.

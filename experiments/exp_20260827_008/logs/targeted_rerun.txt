@@ -1,0 +1,17 @@
+test_backward_updates (tests.test_sspt.SSPTTests.test_backward_updates) ... D:\repo\binance-quant-research\src\quant_research\alpha_models\sspt\core.py:27: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  layer=nn.TransformerEncoderLayer(128,4,512,c.dropout,batch_first=True,norm_first=True); self.encoder=nn.TransformerEncoder(layer,2)
+ok
+test_checkpoint_roundtrip_tamper (tests.test_sspt.SSPTTests.test_checkpoint_roundtrip_tamper) ... D:\repo\binance-quant-research\src\quant_research\alpha_models\sspt\core.py:27: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  layer=nn.TransformerEncoderLayer(128,4,512,c.dropout,batch_first=True,norm_first=True); self.encoder=nn.TransformerEncoder(layer,2)
+ok
+test_config_unknown_and_shape_label (tests.test_sspt.SSPTTests.test_config_unknown_and_shape_label) ... ok
+test_freeze_modes (tests.test_sspt.SSPTTests.test_freeze_modes) ... ok
+test_losses_known_tie_mask_permutation (tests.test_sspt.SSPTTests.test_losses_known_tie_mask_permutation) ... ok
+test_purge_embargo (tests.test_sspt.SSPTTests.test_purge_embargo) ... ok
+test_rolling_is_causal (tests.test_sspt.SSPTTests.test_rolling_is_causal) ... ok
+test_scaler_train_only (tests.test_sspt.SSPTTests.test_scaler_train_only) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.884s
+
+OK

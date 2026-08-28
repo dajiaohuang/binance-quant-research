@@ -1,0 +1,23 @@
+{
+  "changed_paths": [
+    "experiments/exp_20260827_011/report.md",
+    "experiments/exp_20260827_012/report.md",
+    "experiments/exp_20260828_001/manifest.json",
+    "experiments/exp_20260828_001/metrics.json",
+    "experiments/exp_20260828_001/report.md",
+    "research/OFFICIAL_FINANCIAL_ML_REPRODUCTIONS.md"
+  ],
+  "experiment_id": "exp_20260828_001",
+  "formal_records_edited": false,
+  "frozen_files_edited": false,
+  "git_diff_check_rerun": false,
+  "reasons": [
+    "MARK_EXACT_ONCE_KRONOS_VERIFIER_AS_HISTORICAL_AND_NONRERUNNABLE",
+    "REPLACE_NONCOPYABLE_SMOKE_OUTPUT_PLACEHOLDERS_WITH_UNIQUE_TEMP_PATHS",
+    "DISAMBIGUATE_HISTORICAL_PENDING_AND_PREREGISTRATION_STATUSES",
+    "LINK_RECORD_ONLY_DOCUMENTATION_REMEDIATION_WITHOUT_CHANGING_TERMINAL_EVIDENCE"
+  ],
+  "remediation_kind": "APPEND_ONLY_CLOSEOUT_DOCUMENTATION_REMEDIATION",
+  "terminal_status": "INCONCLUSIVE",
+  "tests_rerun": false
+}

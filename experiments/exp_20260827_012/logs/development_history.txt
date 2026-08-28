@@ -1,0 +1,128 @@
+EXP_20260827_012 DEVELOPMENT HISTORY
+All runs below are non-formal, synthetic-only, and network-free. Formal execution count remains 0.
+
+[D001]
+command: uv run python -m py_compile src/quant_research/alpha_models/tips_v1/*.py
+exit_code: 1
+wall_seconds: 0.1883081
+stdout/stderr:
+[Errno 22] Invalid argument: 'src/quant_research/alpha_models/tips_v1/*.py'
+diagnosis: Windows did not expand the wildcard passed to py_compile.
+repair: pass the explicit Get-ChildItem file list; no source semantic change.
+
+[D002]
+command: uv run python -m py_compile (Get-ChildItem src/quant_research/alpha_models/tips_v1/*.py | ForEach-Object FullName)
+exit_code: 0
+wall_seconds: 0.2537201
+stdout/stderr: EMPTY
+
+[D003]
+command: uv run python -m unittest tests.test_tips_v1 -v
+exit_code: 1
+wall_seconds: 6.245984
+result: Ran 20 tests; failures=2; errors=4.
+complete failing output:
+ERROR test_alibi_periodic_rpb_and_patch_matrices
+IndexError: index 20 is out of bounds for dimension 2 with size 20
+ERROR test_checkpoint_tamper_and_synchronized_resign_attack_rejected
+safetensors_rust.SafetensorError: requested operation cannot be performed on a file with a user-mapped section open (os error 1224)
+cleanup then raised PermissionError [WinError 5] for the mapped model.safetensors.
+ERROR test_all_teachers_forward_finite_and_symbol_permutation
+ValueError: symbol_order raised during dataclasses.replace before the assertion context.
+ERROR test_cuda_on_device_deterministic_and_under_2gib
+RuntimeError: Invalid device argument from torch.cuda.reset_peak_memory_stats before CUDA initialization.
+FAIL test_warmup_calendar_purge_and_typed_join_fail_closed
+AssertionError: ValueError not raised because the fixture removed S049 instead of the q=5 label session S046 and only constructed, rather than joined, the late-known series.
+FAIL test_teacher_freeze_student_zero_teacher_grad_and_swa
+AssertionError: teacher parameter.grad retained the preceding teacher-step gradient after freeze.
+repair: correct exact periodic fixture endpoint; clone and atomic-replace mapped safetensors in the attack fixture; put replace in the rejection context; initialize CUDA before peak reset; remove S046 and exercise the typed join; clear gradients in freeze.
+
+[D004]
+command: uv run python -m unittest tests.test_tips_v1 -v
+exit_code: 1
+wall_seconds: 3.0344225
+result: Ran 20 tests; failures=0; errors=1.
+complete failing output:
+ERROR test_cuda_on_device_deterministic_and_under_2gib
+RuntimeError: Invalid device argument from torch.cuda.reset_peak_memory_stats(0) before first CUDA allocation.
+repair: initialize a CUDA model/tensor before reset_peak_memory_stats and use the initialized current device.
+
+[D005]
+command: uv run python -m unittest tests.test_tips_v1 -v
+exit_code: 1
+wall_seconds: 3.1304306
+result: Ran 20 tests; failures=1; errors=0.
+complete failing output:
+FAIL test_all_teachers_forward_finite_and_symbol_permutation
+AssertionError: torch.allclose default absolute tolerance was too strict; independent batched MHA order produced maximum float32 difference 1.7881393432617188e-07.
+repair: freeze explicit rtol=1e-6 and atol=2e-7; no model change.
+
+[D006]
+command: uv run python -m unittest tests.test_tips_v1 -v
+exit_code: 0
+wall_seconds: 3.062424
+result: Ran 20 tests; OK; CUDA test executed, no skips.
+
+[D007]
+command: uv run python -m quant_research.alpha_models.tips_v1.smoke --device cpu --output experiments/exp_20260827_012/artifacts/development_cpu_smoke.json
+exit_code: 0
+wall_seconds: 2.5406277
+stdout/stderr: EMPTY
+
+[D008]
+command: uv run python -m quant_research.alpha_models.tips_v1.smoke --device cuda --output experiments/exp_20260827_012/artifacts/development_gpu_smoke.json
+exit_code: 1
+wall_seconds: 3.1972269
+stdout/stderr:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\repo\binance-quant-research\src\quant_research\alpha_models\tips_v1\smoke.py", line 120, in <module>
+    raise SystemExit(main())
+  File "D:\repo\binance-quant-research\src\quant_research\alpha_models\tips_v1\smoke.py", line 113, in main
+    result = run_smoke(...)
+  File "D:\repo\binance-quant-research\src\quant_research\alpha_models\tips_v1\smoke.py", line 83, in run_smoke
+    raise RuntimeError("checkpoint_roundtrip")
+RuntimeError: checkpoint_roundtrip
+diagnosis: GPU inference floats were compared exactly with CPU-reloaded inference floats.
+repair: retain bitwise GPU-vs-GPU inference evidence, then move the frozen student to CPU and compare CPU-vs-reloaded-CPU exactly.
+
+[D009-D011]
+commands: targeted test, CPU smoke, CUDA smoke after the first repair wave.
+results: targeted 20/20 PASS; CPU PASS; CUDA PASS.
+note: later contract-hardening changed the frozen registry and clock fields, so these are superseded development runs, not candidate evidence.
+
+[D012]
+command: uv run python -m unittest tests.test_tips_v1 -v
+exit_code: 0
+wall_seconds: 2.9478103
+result: Ran 20 tests; OK; CUDA test executed, no skips.
+
+[D013-D014]
+commands: CPU and CUDA smoke after exact registry/calendar hardening.
+exit_codes: 0, 0
+wall_seconds: 2.4553108, 3.0343589
+stdout/stderr: EMPTY, EMPTY
+
+[D015]
+command: uv run python -m unittest tests.test_tips_v1 -v
+exit_code: 0
+wall_seconds: 4.9589086
+result: Ran 23 tests; OK; CUDA test executed, no skips.
+
+[D016-D017]
+commands:
+uv run python -m quant_research.alpha_models.tips_v1.smoke --device cpu --output experiments/exp_20260827_012/artifacts/development_cpu_smoke.json
+uv run python -m quant_research.alpha_models.tips_v1.smoke --device cuda --output experiments/exp_20260827_012/artifacts/development_gpu_smoke.json
+exit_codes: 0, 0
+wall_seconds: 2.5900853, 6.2531145
+stdout/stderr: EMPTY, EMPTY
+result: candidate CPU/GPU development artifacts published; GPU peak=74123264 bytes; deterministic on-device inference=true.
+
+[D018]
+command: uv run python -m py_compile (Get-ChildItem src/quant_research/alpha_models/tips_v1/*.py | ForEach-Object FullName) tests/test_tips_v1.py
+exit_code: 0
+wall_seconds: 0.2208263
+stdout/stderr: EMPTY
+
+No full repository suite, formal command, market-data read, network request, upstream-source execution, download, pickle load, Alpha, IC, ML evaluation, P&L, or backtest was run.

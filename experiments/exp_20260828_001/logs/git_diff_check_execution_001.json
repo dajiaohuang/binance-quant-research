@@ -1,0 +1,13 @@
+{
+  "command": "git diff --check",
+  "command_sha256": "466c2f308b48c7661d646fdd068fbecea974c665fe65dbf8ed508f224180ce0b",
+  "ended_at_utc": "2026-08-27T16:56:05.7450953Z",
+  "exit_code": 0,
+  "execution_count": 1,
+  "process_wall_seconds": 0.0585432,
+  "started_at_utc": "2026-08-27T16:56:05.6842890Z",
+  "stderr_complete": true,
+  "stderr_path": "experiments/exp_20260828_001/logs/git_diff_check_stderr.txt",
+  "stdout_complete": true,
+  "stdout_path": "experiments/exp_20260828_001/logs/git_diff_check_stdout.txt"
+}

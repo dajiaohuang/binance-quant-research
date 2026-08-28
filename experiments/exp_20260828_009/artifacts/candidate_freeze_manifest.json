@@ -1,0 +1,95 @@
+{
+  "files": [
+    {
+      "bytes": 293,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/__init__.py",
+      "sha256": "b78983d0434082c077277c2253428ba0951e341564f58eb56a4689ed70b934f3"
+    },
+    {
+      "bytes": 1355,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/__main__.py",
+      "sha256": "b6b5c5b0822c34c646c90615c68159199e48e5fceedcd2dc4c0415632547d4ce"
+    },
+    {
+      "bytes": 1647,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/contracts.py",
+      "sha256": "549dae83132937bd9dcd37dec14e3130117d8ca0b153741b9f8c34d51637eb5b"
+    },
+    {
+      "bytes": 11558,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/loader.py",
+      "sha256": "b96f369220cc043c44a5a369c21fb5b9bba71e0a4187ed5d98b9c13c771381aa"
+    },
+    {
+      "bytes": 4591,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/planner.py",
+      "sha256": "5a29e1770935e14fad045f226f4ed566e3e3e5f404dce0a95d43d70948382c02"
+    },
+    {
+      "bytes": 12519,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/collector.py",
+      "sha256": "aaa93eb28d84fa3a21dac2b2f4047cea5c71a94c6bc862868a649237b7eb752d"
+    },
+    {
+      "bytes": 6927,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v3/launcher.ps1",
+      "sha256": "fc68a3f59da8bd6e9c2ab55ad425e8e803d24a7140ffee00a7539b65a0df8293"
+    },
+    {
+      "bytes": 12215,
+      "path": "tests/test_jquants_v2_bars_monthly_v3.py",
+      "sha256": "a5f946104b1bec4878b300c81ec9869a04cce38bf48d2ae9961fa28d0ca7180f"
+    },
+    {
+      "bytes": 2130,
+      "path": "experiments/exp_20260828_009/hypothesis.md",
+      "sha256": "b025eb5a0a31ad876b35aa924f47c289adddd22ee7a82517e7520d635bfef943"
+    },
+    {
+      "bytes": 507,
+      "path": "experiments/exp_20260828_009/parameters.json",
+      "sha256": "12b9b88a94c359654ead234f8cebdf021276f8a7a6a50563d46d4dc798a3c194"
+    },
+    {
+      "bytes": 457,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/__init__.py",
+      "sha256": "1e04ca401940c53e9e0ab73794efa37b04776d257eec9a19ff068f1b97763377"
+    },
+    {
+      "bytes": 15489,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/contracts.py",
+      "sha256": "8133a7d7b128fc784cbee892cec881c89a0ef4d5a4730bdc7249b6fe395414fe"
+    },
+    {
+      "bytes": 22430,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/loader.py",
+      "sha256": "0651211d7696b3371ef100b54298ee36cab8141b9896cfcd98df1cd3bb2bc0dd"
+    },
+    {
+      "bytes": 13826,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/collector.py",
+      "sha256": "ec95b3f95f206bc7e57bc1505b20bfa2ebe1dfe1bf4a6143a9e17d12fa355b0e"
+    },
+    {
+      "bytes": 7068,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/catalog.py",
+      "sha256": "25fd2c1db57b65cc16f15ad394a68ead180a27ed62b496bf7f8b6ff4312b3542"
+    },
+    {
+      "bytes": 21722,
+      "path": "tests/test_jquants_v2_bars_monthly_v1.py",
+      "sha256": "d71ea3a5d4c8997ce4de795e841c5e73e95839cbca035db047675d5ade2fb367"
+    },
+    {
+      "bytes": 3552,
+      "path": "experiments/exp_20260828_008/artifacts/candidate_freeze_manifest.json",
+      "sha256": "758be2c679ba655723c8df91aba30aa48b1937beb42870e15af7c35b7bde9598"
+    },
+    {
+      "bytes": 479,
+      "path": "experiments/exp_20260828_007/artifacts/official_plan_fact_snapshot.json",
+      "sha256": "e2005fc9bf460d0c9efd4019812fcd87b67ddf13d3b8aeb8c36907d33252bc2b"
+    }
+  ],
+  "schema_version": "JQUANTS_V2_BARS_MONTHLY_V3_CANDIDATE_FREEZE_V1"
+}

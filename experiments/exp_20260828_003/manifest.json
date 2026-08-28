@@ -1,0 +1,28 @@
+{
+  "artifact_state": "JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_CONTRACT_CANDIDATE_FROZEN",
+  "classification": "SOURCE_PROBE_AND_TYPED_DATA_ADAPTER_CONTRACT",
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260828_003",
+  "formal_execution_count": 0,
+  "formal_command_sha256": "721c10d5257bc119cc718c4f5ea1f07c1f280f39769edd0c932597a47510b832",
+  "freeze_manifest": {
+    "bytes": 1981,
+    "path": "experiments/exp_20260828_003/artifacts/expected_freeze_manifest.json",
+    "sha256": "7b17da9d7ce27229a3bf303a3244e97784972912a8c5edb70dd030408bc225f6"
+  },
+  "historical_eligibility_ready": false,
+  "network_request_count": 0,
+  "parent_experiment_id": "exp_20260828_002",
+  "parent_phase2_result": "FINAL_NO_GO",
+  "primary_change": "AUDIT_CLOSED_JQUANTS_V2_FREE_SOURCE_PROBE_V2",
+  "real_data_accessed": false,
+  "retry_count": 0,
+  "run_id": "exp_20260828_003_formal_001",
+  "phase2_authorized": false,
+  "stage": "PREFORMAL_AWAITING_FRESH_PHASE2",
+  "status": "PREFORMAL_AWAITING_FRESH_PHASE2",
+  "strict_eligible_count": 0,
+  "terminal_status": "NEEDS_MORE_DATA",
+  "targeted_tests": {"failed": 0, "passed": 27, "skipped": 0},
+  "version": "JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_CONTRACT_V2"
+}

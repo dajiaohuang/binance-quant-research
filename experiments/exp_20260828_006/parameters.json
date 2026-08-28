@@ -1,0 +1,9 @@
+{
+  "expected_raw_tree_sha256": "d14273cc49e9de82b0295e9ab76db8c01eea02e5f4e0af940400b64550b8209c",
+  "network_authorized": false,
+  "pacing_status": "RUNTIME_MONOTONIC_GUARD_INFERRED_NOT_REPLAYABLE",
+  "recovery_experiment_id": "exp_20260828_006",
+  "source_experiment_id": "exp_20260828_005",
+  "source_run_id": "exp_20260828_005_formal_001",
+  "source_staging_path": "data/raw/jquants_v2_v4/runs/.exp_20260828_005_formal_001.staging"
+}

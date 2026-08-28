@@ -1,0 +1,6 @@
+Formal acquisition was not retried.
+Offline inspection command exited nonzero because a diagnostic one-liner used wildcard import and therefore did not import the private `_sha256_path` helper. This did not change evidence.
+The first postflight targeted suite ran 11 tests. Official small 256 golden passed; 9 other tests passed; hermetic mini smoke errored.
+Mini error: ValueError("context_interval").
+Cause: the v2 adapter added an unregistered constant-spacing requirement. The frozen contract requires strictly increasing timestamps and positive intervals, not identical intervals. Official regression timestamps are valid but not uniformly spaced.
+Remediation: remove only the constant-spacing restriction. Do not rerun acquisition. Retain strict increasing order and formation/known-at checks.

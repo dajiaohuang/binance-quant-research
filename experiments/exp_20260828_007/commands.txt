@@ -1,0 +1,22 @@
+# RTK availability check. This failed once with CommandNotFoundException.
+rtk --version
+
+# Phase 1 development only; no network and no local key read. The targeted
+# suite ran twice: an initial 35-test development checkpoint, then the frozen
+# 38-test candidate after monthly reservation and path-traversal coverage.
+uv run python -m unittest tests.test_jquants_v2_bars_monthly_v1 -v
+uv run python -m py_compile src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/__init__.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/__main__.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/contracts.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/loader.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/catalog.py src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/collector.py tests/test_jquants_v2_bars_monthly_v1.py
+powershell.exe -NoLogo -NoProfile -NonInteractive -Command "$errors=$null; [void][System.Management.Automation.Language.Parser]::ParseFile('src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/launcher.ps1',[ref]$null,[ref]$errors); if($errors.Count){exit 1}"
+uv run python -m quant_research.alpha_models.data.jquants_v2_bars_monthly_v1 --repo-root . --dry-plan
+
+# Candidate-freeze validation ran twice. The first local one-liner accidentally
+# compared against a literal backslash+n and raised AssertionError; it did not
+# reveal artifact drift. The corrected canonical-newline validation passed.
+uv run python -c "<offline candidate freeze canonical/hash verification>"
+
+# Frozen formal candidate. NOT EXECUTED; do not run before independent Phase2 GO.
+# launcher SHA-256: b8fd26063de55a4898fe36eb287ece8d06a511f6697d4b7261c1b4afe5d37c3f
+# freeze manifest SHA-256: 8fc2241efafc6635b36aeaffde66899b00cfe4f34a7414416017a9ff74be2971
+# exact line UTF-8/no-newline bytes: 393
+# exact line UTF-8/no-newline SHA-256: e4267a218284291136742de95b1f5173a4bc4bf807e897fee97de1c7d038d123
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\alpha_models\data\jquants_v2_bars_monthly_v1\launcher.ps1 -ExpectedLauncherSha256 b8fd26063de55a4898fe36eb287ece8d06a511f6697d4b7261c1b4afe5d37c3f -ExpectedFreezeManifestSha256 8fc2241efafc6635b36aeaffde66899b00cfe4f34a7414416017a9ff74be2971; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode

@@ -1,0 +1,9 @@
+experiment_id=exp_20260828_003
+parent=exp_20260828_002 FINAL_NO_GO preserved unchanged
+stage=OFFLINE_CONTRACT_ONLY
+status=PLANNED
+formal_execution_count=0
+network_request_count=0
+real_key_read=false
+real_data_accessed=false
+retry_count=0

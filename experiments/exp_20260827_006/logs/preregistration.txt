@@ -1,0 +1,13 @@
+2026-08-27T12:27:45.1196692+00:00 preregistration created before dependency resolution and implementation.
+experiment=exp_20260827_006
+classification=METHOD_REPRODUCTION_ON_NEW_DATA
+stage=SYNTHETIC_CONTRACT_ONLY
+status=PLANNED
+empirical_authorized=false
+market_network_allowed=false
+real_data_accessed=false
+formal_execution_count=0
+retry_count=0
+preexisting_dirty_path=AGENTS.md
+missing_skill_reference=.codex/skills/quant-strategy-research/references/methodology.md
+missing_skill_reference=.codex/skills/quant-strategy-research/references/experiment-contract.md

@@ -1,0 +1,19 @@
+Formal command executed exactly once from repository root.
+Exit code: 0
+Started UTC (reservation creation): 2026-08-28T05:44:03.5480055Z
+Finished UTC (catalog publication): 2026-08-28T07:38:05.3889115Z
+Automatic retries: 0
+Result: COMPLETE
+Published immutable months: 23 (2024-07 through 2026-05)
+Formal003 network dates/pages: 434 / 434
+All-source network dates/pages: 462 / 462
+Calendar sessions represented: 465 / 465
+Rows represented: 2,052,323
+Raw response bytes represented: 568,985,417
+Catalog SHA-256: d427064ff9669801d27c64cf75b23acfe10230d75a368a8196489e0aa32bfcd0
+Recovery registry SHA-256: 0d3db35f8afbcc6a65d24f80c234969937e745518f87ed04295fde9f77fe37cb
+Missing dates: 0
+Unexpected dates: 0
+Attempt003 staging remaining after success: 0
+JQUANTS_API_KEY present after launcher exit: false
+Raw output Git-ignored: true

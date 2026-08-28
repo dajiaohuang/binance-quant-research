@@ -1,0 +1,4 @@
+This directory contains the minimal runtime source copied byte-for-byte from
+https://github.com/shiyu-coder/Kronos at commit
+67b630e67f6a18c9e9be918d9b4337c960db1e9a under the included MIT license.
+No upstream training, data-processing, web UI, or backtest scripts are vendored.

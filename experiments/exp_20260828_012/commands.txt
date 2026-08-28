@@ -1,0 +1,12 @@
+# Preregistered before focused tests. RTK remains unavailable; use minimal
+# PowerShell fallback. No broad regressions or audit.
+2026-08-28 .venv\Scripts\python.exe -I -B -m unittest tests.test_jquants_v2_bars_monthly_v6 -v  # import-path error; no tests ran
+2026-08-28 .venv\Scripts\python.exe -I -B -m unittest discover -s tests -p test_jquants_v2_bars_monthly_v6.py -v  # 3/6 errors during development
+2026-08-28 .venv\Scripts\python.exe -I -B -m unittest discover -s tests -p test_jquants_v2_bars_monthly_v6.py -v  # 5/6 pass, expected error-code mismatch
+2026-08-28 .venv\Scripts\python.exe -I -B -m unittest discover -s tests -p test_jquants_v2_bars_monthly_v6.py -v  # PASS 6/6 once after final repair
+2026-08-28 .venv\Scripts\python.exe -I -B -m py_compile <four v6 Python files>  # PASS
+2026-08-28 PowerShell parser: launcher.ps1  # first wrapper quoting error, direct parse PASS
+2026-08-28 .venv\Scripts\python.exe -I -B -m quant_research.alpha_models.data.jquants_v2_bars_monthly_v6 --repo-root . --dry-recovery-plan  # PASS; 28 adopted, 434 remaining, first 2024-08-13, no overlap
+INTENDED_FORMAL_ONCE: powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File src\quant_research\alpha_models\data\jquants_v2_bars_monthly_v6\launcher.ps1 -ExpectedLauncherSha256 a61bd65ecfca80aa104ecddd6d3a1b4795f338d6764a77f78f4be372e82b0e79 -ExpectedFreezeManifestSha256 b48fe6fe11fddef103a861880266be82a06b692a651334a3d883826ab40f31de; $nativeExitCode=$LASTEXITCODE; exit $nativeExitCode
+FORMAL_EXECUTED_ONCE: exact intended command above; exit 0; no retry; 2026-08-28T05:44:03.5480055Z to 2026-08-28T07:38:05.3889115Z
+LIGHTWEIGHT_ORGANIZATION_ONLY: 23 months; 465/465 sessions; 462 network dates/pages across all sources; 2,052,323 rows; 568,985,417 raw bytes; gaps 0; key cleanup PASS; raw Git-ignore PASS

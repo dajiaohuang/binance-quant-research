@@ -1,0 +1,9 @@
+{
+  "availability_semantics":"POLICY_DERIVED_OBSERVATION_NOT_SOURCE_PUBLICATION",
+  "full_tree":"authorization binds every promoted plan/receipt/manifest/summary/raw response path, bytes and SHA256",
+  "listing_presence":"ONLY_INTERSECTION_OF_FULL_MASTER_SNAPSHOTS_ON_ADJACENT_VERIFIED_OFFICIAL_SESSIONS; OTHERWISE_UNKNOWN",
+  "loader_invariants":["EXACT_FIVE_QUERY_IDS_AND_ORDER","CONTIGUOUS_PAGES_1_TO_N","MAX_25_PAGES_PER_QUERY","MAX_60_HTTP","PRIOR_PAGE_PAGINATION_CHAIN","PARAMETER_SHA_REBUILD","RAW_RECEIPT_BIJECTION","SEND_LE_RECEIVE","EXACT_NONEMPTY_COVERAGE"],
+  "daily_bar_required_split_fields":["AdjFactor","ExRT"],
+  "split_probe_expectation":"2025-03-28 AdjFactor=0.5 ExRT=1; falsifiable and not a preclaimed result",
+  "schema_version":"JQUANTS_V2_FREE_OFFLINE_SCHEMA_V2"
+}

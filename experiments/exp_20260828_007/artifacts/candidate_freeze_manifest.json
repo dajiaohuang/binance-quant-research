@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "bytes": 457,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/__init__.py",
+      "sha256": "1e04ca401940c53e9e0ab73794efa37b04776d257eec9a19ff068f1b97763377"
+    },
+    {
+      "bytes": 777,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/__main__.py",
+      "sha256": "88a1b2566e1785432c345cd4e37b0358d0f5037caaf5dbcbf2b9269493a007bc"
+    },
+    {
+      "bytes": 15489,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/contracts.py",
+      "sha256": "8133a7d7b128fc784cbee892cec881c89a0ef4d5a4730bdc7249b6fe395414fe"
+    },
+    {
+      "bytes": 22430,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/loader.py",
+      "sha256": "0651211d7696b3371ef100b54298ee36cab8141b9896cfcd98df1cd3bb2bc0dd"
+    },
+    {
+      "bytes": 13826,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/collector.py",
+      "sha256": "ec95b3f95f206bc7e57bc1505b20bfa2ebe1dfe1bf4a6143a9e17d12fa355b0e"
+    },
+    {
+      "bytes": 7068,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/catalog.py",
+      "sha256": "25fd2c1db57b65cc16f15ad394a68ead180a27ed62b496bf7f8b6ff4312b3542"
+    },
+    {
+      "bytes": 6338,
+      "path": "src/quant_research/alpha_models/data/jquants_v2_bars_monthly_v1/launcher.ps1",
+      "sha256": "b8fd26063de55a4898fe36eb287ece8d06a511f6697d4b7261c1b4afe5d37c3f"
+    },
+    {
+      "bytes": 21722,
+      "path": "tests/test_jquants_v2_bars_monthly_v1.py",
+      "sha256": "d71ea3a5d4c8997ce4de795e841c5e73e95839cbca035db047675d5ade2fb367"
+    },
+    {
+      "bytes": 3052,
+      "path": "experiments/exp_20260828_007/hypothesis.md",
+      "sha256": "bcfb2aa4d50aadf5eb580c86ab441e3d6e3bd41bd588542941c52ff7783bfd54"
+    },
+    {
+      "bytes": 815,
+      "path": "experiments/exp_20260828_007/parameters.json",
+      "sha256": "9da0c63823019acbb8027e246f7cd8951ee8ce49a87e8b181dd51e607bf7df74"
+    },
+    {
+      "bytes": 479,
+      "path": "experiments/exp_20260828_007/artifacts/official_plan_fact_snapshot.json",
+      "sha256": "e2005fc9bf460d0c9efd4019812fcd87b67ddf13d3b8aeb8c36907d33252bc2b"
+    }
+  ],
+  "schema_version": "JQUANTS_V2_BARS_MONTHLY_V1_CANDIDATE_FREEZE_V1"
+}

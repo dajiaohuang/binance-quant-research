@@ -1,0 +1,14 @@
+# PRE-REGISTERED; no command below had run when this file was created.
+# Dependency preparation (not a research result):
+uv lock
+uv sync --extra modern-ml
+
+# Development checks:
+uv run --extra modern-ml python -m unittest tests.test_ddgl_synthetic -v
+uv run --extra modern-ml python -m quant_research.alpha_models.smoke --config config/alpha_models/ddgl_tiny_cpu.json --output experiments/exp_20260827_006/artifacts/cpu_smoke_metrics.json --checkpoint experiments/exp_20260827_006/artifacts/cpu_smoke_checkpoint.pt
+uv run --extra modern-ml python -m quant_research.alpha_models.smoke --config config/alpha_models/ddgl_16gb_gpu.json --output experiments/exp_20260827_006/artifacts/gpu_smoke_metrics.json --checkpoint experiments/exp_20260827_006/artifacts/gpu_smoke_checkpoint.pt
+uv run --extra modern-ml python -m unittest discover -s tests -v
+
+# Candidate single formal synthetic command; execute at most once and never retry:
+uv run --extra modern-ml python -m quant_research.alpha_models.smoke --config config/alpha_models/ddgl_tiny_cpu.json --output experiments/exp_20260827_006/artifacts/formal_cpu_smoke_metrics.json --checkpoint experiments/exp_20260827_006/artifacts/formal_cpu_smoke_checkpoint.pt
+

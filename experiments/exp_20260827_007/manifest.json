@@ -1,0 +1,15 @@
+{
+  "classification": "METHOD_REPRODUCTION_ON_PUBLIC_CHECKPOINT",
+  "empirical_authorized": false,
+  "experiment_id": "exp_20260827_007",
+  "formal_execution_count": 6,
+  "historical_eligibility_ready": false,
+  "network_allowlist": ["raw.githubusercontent.com", "huggingface.co"],
+  "primary_change": "Kronos_PUBLIC_CHECKPOINT_INTERFACE_V1",
+  "real_data_accessed": true,
+  "retry_count": 0,
+  "stage": "PUBLIC_CHECKPOINT_INTERFACE_ONLY",
+  "status": "POSTFLIGHT_INCONCLUSIVE",
+  "strict_eligible_count": 0,
+  "terminal_status_ceiling": "NO_EMPIRICAL_ALPHA"
+}

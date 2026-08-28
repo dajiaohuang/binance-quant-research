@@ -1,0 +1,51 @@
+{
+  "checkpoint": {
+    "model": {
+      "config": {
+        "attn_dropout_p": 0.0,
+        "d_model": 256,
+        "ff_dim": 512,
+        "ffn_dropout_p": 0.2,
+        "learn_te": true,
+        "n_heads": 4,
+        "n_layers": 4,
+        "resid_dropout_p": 0.2,
+        "s1_bits": 10,
+        "s2_bits": 10,
+        "token_dropout_p": 0.0
+      },
+      "config_sha256": "70daca2cb11e3a979dd6b8ac12ee08e2aace877acf28f5b8dfb4fe5609736201",
+      "tensor_count": 80,
+      "weights_sha256": "a7d5f37e2e9fbd9891f7d7d4f72574512dd1f704fee14223e0a8cd0fbf54197c"
+    },
+    "tokenizer": {
+      "config": {
+        "attn_dropout_p": 0.0,
+        "beta": 0.05,
+        "d_in": 6,
+        "d_model": 256,
+        "ff_dim": 512,
+        "ffn_dropout_p": 0.0,
+        "gamma": 1.1,
+        "gamma0": 1.0,
+        "group_size": 5,
+        "n_dec_layers": 4,
+        "n_enc_layers": 4,
+        "n_heads": 4,
+        "resid_dropout_p": 0.0,
+        "s1_bits": 10,
+        "s2_bits": 10,
+        "zeta": 0.05
+      },
+      "config_sha256": "0b30a443affb03e05a876a083857de9164f899feb7b4d261da02c485c9a3e3b6",
+      "tensor_count": 96,
+      "weights_sha256": "b97ec46b3b72160509e289183eaf7bdf5f0dac5bb9b49522f6d46638a99a8717"
+    }
+  },
+  "device": "cpu",
+  "empirical_authorized": false,
+  "finite": true,
+  "peak_cuda_bytes": 0,
+  "provenance_sha256": "1451f3e4b118a3edcc1e22e9c4a30bd3d2b11299934123ed046ed81d805c6726",
+  "rows": 24
+}

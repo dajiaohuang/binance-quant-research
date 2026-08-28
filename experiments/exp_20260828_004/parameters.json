@@ -1,0 +1,20 @@
+{
+  "api_base": "https://api.jquants.com",
+  "api_key_environment_variable": "JQUANTS_API_KEY",
+  "attempt_ledger": "experiments/exp_20260828_004/formal_control/exp_20260828_004_formal_001.stage_ledger.jsonl",
+  "attempt_reservation": "experiments/exp_20260828_004/formal_control/exp_20260828_004_formal_001.reservation.lock",
+  "global_http_cap": 60,
+  "listing_presence_policy": "ALWAYS_UNKNOWN_FOR_CODE_FILTERED_MASTER_QUERIES",
+  "logical_query_count": 5,
+  "max_pages_per_query": 25,
+  "minimum_request_spacing_seconds": 13,
+  "queries": [
+    {"id":"Q01_CALENDAR","path":"/v2/markets/calendar","parameters":{"from":"2025-03-28","to":"2025-03-31"}},
+    {"id":"Q02_MASTER_NORMAL","path":"/v2/equities/master","parameters":{"code":"9433","date":"2025-03-31"}},
+    {"id":"Q03_MASTER_NONTRADING_MAPPING","path":"/v2/equities/master","parameters":{"code":"9433","date":"2025-03-30"}},
+    {"id":"Q04_ALL_BARS_NORMAL","path":"/v2/equities/bars/daily","parameters":{"date":"2025-03-28"}},
+    {"id":"Q05_9433_SPLIT_RANGE","path":"/v2/equities/bars/daily","parameters":{"code":"9433","from":"2025-03-27","to":"2025-04-02"}}
+  ],
+  "retry_count": 0,
+  "runtime_authority_order": ["LAUNCHER_SELF_HASH","O_EXCL_RESERVATION","LEDGER","TEN_FILE_PREFLIGHT","ENV_FILE_READ","COLLECTOR_IMPORT_AND_EXECUTION"]
+}

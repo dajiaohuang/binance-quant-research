@@ -1,0 +1,20 @@
+{
+  "acquisition_manifest_sha256": "2b2ffae4f948124cb949c213d5c1ad34ac6e83ebdc3a1486bbf079fc221929df",
+  "bootstrap_final_relative": "data/raw/jquants_v2_bars_monthly_v3/runs/exp_20260828_009_bootstrap_formal_001",
+  "exp009_postflight_closure_sha256": "d850789b436bb918b3c621085a0ea7cc76b4c9ba6ab3c7d5a2a60373ffae650a",
+  "month_count": 23,
+  "network_date_count": 462,
+  "observed_at": "2026-08-28",
+  "raw_tree_sha256": "5eaed53748fd46141987d37032b99a1f812ca35251f101beecbd25d3eead84f8",
+  "registry_artifact_sha256": "5e1ac6c740d51281f3840fa998e14d315d3aba114ed4f5ba73aa11337af773bc",
+  "reuse_dates": [
+    "2024-07-01",
+    "2025-03-28",
+    "2026-05-29"
+  ],
+  "schema_version": "JQUANTS_V2_BARS_MONTHLY_V4_SOURCE_CONTRACT_SNAPSHOT_V1",
+  "session_artifact_sha256": "6a0f03df72639931ec953739980e91bff72310953979cecc40c543e807ff5a4a",
+  "session_date_count": 465,
+  "session_list_sha256": "e51e2d635155f34119e18bf4e9cc9d6640ae00c73b212ed67dd4f09e42ea90e5",
+  "source_binding_sha256": "9de9bbd7d6f9acc0c2456816db4ecc1953abeaa7ac01998e96d790c85cc5208d"
+}

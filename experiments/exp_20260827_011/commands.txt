@@ -1,0 +1,6 @@
+# Development-only commands. Formal execution requires a fresh independent Phase2 GO.
+uv run --extra modern-ml python -m unittest tests.test_sspt_v2 -v
+uv run --extra modern-ml python -m quant_research.alpha_models.sspt_v2.smoke --device cpu --output experiments/exp_20260827_011/artifacts/development_cpu_smoke.json
+uv run --extra modern-ml python -m quant_research.alpha_models.sspt_v2.smoke --device cuda:0 --output experiments/exp_20260827_011/artifacts/development_gpu_smoke.json
+# Candidate formal line; DO NOT EXECUTE during Phase1:
+uv run --extra modern-ml python -m unittest tests.test_sspt_v2 -v

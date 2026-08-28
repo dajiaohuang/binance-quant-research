@@ -1,0 +1,13 @@
+experiment_id=exp_20260828_005
+created_at=2026-08-28T03:15:00.9141868+08:00
+git_commit=6fd05b8690f99643002a9f310d3c6e0d8bae9346
+git_dirty_entry_count=30
+parent_experiment_id=exp_20260828_004
+phase=PHASE1
+formal_authorized=false
+network_authorized=false
+key_read_authorized=false
+note=Preregistration written before jquants_v2_v4 source and tests.
+amended_at=2026-08-28T03:20:00+08:00
+amendment=Before any development test or formal action, expanded the single official-schema repair to bind the current exact non-Premium 18-key daily-bars schema, nullable ExRT/MktCap semantics, UL/LL enums, Premium-session-key rejection, and KDDI ProdCat 011.
+amendment_2=Before any development test or formal action, removed the old exact adjusted/raw ratio assertion because official adjusted prices are rounded to one decimal; retained finite positive OHLC and null coherence checks.

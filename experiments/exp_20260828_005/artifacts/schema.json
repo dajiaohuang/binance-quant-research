@@ -1,0 +1,16 @@
+{
+  "adjusted_price_validation": "FINITE_POSITIVE_OHLC_ORDER_ONLY_DUE_TO_OFFICIAL_ONE_DECIMAL_ROUNDING",
+  "bars_non_premium_fields": ["Date", "Code", "O", "H", "L", "C", "UL", "LL", "Vo", "Va", "AdjFactor", "AdjO", "AdjH", "AdjL", "AdjC", "AdjVo", "MktCap", "ExRT"],
+  "bars_premium_session_fields_rejected": ["MO", "MH", "ML", "MC", "MUL", "MLL", "MVo", "MVa", "MAdjO", "MAdjH", "MAdjL", "MAdjC", "MAdjVo", "AO", "AH", "AL", "AC", "AUL", "ALL", "AVo", "AVa", "AAdjO", "AAdjH", "AAdjL", "AAdjC", "AAdjVo"],
+  "ex_right_type_values": [null, "1", "2", "3"],
+  "market_cap": "NULL_OR_FINITE_NONNEGATIVE",
+  "master_fields": ["Date", "Code", "CoName", "CoNameEn", "S17", "S17Nm", "S33", "S33Nm", "ScaleCat", "Mkt", "MktNm", "Mrgn", "MrgnNm", "ProdCat"],
+  "master_kddi_product_category": "011",
+  "master_model_field": "product_category",
+  "rejected_master_aliases": ["SecType", "SecTypeNm"],
+  "price_limit_flag_values": ["0", "1"],
+  "response_receipt_keys": ["body_bytes", "body_sha256", "content_type", "http_ordinal", "page_number", "path", "prior_pagination_key_sha256", "query_id", "query_ordinal", "request_parameters_sha256", "sent_at_ms", "received_at_ms", "status", "redirect_count", "pacing_wait_ms"],
+  "schema_version": "JQUANTS_V2_FREE_OFFLINE_SCHEMA_V4",
+  "tse_non_session_holdiv": ["0", "3"],
+  "tse_session_holdiv": ["1", "2"]
+}

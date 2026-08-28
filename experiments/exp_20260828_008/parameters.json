@@ -1,0 +1,18 @@
+{
+  "bootstrap_reuse_dates": [
+    "2024-07-01",
+    "2025-03-28",
+    "2026-05-29"
+  ],
+  "exp005_q04_raw_bytes": 1222835,
+  "exp005_q04_raw_sha256": "adac886e159f3979421b98e3d1b52fedafcafb68c931ef18f6a89597b035fad1",
+  "exp005_q04_receipt_bytes": 583,
+  "exp005_q04_receipt_sha256": "9ef6d7e175c925930306c353ddc1200ebd26ef0152833c3e9ec819fdc1aaa6e4",
+  "exp006_closure_sha256": "4e8488fa3ca8ec5636093edca43b1a709f8077803bac4f10e80951e726f98bf6",
+  "exp007_parent_disposition": "PHASE2_NO_GO",
+  "formal_authorized": false,
+  "key_read_authorized": false,
+  "monthly_network_authorized": false,
+  "network_authorized": false,
+  "success_ceiling": "JQUANTS_V2_BARS_MONTHLY_REUSE_BINDING_FROZEN / NEEDS_DATA"
+}

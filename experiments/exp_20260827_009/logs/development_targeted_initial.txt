@@ -1,0 +1,6 @@
+Command: uv run --extra modern-ml python -m unittest tests.test_kronos_supply_chain_v2 -v
+Observed exit: 1
+Observed tests: 10 run, 1 failure, 2 skipped
+Failure: test_v2_modules_do_not_reference_v1_raw_or_exp007_manifest
+Cause: the downloader contained the forbidden v1 basename only as a defensive rejection literal; the stronger exact v2 path-prefix contract already rejects every other root, so the redundant literal was removed.
+No network request occurred. No v2 raw or acquisition manifest was created.

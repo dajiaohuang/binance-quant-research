@@ -1,0 +1,29 @@
+{
+  "artifact_state": "FORMAL_STOPPED_FIRST_FAILURE_ONE_MONTH_FINAL_NEXT_PARTIAL",
+  "candidate_freeze_file_count": 23,
+  "candidate_freeze_manifest_sha256": "a18f6c6e4738d2db56f79f668d3ddc0181e3054ecfd679aa7c87610532c3acc1",
+  "classification": "JQUANTS_V2_FREE_PARTIAL_DAY_POINTER_ADOPTION_RECOVERY",
+  "experiment_id": "exp_20260828_011",
+  "formal_execution_count": 1,
+  "formal_candidate": {
+    "command_bytes_no_newline": 393,
+    "command_sha256_no_newline": "57690b3a3d681329fa041897080ea90c33050b81b1d977c10ee73a1c50274d8c",
+    "executed": true,
+    "exit_code": 40,
+    "freeze_manifest_sha256": "a18f6c6e4738d2db56f79f668d3ddc0181e3054ecfd679aa7c87610532c3acc1",
+    "launcher_sha256": "7e9d053ef118b457aa5d9fe006f6dc82d88d741cd51248c8aa995249629564bd"
+  },
+  "http_response_count": 24,
+  "key_read_count": 1,
+  "network_request_count": 25,
+  "parent_experiment_id": "exp_20260828_010",
+  "preregistered_before_tests": true,
+  "retry_count": 0,
+  "powershell_parse": "PASS",
+  "py_compile": "PASS",
+  "recovery_registry_sha256": "cce055f98ad209faa6fb448f5697df4fcafa631e2a96f7b6395885f5c050e2a6",
+  "stage": "FORMAL_EXECUTION_STOPPED",
+  "status": "INCONCLUSIVE / DNS_RESOLUTION_FAILURE_ONE_MONTH_FINAL_NEXT_MONTH_PARTIAL",
+  "targeted_tests": "PASS_7_OF_7",
+  "version": "JQUANTS_V2_BARS_MONTHLY_V5_RECOVERY"
+}

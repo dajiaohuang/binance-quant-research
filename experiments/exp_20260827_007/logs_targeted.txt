@@ -1,0 +1,20 @@
+test_bad_feature_width_rejected (tests.test_kronos_adapter.KronosContractTests.test_bad_feature_width_rejected) ... ok
+test_bad_ohlc_and_negative_flow_rejected (tests.test_kronos_adapter.KronosContractTests.test_bad_ohlc_and_negative_flow_rejected) ... ok
+test_context_limit (tests.test_kronos_adapter.KronosContractTests.test_context_limit) ... ok
+test_duplicate_timestamp_rejected (tests.test_kronos_adapter.KronosContractTests.test_duplicate_timestamp_rejected) ... ok
+test_exact_pairing_registry_and_wrong_pair_rejected (tests.test_kronos_adapter.KronosContractTests.test_exact_pairing_registry_and_wrong_pair_rejected) ... ok
+test_future_known_at_rejected (tests.test_kronos_adapter.KronosContractTests.test_future_known_at_rejected) ... ok
+test_label_isolation (tests.test_kronos_adapter.KronosContractTests.test_label_isolation) ... ok
+test_manifest_tamper_rejected_before_safetensors (tests.test_kronos_adapter.KronosContractTests.test_manifest_tamper_rejected_before_safetensors) ... ok
+test_official_small_256_golden (tests.test_kronos_adapter.KronosContractTests.test_official_small_256_golden) ... ok
+test_runtime_offline (tests.test_kronos_adapter.KronosContractTests.test_runtime_offline) ... ok
+test_valid_request (tests.test_kronos_adapter.KronosContractTests.test_valid_request) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.992s
+
+OK
+Loading weights from local directory
+Loading weights from local directory
+Loading weights from local directory
+Loading weights from local directory

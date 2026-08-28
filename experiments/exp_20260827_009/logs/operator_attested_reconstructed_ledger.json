@@ -1,0 +1,35 @@
+{
+  "acquisition_manifest": {
+    "bytes": 12771,
+    "path": "experiments/exp_20260827_009/artifacts/acquisition_manifest.json",
+    "sha256": "811cd603d640a7acfab7776e3a97a9a753a0e3d053670587eb700f89167419c6"
+  },
+  "adapter_drift": {
+    "current_sha256": "215f5cccd7d6802e1499d057799a63334ac46dce280a25a64055cd983c3886fa",
+    "formal_preregistered_sha256": "0e6d748dc02395721997e8d2dace95a18836eefd44fcc95e1fa6057fa6c1e879",
+    "reason": "Removed an unregistered constant-spacing validation after the first offline postflight error."
+  },
+  "attestation_kind": "OPERATOR_RECONSTRUCTED_AFTER_EXECUTION_NOT_CONTEMPORANEOUS",
+  "command": "uv run --extra modern-ml python -m quant_research.alpha_models.external.kronos_supply_chain_v2 --expected-manifest-sha256 3d2b370f172b17f090099d8ef2e3d9e530ed4d6cf4cb3c2ef57d04db7747d52e",
+  "command_no_newline_sha256": "e96c56a8418d7bf66afb4c546001eb23c6513077097b6e68515609ba2776f4e5",
+  "experiment_id": "exp_20260827_009",
+  "formal_execution_count": 1,
+  "network_evidence": {
+    "acquisition_method": "FRESH_HTTPS_DOWNLOAD_NOT_V1_COPY",
+    "logical_request_count": 19,
+    "retry_count": 0
+  },
+  "observed_exit_code": 0,
+  "observed_stderr": "EMPTY",
+  "observed_stdout": "EMPTY",
+  "observed_wall_seconds": 20.672,
+  "postflight_history": [
+    "FIRST_OFFLINE_DIAGNOSTIC_ONE_LINER_NAMEERROR_PRIVATE_HELPER",
+    "FIRST_TARGETED_11_TESTS_1_ERROR_CONSTANT_INTERVAL_OVERRESTRICTION_SMALL_GOLDEN_PASS",
+    "POSTFORMAL_ADAPTER_EDIT_REMOVED_UNREGISTERED_CONSTANT_INTERVAL_REQUIREMENT",
+    "SECOND_TARGETED_11_OF_11_PASS"
+  ],
+  "reconstructed_at_utc": "2026-08-27T13:50:04.052Z",
+  "research_conclusion_authorized": false,
+  "run_consumed": true
+}

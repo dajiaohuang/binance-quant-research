@@ -1,0 +1,19 @@
+attempt=1
+command=uv run python -m quant_research.alpha_models.data.jquants_v2_recovery --repo-root .
+result=FAIL
+error=SOURCE_NOT_CANONICAL
+cause=reservation.lock is canonical compact JSON plus newline, not pretty JSON
+repair=added a strict compact-document reader only for the reservation binding
+
+attempt=2
+command=uv run python -m quant_research.alpha_models.data.jquants_v2_recovery --repo-root .
+result=FAIL
+error=MASTER_MAPPING
+cause=the dataclass equality comparison included different receipt timestamps
+repair=compared the exact source identity fields used by the frozen loader
+
+attempt=3
+command=uv run python -m quant_research.alpha_models.data.jquants_v2_recovery --repo-root .
+result=PASS
+network_request_count=0
+key_read_count=0

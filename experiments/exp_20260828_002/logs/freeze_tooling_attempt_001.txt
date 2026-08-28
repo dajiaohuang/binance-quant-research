@@ -1,0 +1,7 @@
+kind=DEVELOPMENT_FREEZE_TOOLING_NOT_FORMAL
+exit_code=1
+failure=PowerShell ParserError: an empty pipe element after a foreach statement
+effect=NO_FILES_WRITTEN
+network_request_count=0
+retry_count=0
+resolution=assign foreach output to a task-specific rows variable before piping to ConvertTo-Json

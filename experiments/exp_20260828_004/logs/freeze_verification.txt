@@ -1,0 +1,17 @@
+classification: READ_ONLY_PREFORMAL_FREEZE_VERIFICATION
+json_files: PASS
+frozen_file_rows: 10
+frozen_file_hashes_and_bytes: PASS
+freeze_manifest_sha256: 72005cdfe34c0fea8f6161dcd1d421361faf3b401992f4cdc0a335b8bda38941
+formal_line_bytes_no_newline: 380
+formal_line_sha256_no_newline: cd2a88ef0324e3d1d0125d1198be42697c079410e12562e62401db7dcf6e0610
+parent_JQUANTS_API_KEY_present: false
+local_env_file_present_metadata_only: true
+real_env_content_size_hash_read: false
+formal_attempt_reservation_present: false
+formal_stage_ledger_present: false
+formal_final_present: false
+formal_staging_present: false
+formal_collector_control_present: false
+formal_execution_count: 0
+network_request_count: 0

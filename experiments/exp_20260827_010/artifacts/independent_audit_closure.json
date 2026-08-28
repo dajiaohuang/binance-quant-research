@@ -1,0 +1,30 @@
+{
+  "artifact_state": "SUPPLY_CHAIN_AND_OFFLINE_INTERFACE_VERIFIED",
+  "audit_phase": "INDEPENDENT_POSTFLIGHT",
+  "audit_result": "FINAL_PASS",
+  "closure_semantics": "POST_FORMAL_APPEND_ONLY; FORMAL_LEDGER_RESULT_INDEX_AND_FROZEN_FILES_UNCHANGED",
+  "eligibility_evaluated": false,
+  "empirical_authorized": false,
+  "evidence_summary": {
+    "formal_execution_count": 1,
+    "formal_ledger_sha256": "a388cd8d3b764851b0d2476803d6bfa8cb7f5fc78f55860e25af1791ba47ded7",
+    "formal_result_sha256": "71391fe41acad411ed22da08b4ad82691d993004d6704082c0203d2f1acadaf6",
+    "full_repository_expected_lifecycle_failures": 3,
+    "full_repository_tests_passed": 661,
+    "full_repository_tests_run": 664,
+    "raw_file_count": 19,
+    "raw_total_bytes": 562430552,
+    "targeted_tests_passed": 11,
+    "targeted_tests_run": 11,
+    "verification_passes": 2
+  },
+  "experiment_id": "exp_20260827_010",
+  "historical_eligibility_ready": false,
+  "network_request_count": 0,
+  "post_audit_status": "POSTFLIGHT_INDEPENDENT_AUDIT_PASSED",
+  "real_data_accessed": true,
+  "retry_count": 0,
+  "semantic_ceiling": "SUPPLY_CHAIN_AND_OFFLINE_INTERFACE_VERIFIED; NO_EMPIRICAL_ALPHA; NEEDS_MORE_DATA",
+  "strict_eligible_count": 0,
+  "terminal_status": "NEEDS_MORE_DATA"
+}

@@ -1,0 +1,21 @@
+{
+  "artifact_state": "FORMAL_COMPLETE_CANDIDATE_BYTES_REMAIN_FROZEN",
+  "candidate_file_count": 28,
+  "candidate_freeze_manifest_sha256": "b48fe6fe11fddef103a861880266be82a06b692a651334a3d883826ab40f31de",
+  "classification": "JQUANTS_V2_GENERIC_DAY_ADOPTION_PERSISTENT_CONNECTION_RECOVERY",
+  "experiment_id": "exp_20260828_012",
+  "catalog_sha256": "d427064ff9669801d27c64cf75b23acfe10230d75a368a8196489e0aa32bfcd0",
+  "formal_execution_count": 1,
+  "formal_execution_summary_sha256": "bc3fa72f997e8213239dc72a9d59d21ffe3d9e553d9b55cf556beea6c389471f",
+  "formal_exit_code": 0,
+  "formal_log_sha256": "644c4451abfb22133842435dccbe55c17644cc4920135f397d00b4b9ab1ec3fc",
+  "key_read_count": 1,
+  "launcher_sha256": "a61bd65ecfca80aa104ecddd6d3a1b4795f338d6764a77f78f4be372e82b0e79",
+  "network_request_count": 434,
+  "parent_experiment_id": "exp_20260828_011",
+  "preregistered_before_tests": true,
+  "retry_count": 0,
+  "session_date_count": 465,
+  "status": "COMPLETE_23_IMMUTABLE_MONTH_SHARDS",
+  "version": "JQUANTS_V2_BARS_MONTHLY_V6_OPERATIONAL_RECOVERY"
+}

@@ -1,0 +1,12 @@
+{
+  "adapter_callable": "quant_research.alpha_models.data.jquants_v2_recovery.validate_source_probe",
+  "artifact_state": "JQUANTS_V2_FREE_SOURCE_PROBE_OFFLINE_RECOVERED",
+  "authorization_ceiling": "SOURCE_PROBE_ONLY_NEEDS_MORE_DATA",
+  "experiment_id": "exp_20260828_006",
+  "licensed_raw_policy": "LOCAL_GITIGNORED_SOURCE_PATH_ONLY",
+  "pacing_status": "RUNTIME_MONOTONIC_GUARD_INFERRED_NOT_REPLAYABLE",
+  "raw_tree_sha256": "d14273cc49e9de82b0295e9ab76db8c01eea02e5f4e0af940400b64550b8209c",
+  "source_experiment_id": "exp_20260828_005",
+  "source_run_id": "exp_20260828_005_formal_001",
+  "source_staging_path": "data/raw/jquants_v2_v4/runs/.exp_20260828_005_formal_001.staging"
+}

@@ -1,0 +1,11 @@
+{
+  "exp008_parent_disposition": "FRESH_PHASE2_NO_GO",
+  "formal_authorized": false,
+  "key_read_authorized": false,
+  "monthly_network_authorized": false,
+  "network_authorized_this_phase": false,
+  "planner_authority": "CANONICAL_REGISTRY_PATH_PLUS_EXPECTED_SHA_WITH_CALL_TIME_SOURCE_REVALIDATION",
+  "preflight_write_count_before_pass": 0,
+  "success_ceiling": "JQUANTS_V2_BARS_MONTHLY_ZERO_WRITE_PREFLIGHT_AND_TRUSTED_PLANNER_FROZEN / NEEDS_DATA",
+  "user_future_network_authorization_recorded": true
+}

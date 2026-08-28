@@ -1,0 +1,28 @@
+{
+  "artifact_state": "SYNTHETIC_TYPED_METHOD_CONTRACT_FORMAL_VERIFIED",
+  "audit_phase": "INDEPENDENT_POSTFLIGHT",
+  "audit_result": "FINAL_PASS",
+  "closure_semantics": "POST_FORMAL_APPEND_ONLY; FORMAL_LEDGER_RESULT_INDEX_AND_FROZEN_FILES_UNCHANGED",
+  "eligibility_evaluated": false,
+  "empirical_authorized": false,
+  "evidence_summary": {
+    "formal_execution_count": 1,
+    "formal_record_index_sha256": "9fa72bcb85b16bd1a3b28cd9a24322dc7617663df33096083a3c7b25e501e41e",
+    "formal_result_sha256": "6b96554d788ada4c6406ef1f170d83974b9259792c357f21280593880e7b6452",
+    "formal_tests_passed": 28,
+    "formal_tests_run": 28,
+    "formal_tests_skipped": 0,
+    "gpu_peak_cuda_bytes": 76795392,
+    "implementation_tree_sha256": "1c395dfe27c8e820e25507f7aab446a18e82fe89ef0502ebeee6615588775c9d",
+    "postflight_frozen_rows_matched": 16
+  },
+  "experiment_id": "exp_20260827_011",
+  "historical_eligibility_ready": false,
+  "network_request_count": 0,
+  "post_audit_status": "POSTFLIGHT_INDEPENDENT_AUDIT_PASSED",
+  "real_data_accessed": false,
+  "retry_count": 0,
+  "semantic_ceiling": "SYNTHETIC_TYPED_METHOD_CONTRACT_ONLY; NO_EMPIRICAL_ALPHA_OR_MODEL_QUALITY_CONCLUSION; NEEDS_MORE_DATA",
+  "strict_eligible_count": 0,
+  "terminal_status": "NEEDS_MORE_DATA"
+}
